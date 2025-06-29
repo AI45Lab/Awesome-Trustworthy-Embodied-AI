@@ -1,0 +1,471 @@
+请你帮我进行页面美化。整体风格：以白色和蓝色为主色调，干净美观和谐。同时请你按照最为美观舒适方式放置搜索栏和搜索按钮还有二维表格的位置和大小，必要时可以建议我增加一些.csv格式的icon.
+styles/project.css
+.project-page {
+  background-color: #ffffff;
+  color: #2c3e50;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  padding-top: 20px;
+  min-height: 100vh;
+}
+
+/* 标题样式 */
+.title {
+  font-family: 'Georgia', serif;
+  font-size: 2.8rem;
+  font-weight: 300;
+  text-align: center;
+  color: #1a5276;
+  margin: 30px 0;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e0e0e0;
+  letter-spacing: 0.5px;
+}
+
+/* 搜索区域 */
+.search-container {
+  background: #f8f9fa;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  margin-bottom: 40px;
+}
+
+.search-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.search-input {
+  width: 500px;
+  margin-right: 15px;
+}
+
+.search-input .v-input__slot {
+  box-shadow: 0 2px 8px rgba(0, 0, 100, 0.1) !important;
+  border: 1px solid #e0e0e0;
+}
+
+.search-btn {
+  min-width: 120px;
+  height: 48px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  background: linear-gradient(135deg, #1976d2, #2196f3);
+  box-shadow: 0 2px 10px rgba(25, 118, 210, 0.3);
+}
+
+/* 论文卡片 */
+.paper-card {
+  margin-bottom: 30px;
+  border-radius: 10px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08) !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: none !important;
+}
+
+.paper-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12) !important;
+}
+
+.headline {
+  font-family: 'Georgia', serif;
+  font-weight: 500;
+  font-size: 1.5rem;
+  color: #1a5276;
+}
+
+.headline a {
+  color: #1a5276;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.headline a:hover {
+  color: #1976d2;
+  text-decoration: underline;
+}
+
+.paper-date {
+  margin-left: 10px;
+  font-weight: normal;
+  font-size: 1rem;
+  color: #7f8c8d;
+}
+
+.authors {
+  font-size: 1rem;
+  color: #34495e;
+  font-weight: 400;
+}
+
+.authorsOrg {
+  font-size: 0.9rem;
+  color: #7f8c8d;
+  font-style: italic;
+}
+
+/* 标签组 */
+.tag-group {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+/* 二维表格 */
+.tag-matrix-container {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  margin: 40px auto;
+  max-width: 900px;
+}
+
+.tag-matrix {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 5px;
+}
+
+.tag-matrix th {
+  font-weight: 600;
+  font-size: 0.9rem;
+  background-color: #e3f2fd;
+  color: #0d47a1;
+  padding: 12px 8px;
+  border-radius: 6px;
+}
+
+.tag-matrix td {
+  padding: 8px;
+  background-color: #f5f9ff;
+  border-radius: 6px;
+  transition: background-color 0.2s;
+}
+
+.tag-matrix td:hover {
+  background-color: #e1f5fe;
+}
+
+.tag-matrix .v-btn {
+  width: 100%;
+  height: 100%;
+  min-height: 40px;
+  background-color: #e3f2fd;
+  color: #1565c0;
+  font-weight: 500;
+  font-size: 0.8rem;
+  letter-spacing: 0.3px;
+  transition: all 0.2s;
+}
+
+.tag-matrix .v-btn:hover {
+  background-color: #bbdefb;
+  transform: scale(1.03);
+}
+
+/* 响应式调整 */
+@media (max-width: 960px) {
+  .search-row {
+    flex-direction: column;
+  }
+  
+  .search-input {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+  
+  .search-btn {
+    width: 100%;
+  }
+  
+  .tag-matrix th, 
+  .tag-matrix td {
+    padding: 6px 4px;
+    font-size: 0.7rem;
+  }
+}
+
+
+ProjectPage.vue
+<template>
+  <v-container class="project-page" fluid>
+    <!-- 标题部分 -->
+    <div class="header">
+      <h1 class="title">
+        <v-icon large color="blue darken-2" class="mr-2">mdi-book-open-variant</v-icon>
+        Awesome Trustworthy Embodied-AI
+      </h1>
+    </div>
+
+    <!-- 搜索和筛选区域 -->
+    <div class="search-container">
+      <v-row class="search-row" align="center">
+        <v-text-field
+          v-model="searchKeyword"
+          class="search-input"
+          outlined
+          prepend-inner-icon="mdi-magnify"
+          placeholder="Search papers by title..."
+          clearable
+          @keyup.enter="filterPapers"
+        ></v-text-field>
+        <v-btn 
+          class="search-btn"
+          dark
+          @click="filterPapers"
+        >
+          <v-icon left>mdi-send</v-icon>
+          Search
+        </v-btn>
+      </v-row>
+
+      <!-- 二维表格容器 -->
+      <div class="tag-matrix-container">
+        <h3 class="text-center mb-4" style="color: #1a5276;">
+          <v-icon color="blue darken-2">mdi-filter</v-icon>
+          Filter by Categories
+        </h3>
+        <tag-matrix :onTagClick="handleTagFilter"></tag-matrix>
+      </div>
+    </div>
+
+    <!-- 论文列表 -->
+    <v-container>
+      <v-row justify="center">
+        <v-col cols="12" lg="9" v-for="paper in filteredPapers" :key="paper.title + paper.date">
+          <paper-card :paper="paper"></paper-card>
+        </v-col>
+      </v-row>
+      
+      <!-- 空状态提示 -->
+      <v-row v-if="filteredPapers.length === 0" justify="center">
+        <v-col cols="12" class="text-center py-10">
+          <v-icon large color="grey lighten-1">mdi-information-outline</v-icon>
+          <p class="mt-4 grey--text text--darken-1">No papers found matching your criteria</p>
+          <v-btn 
+            color="blue lighten-2" 
+            text
+            @click="resetFilters"
+          >
+            Reset Filters
+          </v-btn>
+        </v-col>
+      </v-row>
+    </v-container>
+  </v-container>
+</template>
+
+<script>
+
+import PaperCard from '@/components/PaperCard.vue'
+import TagMatrix from '@/components/TagMatrix.vue'
+import csvData from '@/data/paper_list.csv'
+
+export default {
+  components: { PaperCard, TagMatrix },
+  data() {
+    return {
+      papers: [],
+      searchKeyword: '',
+      selectedTags: [],
+      filteredPapers: []
+    }
+  },
+  created() {
+    this.processCSVData(csvData)
+    this.filteredPapers = this.papers
+  },
+  methods: {
+    resetFilters() {
+        this.searchKeyword = ''
+        this.filteredPapers = this.papers
+    },
+    processCSVData(rawData) {
+      this.papers = rawData
+        .map(row => {
+          // 处理可能为空的字段
+          const safeSplit = (str) => 
+            str ? str.split(',').map(s => s.trim()).filter(Boolean) : []
+          
+          return {
+            title: row['标题'] || '',
+            date: row['发表年月'] || '',
+            author: row['一作'] || '',
+            authorOrg: row['一作单位'] || '',
+            contact: row['通讯'] || '',
+            contactOrg: row['通讯单位'] || '',
+            macros: safeSplit(row['宏观维度']),
+            apps: safeSplit(row['应用维度']),
+            tasks: safeSplit(row['具身任务']),
+            method: safeSplit(row['方法论']),
+            link: row['链接'] || ''
+          }
+        })
+        // 过滤掉没有标题的论文
+        .filter(paper => paper.title.trim() !== '')
+    },
+    filterPapers() {
+      this.filteredPapers = this.papers.filter(p =>
+        p.title.toLowerCase().includes(this.searchKeyword.toLowerCase()))
+    },
+    handleTagFilter(tag1, tag2) {
+      this.filteredPapers = this.papers.filter(p =>
+        p.macros.includes(tag1) && p.apps.includes(tag2))
+    }
+  }
+}
+</script>
+
+TagMatrix.vue
+<template>
+  <v-simple-table class="tag-matrix">
+    <thead>
+      <tr>
+        <th></th>
+        <th v-for="col in columns" :key="col">{{ col }}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr v-for="row in rows" :key="row">
+        <th>{{ row }}</th>
+        <td v-for="col in columns" :key="col">
+          <v-btn small @click="onTagClick(row, col)">{{ row }}/{{ col }}</v-btn>
+        </td>
+      </tr>
+    </tbody>
+  </v-simple-table>
+</template>
+
+<script>
+export default {
+  name: 'TagMatrix',
+  props: {
+    onTagClick: {
+      type: Function,
+      required: true
+    }
+  },
+    data() {
+    return {
+        columns: [
+        '指令理解',  // 原 'Instruction Understanding'
+        '环境感知',  // 原 'Environment Perception'
+        '决策规划',  // 原 'Behavior Planning'
+        '物理交互'   // 原 'Physical Interaction'
+        ],
+        rows: [
+        '无害',     // 原 'Harmless'
+        '可靠',     // 原 'Reliable'
+        '价值', // 原 'Value-Aligned'
+        '保障',     // 原 'Secure'
+        '透明'      // 原 'Transparent'
+        ]
+    }
+    }
+};
+</script>
+
+<style scoped>
+.tag-v {
+  margin-top: 20px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+.tag-matrix th {
+  font-weight: bold;
+  font-size: 14px;
+  background-color: #f0f8ff;
+}
+.tag-matrix td {
+  padding: 4px;
+}
+</style>
+
+PaperCard.vue
+<template>
+  <v-card class="paper-card" outlined>
+    <v-card-title class="headline">
+      <a :href="paper.link" target="_blank">{{ paper.title }}</a>
+      <span class="paper-date">({{ paper.date }})</span>
+    </v-card-title>
+
+    <v-card-subtitle class="authors">
+      {{ paper.author }}, {{ paper.contact }} et al. 
+
+
+    </v-card-subtitle>
+
+    <v-card-subtitle class="authorsOrg">
+        {{ paper.authorOrg }}
+    </v-card-subtitle>
+
+
+
+    <v-card-text class="tags">
+      <div class="tag-group">
+        <!-- 显示多个宏观维度 -->
+        <v-chip
+          v-for="macro in paper.macros"
+          :key="'macro-' + macro"
+          class="ma-1"
+          color="blue lighten-4"
+          label
+        >
+          {{ macro }}
+        </v-chip>
+        
+        <!-- 显示多个应用维度 -->
+        <v-chip
+          v-for="app in paper.apps"
+          :key="'app-' + app"
+          class="ma-1"
+          color="green lighten-4"
+          label
+        >
+          {{ app }}
+        </v-chip>
+        
+        <!-- 显示任务 -->
+        <v-chip
+          v-for="task in paper.tasks"
+          :key="'task-' + task"
+          class="ma-1"
+          color="purple lighten-4"
+          label
+        >
+          {{ task }}
+        </v-chip>
+
+        <!-- 显示方法论 -->
+        <v-chip
+          v-for="method in paper.method"
+          :key="'method-' + method"
+          class="ma-1"
+          color="orange lighten-4"
+          label
+        >
+          {{ method }}
+        </v-chip>
+
+      </div>
+    </v-card-text>
+  </v-card>
+</template>
+
+<script>
+export default {
+  name: 'PaperCard',
+  props: {
+    paper: {
+      type: Object,
+      required: true
+    }
+  }
+}
+</script>
