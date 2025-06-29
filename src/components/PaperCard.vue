@@ -207,6 +207,10 @@ export default {
   line-height: 1.4;
   transition: all 0.3s ease;
   display: block;
+  word-wrap: break-word;      /* 添加：允许单词内换行 */
+  word-break: break-word;     /* 添加：在单词边界换行 */
+  white-space: normal;        /* 添加：允许正常换行 */
+  overflow-wrap: break-word;  /* 添加：现代浏览器支持 */
 }
 
 .paper-title:hover {

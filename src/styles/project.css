@@ -1,26 +1,37 @@
-/* styles/project.css - 优化版本 */
-.project-page {
-  background: linear-gradient(135deg, #f8fbff 0%, #ffffff 100%);
-  color: #2c3e50;
-  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
-  padding-top: 30px;
-  min-height: 100vh;
+/* 标题容器居中 */
+.header {
+  text-align: center;
+  padding: 60px 0;
+  margin-bottom: 30px;
 }
 
-/* 标题样式 */
+/* 标题样式 - 超大字号，更吸引眼球 */
 .title {
   font-family: 'Inter', sans-serif;
-  font-size: 3rem;
-  font-weight: 700;
+  font-size: 4.5rem;  /* 从3rem增加到4.5rem */
+  font-weight: 800;   /* 从700增加到800 */
   text-align: center;
-  background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+  background: linear-gradient(135deg, #1e3a8a, #3b82f6, #06b6d4);  /* 添加第三个颜色 */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  margin: 40px 0 50px 0;
-  padding-bottom: 25px;
+  margin: 0;  /* 移除原有margin */
+  padding: 0 20px 30px 0;
   position: relative;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.03em;  /* 稍微减少字间距 */
+  line-height: 1.1;  /* 调整行高 */
+  text-shadow: 0 0 30px rgba(59, 130, 246, 0.3);  /* 添加发光效果 */
+  animation: titleGlow 3s ease-in-out infinite alternate;  /* 添加动画 */
+}
+
+/* 发光动画效果 */
+@keyframes titleGlow {
+  0% {
+    text-shadow: 0 0 30px rgba(59, 130, 246, 0.3);
+  }
+  100% {
+    text-shadow: 0 0 40px rgba(59, 130, 246, 0.5), 0 0 60px rgba(59, 130, 246, 0.2);
+  }
 }
 
 .title::after {
@@ -29,20 +40,51 @@
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 80px;
-  height: 3px;
-  background: linear-gradient(90deg, #3b82f6, #1d4ed8);
-  border-radius: 2px;
+  width: 120px;  /* 从80px增加到120px */
+  height: 4px;   /* 从3px增加到4px */
+  background: linear-gradient(90deg, #3b82f6, #1d4ed8, #06b6d4);
+  border-radius: 3px;
+  box-shadow: 0 2px 10px rgba(59, 130, 246, 0.4);  /* 添加阴影 */
 }
 
-/* 标题图标样式 */
+/* 标题图标样式 - 更大更醒目 */
 .title .v-icon {
-  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8, #06b6d4);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  margin-right: 15px;
-  font-size: 3rem !important;
+  margin-right: 20px;  /* 从15px增加到20px */
+  font-size: 4.5rem !important;  /* 从3rem增加到4.5rem */
+  vertical-align: middle;
+  filter: drop-shadow(0 0 10px rgba(59, 130, 246, 0.3));  /* 添加阴影效果 */
+}
+
+/* 响应式设计 - 移动设备上的标题调整 */
+@media (max-width: 768px) {
+  .title {
+    font-size: 3rem;  /* 移动设备上稍小一些 */
+  }
+  
+  .title .v-icon {
+    font-size: 3rem !important;
+    margin-right: 15px;
+  }
+  
+  .title::after {
+    width: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 2.2rem;
+    padding: 0 10px 25px 0;
+  }
+  
+  .title .v-icon {
+    font-size: 2.2rem !important;
+    margin-right: 10px;
+  }
 }
 
 /* 搜索区域 */
@@ -399,8 +441,19 @@
   }
   
   .tag-matrix-container {
-    padding: 20px 15px;
-    margin: 0 15px;
+    background: white;
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 
+      0 8px 30px rgba(59, 130, 246, 0.08),
+      0 4px 20px rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(59, 130, 246, 0.1);
+    position: relative;
+    /* 新增居中和宽度设置 */
+    margin: 0 auto;
+
+    max-width: 1200px;  /* 增加最大宽度 */
+    width: 90%;         /* 占据90%的可用宽度 */
   }
   
   .tag-matrix {

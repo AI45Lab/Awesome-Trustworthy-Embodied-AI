@@ -1,193 +1,453 @@
-请你帮我进行页面美化。整体风格：以白色和蓝色为主色调，干净美观和谐。同时请你按照最为美观舒适方式放置搜索栏和搜索按钮还有二维表格的位置和大小，必要时可以建议我增加一些.csv格式的icon.
+请你帮我进行布局优化，现在我的二维表格处在页面偏左的位置，我需要把它放在页面居中的位置，而且占据尽量宽一些的位置，现在它占的位置太窄了。注意！你只需要把要改部分的指出来改正，不改动的部分不要照抄一遍。
 styles/project.css
+/* styles/project.css - 优化版本 */
 .project-page {
-  background-color: #ffffff;
+  background: linear-gradient(135deg, #f8fbff 0%, #ffffff 100%);
   color: #2c3e50;
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-  padding-top: 20px;
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  padding-top: 30px;
   min-height: 100vh;
 }
 
 /* 标题样式 */
 .title {
-  font-family: 'Georgia', serif;
-  font-size: 2.8rem;
-  font-weight: 300;
+  font-family: 'Inter', sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
   text-align: center;
-  color: #1a5276;
-  margin: 30px 0;
-  padding-bottom: 20px;
-  border-bottom: 1px solid #e0e0e0;
-  letter-spacing: 0.5px;
+  background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 40px 0 50px 0;
+  padding-bottom: 25px;
+  position: relative;
+  letter-spacing: -0.02em;
+}
+
+.title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, #3b82f6, #1d4ed8);
+  border-radius: 2px;
+}
+
+/* 标题图标样式 */
+.title .v-icon {
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-right: 15px;
+  font-size: 3rem !important;
 }
 
 /* 搜索区域 */
 .search-container {
-  background: #f8f9fa;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  margin-bottom: 40px;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(59, 130, 246, 0.1);
+  padding: 40px 30px;
+  border-radius: 20px;
+  box-shadow: 
+    0 10px 40px rgba(59, 130, 246, 0.1),
+    0 4px 20px rgba(0, 0, 0, 0.05);
+  margin: 0 auto 50px auto;
+  max-width: 1000px;
 }
 
 .search-row {
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 800px;
-  margin: 0 auto;
+  gap: 20px;
+  max-width: 700px;
+  margin: 0 auto 40px auto;
 }
 
 .search-input {
-  width: 500px;
-  margin-right: 15px;
+  flex: 1;
+  max-width: 500px;
 }
 
 .search-input .v-input__slot {
-  box-shadow: 0 2px 8px rgba(0, 0, 100, 0.1) !important;
-  border: 1px solid #e0e0e0;
+  background: white !important;
+  border-radius: 12px !important;
+  box-shadow: 
+    0 4px 20px rgba(59, 130, 246, 0.1),
+    0 2px 10px rgba(0, 0, 0, 0.05) !important;
+  border: 2px solid rgba(59, 130, 246, 0.2) !important;
+  transition: all 0.3s ease !important;
+}
+
+.search-input .v-input__slot:hover {
+  border-color: rgba(59, 130, 246, 0.4) !important;
+  box-shadow: 
+    0 6px 25px rgba(59, 130, 246, 0.15),
+    0 3px 15px rgba(0, 0, 0, 0.08) !important;
+}
+
+.search-input .v-input--is-focused .v-input__slot {
+  border-color: #3b82f6 !important;
+  box-shadow: 
+    0 8px 30px rgba(59, 130, 246, 0.2),
+    0 4px 20px rgba(0, 0, 0, 0.1) !important;
 }
 
 .search-btn {
-  min-width: 120px;
+  min-width: 140px;
+  height: 56px;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 0.02em;
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8) !important;
+  border-radius: 12px;
+  box-shadow: 
+    0 6px 25px rgba(59, 130, 246, 0.3),
+    0 3px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  text-transform: none;
+}
+
+.search-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 
+    0 8px 30px rgba(59, 130, 246, 0.4),
+    0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* CSV图标装饰 */
+.search-container::before {
+  content: '📊';
+  position: absolute;
+  top: -15px;
+  right: 30px;
+  font-size: 2rem;
+  background: white;
+  padding: 8px 12px;
+  border-radius: 50%;
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.2);
+}
+
+/* 二维表格容器 */
+.tag-matrix-container {
+  background: white;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 
+    0 8px 30px rgba(59, 130, 246, 0.08),
+    0 4px 20px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(59, 130, 246, 0.1);
+  position: relative;
+}
+
+.tag-matrix-container h3 {
+  color: #1e3a8a !important;
+  font-weight: 700;
+  font-size: 1.4rem;
+  margin-bottom: 25px;
+}
+
+.tag-matrix-container .v-icon {
+  margin-right: 10px;
+  color: #3b82f6 !important;
+}
+
+/* CSV图标装饰 */
+.tag-matrix-container::after {
+  content: '📈';
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  font-size: 1.5rem;
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  color: white;
+  padding: 8px;
+  border-radius: 50%;
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+}
+
+/* 二维表格样式 */
+.tag-matrix {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 8px;
+  margin-top: 10px;
+}
+
+.tag-matrix th {
+  font-weight: 700;
+  font-size: 0.95rem;
+  background: linear-gradient(135deg, #dbeafe, #bfdbfe);
+  color: #1e3a8a;
+  padding: 16px 12px;
+  border-radius: 10px;
+  text-align: center;
+  border: 2px solid rgba(59, 130, 246, 0.2);
+  position: relative;
+}
+
+.tag-matrix th:first-child {
+  background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+  color: white;
+}
+
+.tag-matrix td {
+  padding: 6px;
+  background: rgba(248, 250, 252, 0.8);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(59, 130, 246, 0.1);
+}
+
+.tag-matrix td:hover {
+  background: rgba(219, 234, 254, 0.6);
+  transform: scale(1.02);
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.2);
+}
+
+.tag-matrix .v-btn {
+  width: 100%;
   height: 48px;
-  font-weight: 500;
-  letter-spacing: 0.5px;
-  background: linear-gradient(135deg, #1976d2, #2196f3);
-  box-shadow: 0 2px 10px rgba(25, 118, 210, 0.3);
+  min-height: 48px;
+  background: linear-gradient(135deg, #f8fafc, #f1f5f9) !important;
+  color: #1e3a8a !important;
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 0.02em;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  text-transform: none;
+  border: 2px solid rgba(59, 130, 246, 0.2);
+}
+
+.tag-matrix .v-btn:hover {
+  background: linear-gradient(135deg, #dbeafe, #bfdbfe) !important;
+  color: #1d4ed8 !important;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.25);
 }
 
 /* 论文卡片 */
 .paper-card {
   margin-bottom: 30px;
-  border-radius: 10px !important;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08) !important;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border: none !important;
+  border-radius: 16px !important;
+  box-shadow: 
+    0 8px 25px rgba(59, 130, 246, 0.08),
+    0 4px 15px rgba(0, 0, 0, 0.05) !important;
+  transition: all 0.4s ease;
+  border: 1px solid rgba(59, 130, 246, 0.1) !important;
+  background: white;
+  overflow: hidden;
+  position: relative;
+}
+
+.paper-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #3b82f6, #1d4ed8);
 }
 
 .paper-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12) !important;
+  transform: translateY(-8px);
+  box-shadow: 
+    0 12px 40px rgba(59, 130, 246, 0.15),
+    0 8px 25px rgba(0, 0, 0, 0.1) !important;
 }
 
 .headline {
-  font-family: 'Georgia', serif;
-  font-weight: 500;
-  font-size: 1.5rem;
-  color: #1a5276;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: #1e3a8a;
+  line-height: 1.4;
+  padding-top: 20px;
 }
 
 .headline a {
-  color: #1a5276;
+  color: #1e3a8a;
   text-decoration: none;
-  transition: color 0.2s;
+  transition: all 0.3s ease;
 }
 
 .headline a:hover {
-  color: #1976d2;
-  text-decoration: underline;
+  color: #3b82f6;
+  text-decoration: none;
 }
 
 .paper-date {
-  margin-left: 10px;
-  font-weight: normal;
-  font-size: 1rem;
-  color: #7f8c8d;
+  margin-left: 15px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: #6b7280;
+  background: rgba(59, 130, 246, 0.1);
+  padding: 4px 8px;
+  border-radius: 6px;
 }
 
 .authors {
-  font-size: 1rem;
-  color: #34495e;
-  font-weight: 400;
+  font-size: 1.05rem;
+  color: #374151;
+  font-weight: 500;
+  margin-top: 8px;
 }
 
 .authorsOrg {
-  font-size: 0.9rem;
-  color: #7f8c8d;
+  font-size: 0.95rem;
+  color: #6b7280;
   font-style: italic;
+  margin-top: 4px;
 }
 
 /* 标签组 */
 .tag-group {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 10px;
+  gap: 8px;
+  margin-top: 15px;
 }
 
-/* 二维表格 */
-.tag-matrix-container {
-  background: white;
-  border-radius: 12px;
-  padding: 20px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  margin: 40px auto;
-  max-width: 900px;
-}
-
-.tag-matrix {
-  width: 100%;
-  border-collapse: separate;
-  border-spacing: 5px;
-}
-
-.tag-matrix th {
-  font-weight: 600;
-  font-size: 0.9rem;
-  background-color: #e3f2fd;
-  color: #0d47a1;
-  padding: 12px 8px;
-  border-radius: 6px;
-}
-
-.tag-matrix td {
-  padding: 8px;
-  background-color: #f5f9ff;
-  border-radius: 6px;
-  transition: background-color 0.2s;
-}
-
-.tag-matrix td:hover {
-  background-color: #e1f5fe;
-}
-
-.tag-matrix .v-btn {
-  width: 100%;
-  height: 100%;
-  min-height: 40px;
-  background-color: #e3f2fd;
-  color: #1565c0;
+/* 标签颜色优化 */
+.v-chip.blue.lighten-4 {
+  background: linear-gradient(135deg, #dbeafe, #bfdbfe) !important;
+  color: #1e3a8a !important;
   font-weight: 500;
-  font-size: 0.8rem;
-  letter-spacing: 0.3px;
-  transition: all 0.2s;
 }
 
-.tag-matrix .v-btn:hover {
-  background-color: #bbdefb;
-  transform: scale(1.03);
+.v-chip.green.lighten-4 {
+  background: linear-gradient(135deg, #dcfce7, #bbf7d0) !important;
+  color: #166534 !important;
+  font-weight: 500;
+}
+
+.v-chip.purple.lighten-4 {
+  background: linear-gradient(135deg, #f3e8ff, #e9d5ff) !important;
+  color: #6b21a8 !important;
+  font-weight: 500;
+}
+
+.v-chip.orange.lighten-4 {
+  background: linear-gradient(135deg, #fed7aa, #fdba74) !important;
+  color: #9a3412 !important;
+  font-weight: 500;
+}
+
+/* 空状态样式 */
+.empty-state {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.empty-state .v-icon {
+  font-size: 4rem !important;
+  color: #9ca3af;
+  margin-bottom: 20px;
+}
+
+.empty-state p {
+  font-size: 1.2rem;
+  color: #6b7280;
+  margin-bottom: 25px;
+}
+
+/* CSV数据可视化图标 */
+.csv-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  color: white;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: bold;
+  margin-right: 8px;
 }
 
 /* 响应式调整 */
 @media (max-width: 960px) {
+  .title {
+    font-size: 2.2rem;
+  }
+  
+  .search-container {
+    padding: 30px 20px;
+    margin: 0 15px 40px 15px;
+  }
+  
   .search-row {
     flex-direction: column;
+    gap: 15px;
   }
   
   .search-input {
     width: 100%;
-    margin-right: 0;
-    margin-bottom: 15px;
+    max-width: none;
   }
   
   .search-btn {
     width: 100%;
+    max-width: 300px;
+  }
+  
+  .tag-matrix-container {
+    padding: 20px 15px;
+    margin: 0 15px;
+  }
+  
+  .tag-matrix {
+    border-spacing: 4px;
   }
   
   .tag-matrix th, 
   .tag-matrix td {
-    padding: 6px 4px;
+    padding: 8px 4px;
+  }
+  
+  .tag-matrix th {
+    font-size: 0.8rem;
+  }
+  
+  .tag-matrix .v-btn {
+    height: 40px;
+    min-height: 40px;
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .title {
+    font-size: 1.8rem;
+  }
+  
+  .search-container {
+    border-radius: 15px;
+    padding: 25px 15px;
+  }
+  
+  .tag-matrix-container {
+    border-radius: 12px;
+  }
+  
+  .tag-matrix th, 
+  .tag-matrix td {
+    padding: 6px 2px;
+  }
+  
+  .tag-matrix .v-btn {
     font-size: 0.7rem;
+    height: 36px;
+    min-height: 36px;
   }
 }
 
@@ -198,7 +458,7 @@ ProjectPage.vue
     <!-- 标题部分 -->
     <div class="header">
       <h1 class="title">
-        <v-icon large color="blue darken-2" class="mr-2">mdi-book-open-variant</v-icon>
+        <v-icon large class="title-icon">mdi-database-search</v-icon>
         Awesome Trustworthy Embodied-AI
       </h1>
     </div>
@@ -211,27 +471,75 @@ ProjectPage.vue
           class="search-input"
           outlined
           prepend-inner-icon="mdi-magnify"
-          placeholder="Search papers by title..."
+          placeholder="Search papers by title, author, or keywords..."
           clearable
           @keyup.enter="filterPapers"
-        ></v-text-field>
+          hide-details
+        >
+          <template v-slot:prepend>
+            <div class="csv-icon">📄</div>
+          </template>
+        </v-text-field>
         <v-btn 
           class="search-btn"
           dark
+          elevation="0"
           @click="filterPapers"
         >
-          <v-icon left>mdi-send</v-icon>
+          <v-icon left>mdi-database-search</v-icon>
           Search
         </v-btn>
       </v-row>
 
+      <!-- 搜索统计信息 -->
+      <div class="search-stats" v-if="searchKeyword || selectedTags.length > 0">
+        <v-chip 
+          small 
+          color="blue lighten-4" 
+          text-color="blue darken-3"
+          class="ma-1"
+        >
+          <v-icon small left>mdi-file-document-multiple</v-icon>
+          {{ filteredPapers.length }} papers found
+        </v-chip>
+        <v-chip 
+          v-if="searchKeyword"
+          small 
+          color="green lighten-4" 
+          text-color="green darken-3"
+          class="ma-1"
+          close
+          @click:close="clearSearch"
+        >
+          <v-icon small left>mdi-magnify</v-icon>
+          "{{ searchKeyword }}"
+        </v-chip>
+      </div>
+
       <!-- 二维表格容器 -->
       <div class="tag-matrix-container">
-        <h3 class="text-center mb-4" style="color: #1a5276;">
-          <v-icon color="blue darken-2">mdi-filter</v-icon>
+        <h3 class="text-center mb-4">
+          <v-icon color="blue darken-2">mdi-grid</v-icon>
           Filter by Categories
+          <div class="csv-icon">📊</div>
         </h3>
         <tag-matrix :onTagClick="handleTagFilter"></tag-matrix>
+        
+        <!-- 活跃过滤器显示 -->
+        <div class="active-filters" v-if="activeFilter">
+          <v-divider class="my-4"></v-divider>
+          <div class="text-center">
+            <v-chip 
+              color="blue" 
+              dark 
+              close
+              @click:close="clearTagFilter"
+            >
+              <v-icon small left>mdi-filter</v-icon>
+              {{ activeFilter }}
+            </v-chip>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -245,24 +553,50 @@ ProjectPage.vue
       
       <!-- 空状态提示 -->
       <v-row v-if="filteredPapers.length === 0" justify="center">
-        <v-col cols="12" class="text-center py-10">
-          <v-icon large color="grey lighten-1">mdi-information-outline</v-icon>
-          <p class="mt-4 grey--text text--darken-1">No papers found matching your criteria</p>
-          <v-btn 
-            color="blue lighten-2" 
-            text
-            @click="resetFilters"
-          >
-            Reset Filters
-          </v-btn>
+        <v-col cols="12" class="empty-state">
+          <v-icon x-large color="grey lighten-1">mdi-file-search-outline</v-icon>
+          <p class="mt-4">No papers found matching your criteria</p>
+          <div class="mt-4">
+            <v-btn 
+              color="blue lighten-2" 
+              text
+              class="mr-3"
+              @click="resetFilters"
+            >
+              <v-icon left>mdi-refresh</v-icon>
+              Reset Filters
+            </v-btn>
+            <v-btn 
+              color="green lighten-2" 
+              text
+              @click="showAllPapers"
+            >
+              <v-icon left>mdi-eye</v-icon>
+              Show All Papers
+            </v-btn>
+          </div>
         </v-col>
       </v-row>
     </v-container>
+
+    <!-- 返回顶部按钮 -->
+    <v-btn
+      v-show="showBackToTop"
+      fab
+      dark
+      fixed
+      bottom
+      right
+      color="blue darken-2"
+      @click="scrollToTop"
+      class="back-to-top-btn"
+    >
+      <v-icon>mdi-chevron-up</v-icon>
+    </v-btn>
   </v-container>
 </template>
 
 <script>
-
 import PaperCard from '@/components/PaperCard.vue'
 import TagMatrix from '@/components/TagMatrix.vue'
 import csvData from '@/data/paper_list.csv'
@@ -274,17 +608,44 @@ export default {
       papers: [],
       searchKeyword: '',
       selectedTags: [],
-      filteredPapers: []
+      filteredPapers: [],
+      activeFilter: '',
+      showBackToTop: false
     }
   },
   created() {
     this.processCSVData(csvData)
     this.filteredPapers = this.papers
   },
+  mounted() {
+    window.addEventListener('scroll', this.handleScroll)
+  },
+  beforeDestroy() {
+    window.removeEventListener('scroll', this.handleScroll)
+  },
   methods: {
+    handleScroll() {
+      this.showBackToTop = window.scrollY > 300
+    },
+    scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+    },
     resetFilters() {
-        this.searchKeyword = ''
-        this.filteredPapers = this.papers
+      this.searchKeyword = ''
+      this.selectedTags = []
+      this.activeFilter = ''
+      this.filteredPapers = this.papers
+    },
+    clearSearch() {
+      this.searchKeyword = ''
+      this.filterPapers()
+    },
+    clearTagFilter() {
+      this.activeFilter = ''
+      this.filterPapers()
+    },
+    showAllPapers() {
+      this.resetFilters()
     },
     processCSVData(rawData) {
       this.papers = rawData
@@ -311,35 +672,136 @@ export default {
         .filter(paper => paper.title.trim() !== '')
     },
     filterPapers() {
-      this.filteredPapers = this.papers.filter(p =>
-        p.title.toLowerCase().includes(this.searchKeyword.toLowerCase()))
+      let filtered = this.papers
+
+      // 应用搜索关键词过滤
+      if (this.searchKeyword) {
+        const keyword = this.searchKeyword.toLowerCase()
+        filtered = filtered.filter(p =>
+          p.title.toLowerCase().includes(keyword) ||
+          p.author.toLowerCase().includes(keyword) ||
+          p.contact.toLowerCase().includes(keyword) ||
+          p.macros.some(tag => tag.toLowerCase().includes(keyword)) ||
+          p.apps.some(tag => tag.toLowerCase().includes(keyword)) ||
+          p.tasks.some(tag => tag.toLowerCase().includes(keyword)) ||
+          p.method.some(tag => tag.toLowerCase().includes(keyword))
+        )
+      }
+
+      // 应用标签过滤
+      if (this.activeFilter) {
+        const [tag1, tag2] = this.activeFilter.split('/')
+        filtered = filtered.filter(p =>
+          p.macros.includes(tag1) && p.apps.includes(tag2)
+        )
+      }
+
+      this.filteredPapers = filtered
     },
     handleTagFilter(tag1, tag2) {
-      this.filteredPapers = this.papers.filter(p =>
-        p.macros.includes(tag1) && p.apps.includes(tag2))
+      this.activeFilter = `${tag1}/${tag2}`
+      this.filterPapers()
+    }
+  },
+  watch: {
+    searchKeyword() {
+      // 实时搜索
+      if (this.searchKeyword.length > 2 || this.searchKeyword.length === 0) {
+        this.filterPapers()
+      }
     }
   }
 }
 </script>
 
-TagMatrix.vue
+<style scoped>
+.search-stats {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: -10px;
+}
+
+.active-filters {
+  margin-top: 15px;
+}
+
+.back-to-top-btn {
+  z-index: 999;
+}
+
+.csv-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  color: white;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: bold;
+  margin-left: 8px;
+}
+</style>
+
 <template>
-  <v-simple-table class="tag-matrix">
-    <thead>
-      <tr>
-        <th></th>
-        <th v-for="col in columns" :key="col">{{ col }}</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr v-for="row in rows" :key="row">
-        <th>{{ row }}</th>
-        <td v-for="col in columns" :key="col">
-          <v-btn small @click="onTagClick(row, col)">{{ row }}/{{ col }}</v-btn>
-        </td>
-      </tr>
-    </tbody>
-  </v-simple-table>
+  <div class="tag-matrix-wrapper">
+    <v-simple-table class="tag-matrix">
+      <thead>
+        <tr>
+          <th class="corner-cell">
+            <v-icon color="white" small>mdi-grid</v-icon>
+          </th>
+          <th v-for="col in columns" :key="col" class="column-header">
+            <div class="header-content">
+              <v-icon small class="header-icon">{{ getColumnIcon(col) }}</v-icon>
+              <span>{{ col }}</span>
+            </div>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr v-for="row in rows" :key="row">
+          <th class="row-header">
+            <div class="header-content">
+              <v-icon small class="header-icon">{{ getRowIcon(row) }}</v-icon>
+              <span>{{ row }}</span>
+            </div>
+          </th>
+          <td v-for="col in columns" :key="col" class="matrix-cell">
+            <v-btn 
+              small 
+              elevation="0"
+              class="matrix-btn"
+              @click="onTagClick(row, col)"
+              :title="`筛选: ${row} × ${col}`"
+            >
+              <v-icon small left>mdi-filter-variant</v-icon>
+              <span class="btn-text">{{ row }}/{{ col }}</span>
+            </v-btn>
+          </td>
+        </tr>
+      </tbody>
+    </v-simple-table>
+    
+    <!-- 图例说明 -->
+    <div class="legend">
+      <div class="legend-title">
+        <v-icon small color="blue darken-2">mdi-information</v-icon>
+        点击表格交叉点进行筛选
+      </div>
+      <div class="legend-items">
+        <div class="legend-item">
+          <div class="legend-color legend-row"></div>
+          <span>可信维度 (行)</span>
+        </div>
+        <div class="legend-item">
+          <div class="legend-color legend-col"></div>
+          <span>应用领域 (列)</span>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -351,110 +813,416 @@ export default {
       required: true
     }
   },
-    data() {
+  data() {
     return {
-        columns: [
+      columns: [
         '指令理解',  // 原 'Instruction Understanding'
         '环境感知',  // 原 'Environment Perception'
         '决策规划',  // 原 'Behavior Planning'
         '物理交互'   // 原 'Physical Interaction'
-        ],
-        rows: [
+      ],
+      rows: [
         '无害',     // 原 'Harmless'
         '可靠',     // 原 'Reliable'
-        '价值', // 原 'Value-Aligned'
+        '价值',     // 原 'Value-Aligned'
         '保障',     // 原 'Secure'
         '透明'      // 原 'Transparent'
-        ]
+      ]
     }
+  },
+  methods: {
+    getColumnIcon(col) {
+      const icons = {
+        '指令理解': 'mdi-message-text',
+        '环境感知': 'mdi-eye',
+        '决策规划': 'mdi-brain',
+        '物理交互': 'mdi-hand-heart'
+      }
+      return icons[col] || 'mdi-circle'
+    },
+    getRowIcon(row) {
+      const icons = {
+        '无害': 'mdi-shield-check',
+        '可靠': 'mdi-check-circle',
+        '价值': 'mdi-heart',
+        '保障': 'mdi-security',
+        '透明': 'mdi-eye-outline'
+      }
+      return icons[row] || 'mdi-circle'
     }
+  }
 };
 </script>
 
 <style scoped>
-.tag-v {
-  margin-top: 20px;
-  margin-bottom: 40px;
+.tag-matrix-wrapper {
+  position: relative;
+}
+
+.tag-matrix {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 8px;
+  margin-bottom: 20px;
+}
+
+/* 角落单元格 */
+.corner-cell {
+  background: linear-gradient(135deg, #1e3a8a, #3b82f6) !important;
+  color: white !important;
+  border-radius: 10px;
+  width: 120px;
   text-align: center;
 }
-.tag-matrix th {
-  font-weight: bold;
-  font-size: 14px;
-  background-color: #f0f8ff;
+
+/* 列标题 */
+.column-header {
+  background: linear-gradient(135deg, #dbeafe, #bfdbfe) !important;
+  color: #1e3a8a !important;
+  border-radius: 10px;
+  padding: 16px 12px;
+  text-align: center;
+  border: 2px solid rgba(59, 130, 246, 0.2);
+  min-width: 130px;
 }
-.tag-matrix td {
-  padding: 4px;
+
+/* 行标题 */
+.row-header {
+  background: linear-gradient(135deg, #1e3a8a, #3b82f6) !important;
+  color: white !important;
+  border-radius: 10px;
+  padding: 16px 12px;
+  text-align: center;
+  width: 120px;
+  border: 2px solid rgba(59, 130, 246, 0.3);
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.header-icon {
+  opacity: 0.9;
+}
+
+/* 矩阵单元格 */
+.matrix-cell {
+  padding: 6px;
+  background: rgba(248, 250, 252, 0.8);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(59, 130, 246, 0.1);
+  position: relative;
+}
+
+.matrix-cell:hover {
+  background: rgba(219, 234, 254, 0.6);
+  transform: scale(1.02);
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.2);
+}
+
+.matrix-cell::before {
+  content: '📊';
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  font-size: 0.7rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.matrix-cell:hover::before {
+  opacity: 1;
+}
+
+/* 矩阵按钮 */
+.matrix-btn {
+  width: 100%;
+  height: 48px;
+  min-height: 48px;
+  background: linear-gradient(135deg, #f8fafc, #f1f5f9) !important;
+  color: #1e3a8a !important;
+  font-weight: 600;
+  font-size: 0.75rem;
+  letter-spacing: 0.02em;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  text-transform: none;
+  border: 2px solid rgba(59, 130, 246, 0.2) !important;
+  overflow: hidden;
+}
+
+.matrix-btn:hover {
+  background: linear-gradient(135deg, #dbeafe, #bfdbfe) !important;
+  color: #1d4ed8 !important;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.25) !important;
+  border-color: rgba(59, 130, 246, 0.4) !important;
+}
+
+.btn-text {
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+/* 图例 */
+.legend {
+  background: rgba(248, 250, 252, 0.8);
+  border-radius: 10px;
+  padding: 15px;
+  border: 1px solid rgba(59, 130, 246, 0.1);
+  margin-top: 10px;
+}
+
+.legend-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  color: #1e3a8a;
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+}
+
+.legend-items {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+
+.legend-color {
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+}
+
+.legend-row {
+  background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+}
+
+.legend-col {
+  background: linear-gradient(135deg, #dbeafe, #bfdbfe);
+  border: 1px solid rgba(59, 130, 246, 0.3);
+}
+
+/* 响应式设计 */
+@media (max-width: 960px) {
+  .tag-matrix {
+    border-spacing: 4px;
+  }
+  
+  .column-header,
+  .row-header,
+  .corner-cell {
+    padding: 12px 8px;
+    min-width: 100px;
+    width: 100px;
+  }
+  
+  .header-content {
+    font-size: 0.8rem;
+    gap: 4px;
+  }
+  
+  .matrix-btn {
+    height: 40px;
+    min-height: 40px;
+    font-size: 0.7rem;
+  }
+  
+  .btn-text {
+    font-size: 0.65rem;
+  }
+  
+  .legend-items {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 600px) {
+  .tag-matrix {
+    border-spacing: 2px;
+  }
+  
+  .column-header,
+  .row-header,
+  .corner-cell {
+    padding: 8px 4px;
+    min-width: 80px;
+    width: 80px;
+  }
+  
+  .header-content {
+    font-size: 0.7rem;
+    flex-direction: column;
+    gap: 2px;
+  }
+  
+  .matrix-btn {
+    height: 36px;
+    min-height: 36px;
+  }
+  
+  .btn-text {
+    font-size: 0.6rem;
+    line-height: 1.2;
+  }
+  
+  .legend {
+    padding: 12px;
+  }
+  
+  .legend-items {
+    flex-direction: column;
+    gap: 8px;
+  }
 }
 </style>
 
 PaperCard.vue
 <template>
   <v-card class="paper-card" outlined>
+    <!-- 论文标题区域 -->
     <v-card-title class="headline">
-      <a :href="paper.link" target="_blank">{{ paper.title }}</a>
-      <span class="paper-date">({{ paper.date }})</span>
+      <div class="title-wrapper">
+        <div class="paper-icon">📄</div>
+        <div class="title-content">
+          <a :href="paper.link" target="_blank" class="paper-title">
+            {{ paper.title }}
+          </a>
+          <span class="paper-date">{{ paper.date }}</span>
+        </div>
+      </div>
     </v-card-title>
 
-    <v-card-subtitle class="authors">
-      {{ paper.author }}, {{ paper.contact }} et al. 
-
-
+    <!-- 作者信息 -->
+    <v-card-subtitle class="authors-section">
+      <div class="authors-row">
+        <v-icon small color="blue darken-2" class="mr-2">mdi-account</v-icon>
+        <span class="authors">{{ paper.author }}</span>
+        <span v-if="paper.contact" class="contact-author">, {{ paper.contact }} et al.</span>
+      </div>
+      
+      <div class="org-row" v-if="paper.authorOrg">
+        <v-icon small color="grey darken-1" class="mr-2">mdi-domain</v-icon>
+        <span class="authorsOrg">{{ paper.authorOrg }}</span>
+      </div>
     </v-card-subtitle>
 
-    <v-card-subtitle class="authorsOrg">
-        {{ paper.authorOrg }}
-    </v-card-subtitle>
-
-
-
-    <v-card-text class="tags">
-      <div class="tag-group">
-        <!-- 显示多个宏观维度 -->
+    <!-- 标签区域 -->
+    <v-card-text class="tags-section">
+      <div class="tag-group" v-if="paper.macros.length > 0">
+        <div class="tag-category">
+          <v-icon small color="blue darken-2" class="category-icon">mdi-shield-check</v-icon>
+          <span class="category-label">可信维度:</span>
+        </div>
         <v-chip
           v-for="macro in paper.macros"
           :key="'macro-' + macro"
           class="ma-1"
           color="blue lighten-4"
+          text-color="blue darken-3"
+          small
           label
         >
+          <v-icon small left>mdi-security</v-icon>
           {{ macro }}
         </v-chip>
-        
-        <!-- 显示多个应用维度 -->
+      </div>
+      
+      <div class="tag-group" v-if="paper.apps.length > 0">
+        <div class="tag-category">
+          <v-icon small color="green darken-2" class="category-icon">mdi-application</v-icon>
+          <span class="category-label">应用维度:</span>
+        </div>
         <v-chip
           v-for="app in paper.apps"
           :key="'app-' + app"
           class="ma-1"
           color="green lighten-4"
+          text-color="green darken-3"
+          small
           label
         >
+          <v-icon small left>mdi-cog</v-icon>
           {{ app }}
         </v-chip>
-        
-        <!-- 显示任务 -->
+      </div>
+      
+      <div class="tag-group" v-if="paper.tasks.length > 0">
+        <div class="tag-category">
+          <v-icon small color="purple darken-2" class="category-icon">mdi-robot</v-icon>
+          <span class="category-label">具身任务:</span>
+        </div>
         <v-chip
           v-for="task in paper.tasks"
           :key="'task-' + task"
           class="ma-1"
           color="purple lighten-4"
+          text-color="purple darken-3"
+          small
           label
         >
+          <v-icon small left>mdi-play</v-icon>
           {{ task }}
         </v-chip>
+      </div>
 
-        <!-- 显示方法论 -->
+      <div class="tag-group" v-if="paper.method.length > 0">
+        <div class="tag-category">
+          <v-icon small color="orange darken-2" class="category-icon">mdi-lightbulb</v-icon>
+          <span class="category-label">方法论:</span>
+        </div>
         <v-chip
           v-for="method in paper.method"
           :key="'method-' + method"
           class="ma-1"
           color="orange lighten-4"
+          text-color="orange darken-3"
+          small
           label
         >
+          <v-icon small left>mdi-flask</v-icon>
           {{ method }}
         </v-chip>
-
       </div>
     </v-card-text>
+
+    <!-- 论文操作区域 -->
+    <v-card-actions class="paper-actions">
+      <v-btn
+        v-if="paper.link"
+        :href="paper.link"
+        target="_blank"
+        color="blue darken-2"
+        text
+        small
+      >
+        <v-icon small left>mdi-open-in-new</v-icon>
+        查看论文
+      </v-btn>
+      
+      <v-spacer></v-spacer>
+      
+      <div class="csv-indicator">
+        <div class="csv-icon">📊</div>
+        <span class="csv-text">CSV Data</span>
+      </div>
+    </v-card-actions>
   </v-card>
 </template>
 
@@ -469,3 +1237,249 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.paper-card {
+  margin-bottom: 30px;
+  border-radius: 16px !important;
+  box-shadow: 
+    0 8px 25px rgba(59, 130, 246, 0.08),
+    0 4px 15px rgba(0, 0, 0, 0.05) !important;
+  transition: all 0.4s ease;
+  border: 1px solid rgba(59, 130, 246, 0.1) !important;
+  background: white;
+  overflow: hidden;
+  position: relative;
+}
+
+.paper-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #3b82f6, #1d4ed8);
+}
+
+.paper-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 
+    0 12px 40px rgba(59, 130, 246, 0.15),
+    0 8px 25px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* 标题区域 */
+.headline {
+  padding: 20px 20px 16px 20px;
+}
+
+.title-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  width: 100%;
+}
+
+.paper-icon {
+  font-size: 1.5rem;
+  margin-top: 2px;
+  opacity: 0.8;
+}
+
+.title-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.paper-title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: #1e3a8a;
+  text-decoration: none;
+  line-height: 1.4;
+  transition: all 0.3s ease;
+  display: block;
+}
+
+.paper-title:hover {
+  color: #3b82f6;
+  text-decoration: none;
+}
+
+.paper-date {
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: #6b7280;
+  background: rgba(59, 130, 246, 0.1);
+  padding: 4px 10px;
+  border-radius: 12px;
+  align-self: flex-start;
+  border: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+/* 作者信息区域 */
+.authors-section {
+  padding: 0 20px 16px 20px;
+}
+
+.authors-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.authors {
+  font-size: 1rem;
+  color: #374151;
+  font-weight: 600;
+}
+
+.contact-author {
+  font-size: 1rem;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.org-row {
+  display: flex;
+  align-items: center;
+}
+
+.authorsOrg {
+  font-size: 0.9rem;
+  color: #6b7280;
+  font-style: italic;
+  font-weight: 400;
+}
+
+/* 标签区域 */
+.tags-section {
+  padding: 0 20px 16px 20px;
+}
+
+.tag-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 12px;
+  gap: 4px;
+}
+
+.tag-group:last-child {
+  margin-bottom: 0;
+}
+
+.tag-category {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-right: 8px;
+  min-width: fit-content;
+}
+
+.category-icon {
+  opacity: 0.8;
+}
+
+.category-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #4b5563;
+  white-space: nowrap;
+}
+
+/* 标签样式优化 */
+.v-chip {
+  font-weight: 500 !important;
+  font-size: 0.8rem !important;
+  height: 28px !important;
+  border-radius: 14px !important;
+  transition: all 0.2s ease !important;
+}
+
+.v-chip:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* 特定颜色的标签 */
+.v-chip.blue.lighten-4 {
+  background: linear-gradient(135deg, #dbeafe, #bfdbfe) !important;
+  border: 1px solid rgba(59, 130, 246, 0.3) !important;
+}
+
+.v-chip.green.lighten-4 {
+  background: linear-gradient(135deg, #dcfce7, #bbf7d0) !important;
+  border: 1px solid rgba(34, 197, 94, 0.3) !important;
+}
+
+.v-chip.purple.lighten-4 {
+  background: linear-gradient(135deg, #f3e8ff, #e9d5ff) !important;
+  border: 1px solid rgba(147, 51, 234, 0.3) !important;
+}
+
+.v-chip.orange.lighten-4 {
+  background: linear-gradient(135deg, #fed7aa, #fdba74) !important;
+  border: 1px solid rgba(234, 88, 12, 0.3) !important;
+}
+
+/* 操作区域 */
+.paper-actions {
+  padding: 12px 20px 16px 20px;
+  border-top: 1px solid rgba(59, 130, 246, 0.1);
+  background: rgba(248, 250, 252, 0.5);
+}
+
+.csv-indicator {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  opacity: 0.7;
+}
+
+.csv-icon {
+  font-size: 0.9rem;
+}
+
+.csv-text {
+  font-size: 0.75rem;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+/* 响应式设计 */
+@media (max-width: 600px) {
+  .title-wrapper {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .paper-icon {
+    align-self: flex-start;
+  }
+  
+  .paper-title {
+    font-size: 1.1rem;
+  }
+  
+  .tag-group {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  .tag-category {
+    margin-right: 0;
+    margin-bottom: 4px;
+  }
+  
+  .authors-row,
+  .org-row {
+    flex-wrap: wrap;
+  }
+}
+</style>

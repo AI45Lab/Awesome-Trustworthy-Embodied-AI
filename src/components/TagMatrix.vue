@@ -111,13 +111,20 @@ export default {
 <style scoped>
 .tag-matrix-wrapper {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
 
 .tag-matrix {
   width: 100%;
+  max-width: 1200px;
   border-collapse: separate;
   border-spacing: 8px;
-  margin-bottom: 20px;
+  margin: 20px 0;
+  /* margin-left: 450px; */
+  table-layout: auto; /* 自动分配列宽 */
 }
 
 /* 角落单元格 */
@@ -137,7 +144,7 @@ export default {
   padding: 16px 12px;
   text-align: center;
   border: 2px solid rgba(59, 130, 246, 0.2);
-  min-width: 130px;
+  min-width: 230px;
 }
 
 /* 行标题 */
@@ -147,7 +154,8 @@ export default {
   border-radius: 10px;
   padding: 16px 12px;
   text-align: center;
-  width: 120px;
+  width: 230px;
+
   border: 2px solid rgba(59, 130, 246, 0.3);
 }
 
@@ -309,11 +317,71 @@ export default {
 
 @media (max-width: 600px) {
   .tag-matrix {
-    border-spacing: 2px;
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 8px;
+    margin-bottom: 20px;
+    /* 新增表格布局优化 */
+    table-layout: fixed;  /* 固定表格布局，确保列宽均匀 */
   }
+  /* 调整列标题宽度 */
+  .column-header {
+    background: linear-gradient(135deg, #dbeafe, #bfdbfe) !important;
+    color: #1e3a8a !important;
+    border-radius: 10px;
+    padding: 16px 12px;
+    text-align: center;
+    border: 2px solid rgba(59, 130, 246, 0.2);
+    /* 修改宽度设置 */
+    width: auto;        /* 自动宽度 */
+    min-width: 150px;   /* 增加最小宽度 */
+  }  
+
   
-  .column-header,
-  .row-header,
+/* 在 styles/project.css 中修改以下部分 */
+
+
+
+/* 在 TagMatrix.vue 中修改以下部分 */
+
+/* 二维表格样式 - 调整表格宽度 */
+.tag-matrix {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 8px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  /* 新增表格布局优化 */
+  table-layout: fixed;  /* 固定表格布局，确保列宽均匀 */
+}
+
+/* 调整列标题宽度 */
+.column-header {
+  background: linear-gradient(135deg, #dbeafe, #bfdbfe) !important;
+  color: #1e3a8a !important;
+  border-radius: 10px;
+  padding: 16px 12px;
+  text-align: center;
+  border: 2px solid rgba(59, 130, 246, 0.2);
+  /* 修改宽度设置 */
+  width: auto;        /* 自动宽度 */
+  min-width: 150px;   /* 增加最小宽度 */
+}
+
+  /* 调整行标题宽度 */
+  .row-header {
+    background: linear-gradient(135deg, #1e3a8a, #3b82f6) !important;
+    color: white !important;
+    border-radius: 10px;
+    padding: 16px 12px;
+    text-align: center;
+    border: 2px solid rgba(59, 130, 246, 0.3);
+    /* 修改宽度设置 */
+    width: 140px;       /* 固定宽度 */
+    min-width: 140px;   /* 最小宽度 */
+  }
+
+
   .corner-cell {
     padding: 8px 4px;
     min-width: 80px;
