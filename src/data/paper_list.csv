@@ -100,6 +100,22 @@ Generating Explanations for Embodied Action Decision from Visual Observation,23.
 "Embodied Agent Interface: Benchmarking LLMs for Embodied Decision Making",24.1,"Manling Li,Shiyu Zhao,Qineng Wang,Kangrui Wang,Yu Zhou",Stanford University,,,"透明, 可靠","环境感知, 指令理解, 决策规划, 物理交互",Planning,尽管已有大量研究利用LLMs在具身环境中进行决策，但我们对它们的性能仍缺乏系统的理解，因为这些模型通常应用于不同的领域，用于不同的目的，并且基于不同的输入和输出构建。,提出了一种通用接口（EMBODIED AGENT INTERFACE），该接口支持各种任务形式化和基于LLM的模块的输入-输出规范。,论文将大语言模型在具身决策中的表现进行了系统的评估，帮助确定LLM的能力和问题所在，使得具身智能体有效地利用LLMs,", Benchmark",,https://arxiv.org/abs/2410.07166,王森,,
 "Embodied-Reasoner: Synergizing Visual Search, Reasoning, and Action for Embodied Interactive Tasks",25.03,Wenqi Zhang,ZJU,,,"透明, 可靠","物理交互, 环境感知, 指令理解, 决策规划","Planning, VLN",深度思维模型在数学和编程任务上的推理能力取得了显著进展，模型在需要通过图像和动作交织轨迹与环境持续互动的具身领域中的有效性仍鲜有研究,提出了一种名为“具身推理器”的模型，该模型将o1风格的推理扩展到了交互式的具身搜索任务中。,论文将长程具身任务分解为了分析、空间推理、反思、规划和验证等阶段，通过模仿学习逐步增强大模型的推理能力，对大模型执行具身推理的各个阶段进行了详细建模和解释,", 迭代式交互",,https://arxiv.org/abs/2503.21696,王森,,
 Multi-agent Embodied AI: Advances and Future Directions,25.05,Zhaohan Feng,Beijing Institute of Technology,,,透明,决策规划,survey,现有的研究范围都集中在单一智能体系统上，这些系统通常假设环境是静态和封闭的，无法全面反映动态、开放环境对多代理具身人工智能的复杂性。,文章全面系统地回顾了当前多智能体具身人工智的研究现状，分析了关键贡献，并指出了挑战和未来方向,论文系统回顾了在动态、开放环境下多智能体具身智能的复杂性和关键技术贡献，为具身智能在复杂情况的可解释性提供了坚实理论和技术基础,综述,,https://arxiv.org/pdf/2505.05108?,王森,,
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Characterizing Physical Adversarial Attacks on Robot Motion Planners,24.01,Wenxi Wu,KCL,Wenxi Wu,KCL,保障,决策规划,Planning,探索对运动规划算法进行对抗攻击的策略,作者特别研究了基于物理环境的攻击，并首次提出对运动规划器的两类攻击方式：“planner failure”（规划失败攻击）；“blindspot”（盲区攻击）,直接与“逻辑规划污染”相关，通过篡改环境或地图数据，使规划模块输出错误甚至危险路径，与主题高度重叠。,物理干预,ICRA 2024,https://kclpure.kcl.ac.uk/ws/portalfiles/portal/248844190/icra2024_motion_planning_attacks.pdf,吴雄斌,行为规划,
 Random Spoofing Attack against LiDAR-Based Scan Matching SLAM,24.02,Masashi Fukunaga,Mitsubishi Electric Corporation,Takeshi Sugawara,The University of Electro-Communications,保障,环境感知,SLAM,本文是首次系统评估 LiDAR Scan Matching SLAM 在物理世界下对异步激光欺骗攻击的脆弱性,提出了一个以 Z 轴方向干扰地图构建 为核心的新攻击路径。利用 异步随机激光注入技术（参考 Sato 等人提出的 spoofing 攻击），绕过现代 LiDAR 的随机化机制和距离/角度阈值检测。,这个任务对LiDAR进行攻击，干扰机器人建图，可以误导机器人在行进过程中认为发生了“路面变化”等错误感知。,对抗扰动,VehicleSec 2024,https://www.ndss-symposium.org/ndss-paper/auto-draft-476/,吴雄斌,环境感知,
 Manipulating Neural Path Planners via Slight Perturbations,24.03,Zikang Xiong,Purdue University," Suresh Jagannathan",Purdue University,保障,决策规划,Navigation,在神经路径规划器中植入后门攻击,本文提出一种新颖方法，用于定义并注入多种隐藏恶意行为（即后门）到神经路径规划器中。这些后门可以通过微小扰动触发，即使这种扰动很小，也能严重破坏路径规划器的完整性和可靠性。,它展示了如何有意识地污染路径规划器的行为逻辑，攻击者不仅能隐藏恶意目标，还能通过极其隐蔽的触发方式（如一个“看不见”的物体）来激活它，是典型的策略级攻击，具备极强隐蔽性与威胁性。,"adversarial attack, Backdoor Attack",,https://arxiv.org/pdf/2403.18256,吴雄斌,行为规划,
