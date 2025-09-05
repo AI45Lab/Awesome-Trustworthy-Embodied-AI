@@ -14,7 +14,7 @@ Sen Wang · Yuqi Zhang · Xuhong Wang<sup>&dagger;</sup> · Chaochao Lu<sup>&dag
 
 **上海人工智能实验室 / Shanghai Artificial Intelligence Laboratory [🔗](https://www.shlab.org.cn/)**  
 **华东师范大学 / East China Normal University [🔗](https://www.ecnu.edu.cn/)**  
-
+**清华大学 / Tsinghua University [🔗](https://www.tsinghua.edu.cn/)**  
 </div>
 
 
@@ -172,7 +172,6 @@ Sen Wang · Yuqi Zhang · Xuhong Wang<sup>&dagger;</sup> · Chaochao Lu<sup>&dag
   - [Privacy Protection](#privacy-protection-3)
   - [Reliability](#reliability-3)
   - [Value Alignment](#value-alignment-3)
-- [Star History](#star-history)
 
 
 ## Instruction Understanding
