@@ -19,25 +19,24 @@ Sen&nbsp;Wang · Yuqi&nbsp;Zhang · Xuhong&nbsp;Wang<sup>&dagger;</sup> [🔗](h
 
 <div align="center">
 
-[![Paper](https://img.shields.io/badge/📄-PAPER-000000?style=for-the-badge&logoColor=white&labelColor=000000)](https://ai45lab.github.io/Awesome-Trustworthy-Embodied-AI/) [![Page](https://img.shields.io/badge/🌐-PAGE-000000?style=for-the-badge&logoColor=white&labelColor=000000)](https://ai45lab.github.io/Awesome-Trustworthy-Embodied-AI/) [![arXiv](https://img.shields.io/badge/-ARXIV-000000?style=for-the-badge&logo=arxiv&logoColor=white)](https://ai45lab.github.io/Awesome-Trustworthy-Embodied-AI/)
+[![Paper](https://img.shields.io/badge/📄-PAPER-000000?style=for-the-badge&logoColor=white&labelColor=000000)](https://ai45lab.github.io/Awesome-Trustworthy-Embodied-AI/) [![Project Page](https://img.shields.io/badge/🌐-PROJECT%20PAGE-000000?style=for-the-badge&logoColor=white&labelColor=000000)](https://ai45lab.github.io/Awesome-Trustworthy-Embodied-AI/) [![arXiv](https://img.shields.io/badge/-ARXIV-000000?style=for-the-badge&logo=arxiv&logoColor=white&labelColor=000000)](https://ai45lab.github.io/Awesome-Trustworthy-Embodied-AI/)
+
 </div>
 
 
 
 ---
-
 <div align="center">
-
-### Abstract
-
-<div style="max-width: 800px; margin: 0 auto; padding: 20px; text-align: justify;">
-
-*The increasing autonomy and physical capability of Embodied Artificial Intelligence (EAI) introduce critical challenges to safety and trustworthiness. Unlike purely digital AI, failures in perception, planning, or interaction can lead to direct physical harm, property damage, or the violation of human safety and social norms. However, current EAI foundation models disregard the risks of misalignment between the model capabilities and the safety and trustworthiness competencies. Some works attempt to address these issues, however, they lack a unified framework capable of balancing the developmental trajectories between safety and capability. In this paper, we first comprehensively define a new term* **safe and trustworthy EAI** *by establishing an L1–L5 levels framework and proposing ten core principles of trustworthiness and safety. To unify fragmented research efforts, we propose a novel, agent-centric framework that analyzes risks across the four operational stages of an EAL system. We systematically review state-of-the-art but fragmented solutions, benchmarks, and evaluation metrics, identifying key gaps and challenges. Finally, we identify the need for a paradigm shift away from optimizing isolated components towards a holistic, cybernetic approach. We argue that future progress hinges on engineering the closed-loop system of the agent (Self), its environment (World), and their dynamic coupling (Interaction), paving the way for the next generation of truly safe and trustworthy EAI.*
-
+  <div style="max-width:980px;padding:24px 28px;border:1.6px solid rgba(255,255,255,.6);
+              border-radius:14px;box-shadow:inset 0 0 0 3px rgba(255,255,255,.08);
+              ">
+    <h3 style="text-align:center;margin:0 0 16px 0;">Abstract</h3>
+    <p style="margin:0;font-style:italic;line-height:1.9;
+              text-align:justify;text-justify:inter-word;">
+      The increasing autonomy and physical capability of Embodied Artificial Intelligence (EAI) introduce critical challenges to safety and trustworthiness. Unlike purely digital AI, failures in perception, planning, or interaction can lead to direct physical harm, property damage, or the violation of human safety and social norms. However, current EAI foundation models disregard the risks of misalignment between the model capabilities and the safety and trustworthiness competencies. Some works attempt to address these issues, however, they lack a unified framework capable of balancing the developmental trajectories between safety and capability. In this paper, we first comprehensively define a new term <em>safe and trustworthy EAI</em> by establishing an L1–L5 levels framework and proposing ten core principles of trustworthiness and safety. To unify fragmented research efforts, we propose a novel, agent-centric framework that analyzes risks across the four operational stages of an EAI system. We systematically review state-of-the-art but fragmented solutions, benchmarks, and evaluation metrics, identifying key gaps and challenges. Finally, we identify the need for a paradigm shift away from optimizing isolated components towards a holistic, cybernetic approach. We argue that future progress hinges on engineering the closed-loop system of the agent (Self), its environment (World), and their dynamic coupling (Interaction), paving the way for the next generation of truly safe and trustworthy EAI.
+    </p>
+  </div>
 </div>
-
-</div>
-
 
 
 
