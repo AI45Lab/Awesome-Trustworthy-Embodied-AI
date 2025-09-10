@@ -1,11 +1,12 @@
+# .github/workflows/impact-metrics.yml
 name: Update impact metrics
 
 on:
   workflow_dispatch: {}
   push:
-    branches: [ main ]
+    branches: [ main ]          # 如果你的默认分支不是 main，这里改成默认分支名
   schedule:
-    - cron: "*/15 * * * *"   # 每 15 分钟（UTC）的 00/15/30/45 分触发
+    - cron: "*/15 * * * *"      # 每 15 分钟（UTC 的 00/15/30/45 分）
 
 permissions:
   contents: write
@@ -13,69 +14,35 @@ permissions:
 jobs:
   update:
     runs-on: ubuntu-latest
+
     steps:
-      # 从 main 取脚本
-      - uses: actions/checkout@v4
-        with: { ref: main, path: main }
+      # 1) 从 main 拉脚本到 ./main
+      - name: Checkout main (for script)
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          path: main
 
-      # 把 gh-pages 检出到 ./site 目录（我们要往这里写 JSON）
-      - uses: actions/checkout@v4
-        with: { ref: gh-pages, path: site }
+      # 2) 把 gh-pages 检出到 ./site（我们要往这里写 JSON）
+      - name: Checkout gh-pages (site)
+        uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+          path: site
 
-      - uses: actions/setup-node@v4
-        with: { node-version: '20' }
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
 
-      # 运行脚本，输出到 ./site/impact_metrics.json
+      # 3) 跑脚本：输出到 ./site/impact_metrics.json
       - name: Generate JSON into gh-pages
         run: node main/scripts/fetch-metrics.mjs
         env:
           OUTPUT_DIR: site
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      # 只把 JSON 提交回 gh-pages
-      - name: Commit and push
-        working-directory: site
-        run: |
-          git config user.name  "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add impact_metrics.json || true
-          git commit -m "chore: update impact metrics [skip ci]" || echo "No changes"
-          git push
-name: Update impact metrics
-
-on:
-  workflow_dispatch: {}
-  push:
-    branches: [ main ]
-  schedule:
-    - cron: "*/15 * * * *"   # 每 15 分钟（UTC）的 00/15/30/45 分触发
-
-permissions:
-  contents: write
-
-jobs:
-  update:
-    runs-on: ubuntu-latest
-    steps:
-      # 从 main 取脚本
-      - uses: actions/checkout@v4
-        with: { ref: main, path: main }
-
-      # 把 gh-pages 检出到 ./site 目录（我们要往这里写 JSON）
-      - uses: actions/checkout@v4
-        with: { ref: gh-pages, path: site }
-
-      - uses: actions/setup-node@v4
-        with: { node-version: '20' }
-
-      # 运行脚本，输出到 ./site/impact_metrics.json
-      - name: Generate JSON into gh-pages
-        run: node main/scripts/fetch-metrics.mjs
-        env:
-          OUTPUT_DIR: site
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      # 只把 JSON 提交回 gh-pages
+      # 4) 仅提交 JSON 到 gh-pages
       - name: Commit and push
         working-directory: site
         run: |
