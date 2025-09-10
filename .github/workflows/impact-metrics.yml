@@ -3,15 +3,9 @@ name: Update impact metrics
 on:
   workflow_dispatch: {}
   push:
-    branches: [ main ]             # 换成你的默认分支名
-    paths:
-      - 'scripts/fetch-metrics.mjs'
-      - '.github/workflows/impact-metrics.yml'
-      - 'package.json'
-      - 'yarn.lock'
-      - 'public/**'                # 可按需增减
+    branches: [ main ]
   schedule:
-    - cron: "*/5 * * * *"         # 每 5 分钟跑一次
+    - cron: "*/15 * * * *"   # 每 15 分钟（UTC）的 00/15/30/45 分触发
 
 permissions:
   contents: write
@@ -20,17 +14,73 @@ jobs:
   update:
     runs-on: ubuntu-latest
     steps:
+      # 从 main 取脚本
       - uses: actions/checkout@v4
+        with: { ref: main, path: main }
+
+      # 把 gh-pages 检出到 ./site 目录（我们要往这里写 JSON）
+      - uses: actions/checkout@v4
+        with: { ref: gh-pages, path: site }
+
       - uses: actions/setup-node@v4
         with: { node-version: '20' }
-      - name: Generate metrics JSON
-        run: node scripts/fetch-metrics.mjs
+
+      # 运行脚本，输出到 ./site/impact_metrics.json
+      - name: Generate JSON into gh-pages
+        run: node main/scripts/fetch-metrics.mjs
         env:
+          OUTPUT_DIR: site
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # 只把 JSON 提交回 gh-pages
       - name: Commit and push
+        working-directory: site
         run: |
-          git config user.name "github-actions[bot]"
+          git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add public/impact_metrics.json || true
+          git add impact_metrics.json || true
+          git commit -m "chore: update impact metrics [skip ci]" || echo "No changes"
+          git push
+name: Update impact metrics
+
+on:
+  workflow_dispatch: {}
+  push:
+    branches: [ main ]
+  schedule:
+    - cron: "*/15 * * * *"   # 每 15 分钟（UTC）的 00/15/30/45 分触发
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      # 从 main 取脚本
+      - uses: actions/checkout@v4
+        with: { ref: main, path: main }
+
+      # 把 gh-pages 检出到 ./site 目录（我们要往这里写 JSON）
+      - uses: actions/checkout@v4
+        with: { ref: gh-pages, path: site }
+
+      - uses: actions/setup-node@v4
+        with: { node-version: '20' }
+
+      # 运行脚本，输出到 ./site/impact_metrics.json
+      - name: Generate JSON into gh-pages
+        run: node main/scripts/fetch-metrics.mjs
+        env:
+          OUTPUT_DIR: site
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # 只把 JSON 提交回 gh-pages
+      - name: Commit and push
+        working-directory: site
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add impact_metrics.json || true
           git commit -m "chore: update impact metrics [skip ci]" || echo "No changes"
           git push
