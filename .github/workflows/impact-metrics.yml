@@ -5,7 +5,15 @@ on:
   push:
     branches: [ main ]
   schedule:
-    - cron: "*/15 * * * *"   # 每 15 分钟（UTC 的 00/15/30/45）
+    # 主触发：UTC 的 00 / 15 / 30 / 45 分
+    - cron: "*/15 * * * *"
+    # 备份错峰：UTC 的 07 / 22 / 37 / 52 分，主触发延迟或丢失时顶上
+    - cron: "7-59/15 * * * *"
+
+# 只允许同一时间窗内保留一个运行，避免重复提交
+concurrency:
+  group: impact-metrics
+  cancel-in-progress: true
 
 permissions:
   contents: write
@@ -53,7 +61,6 @@ jobs:
           set -e
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          # 没有变化就让步骤直接退出（不算失败）
           git add impact_metrics.json || true
           if git diff --cached --quiet; then
             echo "No changes to commit."
