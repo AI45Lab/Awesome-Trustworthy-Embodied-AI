@@ -1,12 +1,11 @@
-# .github/workflows/impact-metrics.yml
 name: Update impact metrics
 
 on:
   workflow_dispatch: {}
   push:
-    branches: [ main ]          # 如果你的默认分支不是 main，这里改成默认分支名
+    branches: [ main ]
   schedule:
-    - cron: "*/15 * * * *"      # 每 15 分钟（UTC 的 00/15/30/45 分）
+    - cron: "*/15 * * * *"   # 每 15 分钟（UTC 的 00/15/30/45）
 
 permissions:
   contents: write
@@ -14,16 +13,13 @@ permissions:
 jobs:
   update:
     runs-on: ubuntu-latest
-
     steps:
-      # 1) 从 main 拉脚本到 ./main
       - name: Checkout main (for script)
         uses: actions/checkout@v4
         with:
           ref: main
           path: main
 
-      # 2) 把 gh-pages 检出到 ./site（我们要往这里写 JSON）
       - name: Checkout gh-pages (site)
         uses: actions/checkout@v4
         with:
@@ -35,19 +31,33 @@ jobs:
         with:
           node-version: '20'
 
-      # 3) 跑脚本：输出到 ./site/impact_metrics.json
       - name: Generate JSON into gh-pages
         run: node main/scripts/fetch-metrics.mjs
         env:
-          OUTPUT_DIR: site
+          OUTPUT_DIR: site          # ← 只写 gh-pages 工作树
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      # 4) 仅提交 JSON 到 gh-pages
+      - name: Show diff
+        working-directory: site
+        run: |
+          echo "::group::git status"
+          git status --porcelain
+          echo "::endgroup::"
+          echo "::group::diff"
+          git diff --word-diff -- impact_metrics.json || true
+          echo "::endgroup::"
+
       - name: Commit and push
         working-directory: site
         run: |
+          set -e
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          # 没有变化就让步骤直接退出（不算失败）
           git add impact_metrics.json || true
-          git commit -m "chore: update impact metrics [skip ci]" || echo "No changes"
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+          git commit -m "chore: update impact metrics [skip ci]"
           git push
