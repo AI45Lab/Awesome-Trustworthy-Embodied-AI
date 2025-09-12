@@ -19,7 +19,7 @@ Sen&nbsp;Wang · Yuqi&nbsp;Zhang · Xuhong&nbsp;Wang<sup>&dagger;</sup> [🔗](h
 
 <div align="center">
 
-[![Paper](https://img.shields.io/badge/📄-PAPER-000000?style=for-the-badge&logoColor=white&labelColor=000000)](https://ai45lab.github.io/Awesome-Trustworthy-Embodied-AI/) [![Project Page](https://img.shields.io/badge/🌐-PROJECT%20PAGE-000000?style=for-the-badge&logoColor=white&labelColor=000000)](https://ai45lab.github.io/Awesome-Trustworthy-Embodied-AI/) [![arXiv](https://img.shields.io/badge/-ARXIV-000000?style=for-the-badge&logo=arxiv&logoColor=white&labelColor=000000)](https://ai45lab.github.io/Awesome-Trustworthy-Embodied-AI/)
+[![Paper](https://img.shields.io/badge/📄-PAPER-000000?style=for-the-badge&logoColor=white&labelColor=000000)](https://openreview.net/pdf?id=Eu6Yt21Alv) [![Project Page](https://img.shields.io/badge/🌐-PROJECT%20PAGE-000000?style=for-the-badge&logoColor=white&labelColor=000000)](https://ai45lab.github.io/Awesome-Trustworthy-Embodied-AI/) 
 
 </div>
 
