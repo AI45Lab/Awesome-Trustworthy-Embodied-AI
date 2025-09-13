@@ -6,7 +6,7 @@
 <div align="center">
 
 Xin&nbsp;Tan<sup>&ast;</sup> [🔗](https://tanxincs.github.io/ "Homepage") · Bangwei&nbsp;Liu<sup>&ast;</sup> · Yicheng&nbsp;Bao · Qijian&nbsp;Tian[🔗](https://fangzhou2000.github.io/ "Homepage") · Zhenkun&nbsp;Gao · Xiongbin&nbsp;Wu ·  Zhihao&nbsp;Luo · 
-Sen&nbsp;Wang · Yuqi&nbsp;Zhang · Xuhong&nbsp;Wang<sup>&dagger;</sup> [🔗](https://wangxuhongcn.github.io "Homepage")· Chaochao&nbsp;Lu<sup>&dagger;</sup> [🔗](https://causallu.com/ "Homepage") · Bowen&nbsp;Zhou<sup>&dagger;</sup> [🔗](https://scholar.google.com/citations?user=h3Nsz6YAAAAJ "Homepage")
+Sen&nbsp;Wang · Yuqi&nbsp;Zhang · Xuhong&nbsp;Wang<sup>&sect;</sup> [🔗](https://wangxuhongcn.github.io "Homepage")· Chaochao&nbsp;Lu<sup>&sect;&dagger;</sup> [🔗](https://causallu.com/ "Homepage") · Bowen&nbsp;Zhou<sup>&sect;&Dagger;</sup> [🔗](https://scholar.google.com/citations?user=h3Nsz6YAAAAJ "Homepage")
 </div>
 
 
