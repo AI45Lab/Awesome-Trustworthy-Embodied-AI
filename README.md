@@ -418,7 +418,24 @@ Sen&nbsp;Wang · Yuqi&nbsp;Zhang · Xuhong&nbsp;Wang<sup>&dagger;</sup> [🔗](h
 - **Humanizing AI in medical training: ethical framework for responsible design** (Mohammed Tahri Sqalli, 23.05) [🔗](https://www.frontiersin.org/journals/artificial-intelligence/articles/10.3389/frai.2023.1189914/full)
 
 
+
+<h2>BibTeX</h2>
+
+```bibtex
+@article{tan2025safetrustworthyeai,
+  title={Towards Safe and Trustworthy Embodied AI: Foundations, Status, and Prospects},
+  author={Tan, Xin and Liu, Bangwei and Bao, Yicheng and Tian, Qijian and
+          Gao, Zhenkun and Wu, Xiongbin and Luo, Zhihao and Wang, Sen and
+          Zhang, Yuqi and Wang, Xuhong and Lu, Chaochao and Zhou, Bowen},
+  journal={OpenReview},
+  url={https://openreview.net/pdf?id=Eu6Yt21Alv},
+  year={2025}
+}
+```
+
+
 <h2>🌟 Star History</h2>
+
 
 
 [![Star History Chart](https://api.star-history.com/svg?repos=AI45Lab/Awesome-Trustworthy-Embodied-AI&type=Date)](https://www.star-history.com/?utm_source=chatgpt.com#AI45Lab/Awesome-Trustworthy-Embodied-AI&Date)
