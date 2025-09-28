@@ -130,45 +130,51 @@ Sen&nbsp;Wang · Yuqi&nbsp;Zhang · Xuhong&nbsp;Wang<sup>&sect;</sup> [🔗](htt
  <h1> Reference </h1>
 
 - [Instruction Understanding](#instruction-understanding)
-  - [Abuse Prevention](#abuse-prevention)
-  - [Accuracy](#accuracy)
-  - [Attack Resistance](#attack-resistance)
-  - [Privacy Protection](#privacy-protection)
-  - [Reliability](#reliability)
-  - [Value Alignment](#value-alignment)
+  - [Abuse Prevention](#instruction-understanding-abuse-prevention)
+  - [Accuracy](#instruction-understanding-accuracy)
+  - [Attack Resistance](#instruction-understanding-attack-resistance)
+  - [Controllability](#instruction-understanding-controllability)
+  - [Privacy Protection](#instruction-understanding-privacy-protection)
+  - [Reliability](#instruction-understanding-reliability)
+  - [Value Alignment](#instruction-understanding-value-alignment)
+
 - [Environment Perception](#environment-perception)
-  - [Abuse Prevention](#abuse-prevention-1)
-  - [Accuracy](#accuracy-1)
-  - [Attack Resistance](#attack-resistance-1)
-  - [Auditability](#auditability)
-  - [Explainability](#explainability)
-  - [Privacy Protection](#privacy-protection-1)
-  - [Reliability](#reliability-1)
-  - [Value Alignment](#value-alignment-1)
+  - [Abuse Prevention](#environment-perception-abuse-prevention)
+  - [Accuracy](#environment-perception-accuracy)
+  - [Attack Resistance](#environment-perception-attack-resistance)
+  - [Auditability](#environment-perception-auditability)
+  - [Explainability](#environment-perception-explainability)
+  - [Privacy Protection](#environment-perception-privacy-protection)
+  - [Reliability](#environment-perception-reliability)
+  - [Value Alignment](#environment-perception-value-alignment)
+
 - [Physical Interaction](#physical-interaction)
-  - [Abuse Prevention](#abuse-prevention-2)
-  - [Attack Resistance](#attack-resistance-2)
-  - [Controllability](#controllability)
-  - [Privacy Protection](#privacy-protection-2)
-  - [Reliability](#reliability-2)
-  - [Value Alignment](#value-alignment-2)
+  - [Abuse Prevention](#physical-interaction-abuse-prevention)
+  - [Attack Resistance](#physical-interaction-attack-resistance)
+  - [Controllability](#physical-interaction-controllability)
+  - [Privacy Protection](#physical-interaction-privacy-protection)
+  - [Reliability](#physical-interaction-reliability)
+  - [Value Alignment](#physical-interaction-value-alignment)
+
 - [Action Planning](#action-planning)
-  - [Accuracy](#accuracy-2)
-  - [Attack Resistance](#attack-resistance-3)
-  - [Auditability](#auditability-1)
-  - [Controllability](#controllability-1)
-  - [Explainability](#explainability-1)
-  - [Privacy Protection](#privacy-protection-3)
-  - [Reliability](#reliability-3)
-  - [Value Alignment](#value-alignment-3)
+  - [Accuracy](#action-planning-accuracy)
+  - [Attack Resistance](#action-planning-attack-resistance)
+  - [Auditability](#action-planning-auditability)
+  - [Controllability](#action-planning-controllability)
+  - [Explainability](#action-planning-explainability)
+  - [Privacy Protection](#action-planning-privacy-protection)
+  - [Reliability](#action-planning-reliability)
+  - [Value Alignment](#action-planning-value-alignment)
 
 
 ## Instruction Understanding
 
+<a id="instruction-understanding-abuse-prevention"></a>
 ### Abuse Prevention
 
 - **Plug in the Safety Chip: Enforcing Constraints for LLM-driven Robot Agents** (23.09) [🔗](https://arxiv.org/abs/2309.09919)
 
+<a id="instruction-understanding-accuracy"></a>
 ### Accuracy
 
 - **A Model-Agnostic Approach for Semantically Driven Disambiguation in Human-Robot Interaction** (Fethiye Irmak Dogan, 25.04) [🔗](https://arxiv.org/abs/2409.17004)
@@ -184,6 +190,7 @@ Sen&nbsp;Wang · Yuqi&nbsp;Zhang · Xuhong&nbsp;Wang<sup>&sect;</sup> [🔗](htt
 - **ThinkBot: Embodied Instruction Following with Thought Chain Reasoning** (23.12) [🔗](https://arxiv.org/abs/2312.07062)
 - **tagE: Enabling an Embodied Agent to Understand Human Instructions** (23.1) [🔗](https://arxiv.org/abs/2310.15605)
 
+<a id="instruction-understanding-attack-resistance"></a>
 ### Attack Resistance
 
 - **AGENTSAFE: Benchmarking the Safety of Embodied Agents on Hazardous Instructions** (Aishan Liu, 25.06) [🔗](https://arxiv.org/abs/2506.14697)
@@ -191,16 +198,24 @@ Sen&nbsp;Wang · Yuqi&nbsp;Zhang · Xuhong&nbsp;Wang<sup>&sect;</sup> [🔗](htt
 - **Adversarial Attacks on Robotic Vision Language Action Models** (Eliot Krzysztof Jones, 25.06) [🔗](https://arxiv.org/abs/2506.03350)
 - **Adversarial Training for Multimodal Large Language Models against Jailbreak Attacks** (Liming Lu, 25.03) [🔗](https://arxiv.org/abs/2503.04833)
 - **BadNAVer: Exploring Jailbreak Attacks On Vision-and-Language Navigation** (Wenqi Lyu, 25.05) [🔗](https://arxiv.org/abs/2505.12443)
+- **BadRobot: Jailbreaking Embodied LLMs in the Physical World** (Hangtao Zhang, 24.07) [🔗](https://arxiv.org/abs/2407.20242)
 - **Concept Enhancement Engineering: A Lightweight and Efficient Robust Defense Against Jailbreak Attacks in Embodied AI** (Jirui Yang; Zheyu Lin, 25.04) [🔗](https://arxiv.org/abs/2504.13201)
 - **Jailbreaking LLM-Controlled Robots** (Alexander Robey, 24.1) [🔗](https://arxiv.org/abs/2410.13691)
 - **MM-SafetyBench: A Benchmark for Safety Evaluation of Multimodal Large Language Models** (Xin Liu, 23.11) [🔗](https://arxiv.org/abs/2311.17600)
 - **POEX: Understanding and Mitigating Policy Executable Jailbreak Attacks against Embodied AI** (Xuancun Lu, 24.12) [🔗](https://arxiv.org/abs/2412.16633)
 - **Towards Robust Multimodal Large Language Models Against Jailbreak Attacks** (Ziyi Yin, 25.02) [🔗](https://arxiv.org/abs/2502.00653)
 
+<a id="instruction-understanding-controllability"></a>
+### Controllability
+
+- **Who’s in Charge Here? A Survey on Trustworthy AI in Variable Autonomy Robotic Systems** (Leila Methnani, 24.04) [🔗](https://dl.acm.org/doi/pdf/10.1145/3645090)
+
+<a id="instruction-understanding-privacy-protection"></a>
 ### Privacy Protection
 
 - **Security Considerations in AI-Robotics: A Survey of Current Methods, Challenges, and Opportunities** (23.1) [🔗](https://arxiv.org/abs/2310.08565)
 
+<a id="instruction-understanding-reliability"></a>
 ### Reliability
 
 - **Embodied Instruction Following in Unknown Environments** (25.07) [🔗](https://www.arxiv.org/pdf/2406.11818)
@@ -208,13 +223,16 @@ Sen&nbsp;Wang · Yuqi&nbsp;Zhang · Xuhong&nbsp;Wang<sup>&sect;</sup> [🔗](htt
 - **Semantic Skill Grounding for Embodied Instruction-Following in Cross-Domain Environments** (24.08) [🔗](https://arxiv.org/abs/2408.01024)
 - **Verifiably Following Complex Robot Instructions with Foundation Models** (24.02) [🔗](https://arxiv.org/abs/2402.11498)
 
+<a id="instruction-understanding-value-alignment"></a>
 ### Value Alignment
 
 - **LLM-Driven Robots Risk Enacting Discrimination, Violence, and Unlawful Actions** (24.06) [🔗](https://arxiv.org/abs/2406.08824)
+- **Who’s in Charge Here? A Survey on Trustworthy AI in Variable Autonomy Robotic Systems** (Leila Methnani, 24.04) [🔗](https://dl.acm.org/doi/pdf/10.1145/3645090)
 
 
 ## Environment Perception
 
+<a id="environment-perception-abuse-prevention"></a>
 ### Abuse Prevention
 
 - **A Survey on Adversarial Robustness of LiDAR-based Machine Learning Perception in Autonomous Vehicles** (Junae Kim, 24.11) [🔗](https://arxiv.org/pdf/2411.13778v1)
@@ -227,6 +245,7 @@ Sen&nbsp;Wang · Yuqi&nbsp;Zhang · Xuhong&nbsp;Wang<sup>&sect;</sup> [🔗](htt
 - **SoK: Rethinking Sensor Spoofing Attacks against Robotic Vehicles from a Systematic View** (23.07) [🔗](https://arxiv.org/abs/2205.04662)
 - **Towards Robust and Secure Embodied AI: A Survey on Vulnerabilities and Attacks** (WENPENG XING, 25.02) [🔗](https://arxiv.org/pdf/2502.13175)
 
+<a id="environment-perception-accuracy"></a>
 ### Accuracy
 
 - **Active SLAM With Dynamic Viewpoint Optimization for Robust Visual Navigation** (Peng Li, 25.06) [🔗](https://ieeexplore.ieee.org/abstract/document/11037221)
@@ -236,6 +255,7 @@ Sen&nbsp;Wang · Yuqi&nbsp;Zhang · Xuhong&nbsp;Wang<sup>&sect;</sup> [🔗](htt
 - **Embodiedgpt: Vision-language pre-training via embodied chain of thought** (Yao Mu, 23.05) [🔗](https://proceedings.neurips.cc/paper_files/paper/2023/file/4ec43957eda1126ad4887995d05fae3b-Paper-Conference.pdf)
 - **Embodiedscan: A holistic multi-modal 3d perception suite towards embodied ai** (Tai Wang, 24.03) [🔗](https://openaccess.thecvf.com/content/CVPR2024/html/Wang_EmbodiedScan_A_Holistic_Multi-Modal_3D_Perception_Suite_Towards_Embodied_AI_CVPR_2024_paper.html)
 - **Enhancing embodied object detection through language-image pre-training and implicit object memory** (Nicolas Harvey Chapman, 24.02) [🔗](https://arxiv.org/pdf/2402.03721)
+- **Hallucination In Object Detection -- A Study In Visual Part Verification** (21.06) [🔗](https://arxiv.org/pdf/2106.02523)
 - **Interactron: Embodied adaptive object detection** (Klemen Kotar, 22.03) [🔗](https://openaccess.thecvf.com/content/CVPR2022/papers/Kotar_Interactron_Embodied_Adaptive_Object_Detection_CVPR_2022_paper.pdf)
 - **Learn how to see: collaborative embodied learning for object detection and camera adjusting** (Lingdong Shen, 24.03) [🔗](https://ojs.aaai.org/index.php/AAAI/article/view/28281)
 - **Learning robust perceptive locomotion for quadrupedal robots in the wild** (TAKAHIRO MIKI, 22.01) [🔗](https://arxiv.org/abs/2201.08117)
@@ -254,6 +274,7 @@ Sen&nbsp;Wang · Yuqi&nbsp;Zhang · Xuhong&nbsp;Wang<sup>&sect;</sup> [🔗](htt
 - **Viewinfer3d: 3d visual grounding based on embodied viewpoint inference** (Liang Geng, 24.07) [🔗](https://ieeexplore.ieee.org/abstract/document/10592798)
 - **Vima: General robot manipulation with multimodal prompts** (Yunfan Jiang, 22.1) [🔗](https://arxiv.org/abs/2210.03094)
 
+<a id="environment-perception-attack-resistance"></a>
 ### Attack Resistance
 
 - **A Survey on Adversarial Robustness of LiDAR-based Machine Learning Perception in Autonomous Vehicles** (Junae Kim, 24.11) [🔗](https://arxiv.org/pdf/2411.13778v1)
@@ -266,12 +287,14 @@ Sen&nbsp;Wang · Yuqi&nbsp;Zhang · Xuhong&nbsp;Wang<sup>&sect;</sup> [🔗](htt
 - **SoK: Rethinking Sensor Spoofing Attacks against Robotic Vehicles from a Systematic View** (23.07) [🔗](https://arxiv.org/abs/2205.04662)
 - **Towards Robust and Secure Embodied AI: A Survey on Vulnerabilities and Attacks** (WENPENG XING, 25.02) [🔗](https://arxiv.org/pdf/2502.13175)
 
+<a id="environment-perception-auditability"></a>
 ### Auditability
 
 - **AuditMAI: Towards An Infrastructure for Continuous AI Auditing** (24.06) [🔗](https://arxiv.org/abs/2406.14243)
 - **Monitoring and Diagnosability of Perception Systems** (20.11) [🔗](https://arxiv.org/abs/2005.11816)
 - **Safety Assessment for Autonomous Systems' Perception Capabilities** (22.08) [🔗](https://arxiv.org/abs/2208.08237)
 
+<a id="environment-perception-explainability"></a>
 ### Explainability
 
 - **E2CL: exploration-based error correction learning for embodied agents** (24.09) [🔗](https://arxiv.org/abs/2409.03256)
@@ -282,6 +305,7 @@ Sen&nbsp;Wang · Yuqi&nbsp;Zhang · Xuhong&nbsp;Wang<sup>&sect;</sup> [🔗](htt
 - **Towards Embodied Agent Intent Explanation in Human-Robot Collaboration: ACT Error Analysis and Solution Conceptualization** (25.05) [🔗](https://openreview.net/forum?id=gPqkW8V6Je)
 - **What do navigation agents learn about their environment?** (Kshitij Dwivedi, 22.06) [🔗](https://openaccess.thecvf.com/content/CVPR2022/html/Dwivedi_What_Do_Navigation_Agents_Learn_About_Their_Environment_CVPR_2022_paper.html)
 
+<a id="environment-perception-privacy-protection"></a>
 ### Privacy Protection
 
 - **Improved Semantic Segmentation from Ultra-Low-Resolution RGB Images Applied to Privacy-Preserving Object-Goal Navigation** (25.07) [🔗](https://arxiv.org/abs/2507.16034)
@@ -291,6 +315,7 @@ Sen&nbsp;Wang · Yuqi&nbsp;Zhang · Xuhong&nbsp;Wang<sup>&sect;</sup> [🔗](htt
 - **Privacy-preserving robot vision with anonymized faces by extreme low resolution** (19.11) [🔗](https://ieeexplore.ieee.org/document/8967681)
 - **Real-time privacy preservation for robot visual perception** (25.05) [🔗](https://arxiv.org/abs/2505.05519)
 
+<a id="environment-perception-reliability"></a>
 ### Reliability
 
 - **Active SLAM With Dynamic Viewpoint Optimization for Robust Visual Navigation** (Peng Li, 25.06) [🔗](https://ieeexplore.ieee.org/abstract/document/11037221)
@@ -302,37 +327,44 @@ Sen&nbsp;Wang · Yuqi&nbsp;Zhang · Xuhong&nbsp;Wang<sup>&sect;</sup> [🔗](htt
 - **Robustnav: Towards benchmarking robustness in embodied navigation** (Prithvijit Chattopadhyay, 21.06) [🔗](https://openaccess.thecvf.com/content/ICCV2021/html/Chattopadhyay_RobustNav_Towards_Benchmarking_Robustness_in_Embodied_Navigation_ICCV_2021_paper.html)
 - **Robustness of embodied point navigation agents** (Frano Rajiˇc, 23.02) [🔗](https://link.springer.com/chapter/10.1007/978-3-031-25075-0_15)
 
+<a id="environment-perception-value-alignment"></a>
 ### Value Alignment
 
 - **An Enactive Approach to Value Alignment in Artificial Intelligence: A Matter of Relevance** (25.11) [🔗](https://philpapers.org/archive/CANAEA-5.pdf)
 - **From Strangers to Assistants: Fast Desire Alignment for Embodied Agent-User Adaptation** (25.05) [🔗](https://arxiv.org/abs/2505.22503)
 - **On the Sensory Commutativity of Action Sequences for Embodied Agents** (21.01) [🔗](https://arxiv.org/abs/2002.05630)
+- **SafeVLA: Towards Safety Alignment of Vision-Language-Action Model via Constrained Learning** (Borong Zhang, 25.03) [🔗](https://arxiv.org/pdf/2503.03480)
 
 
 ## Physical Interaction
 
+<a id="physical-interaction-abuse-prevention"></a>
 ### Abuse Prevention
 
 - **A Secure Robot Learning Framework for Cyber Attack Scheduling and Countermeasure** (Chengwei Wu, 23.06) [🔗](https://ieeexplore.ieee.org/document/10144090)
 - **Optimal Actuator Attacks on Autonomous Vehicles Using Reinforcement Learning** (Pengyu Wang, 25.02) [🔗](https://arxiv.org/pdf/2502.07839)
 
+<a id="physical-interaction-attack-resistance"></a>
 ### Attack Resistance
 
 - **AdvGrasp: Adversarial Attacks on Robotic Grasping from a Physical Perspective** (Xiaofei Wang, 25.07) [🔗](https://arxiv.org/pdf/2507.09857)
 - **Robust Humanoid Locomotion Using Trajectory Optimization and Sample-Efficient Learning** (19.07) [🔗](https://arxiv.org/abs/1907.04616)
 - **Robust Push Recovery on Bipedal Robots: Leveraging Multi-Domain Hybrid Systems with Reduced-Order Model Predictive Control** (Min Dai, 25.04) [🔗](https://arxiv.org/abs/2504.18698)
 
+<a id="physical-interaction-controllability"></a>
 ### Controllability
 
-- **Controllability, Observability, Realizability, and Stability of Dynamic Linear Systems** (John M. Davis, 9.01) [🔗](https://arxiv.org/abs/0901.3764)
+- **Controllability, Observability, Realizability, and Stability of Dynamic Linear Systems** (John M. Davis, 2009.01) [🔗](https://arxiv.org/abs/0901.3764)
 - **On the general theory of control systems** (1959.12) [🔗](https://www.sciencedirect.com/science/article/pii/S1474667017700948)
 
+<a id="physical-interaction-privacy-protection"></a>
 ### Privacy Protection
 
 - **A Review of Future and Ethical Perspectives of Robotics and AI** (Jim Torresen, 18.1) [🔗](https://www.frontiersin.org/journals/robotics-and-ai/articles/10.3389/frobt.2017.00075/full)
 - **Disability 4.0: bioethical considerations on the use of embodied artificial intelligence** (24.08) [🔗](https://www.frontiersin.org/journals/medicine/articles/10.3389/fmed.2024.1437280/full)
 - **Humanoid Robots in Tourism and Hospitality—Exploring Managerial, Ethical, and Societal Challenges** (Ida Skubis, 24.12) [🔗](https://www.mdpi.com/2076-3417/14/24/11823)
 
+<a id="physical-interaction-reliability"></a>
 ### Reliability
 
 - **Contact-GraspNet: Efficient 6-DoF Grasp Generation in Cluttered Scenes** (Martin Sundermeyer, 21.05) [🔗](https://arxiv.org/abs/2103.14127)
@@ -351,14 +383,17 @@ Sen&nbsp;Wang · Yuqi&nbsp;Zhang · Xuhong&nbsp;Wang<sup>&sect;</sup> [🔗](htt
 - **TransCG: A Large-Scale Real-World Dataset for Transparent Object Depth Completion and a Grasping Baseline** (Hongjie Fang, 22.02) [🔗](https://arxiv.org/abs/2202.08471)
 - **Vision-Language-Action Model and Diffusion Policy Switching Enables Dexterous Control of an Anthropomorphic Hand** (Cheng Pan, 24.1) [🔗](https://arxiv.org/abs/2410.14022)
 
+<a id="physical-interaction-value-alignment"></a>
 ### Value Alignment
 
 - **A Review of Future and Ethical Perspectives of Robotics and AI** (Jim Torresen, 18.1) [🔗](https://www.frontiersin.org/journals/robotics-and-ai/articles/10.3389/frobt.2017.00075/full)
 - **Humanoid Robots in Tourism and Hospitality—Exploring Managerial, Ethical, and Societal Challenges** (Ida Skubis, 24.12) [🔗](https://www.mdpi.com/2076-3417/14/24/11823)
+- **SafeVLA: Towards Safety Alignment of Vision-Language-Action Model via Constrained Learning** (Borong Zhang, 25.03) [🔗](https://arxiv.org/pdf/2503.03480)
 
 
 ## Action Planning
 
+<a id="action-planning-accuracy"></a>
 ### Accuracy
 
 - **DynaMem: Online Dynamic Spatio-Semantic Memory for Open World Mobile Manipulation** (Peiqi Liu, 25.05) [🔗](https://arxiv.org/pdf/2411.04999)
@@ -376,17 +411,21 @@ Sen&nbsp;Wang · Yuqi&nbsp;Zhang · Xuhong&nbsp;Wang<sup>&sect;</sup> [🔗](htt
 - **SnapMem: Snapshot-based 3D Scene Memory for Embodied Exploration and Reasoning** (Yuncong Yang, 24.11) [🔗](https://arxiv.org/html/2411.17735v1)
 - **Thinking in Space:How Multimodal Large Language Models See, Remember, and Recall Spaces** (Jihan Yang, 24.12) [🔗](https://arxiv.org/pdf/2412.14171)
 
+<a id="action-planning-attack-resistance"></a>
 ### Attack Resistance
 
+- **BadRobot: Jailbreaking Embodied LLMs in the Physical World** (Hangtao Zhang, 24.07) [🔗](https://arxiv.org/abs/2407.20242)
 - **BadVLA: Towards Backdoor Attacks on Vision-Language-Action Models via Objective-Decoupled Optimization** (Xueyang Zhou, 25.05) [🔗](https://arxiv.org/pdf/2505.16640)
 - **Characterizing Physical Adversarial Attacks on Robot Motion Planners** (Wenxi Wu, 24.01) [🔗](https://kclpure.kcl.ac.uk/ws/portalfiles/portal/248844190/icra2024_motion_planning_attacks.pdf)
 - **Exploring the Robustness of Decision-Level Through Adversarial Attacks on LLM-Based Embodied Models** (Shuyuan Liu, 24.05) [🔗](https://arxiv.org/abs/2405.19802)
 
+<a id="action-planning-auditability"></a>
 ### Auditability
 
 - **From Screens to Scenes: A Survey of Embodied AI in Healthcare** (Yihao Liu, 25.03) [🔗](https://arxiv.org/abs/2501.07468)
 - **INTRODUCING THE Robot Security Framework (RSF), A STANDARDIZED METHODOLOGY TO PERFORM SECURITY ASSESSMENTS IN ROBOTICS** (Abiodun Sunday Adebayo, 23.12) [🔗](https://www.multidisciplinaryfrontiers.com/uploads/archives/20250312183510_FMR-2025-1-004.1.pdf)
 
+<a id="action-planning-controllability"></a>
 ### Controllability
 
 - **EHAZOP: A Proof of Concept Ethical Hazard Analysis of an Assistive Robot** (24.06) [🔗](https://arxiv.org/pdf/2406.09239)
@@ -394,16 +433,20 @@ Sen&nbsp;Wang · Yuqi&nbsp;Zhang · Xuhong&nbsp;Wang<sup>&sect;</sup> [🔗](htt
 - **Safety assurances for human-robot interaction via confidence-aware game-theoretic human models** (21.1) [🔗](https://arxiv.org/abs/2109.14700)
 - **Trust-aware motion planning for human-robot collaboration under distribution temporal logic specifications** (23.1) [🔗](https://arxiv.org/abs/2310.01163)
 - **VLM-Social-Nav: Socially Aware Robot Navigation through Scoring using Vision-Language Models** (24.11) [🔗](https://arxiv.org/abs/2404.00210)
+- **Who’s in Charge Here? A Survey on Trustworthy AI in Variable Autonomy Robotic Systems** (Leila Methnani, 24.04) [🔗](https://dl.acm.org/doi/pdf/10.1145/3645090)
 
+<a id="action-planning-explainability"></a>
 ### Explainability
 
 - **Generating Explanations for Embodied Action Decision from Visual Observation** (Xiaohan Wang, 23.1) [🔗](https://dl.acm.org/doi/10.1145/3581783.3612351)
 
+<a id="action-planning-privacy-protection"></a>
 ### Privacy Protection
 
 - **Manipulating Neural Path Planners via Slight Perturbations** (Zikang Xiong, 24.03) [🔗](https://arxiv.org/pdf/2403.18256)
 - **Multi-Modal Multi-Task (M3T) Federated Foundation Models for Embodied AI: Potentials and Challenges for Edge Integration** (Kasra Borazjani, 25.05) [🔗](https://arxiv.org/abs/2505.11191)
 
+<a id="action-planning-reliability"></a>
 ### Reliability
 
 - **Ask4Help: Learning to Leverage an Expert for Embodied Tasks** (Kunal Pratap Singh, 22.11) [🔗](https://arxiv.org/abs/2211.09960)
@@ -412,10 +455,13 @@ Sen&nbsp;Wang · Yuqi&nbsp;Zhang · Xuhong&nbsp;Wang<sup>&sect;</sup> [🔗](htt
 - **LLaPa: A Vision-Language Model Framework for Counterfactual-Aware Procedural Planning** (Shibo Sun, 25.07) [🔗](https://arxiv.org/pdf/2507.08496)
 - **Uncertainty in Action: Confidence Elicitation in Embodied Agents** (Tianjiao Yu, 25.03) [🔗](https://arxiv.org/abs/2503.10628)
 
+<a id="action-planning-value-alignment"></a>
 ### Value Alignment
 
 - **Disability 4.0: bioethical considerations on the use of embodied artificial intelligence** (Francesco De Micco, 24.08) [🔗](https://www.frontiersin.org/journals/medicine/articles/10.3389/fmed.2024.1437280/full)
 - **Humanizing AI in medical training: ethical framework for responsible design** (Mohammed Tahri Sqalli, 23.05) [🔗](https://www.frontiersin.org/journals/artificial-intelligence/articles/10.3389/frai.2023.1189914/full)
+- **SafeVLA: Towards Safety Alignment of Vision-Language-Action Model via Constrained Learning** (Borong Zhang, 25.03) [🔗](https://arxiv.org/pdf/2503.03480)
+- **Who’s in Charge Here? A Survey on Trustworthy AI in Variable Autonomy Robotic Systems** (Leila Methnani, 24.04) [🔗](https://dl.acm.org/doi/pdf/10.1145/3645090)
 
 
 
