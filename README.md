@@ -4,7 +4,7 @@ Study list for the submitted *ACM Computing Surveys* revision of **Towards Safe 
 
 Search cutoff: 25 August 2026.
 
-The searchable page in this repository is [`index.html`](index.html). The literature list that accompanied the [OpenReview preprint](https://openreview.net/pdf?id=Eu6Yt21Alv) is preserved on the [`openreview-preprint`](https://github.com/AI45Lab/Awesome-Trustworthy-Embodied-AI/tree/openreview-preprint) branch.
+The searchable page is [https://ai45lab.github.io/Awesome-Trustworthy-Embodied-AI/](https://ai45lab.github.io/Awesome-Trustworthy-Embodied-AI/). The literature list that accompanied the [OpenReview preprint](https://openreview.net/pdf?id=Eu6Yt21Alv) is preserved on the [`openreview-preprint`](https://github.com/AI45Lab/Awesome-Trustworthy-Embodied-AI/tree/openreview-preprint) branch.
 
 ## Counts
 
