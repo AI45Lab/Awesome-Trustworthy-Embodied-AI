@@ -1,0 +1,41 @@
+stage,facet,studies
+Instruction Understanding,Accuracy,12
+Instruction Understanding,Reliability,17
+Instruction Understanding,Controllability,16
+Instruction Understanding,Explainability,4
+Instruction Understanding,Auditability,5
+Instruction Understanding,Attack Resistance,14
+Instruction Understanding,Abuse Prevention,14
+Instruction Understanding,Identifiability,1
+Instruction Understanding,Privacy Protection,2
+Instruction Understanding,Value Alignment,6
+Environment Perception,Accuracy,21
+Environment Perception,Reliability,35
+Environment Perception,Controllability,22
+Environment Perception,Explainability,4
+Environment Perception,Auditability,5
+Environment Perception,Attack Resistance,22
+Environment Perception,Abuse Prevention,4
+Environment Perception,Identifiability,0
+Environment Perception,Privacy Protection,8
+Environment Perception,Value Alignment,3
+Action Planning,Accuracy,20
+Action Planning,Reliability,52
+Action Planning,Controllability,51
+Action Planning,Explainability,8
+Action Planning,Auditability,6
+Action Planning,Attack Resistance,20
+Action Planning,Abuse Prevention,15
+Action Planning,Identifiability,0
+Action Planning,Privacy Protection,2
+Action Planning,Value Alignment,8
+Physical Interaction,Accuracy,12
+Physical Interaction,Reliability,45
+Physical Interaction,Controllability,46
+Physical Interaction,Explainability,10
+Physical Interaction,Auditability,7
+Physical Interaction,Attack Resistance,24
+Physical Interaction,Abuse Prevention,8
+Physical Interaction,Identifiability,1
+Physical Interaction,Privacy Protection,7
+Physical Interaction,Value Alignment,9

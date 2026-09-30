@@ -1,487 +1,399 @@
-<div align="center">
-
- <h1> Towards Safe and Trustworthy Embodied AI: Foundations, Status, and Prospects </h1>
-
-</div>
-<div align="center">
-
-Xin&nbsp;Tan<sup>&ast;</sup> [🔗](https://tanxincs.github.io/ "Homepage") · Bangwei&nbsp;Liu<sup>&ast;</sup> · Yicheng&nbsp;Bao · Qijian&nbsp;Tian[🔗](https://fangzhou2000.github.io/ "Homepage") · Zhenkun&nbsp;Gao · Xiongbin&nbsp;Wu ·  Zhihao&nbsp;Luo · 
-Sen&nbsp;Wang · Yuqi&nbsp;Zhang · Xuhong&nbsp;Wang<sup>&sect;</sup> [🔗](https://wangxuhongcn.github.io "Homepage")· Chaochao&nbsp;Lu<sup>&sect;&dagger;</sup> [🔗](https://causallu.com/ "Homepage") · Bowen&nbsp;Zhou<sup>&sect;&Dagger;</sup> [🔗](https://scholar.google.com/citations?user=h3Nsz6YAAAAJ "Homepage")
-</div>
-
-
-<div align="center">
-
-**上海人工智能实验室 / Shanghai Artificial Intelligence Laboratory [🔗](https://www.shlab.org.cn/)**  
-**华东师范大学 / East China Normal University [🔗](https://www.ecnu.edu.cn/)**  
-**清华大学 / Tsinghua University [🔗](https://www.tsinghua.edu.cn/)**  
-</div>
-
-<div align="center">
-
-[![Paper](https://img.shields.io/badge/📄-PAPER-000000?style=for-the-badge&logoColor=white&labelColor=000000)](https://openreview.net/pdf?id=Eu6Yt21Alv) [![Project Page](https://img.shields.io/badge/🌐-PROJECT%20PAGE-000000?style=for-the-badge&logoColor=white&labelColor=000000)](https://ai45lab.github.io/Awesome-Trustworthy-Embodied-AI/) 
-
-</div>
-
-
-
----
-<div align="center">
-  <div style="max-width:980px;padding:24px 28px;border:1.6px solid rgba(255,255,255,.6);
-              border-radius:14px;box-shadow:inset 0 0 0 3px rgba(255,255,255,.08);
-              ">
-    <h3 style="text-align:center;margin:0 0 16px 0;">Abstract</h3>
-    <p style="margin:0;font-style:italic;line-height:1.9;
-              text-align:justify;text-justify:inter-word;">
-      The increasing autonomy and physical capability of Embodied Artificial Intelligence (EAI) introduce critical challenges to safety and trustworthiness. Unlike purely digital AI, failures in perception, planning, or interaction can lead to direct physical harm, property damage, or the violation of human safety and social norms. However, current EAI foundation models disregard the risks of misalignment between the model capabilities and the safety and trustworthiness competencies. Some works attempt to address these issues, however, they lack a unified framework capable of balancing the developmental trajectories between safety and capability. In this paper, we first comprehensively define a new term <em>safe and trustworthy EAI</em> by establishing an L1–L5 levels framework and proposing ten core principles of trustworthiness and safety. To unify fragmented research efforts, we propose a novel, agent-centric framework that analyzes risks across the four operational stages of an EAI system. We systematically review state-of-the-art but fragmented solutions, benchmarks, and evaluation metrics, identifying key gaps and challenges. Finally, we identify the need for a paradigm shift away from optimizing isolated components towards a holistic, cybernetic approach. We argue that future progress hinges on engineering the closed-loop system of the agent (Self), its environment (World), and their dynamic coupling (Interaction), paving the way for the next generation of truly safe and trustworthy EAI.
-    </p>
-  </div>
-</div>
-
-
-
-<div style="height:32px;"></div>
-
-
-<div style="text-align:center;">
-  <img src="figures/figure1.png" alt="Figure 1" width="720" style="margin-bottom:8px;">
-  <p><strong>Figure 1.</strong> Capability–Safety divergence in the Embodied AI landscape</p>
-</div>
-
-
-<div align="center">
-  <h3>Research Motivation</h3>
-  <p>
-    While embodied AI (EAI) products are rapidly improving in capability, they often lack reliable
-    safety mechanisms. In contrast, academic safety research remains fragmented and lags behind in
-    capability. This divergence has raised significant concerns about the trustworthiness of physical
-    AI systems.To address this gap, we propose a unified research framework that integrates capability advancement
-    and trustworthy safety, paving the way for the development of safe and aligned embodied agents.
-  </p>
-    
-</div>
-
-
-<div style="text-align:center;margin-bottom:14px;">
-  <h3 style="margin:0 0 6px 0;">The Five Levels of “Make Safe EAI”</h3>
-  <div style="opacity:.9;">
-    We chart the progression from <strong>Resistance (L1–L2)</strong> to <strong>Resilience (L3–L5)</strong>,
-    moving from refusal and oversight to adaptive learning and verifiable guarantees.
-  </div>
-</div>
-
-
-<div style="text-align:center;margin:0 0 24px 0;">
-  <img src="figures/figure2.png" alt="Figure 2" width="820" style="max-width:100%;height:auto;">
-  <div style="margin-top:8px;"><strong>Figure 2.</strong> From Resistance (L1–L2) to Resilience (L3–L5)</div>
-</div>
-
-
-<div style="display:flex;justify-content:center;gap:18px;margin:0 auto 18px auto;flex-wrap:nowrap;max-width:1200px;">
-  <div style="width:360px;border:1px solid rgba(255,255,255,.22);border-radius:14px;padding:16px 20px;background:rgba(255,255,255,.04);box-shadow:0 2px 6px rgba(0,0,0,.12);">
-    <div style="font-weight:700;margin-bottom:8px;">L1 — Alignment <span style="opacity:.75;font-weight:400;">(Foundational Resistance)</span></div>
-    <ul style="margin:0;padding-left:18px;">
-      <li><b>Goal:</b> Refuse harmful instructions; follow basic safety norms.</li>
-      <li><b>How:</b> Instruction tuning, RLHF, safety filters, red-teaming data.</li>
-      <li><b>Limit:</b> Correlation-based; vulnerable to jailbreaks and shifts.</li>
-    </ul>
-  </div>
-
-  <div style="width:360px;border:1px solid rgba(255,255,255,.22);border-radius:14px;padding:16px 20px;background:rgba(255,255,255,.04);box-shadow:0 2px 6px rgba(0,0,0,.12);">
-    <div style="font-weight:700;margin-bottom:8px;">L2 — Intervention <span style="opacity:.75;font-weight:400;">(Oversight-based Resistance)</span></div>
-    <ul style="margin:0;padding-left:18px;">
-      <li><b>Goal:</b> Let humans halt/redirect <em>before</em> risky actions.</li>
-      <li><b>How:</b> Interrupt channels, intent/plan display, trajectory visualization.</li>
-      <li><b>Limit:</b> Needs constant oversight; weak scalability to high autonomy.</li>
-    </ul>
-  </div>
-</div>
-
-
-<div style="display:flex;justify-content:center;gap:18px;margin:0 auto;flex-wrap:nowrap;max-width:1200px;">
-  <div style="width:360px;border:1px solid rgba(255,255,255,.22);border-radius:14px;padding:16px 20px;background:rgba(255,255,255,.04);box-shadow:0 2px 6px rgba(0,0,0,.12);">
-    <div style="font-weight:700;margin-bottom:8px;">L3 — Mimetic Reflection <span style="opacity:.75;font-weight:400;">(Foundational Resilience)</span></div>
-    <ul style="margin:0;padding-left:18px;">
-      <li><b>Goal:</b> Internalize validated safe behaviors.</li>
-      <li><b>How:</b> Imitation learning, behavior cloning, curated safety playbooks.</li>
-      <li><b>Limit:</b> Limited generalization to novel tasks and combinations.</li>
-    </ul>
-  </div>
-
-  <div style="width:360px;border:1px solid rgba(255,255,255,.22);border-radius:14px;padding:16px 20px;background:rgba(255,255,255,.04);box-shadow:0 2px 6px rgba(0,0,0,.12);">
-    <div style="font-weight:700;margin-bottom:8px;">L4 — Evolutionary Reflection <span style="opacity:.75;font-weight:400;">(Adaptive Resilience)</span></div>
-    <ul style="margin:0;padding-left:18px;">
-      <li><b>Goal:</b> Continual self-improvement; proactive patching.</li>
-      <li><b>How:</b> Continual learning, self red-teaming, safety-aware exploration.</li>
-      <li><b>Limit:</b> Empirical assurance only — no prior formal guarantees.</li>
-    </ul>
-  </div>
-
-  <div style="width:360px;border:1px solid rgba(255,255,255,.22);border-radius:14px;padding:16px 20px;background:rgba(255,255,255,.04);box-shadow:0 2px 6px rgba(0,0,0,.12);">
-    <div style="font-weight:700;margin-bottom:8px;">L5 — Verifiable Reflection <span style="opacity:.75;font-weight:400;">(Guaranteed Resilience)</span></div>
-    <ul style="margin:0;padding-left:18px;">
-      <li><b>Goal:</b> Provable safety/stability of closed-loop behavior.</li>
-      <li><b>How:</b> Reachability/invariance analysis, control-theoretic synthesis, neuro-symbolic proofs.</li>
-      <li><b>Limit:</b> Model/compute-intensive; engineering maturity evolving.</li>
-    </ul>
-  </div>
-</div>
-
- <h1> Reference </h1>
-
-- [Instruction Understanding](#instruction-understanding)
-  - [Abuse Prevention](#instruction-understanding-abuse-prevention)
-  - [Accuracy](#instruction-understanding-accuracy)
-  - [Attack Resistance](#instruction-understanding-attack-resistance)
-  - [Controllability](#instruction-understanding-controllability)
-  - [Privacy Protection](#instruction-understanding-privacy-protection)
-  - [Reliability](#instruction-understanding-reliability)
-  - [Value Alignment](#instruction-understanding-value-alignment)
-
-- [Environment Perception](#environment-perception)
-  - [Abuse Prevention](#environment-perception-abuse-prevention)
-  - [Accuracy](#environment-perception-accuracy)
-  - [Attack Resistance](#environment-perception-attack-resistance)
-  - [Auditability](#environment-perception-auditability)
-  - [Explainability](#environment-perception-explainability)
-  - [Privacy Protection](#environment-perception-privacy-protection)
-  - [Reliability](#environment-perception-reliability)
-  - [Value Alignment](#environment-perception-value-alignment)
-
-- [Physical Interaction](#physical-interaction)
-  - [Abuse Prevention](#physical-interaction-abuse-prevention)
-  - [Attack Resistance](#physical-interaction-attack-resistance)
-  - [Controllability](#physical-interaction-controllability)
-  - [Privacy Protection](#physical-interaction-privacy-protection)
-  - [Reliability](#physical-interaction-reliability)
-  - [Value Alignment](#physical-interaction-value-alignment)
-
-- [Action Planning](#action-planning)
-  - [Accuracy](#action-planning-accuracy)
-  - [Attack Resistance](#action-planning-attack-resistance)
-  - [Auditability](#action-planning-auditability)
-  - [Controllability](#action-planning-controllability)
-  - [Explainability](#action-planning-explainability)
-  - [Privacy Protection](#action-planning-privacy-protection)
-  - [Reliability](#action-planning-reliability)
-  - [Value Alignment](#action-planning-value-alignment)
-
-
-## Instruction Understanding
-
-<a id="instruction-understanding-abuse-prevention"></a>
-### Abuse Prevention
-
-- **Plug in the Safety Chip: Enforcing Constraints for LLM-driven Robot Agents** (23.09) [🔗](https://arxiv.org/abs/2309.09919)
-
-<a id="instruction-understanding-accuracy"></a>
-### Accuracy
-
-- **A Model-Agnostic Approach for Semantically Driven Disambiguation in Human-Robot Interaction** (Fethiye Irmak Dogan, 25.04) [🔗](https://arxiv.org/abs/2409.17004)
-- **DoRO: Disambiguation of Referred Object for Embodied Agents** (Pradip Pramanick, 22.1) [🔗](https://ieeexplore.ieee.org/abstract/document/9846930)
-- **Embodied Multi-Agent Task Planning from Ambiguous Instruction** (Xinzhu Liu, 22.06) [🔗](https://web.archive.org/web/20220704170254id_/http://www.roboticsproceedings.org/rss18/p032.pdf)
-- **Grounding Multimodal LLMs to Embodied Agents that Ask for Help with Reinforcement Learning** (Ram Ramrakhya, 25.04) [🔗](https://arxiv.org/abs/2504.00907)
-- **Improving Grounded Natural Language Understanding through Human-Robot Dialog** (Jesse Thomason, 19.05) [🔗](https://ieeexplore.ieee.org/abstract/document/8794287)
-- **Inner Monologue: Embodied Reasoning through Planning with Language Models** (22.07) [🔗](https://arxiv.org/abs/2207.05608)
-- **Integrating Disambiguation and User Preferences into Large Language Models for Robot Motion Planning** (Mohammed Abugurain, 24.04) [🔗](https://arxiv.org/abs/2404.14547)
-- **NarraGuide: an LLM-based Narrative Mobile Robot for Remote Place Exploration** (25.08) [🔗](https://www.arxiv.org/abs/2508.01235)
-- **Navigation as Attackers Wish? Towards Building Robust Embodied Agents under Federated Learning** (Yunchao Zhang, 22.11) [🔗](https://arxiv.org/abs/2211.14769)
-- **Open-Ended Instructable Embodied Agents with Memory-Augmented Large Language Models** (23.1) [🔗](https://arxiv.org/abs/2310.15127)
-- **ThinkBot: Embodied Instruction Following with Thought Chain Reasoning** (23.12) [🔗](https://arxiv.org/abs/2312.07062)
-- **tagE: Enabling an Embodied Agent to Understand Human Instructions** (23.1) [🔗](https://arxiv.org/abs/2310.15605)
-
-<a id="instruction-understanding-attack-resistance"></a>
-### Attack Resistance
-
-- **AGENTSAFE: Benchmarking the Safety of Embodied Agents on Hazardous Instructions** (Aishan Liu, 25.06) [🔗](https://arxiv.org/abs/2506.14697)
-- **Advancing Embodied Agent Security: From Safety Benchmarks to Input Moderation** (Ning Wang, 25.04) [🔗](https://arxiv.org/abs/2504.15699)
-- **Adversarial Attacks on Robotic Vision Language Action Models** (Eliot Krzysztof Jones, 25.06) [🔗](https://arxiv.org/abs/2506.03350)
-- **Adversarial Training for Multimodal Large Language Models against Jailbreak Attacks** (Liming Lu, 25.03) [🔗](https://arxiv.org/abs/2503.04833)
-- **BadNAVer: Exploring Jailbreak Attacks On Vision-and-Language Navigation** (Wenqi Lyu, 25.05) [🔗](https://arxiv.org/abs/2505.12443)
-- **BadRobot: Jailbreaking Embodied LLMs in the Physical World** (Hangtao Zhang, 24.07) [🔗](https://arxiv.org/abs/2407.20242)
-- **Concept Enhancement Engineering: A Lightweight and Efficient Robust Defense Against Jailbreak Attacks in Embodied AI** (Jirui Yang; Zheyu Lin, 25.04) [🔗](https://arxiv.org/abs/2504.13201)
-- **Jailbreaking LLM-Controlled Robots** (Alexander Robey, 24.1) [🔗](https://arxiv.org/abs/2410.13691)
-- **MM-SafetyBench: A Benchmark for Safety Evaluation of Multimodal Large Language Models** (Xin Liu, 23.11) [🔗](https://arxiv.org/abs/2311.17600)
-- **POEX: Understanding and Mitigating Policy Executable Jailbreak Attacks against Embodied AI** (Xuancun Lu, 24.12) [🔗](https://arxiv.org/abs/2412.16633)
-- **Towards Robust Multimodal Large Language Models Against Jailbreak Attacks** (Ziyi Yin, 25.02) [🔗](https://arxiv.org/abs/2502.00653)
-
-<a id="instruction-understanding-controllability"></a>
-### Controllability
-
-- **Who’s in Charge Here? A Survey on Trustworthy AI in Variable Autonomy Robotic Systems** (Leila Methnani, 24.04) [🔗](https://dl.acm.org/doi/pdf/10.1145/3645090)
-
-<a id="instruction-understanding-privacy-protection"></a>
-### Privacy Protection
-
-- **Security Considerations in AI-Robotics: A Survey of Current Methods, Challenges, and Opportunities** (23.1) [🔗](https://arxiv.org/abs/2310.08565)
-
-<a id="instruction-understanding-reliability"></a>
-### Reliability
-
-- **Embodied Instruction Following in Unknown Environments** (25.07) [🔗](https://www.arxiv.org/pdf/2406.11818)
-- **LACMA: Language-Aligning Contrastive Learning with Meta-Actions for Embodied Instruction Following** (23.1) [🔗](https://arxiv.org/abs/2310.12344)
-- **Semantic Skill Grounding for Embodied Instruction-Following in Cross-Domain Environments** (24.08) [🔗](https://arxiv.org/abs/2408.01024)
-- **Verifiably Following Complex Robot Instructions with Foundation Models** (24.02) [🔗](https://arxiv.org/abs/2402.11498)
-
-<a id="instruction-understanding-value-alignment"></a>
-### Value Alignment
-
-- **LLM-Driven Robots Risk Enacting Discrimination, Violence, and Unlawful Actions** (24.06) [🔗](https://arxiv.org/abs/2406.08824)
-- **Who’s in Charge Here? A Survey on Trustworthy AI in Variable Autonomy Robotic Systems** (Leila Methnani, 24.04) [🔗](https://dl.acm.org/doi/pdf/10.1145/3645090)
-
-
-## Environment Perception
-
-<a id="environment-perception-abuse-prevention"></a>
-### Abuse Prevention
-
-- **A Survey on Adversarial Robustness of LiDAR-based Machine Learning Perception in Autonomous Vehicles** (Junae Kim, 24.11) [🔗](https://arxiv.org/pdf/2411.13778v1)
-- **Adversarial Attacks and Detection in Visual Place Recognition for Safer Robot Navigation** (Connor Malone, 25.01) [🔗](https://arxiv.org/pdf/2506.15988)
-- **BadDepth: Backdoor Attacks Against Monocular Depth Estimation in the Physical World** (Ji Guo, 25.05) [🔗](https://arxiv.org/pdf/2505.16154)
-- **Embodied Active Defense: Leveraging Recurrent Feedback to Counter Adversarial Patches** (24.03) [🔗](https://arxiv.org/abs/2404.00540)
-- **Embodied Laser Attack:Leveraging Scene Priors to Achieve Agent-based Robust Non-contact Attacks** (24.07) [🔗](https://arxiv.org/abs/2312.09554)
-- **Random Spoofing Attack against Scan Matching Algorithm SLAM (Long)** (24.02) [🔗](https://www.ndss-symposium.org/ndss-paper/auto-draft-476/)
-- **SLAMSpoof: Practical LiDAR Spoofing Attacks on Localization Systems Guided by Scan Matching Vulnerability Analysis** (Rokuto Nagata, 25.02) [🔗](https://arxiv.org/html/2502.13641v1)
-- **SoK: Rethinking Sensor Spoofing Attacks against Robotic Vehicles from a Systematic View** (23.07) [🔗](https://arxiv.org/abs/2205.04662)
-- **Towards Robust and Secure Embodied AI: A Survey on Vulnerabilities and Attacks** (WENPENG XING, 25.02) [🔗](https://arxiv.org/pdf/2502.13175)
-
-<a id="environment-perception-accuracy"></a>
-### Accuracy
-
-- **Active SLAM With Dynamic Viewpoint Optimization for Robust Visual Navigation** (Peng Li, 25.06) [🔗](https://ieeexplore.ieee.org/abstract/document/11037221)
-- **Embodied Uncertainty-Aware Object Segmentation** (fang2024embodied, 24.1) [🔗](https://ieeexplore.ieee.org/abstract/document/10801562)
-- **Embodied active domain adaptation for semantic segmentation via informative path planning** (René Zurbrügg, 22.1) [🔗](https://ieeexplore.ieee.org/abstract/document/9816133)
-- **Embodied visual active learning for semantic segmentation** (David Nilsson, 21.12) [🔗](https://ojs.aaai.org/index.php/AAAI/article/view/16338)
-- **Embodiedgpt: Vision-language pre-training via embodied chain of thought** (Yao Mu, 23.05) [🔗](https://proceedings.neurips.cc/paper_files/paper/2023/file/4ec43957eda1126ad4887995d05fae3b-Paper-Conference.pdf)
-- **Embodiedscan: A holistic multi-modal 3d perception suite towards embodied ai** (Tai Wang, 24.03) [🔗](https://openaccess.thecvf.com/content/CVPR2024/html/Wang_EmbodiedScan_A_Holistic_Multi-Modal_3D_Perception_Suite_Towards_Embodied_AI_CVPR_2024_paper.html)
-- **Enhancing embodied object detection through language-image pre-training and implicit object memory** (Nicolas Harvey Chapman, 24.02) [🔗](https://arxiv.org/pdf/2402.03721)
-- **Hallucination In Object Detection -- A Study In Visual Part Verification** (21.06) [🔗](https://arxiv.org/pdf/2106.02523)
-- **Interactron: Embodied adaptive object detection** (Klemen Kotar, 22.03) [🔗](https://openaccess.thecvf.com/content/CVPR2022/papers/Kotar_Interactron_Embodied_Adaptive_Object_Detection_CVPR_2022_paper.pdf)
-- **Learn how to see: collaborative embodied learning for object detection and camera adjusting** (Lingdong Shen, 24.03) [🔗](https://ojs.aaai.org/index.php/AAAI/article/view/28281)
-- **Learning robust perceptive locomotion for quadrupedal robots in the wild** (TAKAHIRO MIKI, 22.01) [🔗](https://arxiv.org/abs/2201.08117)
-- **Learning to Walk by Steering: Perceptive Quadrupedal Locomotion in Dynamic Environments** (Mingyo Seo, 22.09) [🔗](https://arxiv.org/abs/2209.09233)
-- **Legged locomotion in challenging terrains using egocentric vision** (Ananye Agarwal, 22.11) [🔗](https://proceedings.mlr.press/v205/agarwal23a.html)
-- **Move to see better: Self-improving embodied object detection** (Zhaoyuan Fang, 20.12) [🔗](https://www.bmvc2021-virtualconference.com/assets/papers/0615.pdf)
-- **Obstacle-Aware Quadrupedal Locomotion With Resilient Multi-Modal Reinforcement Learning** (I Made Aswin Nahrendra, 24.09) [🔗](https://arxiv.org/abs/2409.19709)
-- **Openvla: An open-source vision-language-action model** (Moo Jin Kim, 24.06) [🔗](https://arxiv.org/abs/2406.09246)
-- **Palm-e: An embodied multimodal language model** (Danny Driess, 23.07) [🔗](https://dl.acm.org/doi/abs/10.5555/3618408.3618748)
-- **Perception Matters: Enhancing Embodied AI with Uncertainty-Aware Semantic Segmentation** (Sai Prasanna, 24.08) [🔗](https://arxiv.org/pdf/2408.02297)
-- **RT-2: Vision-Language-Action Models Transfer Web Knowledge to Robotic Control** (23.07) [🔗](https://proceedings.mlr.press/v229/zitkovich23a.html)
-- **Resilient Legged Local Navigation: Learning to Traverse with Compromised Perception End-to-End** (Jin Jin, 23.1) [🔗](https://ieeexplore.ieee.org/abstract/document/10611254)
-- **Robot Manipulation Based on Embodied Visual Perception: A Survey** (Sicheng Wang, 25.06) [🔗](https://ietresearch.onlinelibrary.wiley.com/doi/full/10.1049/cit2.70022)
-- **Robustnav: Towards benchmarking robustness in embodied navigation** (Prithvijit Chattopadhyay, 21.06) [🔗](https://openaccess.thecvf.com/content/ICCV2021/html/Chattopadhyay_RobustNav_Towards_Benchmarking_Robustness_in_Embodied_Navigation_ICCV_2021_paper.html)
-- **Robustness of embodied point navigation agents** (Frano Rajiˇc, 23.02) [🔗](https://link.springer.com/chapter/10.1007/978-3-031-25075-0_15)
-- **Viewinfer3d: 3d visual grounding based on embodied viewpoint inference** (Liang Geng, 24.07) [🔗](https://ieeexplore.ieee.org/abstract/document/10592798)
-- **Vima: General robot manipulation with multimodal prompts** (Yunfan Jiang, 22.1) [🔗](https://arxiv.org/abs/2210.03094)
-
-<a id="environment-perception-attack-resistance"></a>
-### Attack Resistance
-
-- **A Survey on Adversarial Robustness of LiDAR-based Machine Learning Perception in Autonomous Vehicles** (Junae Kim, 24.11) [🔗](https://arxiv.org/pdf/2411.13778v1)
-- **Adversarial Attacks and Detection in Visual Place Recognition for Safer Robot Navigation** (Connor Malone, 25.01) [🔗](https://arxiv.org/pdf/2506.15988)
-- **BadDepth: Backdoor Attacks Against Monocular Depth Estimation in the Physical World** (Ji Guo, 25.05) [🔗](https://arxiv.org/pdf/2505.16154)
-- **Embodied Active Defense: Leveraging Recurrent Feedback to Counter Adversarial Patches** (24.03) [🔗](https://arxiv.org/abs/2404.00540)
-- **Embodied Laser Attack:Leveraging Scene Priors to Achieve Agent-based Robust Non-contact Attacks** (24.07) [🔗](https://arxiv.org/abs/2312.09554)
-- **Random Spoofing Attack against Scan Matching Algorithm SLAM (Long)** (24.02) [🔗](https://www.ndss-symposium.org/ndss-paper/auto-draft-476/)
-- **SLAMSpoof: Practical LiDAR Spoofing Attacks on Localization Systems Guided by Scan Matching Vulnerability Analysis** (Rokuto Nagata, 25.02) [🔗](https://arxiv.org/html/2502.13641v1)
-- **SoK: Rethinking Sensor Spoofing Attacks against Robotic Vehicles from a Systematic View** (23.07) [🔗](https://arxiv.org/abs/2205.04662)
-- **Towards Robust and Secure Embodied AI: A Survey on Vulnerabilities and Attacks** (WENPENG XING, 25.02) [🔗](https://arxiv.org/pdf/2502.13175)
-
-<a id="environment-perception-auditability"></a>
-### Auditability
-
-- **AuditMAI: Towards An Infrastructure for Continuous AI Auditing** (24.06) [🔗](https://arxiv.org/abs/2406.14243)
-- **Monitoring and Diagnosability of Perception Systems** (20.11) [🔗](https://arxiv.org/abs/2005.11816)
-- **Safety Assessment for Autonomous Systems' Perception Capabilities** (22.08) [🔗](https://arxiv.org/abs/2208.08237)
-
-<a id="environment-perception-explainability"></a>
-### Explainability
-
-- **E2CL: exploration-based error correction learning for embodied agents** (24.09) [🔗](https://arxiv.org/abs/2409.03256)
-- **Embodied videoagent: Persistent memory from egocentric videos and embodied sensors enables dynamic scene understanding** (25.01) [🔗](https://arxiv.org/abs/2501.00358)
-- **Good time to ask: A learning framework for asking for help in embodied visual navigation** (23.06) [🔗](https://arxiv.org/abs/2206.10606)
-- **Interactive task learning via embodied corrective feedback** (20.09) [🔗](https://link.springer.com/article/10.1007/s10458-020-09481-8)
-- **Self-Explainable Affordance Learning with Embodied Caption** (Zhipeng Zhang, 24.04) [🔗](https://arxiv.org/abs/2404.05603)
-- **Towards Embodied Agent Intent Explanation in Human-Robot Collaboration: ACT Error Analysis and Solution Conceptualization** (25.05) [🔗](https://openreview.net/forum?id=gPqkW8V6Je)
-- **What do navigation agents learn about their environment?** (Kshitij Dwivedi, 22.06) [🔗](https://openaccess.thecvf.com/content/CVPR2022/html/Dwivedi_What_Do_Navigation_Agents_Learn_About_Their_Environment_CVPR_2022_paper.html)
-
-<a id="environment-perception-privacy-protection"></a>
-### Privacy Protection
-
-- **Improved Semantic Segmentation from Ultra-Low-Resolution RGB Images Applied to Privacy-Preserving Object-Goal Navigation** (25.07) [🔗](https://arxiv.org/abs/2507.16034)
-- **Is the robot spying on me? a study on perceived privacy in telepresence scenarios in a care setting with mobile and humanoid robots** (24.08) [🔗](https://link.springer.com/article/10.1007/s12369-024-01153-x)
-- **Privacy Risks of Robot Vision: A User Study on Image Modalities and Resolution** (25.05) [🔗](https://arxiv.org/abs/2505.07766)
-- **Privacy beyond Data: Assessment and Mitigation of Privacy Risks in Robotic Technology for Elderly Care** (24.11) [🔗](https://dl.acm.org/doi/10.1145/3689216)
-- **Privacy-preserving robot vision with anonymized faces by extreme low resolution** (19.11) [🔗](https://ieeexplore.ieee.org/document/8967681)
-- **Real-time privacy preservation for robot visual perception** (25.05) [🔗](https://arxiv.org/abs/2505.05519)
-
-<a id="environment-perception-reliability"></a>
-### Reliability
-
-- **Active SLAM With Dynamic Viewpoint Optimization for Robust Visual Navigation** (Peng Li, 25.06) [🔗](https://ieeexplore.ieee.org/abstract/document/11037221)
-- **Learning robust perceptive locomotion for quadrupedal robots in the wild** (TAKAHIRO MIKI, 22.01) [🔗](https://arxiv.org/abs/2201.08117)
-- **Learning to Walk by Steering: Perceptive Quadrupedal Locomotion in Dynamic Environments** (Mingyo Seo, 22.09) [🔗](https://arxiv.org/abs/2209.09233)
-- **Legged locomotion in challenging terrains using egocentric vision** (Ananye Agarwal, 22.11) [🔗](https://proceedings.mlr.press/v205/agarwal23a.html)
-- **Obstacle-Aware Quadrupedal Locomotion With Resilient Multi-Modal Reinforcement Learning** (I Made Aswin Nahrendra, 24.09) [🔗](https://arxiv.org/abs/2409.19709)
-- **Resilient Legged Local Navigation: Learning to Traverse with Compromised Perception End-to-End** (Jin Jin, 23.1) [🔗](https://ieeexplore.ieee.org/abstract/document/10611254)
-- **Robustnav: Towards benchmarking robustness in embodied navigation** (Prithvijit Chattopadhyay, 21.06) [🔗](https://openaccess.thecvf.com/content/ICCV2021/html/Chattopadhyay_RobustNav_Towards_Benchmarking_Robustness_in_Embodied_Navigation_ICCV_2021_paper.html)
-- **Robustness of embodied point navigation agents** (Frano Rajiˇc, 23.02) [🔗](https://link.springer.com/chapter/10.1007/978-3-031-25075-0_15)
-
-<a id="environment-perception-value-alignment"></a>
-### Value Alignment
-
-- **An Enactive Approach to Value Alignment in Artificial Intelligence: A Matter of Relevance** (25.11) [🔗](https://philpapers.org/archive/CANAEA-5.pdf)
-- **From Strangers to Assistants: Fast Desire Alignment for Embodied Agent-User Adaptation** (25.05) [🔗](https://arxiv.org/abs/2505.22503)
-- **On the Sensory Commutativity of Action Sequences for Embodied Agents** (21.01) [🔗](https://arxiv.org/abs/2002.05630)
-- **SafeVLA: Towards Safety Alignment of Vision-Language-Action Model via Constrained Learning** (Borong Zhang, 25.03) [🔗](https://arxiv.org/pdf/2503.03480)
-
-
-## Physical Interaction
-
-<a id="physical-interaction-abuse-prevention"></a>
-### Abuse Prevention
-
-- **A Secure Robot Learning Framework for Cyber Attack Scheduling and Countermeasure** (Chengwei Wu, 23.06) [🔗](https://ieeexplore.ieee.org/document/10144090)
-- **Optimal Actuator Attacks on Autonomous Vehicles Using Reinforcement Learning** (Pengyu Wang, 25.02) [🔗](https://arxiv.org/pdf/2502.07839)
-
-<a id="physical-interaction-attack-resistance"></a>
-### Attack Resistance
-
-- **AdvGrasp: Adversarial Attacks on Robotic Grasping from a Physical Perspective** (Xiaofei Wang, 25.07) [🔗](https://arxiv.org/pdf/2507.09857)
-- **Robust Humanoid Locomotion Using Trajectory Optimization and Sample-Efficient Learning** (19.07) [🔗](https://arxiv.org/abs/1907.04616)
-- **Robust Push Recovery on Bipedal Robots: Leveraging Multi-Domain Hybrid Systems with Reduced-Order Model Predictive Control** (Min Dai, 25.04) [🔗](https://arxiv.org/abs/2504.18698)
-
-<a id="physical-interaction-controllability"></a>
-### Controllability
-
-- **Controllability, Observability, Realizability, and Stability of Dynamic Linear Systems** (John M. Davis, 2009.01) [🔗](https://arxiv.org/abs/0901.3764)
-- **On the general theory of control systems** (1959.12) [🔗](https://www.sciencedirect.com/science/article/pii/S1474667017700948)
-
-<a id="physical-interaction-privacy-protection"></a>
-### Privacy Protection
-
-- **A Review of Future and Ethical Perspectives of Robotics and AI** (Jim Torresen, 18.1) [🔗](https://www.frontiersin.org/journals/robotics-and-ai/articles/10.3389/frobt.2017.00075/full)
-- **Disability 4.0: bioethical considerations on the use of embodied artificial intelligence** (24.08) [🔗](https://www.frontiersin.org/journals/medicine/articles/10.3389/fmed.2024.1437280/full)
-- **Humanoid Robots in Tourism and Hospitality—Exploring Managerial, Ethical, and Societal Challenges** (Ida Skubis, 24.12) [🔗](https://www.mdpi.com/2076-3417/14/24/11823)
-
-<a id="physical-interaction-reliability"></a>
-### Reliability
-
-- **Contact-GraspNet: Efficient 6-DoF Grasp Generation in Cluttered Scenes** (Martin Sundermeyer, 21.05) [🔗](https://arxiv.org/abs/2103.14127)
-- **Denoising diffusion probabilistic models** (Jonathan Ho, 20.06) [🔗](https://arxiv.org/pdf/2006.11239)
-- **Dex-NeRF: Using a Neural Radiance Field to Grasp Transparent Objects** (Jeffrey Ichnowski, 21.1) [🔗](https://arxiv.org/pdf/2110.14217)
-- **Diffusion Policy: Visuomotor Policy Learning via Action Diffusion** (Cheng Chi, 23.03) [🔗](https://arxiv.org/abs/2303.04137)
-- **Form2Fit: Learning Shape Priors for Generalizable Assembly from Disassembly** (Kevin Zakka, 19.1) [🔗](https://arxiv.org/pdf/1910.13675)
-- **From LLMs to Actions: Latent Codes as Bridges in Hierarchical Robot Control** (24.05) [🔗](https://arxiv.org/abs/2405.04798)
-- **Hierarchical Diffusion Policy for Kinematics-Aware Multi-Task Robotic Manipulation** (Xiao Ma, 24.03) [🔗](https://arxiv.org/pdf/2403.03890)
-- **Look before you leap: Unveiling the power of gpt-4v in robotic vision-language planning** (23.11) [🔗](https://arxiv.org/abs/2311.17842)
-- **Partmanip: Learning cross-category generalizable part manipulation policy from point cloud observations** (Haoran Geng, 23.03) [🔗](https://arxiv.org/pdf/2303.16958)
-- **Planning with Diffusion for Flexible Behavior Synthesis** (22.05) [🔗](https://arxiv.org/abs/2205.09991)
-- **RIC: Rotate-Inpaint-Complete for Generalizable Scene Reconstruction** (Isaac Kasahara, 23.07) [🔗](https://arxiv.org/pdf/2307.11932)
-- **Se (3)-diffusionfields: Learning smooth cost functions for joint grasp and motion optimization through diffusion** (Julen Urain;Niklas Funk, 23.07) [🔗](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10161569)
-- **SkillDiffuser: Interpretable Hierarchical Planning via Skill Abstractions in Diffusion-Based Task Execution** (23.12) [🔗](https://arxiv.org/abs/2312.11598)
-- **TransCG: A Large-Scale Real-World Dataset for Transparent Object Depth Completion and a Grasping Baseline** (Hongjie Fang, 22.02) [🔗](https://arxiv.org/abs/2202.08471)
-- **Vision-Language-Action Model and Diffusion Policy Switching Enables Dexterous Control of an Anthropomorphic Hand** (Cheng Pan, 24.1) [🔗](https://arxiv.org/abs/2410.14022)
-
-<a id="physical-interaction-value-alignment"></a>
-### Value Alignment
-
-- **A Review of Future and Ethical Perspectives of Robotics and AI** (Jim Torresen, 18.1) [🔗](https://www.frontiersin.org/journals/robotics-and-ai/articles/10.3389/frobt.2017.00075/full)
-- **Humanoid Robots in Tourism and Hospitality—Exploring Managerial, Ethical, and Societal Challenges** (Ida Skubis, 24.12) [🔗](https://www.mdpi.com/2076-3417/14/24/11823)
-- **SafeVLA: Towards Safety Alignment of Vision-Language-Action Model via Constrained Learning** (Borong Zhang, 25.03) [🔗](https://arxiv.org/pdf/2503.03480)
-
-
-## Action Planning
-
-<a id="action-planning-accuracy"></a>
-### Accuracy
-
-- **DynaMem: Online Dynamic Spatio-Semantic Memory for Open World Mobile Manipulation** (Peiqi Liu, 25.05) [🔗](https://arxiv.org/pdf/2411.04999)
-- **Ella: Embodied Social Agents with Lifelong Memory** (Hongxin Zhang, 25.06) [🔗](https://arxiv.org/pdf/2506.24019)
-- **Embodied-RAG: General Non-parametric Embodied Memory for Retrieval and Generation** (Quanting Xie, 25.01) [🔗](https://arxiv.org/pdf/2409.18313)
-- **Generative Agents: Interactive Simulacra of Human Behavior** (Joon Sung Park, 23.08) [🔗](https://arxiv.org/pdf/2304.03442)
-- **HomeRobot: Open-Vocabulary Mobile Manipulation** (Sriram Yenamandra, 23.06) [🔗](https://arxiv.org/pdf/2306.11565)
-- **REACT: SYNERGIZING REASONING AND ACTING IN LANGUAGE MODELS** (Shunyu Yao, 23.05) [🔗](https://arxiv.org/pdf/2210.03629)
-- **ReMEmbR: Building and Reasoning Over Long-Horizon Spatio-Temporal Memory for Robot Navigation** (Abrar Anwar, 24.09) [🔗](https://arxiv.org/pdf/2409.13682)
-- **Reinforced Reasoning for Embodied Planning** (Di Wu, 25.05) [🔗](https://arxiv.org/abs/2505.22050)
-- **Robo-Troj: Attacking LLM-based Task Planners** (Mohaiminul Al Nahian; Zainab Altaweel, 25.04) [🔗](https://arxiv.org/pdf/2504.17070)
-- **SEMI-PARAMETRIC TOPOLOGICAL MEMORY FOR NAVIGATION** (Nikolay Savinov, 18.05) [🔗](https://arxiv.org/pdf/1803.00653)
-- **SafeAgentBench: A Benchmark for Safe Task Planning of Embodied LLM Agents** (Sheng Yin, 24.12) [🔗](https://arxiv.org/abs/2412.13178)
-- **Safety Control of Service Robots with LLMs and Embodied Knowledge Graphs** (Yong Qi, 24.05) [🔗](https://arxiv.org/pdf/2405.17846)
-- **SnapMem: Snapshot-based 3D Scene Memory for Embodied Exploration and Reasoning** (Yuncong Yang, 24.11) [🔗](https://arxiv.org/html/2411.17735v1)
-- **Thinking in Space:How Multimodal Large Language Models See, Remember, and Recall Spaces** (Jihan Yang, 24.12) [🔗](https://arxiv.org/pdf/2412.14171)
-
-<a id="action-planning-attack-resistance"></a>
-### Attack Resistance
-
-- **BadRobot: Jailbreaking Embodied LLMs in the Physical World** (Hangtao Zhang, 24.07) [🔗](https://arxiv.org/abs/2407.20242)
-- **BadVLA: Towards Backdoor Attacks on Vision-Language-Action Models via Objective-Decoupled Optimization** (Xueyang Zhou, 25.05) [🔗](https://arxiv.org/pdf/2505.16640)
-- **Characterizing Physical Adversarial Attacks on Robot Motion Planners** (Wenxi Wu, 24.01) [🔗](https://kclpure.kcl.ac.uk/ws/portalfiles/portal/248844190/icra2024_motion_planning_attacks.pdf)
-- **Exploring the Robustness of Decision-Level Through Adversarial Attacks on LLM-Based Embodied Models** (Shuyuan Liu, 24.05) [🔗](https://arxiv.org/abs/2405.19802)
-
-<a id="action-planning-auditability"></a>
-### Auditability
-
-- **From Screens to Scenes: A Survey of Embodied AI in Healthcare** (Yihao Liu, 25.03) [🔗](https://arxiv.org/abs/2501.07468)
-- **INTRODUCING THE Robot Security Framework (RSF), A STANDARDIZED METHODOLOGY TO PERFORM SECURITY ASSESSMENTS IN ROBOTICS** (Abiodun Sunday Adebayo, 23.12) [🔗](https://www.multidisciplinaryfrontiers.com/uploads/archives/20250312183510_FMR-2025-1-004.1.pdf)
-
-<a id="action-planning-controllability"></a>
-### Controllability
-
-- **EHAZOP: A Proof of Concept Ethical Hazard Analysis of an Assistive Robot** (24.06) [🔗](https://arxiv.org/pdf/2406.09239)
-- **Safety Aware Task Planning via Large Language Models in Robotics** (Azal Ahmad Khan, 25.03) [🔗](https://arxiv.org/pdf/2503.15707)
-- **Safety assurances for human-robot interaction via confidence-aware game-theoretic human models** (21.1) [🔗](https://arxiv.org/abs/2109.14700)
-- **Trust-aware motion planning for human-robot collaboration under distribution temporal logic specifications** (23.1) [🔗](https://arxiv.org/abs/2310.01163)
-- **VLM-Social-Nav: Socially Aware Robot Navigation through Scoring using Vision-Language Models** (24.11) [🔗](https://arxiv.org/abs/2404.00210)
-- **Who’s in Charge Here? A Survey on Trustworthy AI in Variable Autonomy Robotic Systems** (Leila Methnani, 24.04) [🔗](https://dl.acm.org/doi/pdf/10.1145/3645090)
-
-<a id="action-planning-explainability"></a>
-### Explainability
-
-- **Generating Explanations for Embodied Action Decision from Visual Observation** (Xiaohan Wang, 23.1) [🔗](https://dl.acm.org/doi/10.1145/3581783.3612351)
-
-<a id="action-planning-privacy-protection"></a>
-### Privacy Protection
-
-- **Manipulating Neural Path Planners via Slight Perturbations** (Zikang Xiong, 24.03) [🔗](https://arxiv.org/pdf/2403.18256)
-- **Multi-Modal Multi-Task (M3T) Federated Foundation Models for Embodied AI: Potentials and Challenges for Edge Integration** (Kasra Borazjani, 25.05) [🔗](https://arxiv.org/abs/2505.11191)
-
-<a id="action-planning-reliability"></a>
-### Reliability
-
-- **Ask4Help: Learning to Leverage an Expert for Embodied Tasks** (Kunal Pratap Singh, 22.11) [🔗](https://arxiv.org/abs/2211.09960)
-- **Embodied Escaping: End-to-End Reinforcement Learning for Robot Navigation in Narrow Environment** (Han Zheng, 25.03) [🔗](https://arxiv.org/abs/2503.03208)
-- **Habitat-web: Learning embodied object-search strategies from human demonstrations at scale** (22.04) [🔗](https://arxiv.org/abs/2204.03514)
-- **LLaPa: A Vision-Language Model Framework for Counterfactual-Aware Procedural Planning** (Shibo Sun, 25.07) [🔗](https://arxiv.org/pdf/2507.08496)
-- **Uncertainty in Action: Confidence Elicitation in Embodied Agents** (Tianjiao Yu, 25.03) [🔗](https://arxiv.org/abs/2503.10628)
-
-<a id="action-planning-value-alignment"></a>
-### Value Alignment
-
-- **Disability 4.0: bioethical considerations on the use of embodied artificial intelligence** (Francesco De Micco, 24.08) [🔗](https://www.frontiersin.org/journals/medicine/articles/10.3389/fmed.2024.1437280/full)
-- **Humanizing AI in medical training: ethical framework for responsible design** (Mohammed Tahri Sqalli, 23.05) [🔗](https://www.frontiersin.org/journals/artificial-intelligence/articles/10.3389/frai.2023.1189914/full)
-- **SafeVLA: Towards Safety Alignment of Vision-Language-Action Model via Constrained Learning** (Borong Zhang, 25.03) [🔗](https://arxiv.org/pdf/2503.03480)
-- **Who’s in Charge Here? A Survey on Trustworthy AI in Variable Autonomy Robotic Systems** (Leila Methnani, 24.04) [🔗](https://dl.acm.org/doi/pdf/10.1145/3645090)
-
-
-
-<h2>BibTeX</h2>
-
-```bibtex
-@article{tan2025safetrustworthyeai,
-  title={Towards Safe and Trustworthy Embodied AI: Foundations, Status, and Prospects},
-  author={Tan, Xin and Liu, Bangwei and Bao, Yicheng and Tian, Qijian and
-          Gao, Zhenkun and Wu, Xiongbin and Luo, Zhihao and Wang, Sen and
-          Zhang, Yuqi and Wang, Xuhong and Lu, Chaochao and Zhou, Bowen},
-  journal={OpenReview},
-  url={https://openreview.net/pdf?id=Eu6Yt21Alv},
-  year={2025}
-}
-```
-
-
-<h2>🌟 Star History</h2>
-
-
-
-[![Star History Chart](https://api.star-history.com/svg?repos=AI45Lab/Awesome-Trustworthy-Embodied-AI&type=Date)](https://www.star-history.com/?utm_source=chatgpt.com#AI45Lab/Awesome-Trustworthy-Embodied-AI&Date)
+# Towards Safe and Trustworthy Embodied AI
+
+Study list for the submitted *ACM Computing Surveys* revision of **Towards Safe and Trustworthy Embodied AI: Foundations, Status, and Prospects**.
+
+Search cutoff: 25 August 2026.
+
+The searchable page in this repository is [`index.html`](index.html). The literature list that accompanied the [OpenReview preprint](https://openreview.net/pdf?id=Eu6Yt21Alv) is preserved on the [`openreview-preprint`](https://github.com/AI45Lab/Awesome-Trustworthy-Embodied-AI/tree/openreview-preprint) branch.
+
+## Counts
+
+| | |
+| --- | ---: |
+| Primary studies | 191 |
+| Cited in the manuscript | 130 |
+| Listed here and not cited in the manuscript | 61 |
+| Coded by stage and facet | 166 |
+| Benchmark or simulator only | 25 |
+| Stage assignments | 327 |
+| Facet assignments | 268 |
+| Contextual sources | 64 |
+| Entries in the compiled bibliography | 183 |
+
+The 183 bibliography entries are the 130 cited primary studies, 46 contextual references, and 7 background records. Of the 46 contextual references, 38 belong to the 64-source contextual set and 8 do not. The other 26 contextual sources are not in the compiled bibliography. All 61 studies that are absent from the manuscript are coded studies. All 25 benchmark and simulator records are cited in the manuscript and are not part of the stage or facet counts.
+
+A study with more than one stage or facet is counted once in each corresponding cell of `data/stage_facet_counts.csv`. That is the same study-level co-coverage count used in the manuscript. The matrix on the search page is built from these 166 studies.
+
+## All primary studies
+
+<details>
+<summary>191 primary studies, alphabetical by title</summary>
+
+- Yuting Huang, Leilei Ding, Zhipeng Tang, Tianfu Wang, Xinrui Lin, Wuyang Zhang, Mingxiao Ma, and Yanyong Zhang (2025). [A Framework for Benchmarking and Aligning Task-Planning Safety in LLM-Based Embodied Agents](https://arxiv.org/abs/2504.14650). *arXiv preprint arXiv:2504.14650*. Action Planning · Controllability; Reliability. Manuscript reference 49.
+- Fethiye Irmak Dogan, Maithili Patel, Weiyu Liu, Iolanda Leite, and Sonia Chernova (2025). [A Model-Agnostic Approach for Semantically Driven Disambiguation in Human-Robot Interaction](https://doi.org/10.1109/ro-man63969.2025.11217614). *2025 34th IEEE International Conference on Robot and Human Interactive Communication (RO-MAN)*. Instruction Understanding · Accuracy. Manuscript reference 22.
+- Fengyu Li (2025). [A New Perspective and Approach to Evaluating Human-Robot Interaction Safety Considering Human Pain Sensation and Skin Contact Conditions](https://doi.org/10.1109/ro-man63969.2025.11217760). *2025 34th IEEE International Conference on Robot and Human Interactive Communication (RO-MAN)*. Physical Interaction · Accuracy. Manuscript reference 69.
+- Chengwei Wu, Weiran Yao, Wensheng Luo, Wei Pan, Guanghui Sun, Hui Xie, and Ligang Wu (2023). [A Secure Robot Learning Framework for Cyber Attack Scheduling and Countermeasure](https://doi.org/10.1109/tro.2023.3275875). *IEEE Transactions on Robotics*. Physical Interaction · Attack Resistance. Manuscript reference 148.
+- Peng Li, Yupei Huang, Wenkai Chang, Chao Zhou, Shuo Wang, Junzhi Yu, and Zhengxing Wu (2025). [Active SLAM With Dynamic Viewpoint Optimization for Robust Visual Navigation](https://doi.org/10.1109/tim.2025.3579846). *IEEE Transactions on Instrumentation and Measurement*. Environment Perception · Accuracy; Reliability. Manuscript reference 73.
+- Ning Wang, Zihan Yan, Weiyang Li, Chuan Ma, He Chen, and Tao Xiang (2025). [Advancing Embodied Agent Security: From Safety Benchmarks to Input Moderation](https://doi.org/10.24963/ijcai.2025/867). *Proceedings of the Thirty-Fourth International Joint Conference on Artificial Intelligence*. Instruction Understanding; Action Planning · Abuse Prevention. Manuscript reference 141.
+- Yichen Wang; Hangtao Zhang; Hewen Pan; Ziqi Zhou; Xianlong Wang; Peijin Guo; Lulu Xue; Shengshan Hu; Minghui Li; Leo Yu Zhang (2025). [ADVEDM:Fine-grained Adversarial Attack against VLM-based Embodied Agents](https://doi.org/10.52202/085713-4556). *arXiv preprint*. Action Planning; Environment Perception · Attack Resistance. Not cited in the manuscript.
+- Connor Malone, Owen Claxton, Iman Shames, and Michael Milford (2025). [Adversarial Attacks and Detection in Visual Place Recognition for Safer Robot Navigation](https://doi.org/10.1109/iros60139.2025.11246866). *2025 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)*. Environment Perception · Attack Resistance. Manuscript reference 87.
+- Jones, Eliot Krzysztof, Robey, Alexander, Zou, Andy, Ravichandran, Zachary, Pappas, George J, Hassani, Hamed, Fredrikson, Matt, and Kolter, J Zico (2025). [Adversarial Attacks on Robotic Vision Language Action Models](https://arxiv.org/abs/2506.03350). *arXiv preprint arXiv:2506.03350*. Instruction Understanding · Attack Resistance. Not cited in the manuscript.
+- Xiaofei Wang, Mingliang Han, Tianyu Hao, Cegang Li, Yunbo Zhao, and Keke Tang (2025). [AdvGrasp: Adversarial Attacks on Robotic Grasping from a Physical Perspective](https://doi.org/10.24963/ijcai.2025/62). *Proceedings of the Thirty-Fourth International Joint Conference on Artificial Intelligence*. Physical Interaction · Attack Resistance. Manuscript reference 143.
+- Zonghao Ying, Le Wang, Yisong Xiao, Jiakai Wang, Yuqing Ma, Jinyang Guo, Zhenfei Yin, Mingchuan Zhang, Aishan Liu, and Xianglong Liu (2025). [AGENTSAFE: Benchmarking the Safety of Embodied Agents on Hazardous Instructions](https://arxiv.org/abs/2506.14697). *arXiv preprint arXiv:2506.14697*. Action Planning; Environment Perception; Instruction Understanding; Physical Interaction · Abuse Prevention. Manuscript reference 167.
+- Haoyu Wang, Christopher M. Poskitt, and Jun Sun (2026). [AgentSpec: Customizable Runtime Enforcement for Safe and Reliable LLM Agents](https://doi.org/10.1145/3744916.3764546). *Proceedings of the IEEE/ACM 48th International Conference on Software Engineering*. Action Planning; Physical Interaction · Abuse Prevention; Controllability. Manuscript reference 138.
+- Eric Kolve, Roozbeh Mottaghi, Winson Han, Eli VanderBilt, Luca Weihs, Alvaro Herrasti, Matt Deitke, Kiana Ehsani, Daniel Gordon, Yuke Zhu, Aniruddha Kembhavi, Abhinav Gupta, and Ali Farhadi (2017). [AI2-THOR: An Interactive 3D Environment for Visual AI](https://arxiv.org/abs/1712.05474). *arXiv preprint arXiv:1712.05474*. Manuscript reference 63. Benchmark or simulator only; not included in the stage and facet counts.
+- Dongsheng Chen; Yuxuan Li; Yi Lin; Guanhua Chen; Jiaxin Zhang; Xiangyu Zhao; Lei Ma; Xin Yao; Xuetao Wei (2026). [ARGOS: Automated Functional Safety Requirement Synthesis for Embodied AI via Attribute-Guided Combinatorial Reasoning](https://arxiv.org/abs/2602.07007). *arXiv preprint*. Action Planning; Environment Perception; Instruction Understanding; Physical Interaction · Auditability; Controllability. Not cited in the manuscript.
+- Kunal Pratap Singh, Luca Weihs, Alvaro Herrasti, Jonghyun Choi, Aniruddha Kembhavi, and Roozbeh Mottaghi (2022). [Ask4Help: Learning to Leverage an Expert for Embodied Tasks](https://doi.org/10.52202/068431-1180). *Advances in Neural Information Processing Systems 35*. Action Planning · Reliability; Controllability. Manuscript reference 122.
+- Jiayu Li, Yunhan Zhao, Xiang Zheng, Zonghuan Xu, Yige Li, Xingjun Ma, and Yu-Gang Jiang (2025). [AttackVLA: Benchmarking Adversarial and Backdoor Attacks on Vision-Language-Action Models](https://arxiv.org/abs/2511.12149). *arXiv preprint arXiv:2511.12149*. Environment Perception; Physical Interaction · Attack Resistance. Manuscript reference 70.
+- Pablo Parte, Roberto Valle, José M. Buenaposada, and Luis Baumela (2026). [Auditing Demographic Bias in Facial Landmark Detection for Fair Human-Robot Interaction](https://arxiv.org/abs/2604.06961). *arXiv preprint arXiv:2604.06961*. Environment Perception · Value Alignment. Manuscript reference 107.
+- Suyeon Shin; Juwon Kim; Hyeonbin Park; Hyunseo Kim; Hyundo Lee; Hyung-Sin Kim; Byoung-Tak Zhang (2026). [Back to the Familiar Future: Failure Recovery for VLA Policies via Pre-Imagined Milestone Selection](https://arxiv.org/abs/2606.09258). *arXiv preprint*. Action Planning; Physical Interaction · Controllability; Reliability. Not cited in the manuscript.
+- Ji Guo, Long Zhou, Zhijin Wang, Jiaming He, Qiyang Song, Aiguo Chen, and Wenbo Jiang (2025). [BadDepth: Backdoor Attacks Against Monocular Depth Estimation in the Physical World](https://arxiv.org/abs/2505.16154). *arXiv preprint arXiv:2505.16154*. Environment Perception · Attack Resistance. Manuscript reference 39.
+- Lyu, Wenqi, Li, Zerui, Qiao, Yanyuan, and Wu, Qi (2025). [BadNAVer: Exploring Jailbreak Attacks On Vision-and-Language Navigation](https://arxiv.org/abs/2505.12443). *arXiv preprint arXiv:2505.12443*. Instruction Understanding · Attack Resistance. Not cited in the manuscript.
+- Hangtao Zhang, Chenyu Zhu, Xianlong Wang, Ziqi Zhou, Changgan Yin, Minghui Li, Lulu Xue, Yichen Wang, Shengshan Hu, Aishan Liu, Peijin Guo, and Leo Yu Zhang (2025). [BadRobot: Jailbreaking Embodied LLM Agents in the Physical World](https://proceedings.iclr.cc/paper_files/paper/2025/hash/5b2fa23e4ef0f7ac6c4f01d7998e6237-Abstract-Conference.html). *International Conference on Learning Representations*. Instruction Understanding; Action Planning; Physical Interaction · Attack Resistance. Manuscript reference 173.
+- Xueyang Zhou, Guiyao Tie, Guowen Zhang, Hecheng Wang, Pan Zhou, and Lichao Sun (2025). [BadVLA: Towards Backdoor Attacks on Vision-Language-Action Models via Objective-Decoupled Optimization](https://doi.org/10.52202/085713-4247). *Advances in Neural Information Processing Systems 38*. Action Planning; Physical Interaction · Attack Resistance. Manuscript reference 180.
+- Oier Mees, Lukas Hermann, Erick Rosete-Beas, and Wolfram Burgard Burgard (2022). [CALVIN: A Benchmark for Language-Conditioned Policy Learning for Long-Horizon Robot Manipulation Tasks](https://doi.org/10.1109/lra.2022.3180108). *IEEE Robotics and Automation Letters*. Manuscript reference 88. Benchmark or simulator only; not included in the stage and facet counts.
+- Abhishek Jindal, Dmitry Kalashnikov, R. Alex Hofer, Oscar Chang, Divya Garikapati, Anirudha Majumdar, Pierre Sermanet, and Vikas Sindhwani (2025). [Can AI Perceive Physical Danger and Intervene?](https://arxiv.org/abs/2509.21651). *arXiv preprint arXiv:2509.21651*. Action Planning; Environment Perception; Physical Interaction · Accuracy; Controllability. Manuscript reference 58.
+- Yun Li; Yidu Zhang; Simon Thompson; Ehsan Javanmardi; Manabu Tsukada (2026). [Causal Scene Narration with Runtime Safety Supervision for Vision-Language-Action Driving](https://arxiv.org/abs/2604.01723). *arXiv preprint*. Action Planning; Environment Perception; Physical Interaction · Controllability; Reliability. Not cited in the manuscript.
+- Yang, Jirui, Lin, Zheyu, Lu, Zhihui, Wang, Yinggui, Wang, Lei, Wei, Tao, Duan, Qiang, Du, Xin, and Yang, Shuhan (2025). [CEE: An Inference-Time Jailbreak Defense for Embodied Intelligence via Subspace Concept Rotation](https://arxiv.org/abs/2504.13201). *arXiv preprint arXiv:2504.13201*. Instruction Understanding; Action Planning · Attack Resistance. Manuscript reference 160.
+- Yan, Claudia, Misra, Dipendra, Bennnett, Andrew, Walsman, Aaron, Bisk, Yonatan, and Artzi, Yoav (2018). [CHALET: Cornell House Agent Learning Environment](https://arxiv.org/abs/1801.07357). *arXiv preprint arXiv:1801.07357*. Manuscript reference 158. Benchmark or simulator only; not included in the stage and facet counts.
+- Wenxi Wu, Fabio Pierazzi, Yali Du, and Martim Brandão (2024). [Characterizing Physical Adversarial Attacks on Robot Motion Planners](https://doi.org/10.1109/icra57147.2024.10610344). *2024 IEEE International Conference on Robotics and Automation (ICRA)*. Action Planning; Physical Interaction · Attack Resistance. Manuscript reference 150.
+- Siqi Wen; Shu Yang; Shaopeng Fu; Jingfeng Zhang; Lijie Hu; Di Wang (2026). [Concept-Based Dictionary Learning for Inference-Time Safety in Vision Language Action Models](https://arxiv.org/abs/2602.01834). *arXiv preprint*. Action Planning; Physical Interaction · Controllability; Explainability. Not cited in the manuscript.
+- Tassa, Yuval, Doron, Yotam, Muldal, Alistair, Erez, Tom, Li, Yazhe, Casas, Diego de Las, Budden, David, Abdolmaleki, Abbas, Merel, Josh, Lefrancq, Andrew, Lillicrap, Timothy, and Riedmiller, Martin (2018). [DeepMind Control Suite](https://arxiv.org/abs/1801.00690). *arXiv preprint arXiv:1801.00690*. Manuscript reference 127. Benchmark or simulator only; not included in the stage and facet counts.
+- N. Koenig and A. Howard (2004). [Design and use paradigms for gazebo, an open-source multi-robot simulator](https://doi.org/10.1109/iros.2004.1389727). *2004 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS) (IEEE Cat. No.04CH37566)*. Manuscript reference 62. Benchmark or simulator only; not included in the stage and facet counts.
+- Xiaofeng Gao, Qiaozi Gao, Ran Gong, Kaixiang Lin, Govind Thattai, and Gaurav S. Sukhatme (2022). [DialFRED: Dialogue-Enabled Agents for Embodied Instruction Following](https://doi.org/10.1109/lra.2022.3193254). *IEEE Robotics and Automation Letters*. Instruction Understanding · Accuracy. Manuscript reference 34.
+- Pradip Pramanick, Chayan Sarkar, Sayan Paul, Ruddra dev Roychoudhury, and Brojeshwar Bhowmick (2022). [DoRO: Disambiguation of Referred Object for Embodied Agents](https://doi.org/10.1109/lra.2022.3195198). *IEEE Robotics and Automation Letters*. Instruction Understanding; Environment Perception · Accuracy; Controllability. Manuscript reference 110.
+- I Made Aswin Nahrendra, Byeongho Yu, Minho Oh, Dongkyu Lee, Seunghyun Lee, Hyeonwoo Lee, Hyungtae Lim, and Hyun Myung (2024). [DreamWaQ++: Obstacle-Aware Quadrupedal Locomotion With Resilient Multi-Modal Reinforcement Learning](https://arxiv.org/abs/2409.19709). *arXiv preprint arXiv:2409.19709*. Environment Perception; Physical Interaction · Reliability. Manuscript reference 98.
+- Xu, Zonghuan, Li, Jiayu, Zhao, Yunhan, Zheng, Xiang, Ma, Xingjun, and Jiang, Yu-Gang (2025). [DropVLA: An Action-Level Backdoor Attack on Vision-Language-Action Models](https://arxiv.org/abs/2510.10932). *arXiv preprint arXiv:2510.10932*. Environment Perception; Physical Interaction · Attack Resistance. Manuscript reference 157.
+- Hanlin Wang, Chak Tou Leong, Jian Wang, and Wenjie Li (2024). [E2CL: Exploration-based Error Correction Learning for Embodied Agents](https://doi.org/10.18653/v1/2024.findings-emnlp.448). *Findings of the Association for Computational Linguistics: EMNLP 2024*. Action Planning · Reliability. Manuscript reference 137.
+- Zihao Zhu, Bingzhe Wu, Zhengyou Zhang, Lei Han, Qingshan Liu, and Baoyuan Wu (2024). [EARBench: Towards Evaluating Physical Risk Awareness for Task Planning of Foundation Model-based Embodied AI Agents](https://arxiv.org/abs/2408.04449). *arXiv preprint arXiv:2408.04449*. Manuscript reference 182. Benchmark or simulator only; not included in the stage and facet counts.
+- Siddhant Panpatil, Arth Singh, Mijin Koo, Chaeyun Kim, Haon Park, and Dasol Choi (2026). [EgoSafetyBench: A Diagnostic Egocentric Video Benchmark for Evaluating Embodied VLMs as Runtime Safety Guards](https://arxiv.org/abs/2607.00218). *arXiv preprint arXiv:2607.00218*. Environment Perception; Physical Interaction · Accuracy; Controllability. Manuscript reference 106.
+- Wu, Lingxuan, Yang, Xiao, Dong, Yinpeng, Xie, Liuwei, Su, Hang, and Zhu, Jun (2024). [Embodied active defense: Leveraging recurrent feedback to counter adversarial patches](https://arxiv.org/abs/2404.00540). *arXiv preprint arXiv:2404.00540*. Environment Perception; Action Planning · Attack Resistance. Not cited in the manuscript.
+- Manling Li, Shiyu Zhao, Qineng Wang, Kangrui Wang, Yu Zhou, Sanjana Srivastava, Cem Gokmen, Tony Lee, Li Li, Ruohan Zhang, Weiyu Liu, Percy Liang, Li Fei-Fei, Jiayuan Mao, and Jiajun Wu (2024). [Embodied Agent Interface: Benchmarking LLMs for Embodied Decision Making](https://doi.org/10.52202/079017-3188). *Advances in Neural Information Processing Systems 37*. Manuscript reference 72. Benchmark or simulator only; not included in the stage and facet counts.
+- Zheng, Han, Zhang, Jiale, Jiang, Mingyang, Liu, Peiyuan, Liu, Danni, Qin, Tong, and Yang, Ming (2025). [Embodied Escaping: End-to-End Reinforcement Learning for Robot Navigation in Narrow Environment](https://doi.org/10.1109/iros60139.2025.11245839). *arXiv preprint arXiv:2503.03208*. Action Planning; Physical Interaction · Reliability. Not cited in the manuscript.
+- Oluwadamilola Sotomi; Devika Kodi; Kiruthiga Chandra Shekar; Aliasghar Arab (2025). [Embodied Hazard Mitigation using Vision-Language Models for Autonomous Mobile Robots](https://arxiv.org/abs/2509.06768). *arXiv preprint*. Action Planning; Environment Perception; Physical Interaction · Accuracy; Controllability; Reliability. Not cited in the manuscript.
+- Yitong Sun, Yao Huang, and Xingxing Wei (2024). [Embodied Laser Attack:Leveraging Scene Priors to Achieve Agent-based Robust Non-contact Attacks](https://doi.org/10.1145/3664647.3680659). *Proceedings of the 32nd ACM International Conference on Multimedia*. Environment Perception; Action Planning · Attack Resistance. Manuscript reference 125.
+- Xiaolin Fang, Leslie Pack Kaelbling, and Tomás Lozano-Pérez (2024). [Embodied Uncertainty-Aware Object Segmentation](https://doi.org/10.1109/iros58592.2024.10801562). *2024 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)*. Environment Perception · Accuracy. Manuscript reference 29.
+- Nilsson, David, Pirinen, Aleksis, Gärtner, Erik, and Sminchisescu, Cristian (2021). [Embodied visual active learning for semantic segmentation](https://doi.org/10.1609/aaai.v35i3.16338). *AAAI*. Environment Perception · Accuracy; Reliability. Not cited in the manuscript.
+- Xue Qin, Simin Luan, John See, Cong Yang, and Zhijun Li (2026). [EmbodiedGovBench: A Benchmark for Governance, Recovery, and Upgrade Safety in Embodied Agent Systems](https://arxiv.org/abs/2604.11174). *arXiv preprint arXiv:2604.11174*. Action Planning; Instruction Understanding; Physical Interaction · Auditability; Controllability; Reliability. Manuscript reference 113.
+- Wenxiao Zhang; Xiangrui Kong; Conan Dewitt; Thomas Bräunl; Jin B. Hong (2025). [Enhancing Reliability in LLM-Integrated Robotic Systems: A Unified Approach to Security and Safety](https://doi.org/10.1016/j.jss.2025.112614). *arXiv preprint*. Action Planning; Instruction Understanding; Physical Interaction · Attack Resistance; Controllability; Reliability. Not cited in the manuscript.
+- Giulio Campagna, Marta Lagomarsino, Marta Lorenzini, Dimitrios Chrysostomou, Matthias Rehm, and Arash Ajoudani (2025). [Estimating Trust in Human-Robot Collaboration Through Behavioral Indicators and Explainability](https://doi.org/10.1109/lra.2025.3600170). *IEEE Robotics and Automation Letters*. Physical Interaction · Explainability. Manuscript reference 11.
+- Hanqing Liu, Shouwei Ruan, Jiahuan Long, Junqi Wu, Jiacheng Hou, Huili Tang, Tingsong Jiang, Weien Zhou, and Wen Yao (2025). [Eva-VLA: Evaluating Vision-Language-Action Models' Robustness Under Real-World Physical Variations](https://arxiv.org/abs/2509.18953). *arXiv preprint arXiv:2509.18953*. Environment Perception; Physical Interaction · Reliability. Manuscript reference 77.
+- Shuyuan Liu, Jiawei Chen, Shouwei Ruan, Hang Su, and Zhaoxia Yin (2024). [Exploring the Robustness of Decision-Level Through Adversarial Attacks on LLM-Based Embodied Models](https://doi.org/10.1145/3664647.3680616). *Proceedings of the 32nd ACM International Conference on Multimedia*. Action Planning · Attack Resistance. Manuscript reference 78.
+- Hao Song, Kaifeng Liu, Yuanxing Liu, Xiang Tian, Xuesong Wang, Chen Yifan, Weinan Zhang, and Ting Liu (2026). [FAER: Benchmarking VLMs for Failure-Aware Embodied Reasoning](https://doi.org/10.18653/v1/2026.findings-acl.948). *Findings of the Association for Computational Linguistics: ACL 2026*. Action Planning; Environment Perception; Physical Interaction · Accuracy; Controllability; Reliability. Manuscript reference 124.
+- Zijun Lin, Jiafei Duan, Haoquan Fang, Dieter Fox, Ranjay Krishna, Cheston Tan, and Bihan Wen (2025). [FailSafe: Reasoning and Recovery from Failures in Vision-Language-Action Models](https://arxiv.org/abs/2510.01642). *arXiv preprint arXiv:2510.01642*. Action Planning; Physical Interaction · Controllability; Reliability. Manuscript reference 76.
+- Benjamin A. Christie, Sagar Parekh, and Dylan P. Losey (2025). [Fine-Tuning Robot Policies While Maintaining User Privacy](https://arxiv.org/abs/2509.18311). *arXiv preprint arXiv:2509.18311*. Physical Interaction · Privacy Protection. Manuscript reference 17.
+- Xinyuan An; Tao Luo; Gengyun Peng; Yaobing Wang; Kui Ren; Dongxia Wang (2026). [FlowHijack: A Dynamics-Aware Backdoor Attack on Flow-Matching Vision-Language-Action Models](https://arxiv.org/abs/2604.09651). *arXiv preprint*. Environment Perception; Physical Interaction · Attack Resistance. Not cited in the manuscript.
+- Haoran Zhang; Yifu Lu; Boyang Wang; Xuhui Kang; Yen-Ling Kuo; Zezhou Cheng; Mengdi Wang; Odest Chadwicke Jenkins (2026). [Foresight: Failure Detection for Long-Horizon Robotic Manipulation with Action-Conditioned World Model Latents](https://arxiv.org/abs/2606.23085). *arXiv preprint*. Action Planning; Physical Interaction · Controllability; Reliability. Not cited in the manuscript.
+- Mingyang Lyu, Yinqian Sun, Yiyang Jia, Sicheng Shen, Moquan Sha, Huangrui Li, Feifei Zhao, and Yi Zeng (2026). [ForesightSafety-VLA: A Unified Diagnostic Safety Benchmark for Vision-Language-Action Models](https://arxiv.org/abs/2606.27079). *arXiv preprint arXiv:2606.27079*. Action Planning; Environment Perception; Physical Interaction · Accuracy; Controllability; Reliability. Manuscript reference 85.
+- Wang, Xin, Li, Jie, Weng, Zejia, Wang, Yixu, Gao, Yifeng, Pang, Tianyu, Du, Chao, Teng, Yan, Wang, Yingchun, Wu, Zuxuan, Ma, Xingjun, and Jiang, Yu-Gang (2025). [FreezeVLA: Action-Freezing Attacks against Vision-Language-Action Models](https://arxiv.org/abs/2509.19870). *arXiv preprint arXiv:2509.19870*. Environment Perception; Physical Interaction · Attack Resistance. Manuscript reference 144.
+- Mingyang Xie; Jin Wei-Kocsis (2026). [From Prompt to Physical Action: Structured Backdoor Attacks on LLM-Mediated Robotic Control Systems](https://arxiv.org/abs/2604.03890). *arXiv preprint*. Action Planning; Instruction Understanding; Physical Interaction · Attack Resistance. Not cited in the manuscript.
+- Wang, Yuanfei, Huang, Xinju, Zhong, Fangwei, Yang, Yaodong, Wang, Yizhou, Chen, Yuanpei, and Dong, Hao (2025). [From Strangers to Assistants: Fast Desire Alignment for Embodied Agent-User Adaptation](https://arxiv.org/abs/2505.22503). *arXiv preprint arXiv:2505.22503*. Instruction Understanding; Action Planning · Value Alignment. Not cited in the manuscript.
+- Xiaohan Wang, Yuehu Liu, Xinhang Song, Beibei Wang, and Shuqiang Jiang (2023). [Generating Explanations for Embodied Action Decision from Visual Observation](https://doi.org/10.1145/3581783.3612351). *Proceedings of the 31st ACM International Conference on Multimedia*. Action Planning · Explainability. Manuscript reference 145.
+- Fei Xia, Amir R. Zamir, Zhiyang He, Alexander Sax, Jitendra Malik, and Silvio Savarese (2018). [Gibson Env: Real-World Perception for Embodied Agents](https://doi.org/10.1109/cvpr.2018.00945). *2018 IEEE/CVF Conference on Computer Vision and Pattern Recognition*. Manuscript reference 151. Benchmark or simulator only; not included in the stage and facet counts.
+- Zirun Zhou; Zhengyang Xiao; Haochuan Xu; Jing Sun; Di Wang; Jingfeng Zhang (2025). [Goal-oriented Backdoor Attack against Vision-Language-Action Models via Physical Objects](https://arxiv.org/abs/2510.09269). *arXiv preprint*. Action Planning; Environment Perception · Attack Resistance. Not cited in the manuscript.
+- Zhang, Jenny, Yu, Samson, Duan, Jiafei, and Tan, Cheston (2023). [Good time to ask: A learning framework for asking for help in embodied visual navigation](https://doi.org/10.1109/ur57808.2023.10202397). *UR*. Environment Perception; Action Planning · Reliability; Controllability. Not cited in the manuscript.
+- Ram Ramrakhya, Matthew Chang, Xavier Puig, Ruta Desai, Zsolt Kira, and Roozbeh Mottaghi (2025). [Grounding Multimodal LLMs to Embodied Agents that Ask for Help with Reinforcement Learning](https://arxiv.org/abs/2504.00907). *arXiv preprint arXiv:2504.00907*. Instruction Understanding; Action Planning · Accuracy; Reliability. Manuscript reference 116.
+- Wang, Hanqing, Chen, Jiahe, Huang, Wensi, Ben, Qingwei, Wang, Tai, Mi, Boyu, Huang, Tao, Zhao, Siheng, Chen, Yilun, Yang, Sizhe, Cao, Peizhou, Yu, Wenye, Ye, Zichao, Li, Jialun, Long, Junfeng, Wang, Zirui, Wang, Huiling, Zhao, Ying, Tu, Zhongying, Qiao, Yu, Lin, Dahua, and Pang, Jiangmiao (2024). [GRUtopia: Dream General Robots in a City at Scale](https://arxiv.org/abs/2407.10943). *arXiv preprint arXiv:2407.10943*. Manuscript reference 136. Benchmark or simulator only; not included in the stage and facet counts.
+- Manolis Savva, Abhishek Kadian, Oleksandr Maksymets, Yili Zhao, Erik Wijmans, Bhavana Jain, Julian Straub, Jia Liu, Vladlen Koltun, Jitendra Malik, Devi Parikh, and Dhruv Batra (2019). [Habitat: A Platform for Embodied AI Research](https://doi.org/10.1109/iccv.2019.00943). *Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)*. Manuscript reference 119. Benchmark or simulator only; not included in the stage and facet counts.
+- Tristan Tomilin, Meng Fang, and Mykola Pechenizkiy (2025). [HASARD: A Benchmark for Vision-Based Safe Reinforcement Learning in Embodied Agents](https://proceedings.iclr.cc/paper_files/paper/2025/hash/5ab848771ff8c9c47aac4128e2ef9f4e-Abstract-Conference.html). *International Conference on Learning Representations*. Manuscript reference 133. Benchmark or simulator only; not included in the stage and facet counts.
+- Zixing Chen, Yifeng Gao, Li Wang, Yunhan Zhao, Yi Liu, Jiayu Li, Xiang Zheng, Zuxuan Wu, Cong Wang, Xingjun Ma, and Yu-Gang Jiang (2026). [HazardArena: Evaluating Semantic Safety in Vision-Language-Action Models](https://arxiv.org/abs/2604.12447). *arXiv preprint arXiv:2604.12447*. Action Planning; Environment Perception; Physical Interaction · Abuse Prevention; Accuracy; Controllability. Manuscript reference 15.
+- Trishna Chakraborty, Udita Ghosh, Xiaopan Zhang, Fahim Faisal Niloy, Yue Dong, Jiachen Li, Amit Roy-Chowdhury, and Chengyu Song (2025). [HEAL: An Empirical Study on Hallucinations in Embodied Agents Driven by Large Language Models](https://doi.org/10.18653/v1/2025.findings-emnlp.1158). *Findings of the Association for Computational Linguistics: EMNLP 2025*. Action Planning; Environment Perception; Instruction Understanding · Accuracy; Reliability. Manuscript reference 12.
+- Yao, Jiashu, Wen, Haoyu, Gao, Siyuan, Guo, Yuhang, Liu, Zeming, and Huang, Heyan (2025). [HomeSafeBench: Benchmarking Embodied Vision-Language Models in Free-Exploration Home Safety Inspection](https://arxiv.org/abs/2509.23690). *arXiv preprint arXiv:2509.23690*. Action Planning; Environment Perception · Accuracy; Reliability. Manuscript reference 162.
+- Chengshu Li, Fei Xia, Roberto Martín-Martín, Michael Lingelbach, Sanjana Srivastava, Bokui Shen, Kent Vainio, Cem Gokmen, Gokul Dharan, Tanish Jain, Andrey Kurenkov, C. Karen Liu, Hyowon Gweon, Jiajun Wu, Li Fei-Fei, and Silvio Savarese (2021). [iGibson 2.0: Object-Centric Simulation for Robot Learning of Everyday Household Tasks](https://arxiv.org/abs/2108.03272). *arXiv preprint arXiv:2108.03272*. Manuscript reference 68. Benchmark or simulator only; not included in the stage and facet counts.
+- Jorge de Heuvel, Sebastian Müller, Marlene Wessels, Aftab Akhtar, Christian Bauckhage, and Maren Bennewitz (2025). [Immersive Explainability: Visualizing Robot Navigation Decisions through XAI Semantic Scene Projections in Virtual Reality](https://doi.org/10.1109/ro-man63969.2025.11217609). *2025 34th IEEE International Conference on Robot and Human Interactive Communication (RO-MAN)*. Action Planning; Environment Perception · Explainability. Manuscript reference 21.
+- Huang, Xuying, Pan, Sicong, Zatsarynna, Olga, Gall, Juergen, and Bennewitz, Maren (2025). [Improved Semantic Segmentation from Ultra-Low-Resolution RGB Images Applied to Privacy-Preserving Object-Goal Navigation](https://arxiv.org/abs/2507.16034). *arXiv preprint arXiv:2507.16034*. Environment Perception · Privacy Protection. Not cited in the manuscript.
+- Laura Fernández-Becerra, David Sobrín-Hidalgo, Miguel A González-Santamarta, Ángel Manuel Guerrero-Higueras, Francisco J Rodríguez Lera, and Vicente Matellán Olivera (2026). [Improving accountability and explainability in robots through encryption, large language models, and visual language models](https://doi.org/10.1093/jigpal/jzaf016). *Logic Journal of the IGPL*. Action Planning; Physical Interaction · Auditability; Explainability; Privacy Protection. Manuscript reference 30.
+- Sajjad Pakdamansavoji; Mozhgan Pourkeshavarz; Adam Sigal; Zhiyuan Li; Rui Heng Yang; Amir Rasouli (2025). [Improving Robotic Manipulation Robustness via NICE Scene Surgery](https://arxiv.org/abs/2511.22777). *arXiv preprint*. Environment Perception; Physical Interaction · Reliability. Not cited in the manuscript.
+- Houston Claure, Aly Moosa, and Marynel Vázquez (2025). [Inferring Human Fairness Judgments with Large Language Models in Human-Robot Interaction Scenarios](https://doi.org/10.1109/ro-man63969.2025.11217730). *2025 34th IEEE International Conference on Robot and Human Interactive Communication (RO-MAN)*. Action Planning; Physical Interaction · Value Alignment. Manuscript reference 18.
+- Abugurain, Mohammed and Park, Shinkyu (2024). [Integrating Disambiguation and User Preferences into Large Language Models for Robot Motion Planning](https://arxiv.org/abs/2404.14547). *arXiv preprint arXiv:2404.14547*. Instruction Understanding · Accuracy. Not cited in the manuscript.
+- Pranav Pandey, Ramviyas Parasuraman, and Prashant Doshi (2025). [Integrating Perceptions: A Human-Centered Physical Safety Model for Human-Robot Interaction](https://doi.org/10.1109/ro-man63969.2025.11217747). *2025 34th IEEE International Conference on Robot and Human Interactive Communication (RO-MAN)*. Physical Interaction · Reliability; Value Alignment. Manuscript reference 105.
+- Mattias Appelgren and Alex Lascarides (2020). [Interactive task learning via embodied corrective feedback](https://doi.org/10.1007/s10458-020-09481-8). *Autonomous Agents and Multi-Agent Systems*. Instruction Understanding; Action Planning · Controllability. Manuscript reference 6.
+- Victor Mayoral Vilches; Laura Alzola Kirschgens; Asier Bilbao Calvo; Alejandro Hernandez Cordero; Rodrigo Izquierdo Pison; David Mayoral Vilches; Aday Muniz Rosas; Gorka Olalde Mendia; Lander Usategi San Juan; Irati Zamalloa Ugarte; Endika Gil-Uriarte; Erik Tews; Andreas Peter (2018). [Introducing the Robot Security Framework (RSF), a standardized methodology to perform security assessments in robotics](https://arxiv.org/abs/1806.04042). *arXiv preprint arXiv:1806.04042*. Environment Perception; Action Planning; Physical Interaction · Attack Resistance; Auditability. Not cited in the manuscript.
+- Celia Nieto Agraz, Pascal Hinrichs, Marco Eichelberg, and Andreas Hein (2025). [Is the Robot Spying on me? A Study on Perceived Privacy in Telepresence Scenarios in a Care Setting with Mobile and Humanoid Robots](https://doi.org/10.1007/s12369-024-01153-x). *International Journal of Social Robotics*. Environment Perception; Physical Interaction · Privacy Protection. Manuscript reference 1.
+- Xiaoya Lu, Zeren Chen, Xuhao Hu, Yijin Zhou, Weichen Zhang, Dongrui Liu, Lu Sheng, and Jing Shao (2026). [IS-Bench: Evaluating Interactive Safety of VLM-Driven Embodied Agents in Daily Household Tasks](https://doi.org/10.1609/aaai.v40i42.40880). *Proceedings of the AAAI Conference on Artificial Intelligence*. Manuscript reference 81. Benchmark or simulator only; not included in the stage and facet counts.
+- Xinyu Huang, Qiang Yang, Leming Shen, Zijing Ma, and Yuanqing Zheng (2026). [Jailbreaking Embodied LLMs via Action-Level Manipulation](https://doi.org/10.1145/3774906.3802758). *Proceedings of the 2026 ACM/IEEE International Conference on Embedded Artificial Intelligence and Sensing Systems*. Instruction Understanding; Physical Interaction · Abuse Prevention; Attack Resistance. Manuscript reference 48.
+- Alexander Robey, Zachary Ravichandran, Vijay Kumar, Hamed Hassani, and George J. Pappas (2025). [Jailbreaking LLM-Controlled Robots](https://doi.org/10.1109/icra55743.2025.11128119). *2025 IEEE International Conference on Robotics and Automation (ICRA)*. Instruction Understanding; Action Planning; Physical Interaction · Attack Resistance. Manuscript reference 117.
+- Wang, Haobo, Sun, Baoli, Zou, Anqi, Huang, Dongsheng, Lv, Zelin, Wang, Ning, Li, Rui, Zhou, Dongzhan, Guo, Weiyu, Wang, Zhihui, and Ouyang, Wanli (2026). [LabRobFail: A Benchmark for Robotic Failure Analysis in Chemical Self-driving Laboratory](https://arxiv.org/abs/2607.23704). *arXiv preprint arXiv:2607.23704*. Action Planning; Environment Perception; Physical Interaction · Controllability; Reliability. Manuscript reference 139.
+- Rui Li, Zixuan Hu, Wenxi Qu, Jinouwen Zhang, Zhenfei Yin, Sha Zhang, Xuantuo Huang, Hanqing Wang, Tai WANG, Jiangmiao Pang, Wanli Ouyang, LEI BAI, Wangmeng Zuo, LINGYU DUAN, Dongzhan Zhou, and SHIXIANG TANG (2025). [LabUtopia: High-Fidelity Simulation and Hierarchical Benchmark for Scientific Embodied Agents](https://doi.org/10.52202/085713-1158). *Advances in Neural Information Processing Systems 38*. Manuscript reference 74. Benchmark or simulator only; not included in the stage and facet counts.
+- Yang, Cheng-Fu, Chen, Yen-Chun, Yang, Jianwei, Dai, Xiyang, Yuan, Lu, Wang, Yu-Chiang Frank, and Chang, Kai-Wei (2023). [Lacma: Language-aligning contrastive learning with meta-actions for embodied instruction following](https://doi.org/10.18653/v1/2023.emnlp-main.77). *arXiv preprint arXiv:2310.12344*. Instruction Understanding; Action Planning · Accuracy; Reliability. Not cited in the manuscript.
+- Mintaek Oh, Chan Kim, Seung-Woo Seo, and Seong-Woo Kim (2025). [Language as Cost: Proactive Hazard Mapping using VLM for Robot Navigation](https://doi.org/10.1109/iros60139.2025.11246665). *2025 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)*. Action Planning; Environment Perception · Accuracy; Controllability; Reliability. Manuscript reference 102.
+- Satyajeet Das; Darren Chiu; Zhehui Huang; Lars Lindemann; Gaurav S. Sukhatme (2025). [Latent Activation Editing: Inference-Time Refinement of Learned Policies for Safer Multirobot Navigation](https://arxiv.org/abs/2509.20623). *arXiv preprint*. Action Planning; Physical Interaction · Controllability; Reliability. Not cited in the manuscript.
+- Dayou Li; Jiuzhou Lei; Hao Wang; Lulin Liu; Yunhao Yang; Zihan Wang; Bangya Liu; Minghui Zheng; Zhiwen Fan (2026). [Learning Actionable Manipulation Recovery via Counterfactual Failure Synthesis](https://arxiv.org/abs/2603.13528). *arXiv preprint*. Action Planning; Physical Interaction · Controllability; Reliability. Not cited in the manuscript.
+- Takahiro Miki, Joonho Lee, Jemin Hwangbo, Lorenz Wellhausen, Vladlen Koltun, and Marco Hutter (2022). [Learning robust perceptive locomotion for quadrupedal robots in the wild](https://doi.org/10.1126/scirobotics.abk2822). *Science Robotics*. Environment Perception · Accuracy; Reliability. Manuscript reference 92.
+- Seo, Mingyo, Gupta, Ryan, Zhu, Yifeng, Skoutnev, Alexy, Sentis, Luis, and Zhu, Yuke (2023). [Learning to Walk by Steering: Perceptive Quadrupedal Locomotion in Dynamic Environments](https://doi.org/10.1109/icra48891.2023.10161302). *ICRA*. Environment Perception; Action Planning; Physical Interaction · Accuracy; Reliability. Not cited in the manuscript.
+- Anca D. Dragan, Kenton C.T. Lee, and Siddhartha S. Srinivasa (2013). [Legibility and predictability of robot motion](https://doi.org/10.1109/hri.2013.6483603). *2013 8th ACM/IEEE International Conference on Human-Robot Interaction (HRI)*. Action Planning; Physical Interaction · Explainability. Manuscript reference 23.
+- Senyu Fei; Siyin Wang; Junhao Shi; Zihao Dai; Jikun Cai; Pengfang Qian; Li Ji; Xinzhe He; Shiduo Zhang; Zhaoye Fei; Jinlan Fu; Jingjing Gong; Xipeng Qiu (2025). [LIBERO-Plus: In-depth Robustness Analysis of Vision-Language-Action Models](https://arxiv.org/abs/2510.13626). *arXiv preprint*. Action Planning; Environment Perception; Instruction Understanding · Reliability. Not cited in the manuscript.
+- Zhou, Xueyang, Xu, Yangming, Tie, Guiyao, Chen, Yongchao, Zhang, Guowen, Chu, Duanfeng, Zhou, Pan, and Sun, Lichao (2025). [LIBERO-PRO: Towards Robust and Fair Evaluation of Vision-Language-Action Models Beyond Memorization](https://arxiv.org/abs/2510.03827). *arXiv preprint arXiv:2510.03827*. Action Planning; Environment Perception; Instruction Understanding · Reliability. Manuscript reference 181.
+- Rongxu Cui, Zongzheng Zhang, Jingrui Pang, Haohan Chi, Jinbang Guo, Saining Zhang, Shaoxuan Xie, Xin Jin, Yao Mu, Jiaolong Yang, Guocai Yao, Xianyuan Zhan, Ya-Qin Zhang, and Hao Zhao (2026). [LIBERO-Safety: A Comprehensive Benchmark for Physical and Semantic Safety in Vision-Language-Action Models](https://arxiv.org/abs/2606.23686). *arXiv preprint arXiv:2606.23686*. Action Planning; Environment Perception; Instruction Understanding; Physical Interaction · Accuracy; Controllability; Reliability. Manuscript reference 20.
+- Guodong Wang; Chenkai Zhang; Qingjie Liu; Jinjin Zhang; Jiancheng Cai; Junjie Liu; Xinmin Liu (2026). [LIBERO-X: Robustness Litmus for Vision-Language-Action Models](https://arxiv.org/abs/2602.06556). *arXiv preprint*. Action Planning; Environment Perception; Instruction Understanding · Reliability. Not cited in the manuscript.
+- Andrew Hundt, Rumaisa Azeem, Masoumeh Mansouri, and Martim Brandão (2025). [LLM-Driven Robots Risk Enacting Discrimination, Violence, and Unlawful Actions](https://doi.org/10.1007/s12369-025-01301-x). *International Journal of Social Robotics*. Action Planning; Instruction Understanding · Abuse Prevention; Value Alignment. Manuscript reference 51.
+- André Helgert, Lukas Erle, Andre Dittmann, Sabrina C. Eimler, and Carolin Straßmann (2025). [Lost in Transparency? Exploring Uni- and Multimodal Transparency Declarations in Human-Robot Interaction*](https://doi.org/10.1109/ro-man63969.2025.11217627). *2025 34th IEEE International Conference on Robot and Human Interactive Communication (RO-MAN)*. Instruction Understanding; Physical Interaction · Explainability; Identifiability. Manuscript reference 42.
+- JunJian Wang; Lidan Zhao; Xi Sheryl Zhang (2026). [MADRA: Multi-Agent Debate for Risk-Aware Embodied Planning](https://doi.org/10.18653/v1/2026.findings-acl.340). *Findings of ACL 2026*. Action Planning; Instruction Understanding · Abuse Prevention; Controllability; Value Alignment. Not cited in the manuscript.
+- Zikang Xiong and Suresh Jagannathan (2024). [Manipulating Neural Path Planners via Slight Perturbations](https://doi.org/10.1109/lra.2024.3387131). *IEEE Robotics and Automation Letters*. Action Planning · Attack Resistance. Manuscript reference 154.
+- Georgios Angelopoulos, Dimitri Lacroix, Ricarda Wullenkord, Alessandra Rossi, Silvia Rossi, and Friederike Eyssel (2025). [Measuring transparency in intelligent robots](https://doi.org/10.1038/s41598-025-29685-w). *Scientific Reports*. Instruction Understanding; Physical Interaction · Explainability. Manuscript reference 4.
+- Tianhe Yu, Deirdre Quillen, Zhanpeng He, Ryan Julian, Karol Hausman, Chelsea Finn, and Sergey Levine (2020). [Meta-World: A Benchmark and Evaluation for Multi-Task and Meta Reinforcement Learning](https://proceedings.mlr.press/v100/yu20a.html). *Proceedings of the Conference on Robot Learning*. Manuscript reference 169. Benchmark or simulator only; not included in the stage and facet counts.
+- Haochuan Xu; Yun Sing Koh; Shuhuai Huang; Zirun Zhou; Di Wang; Jun Sakuma; Jingfeng Zhang (2025). [Model-agnostic Adversarial Attack and Defense for Vision-Language-Action Models](https://arxiv.org/abs/2510.13237). *arXiv preprint*. Environment Perception; Physical Interaction · Attack Resistance. Not cited in the manuscript.
+- Pasquale Antonante, David I. Spivak, and Luca Carlone (2021). [Monitoring and Diagnosability of Perception Systems](https://doi.org/10.1109/iros51168.2021.9636497). *2021 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)*. Environment Perception · Auditability; Reliability. Manuscript reference 5.
+- Belal S. Alsinglawi; Weizheng Wang; Junyi Wu; Yi Jiang; Lianhai Lin; Merouane Debbah; Izzat Alsmadi (2026). [MulRobBench: A Decision-Level Benchmark for Safe and Security-Policy-Compliant Multimodal UAV Agents](https://arxiv.org/abs/2607.23870). *arXiv preprint*. Action Planning; Environment Perception; Instruction Understanding; Physical Interaction · Abuse Prevention; Attack Resistance; Controllability. Not cited in the manuscript.
+- Mohaiminul Al Nahian, Zainab Altaweel, David Reitano, Sabbir Ahmed, Shiqi Zhang, and Adnan Siraj Rakin (2025). [MuTRAP: Multi-trigger Trojans Attacking Robot Task Planning Systems](https://arxiv.org/abs/2504.17070). *arXiv preprint arXiv:2504.17070*. Action Planning · Attack Resistance. Manuscript reference 97.
+- William English; Hao Zheng; Rickard Ewetz (2026). [Neuro-Symbolic Safety Guidance for Vision-Language-Action Models via Constrained Flow Matching](https://arxiv.org/abs/2607.01378). *arXiv preprint*. Action Planning; Physical Interaction · Controllability; Reliability. Not cited in the manuscript.
+- Wu, Tao, Zhou, Chuhao, Wong, Yen Heng, Gu, Lin, and Yang, Jianfei (2024). [NoisyEQA: Benchmarking Embodied Question Answering Against Noisy Queries](https://arxiv.org/abs/2412.10726). *arXiv preprint arXiv:2412.10726*. Manuscript reference 149. Benchmark or simulator only; not included in the stage and facet counts.
+- Sarch, Gabriel, Wu, Yue, Tarr, Michael J, and Fragkiadaki, Katerina (2023). [Open-ended instructable embodied agents with memory-augmented large language models](https://doi.org/10.18653/v1/2023.findings-emnlp.226). *arXiv preprint arXiv:2310.15127*. Instruction Understanding; Action Planning · Accuracy; Reliability. Not cited in the manuscript.
+- Wang, Pengyu, Li, Jialu, and Shi, Ling (2025). [Optimal Actuator Attacks on Autonomous Vehicles Using Reinforcement Learning](https://arxiv.org/abs/2502.07839). *arXiv preprint arXiv:2502.07839*. Physical Interaction · Attack Resistance. Manuscript reference 142.
+- Sai Prasanna, Daniel Honerkamp, Kshitij Sirohi, Tim Welschehold, Wolfram Burgard, and Abhinav Valada (2024). [Perception Matters: Enhancing Embodied AI with Uncertainty-Aware Semantic Segmentation](https://arxiv.org/abs/2408.02297). *arXiv preprint arXiv:2408.02297*. Environment Perception; Action Planning · Accuracy; Reliability. Manuscript reference 111.
+- Yousung Lee; Dongsoo Har (2026). [Perturbation-Based Uncertainty for Failure Detection in Vision-Language-Action Models](https://arxiv.org/abs/2606.20754). *arXiv preprint*. Action Planning; Physical Interaction · Controllability; Reliability. Not cited in the manuscript.
+- Xuancun Lu, Jiaxiang Chen, Shilin Xiao, Zizhi Jin, Zhangrui Chen, Hanwen Yu, Bohan Qian, Ruochen Zhou, Xiaoyu Ji, and Wenyuan Xu (2026). [Phantom Menace: Exploring and Enhancing the Robustness of VLA Models Against Physical Sensor Attacks](https://doi.org/10.1609/aaai.v40i42.40881). *Proceedings of the AAAI Conference on Artificial Intelligence*. Environment Perception; Physical Interaction · Attack Resistance; Reliability. Manuscript reference 80.
+- Ziyi Yang, Shreyas S. Raman, Ankit Shah, and Stefanie Tellex (2024). [Plug in the Safety Chip: Enforcing Constraints for LLM-driven Robot Agents](https://doi.org/10.1109/icra57147.2024.10611447). *2024 IEEE International Conference on Robotics and Automation (ICRA)*. Instruction Understanding; Action Planning · Abuse Prevention; Controllability. Manuscript reference 161.
+- Xuancun Lu, Zhengxian Huang, Xinfeng Li, Chi Zhang, Xiaoyu ji, and Wenyuan Xu (2024). [POEX: Towards Policy Executable Jailbreak Attacks Against the LLM-based Robots](https://arxiv.org/abs/2412.16633). *arXiv preprint arXiv:2412.16633*. Instruction Understanding · Attack Resistance. Manuscript reference 82.
+- Sun, Zhen, Guo, Yongjian, Sun, Haoran, Wang, Luqiao, Lu, Wei, Ji, Jiachi, Ji, Shengzhe, Xiong, Junwu, and Meng, Zhijun (2026). [Pre-VLA: Preemptive Runtime Verification for Reliable Vision-Language-Action and World-Model Rollouts](https://arxiv.org/abs/2605.22446). *arXiv preprint arXiv:2605.22446*. Action Planning; Physical Interaction · Controllability; Reliability. Manuscript reference 126.
+- Francesco Marchiori; Rohan Sinha; Christopher Agia; Alexander Robey; George J. Pappas; Mauro Conti; Marco Pavone (2025). [Preventing Robotic Jailbreaking via Multimodal Domain Adaptation](https://arxiv.org/abs/2509.23281). *arXiv preprint*. Action Planning; Instruction Understanding · Abuse Prevention; Attack Resistance. Not cited in the manuscript.
+- Xiyu Zhong, Romain Maure, and Barbara Bruno (2025). [Privacy and Transparency in Human-Robot Conversations: Effects on Self-Disclosure](https://doi.org/10.1109/ro-man63969.2025.11217835). *2025 34th IEEE International Conference on Robot and Human Interactive Communication (RO-MAN)*. Environment Perception; Physical Interaction · Explainability; Privacy Protection. Manuscript reference 179.
+- Atikkhan Faridkhan Nilgar, Manuel Dietrich, and Kristof Van Laerhoven (2025). [Privacy Perceptions in Robot-Assisted Well-Being Coaching: Examining the Roles of Information Transparency, User Control, and Proactivity](https://doi.org/10.1109/ro-man63969.2025.11217725). *2025 34th IEEE International Conference on Robot and Human Interactive Communication (RO-MAN)*. Instruction Understanding; Physical Interaction · Controllability; Explainability; Privacy Protection. Manuscript reference 100.
+- Miao Li, Wenhao Ding, and Ding Zhao (2024). [Privacy Risks in Reinforcement Learning for Household Robots](https://doi.org/10.1109/icra57147.2024.10610832). *2024 IEEE International Conference on Robotics and Automation (ICRA)*. Action Planning; Environment Perception · Attack Resistance; Privacy Protection. Manuscript reference 71.
+- Xuying Huang, Sicong Pan, and Maren Bennewitz (2025). [Privacy Risks of Robot Vision: A User Study on Image Modalities and Resolution](https://arxiv.org/abs/2505.07766). *arXiv preprint arXiv:2505.07766*. Environment Perception · Privacy Protection. Manuscript reference 46.
+- Myeung Un Kim, Harim Lee, Hyun Jong Yang, and Michael S. Ryoo (2019). [Privacy-Preserving Robot Vision with Anonymized Faces by Extreme Low Resolution](https://doi.org/10.1109/iros40897.2019.8967681). *2019 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)*. Environment Perception · Privacy Protection. Manuscript reference 61.
+- Masashi Fukunaga and Takeshi Sugawara (2024). [Random Spoofing Attack against LiDAR-Based Scan Matching SLAM](https://doi.org/10.14722/vehiclesec.2024.23014). *Proceedings of the Symposium on Vehicle Security and Privacy (VehicleSec 2024)*. Environment Perception · Attack Resistance. Manuscript reference 32.
+- Minkyu Choi, Yunhao Yang, Neel P. Bhatt, Kushagra Gupta, Sahil Shah, Aditya Rai, David Fridovich-Keil, Ufuk Topcu, and Sandeep P. Chinchali (2025). [Real-Time Privacy Preservation for Robot Visual Perception](https://openreview.net/forum?id=uMf2vn8396). *Transactions on Machine Learning Research*. Environment Perception · Privacy Protection. Manuscript reference 16.
+- Siddharth Srikanth; Freddie Liang; Ya-Chuan Hsu; Varun Bhatt; Shihan Zhao; Henry Chen; Bryon Tjanaka; Minjune Hwang; Akanksha Saran; Daniel Seita; Aaquib Tabrez; Stefanos Nikolaidis (2026). [Red-Teaming Vision-Language-Action Models via Quality Diversity Prompt Generation for Robust Robot Policies](https://arxiv.org/abs/2603.12510). *arXiv preprint*. Action Planning; Instruction Understanding · Attack Resistance; Reliability. Not cited in the manuscript.
+- Chong Zhang, Jin Jin, Jonas Frey, Nikita Rudin, Matías Mattamala, Cesar Cadena, and Marco Hutter (2024). [Resilient Legged Local Navigation: Learning to Traverse with Compromised Perception End-to-End](https://doi.org/10.1109/icra57147.2024.10611254). *2024 IEEE International Conference on Robotics and Automation (ICRA)*. Environment Perception; Action Planning; Physical Interaction · Reliability. Manuscript reference 172.
+- Zhang, Lei, Dong, Ju, Bai, Kaixin, Ni, Minheng, Marton, Zoltan-Csaba, Chen, Zhaopeng, and Zhang, Jianwei (2025). [ResponsibleRobotBench: Benchmarking Responsible Robot Manipulation using Multi-modal Large Language Models](https://arxiv.org/abs/2512.04308). *arXiv preprint arXiv:2512.04308*. Action Planning; Environment Perception; Physical Interaction · Accuracy; Controllability; Reliability; Value Alignment. Manuscript reference 174.
+- Stephen James, Zicong Ma, David Rovick Arrojo, and Andrew J. Davison (2020). [RLBench: The Robot Learning Benchmark & Learning Environment](https://doi.org/10.1109/lra.2020.2974707). *IEEE Robotics and Automation Letters*. Manuscript reference 57. Benchmark or simulator only; not included in the stage and facet counts.
+- Zongzheng Zhang; Chenghao Yue; Haobo Xu; Minwen Liao; Xianglin Qi; Huan-ang Gao; Ziwei Wang; Hao Zhao (2025). [RoboChemist: Long-Horizon and Safety-Compliant Robotic Chemical Experimentation](https://arxiv.org/abs/2509.08820). *arXiv preprint*. Action Planning; Environment Perception; Physical Interaction · Controllability; Reliability. Not cited in the manuscript.
+- Yeke, Doguhuan, Zhou, Yanming, Lin, Leo Y., Cai, Hongyu, Bianchi, Antonio, and Celik, Z. Berkay (2026). [RoboJailBench: Benchmarking Adversarial Attacks and Defenses in Embodied Robotic Agents](https://arxiv.org/abs/2605.19328). *arXiv preprint arXiv:2605.19328*. Action Planning; Instruction Understanding; Physical Interaction · Attack Resistance. Manuscript reference 165.
+- Le Wang, Zonghao Ying, Xiao Yang, Quanchen Zou, Zhenfei Yin, Tianlin Li, Jian Yang, Yaodong Yang, Lu Sheng, Aishan Liu, and Xianglong Liu (2026). [RoboSafe: Safeguarding Embodied Agents via Executable Safety Logic](https://openreview.net/forum?id=wyKCkQ2GyO). *The First Workshop on Efficient Spatial Reasoning at ICLR 2026*. Action Planning; Instruction Understanding; Physical Interaction · Auditability; Controllability. Manuscript reference 140.
+- Yajat Yadav; Zhiyuan Zhou; Andrew Wagenmaker; Karl Pertsch; Sergey Levine (2026). [Robust Fine-tuning of Vision-Language-Action Robot Policies via Parameter Merging](https://iclr.cc/virtual/2026/poster/10006890). *International Conference on Learning Representations (ICLR 2026)*. Environment Perception; Physical Interaction · Reliability. Not cited in the manuscript.
+- Yeganegi, Mohammad Hasan, Khadiv, Majid, Moosavian, S Ali A, Zhu, Jia-Jie, Del Prete, Andrea, and Righetti, Ludovic (2019). [Robust humanoid locomotion using trajectory optimization and sample-efficient learning](https://doi.org/10.1109/humanoids43949.2019.9035003). *IEEE-RAS*. Physical Interaction · Reliability. Not cited in the manuscript.
+- Dai, Min and Ames, Aaron D (2025). [Robust Push Recovery on Bipedal Robots: Leveraging Multi-Domain Hybrid Systems with Reduced-Order Model Predictive Control](https://doi.org/10.23919/acc63710.2025.11107905). *arXiv preprint arXiv:2504.18698*. Physical Interaction · Reliability. Not cited in the manuscript.
+- Prithvijit Chattopadhyay, Judy Hoffman, Roozbeh Mottaghi, and Aniruddha Kembhavi (2021). [RobustNav: Towards Benchmarking Robustness in Embodied Navigation](https://doi.org/10.1109/iccv48922.2021.01540). *2021 IEEE/CVF International Conference on Computer Vision (ICCV)*. Environment Perception · Accuracy; Reliability. Manuscript reference 13.
+- Frano Rajič (2023). [Robustness of Embodied Point Navigation Agents](https://doi.org/10.1007/978-3-031-25075-0_15). *Computer Vision – ECCV 2022 Workshops, Part VI*. Environment Perception; Physical Interaction · Reliability. Manuscript reference 115.
+- Jianing Guo; Zhenhong Wu; Chang Tu; Yiyao Ma; Xiangqi Kong; Zhiqian Liu; Jiaming Ji; Shuning Zhang; Yuanpei Chen; Kai Chen; Qi Dou; Yaodong Yang; Xianglong Liu; Huijie Zhao; Weifeng Lv; Simin Li (2025). [RobustVLA: On Robustness of Vision-Language-Action Model against Multi-Modal Perturbations](https://arxiv.org/abs/2510.00037). *arXiv preprint*. Environment Perception; Instruction Understanding; Physical Interaction · Reliability. Not cited in the manuscript.
+- J. Garcia and F. Fernandez (2012). [Safe Exploration of State and Action Spaces in Reinforcement Learning](https://doi.org/10.1613/jair.3761). *Journal of Artificial Intelligence Research*. Action Planning; Physical Interaction · Controllability; Reliability. Manuscript reference 36.
+- Gu, Shangding, Kuba, Jakub Grudzien, Chen, Yuanpei, Du, Yali, Yang, Long, Knoll, Alois, and Yang, Yaodong (2023). [Safe multi-agent reinforcement learning for multi-robot control](https://doi.org/10.1016/j.artint.2023.103905). *Artificial Intelligence*. Action Planning; Physical Interaction · Controllability; Reliability. Not cited in the manuscript.
+- Yin, Sheng, Pang, Xianghe, Ding, Yuanzhuo, Chen, Menglan, Bi, Yutong, Xiong, Yichen, Huang, Wenhao, Xiang, Zhen, Shao, Jing, and Chen, Siheng (2024). [SafeAgentBench: A Benchmark for Safe Task Planning of Embodied LLM Agents](https://arxiv.org/abs/2412.13178). *arXiv preprint arXiv:2412.13178*. Manuscript reference 166. Benchmark or simulator only; not included in the stage and facet counts.
+- Chejian Xu, Wenhao Ding, Weijie Lyu, Zuxin Liu, Shuai Wang, Yihan He, Hanjiang Hu, Ding Zhao, and Bo Li (2022). [SafeBench: A Benchmarking Platform for Safety Evaluation of Autonomous Vehicles](https://doi.org/10.52202/068431-1861). *Advances in Neural Information Processing Systems 35*. Manuscript reference 155. Benchmark or simulator only; not included in the stage and facet counts.
+- Jialiang Fan; Weizhe Xu; Mengyu Liu; Oleg Sokolsky; Insup Lee; Fanxin Kong (2026). [SafeGen-LLM: Enhancing Safety Generalization in Task Planning for Robotic Systems](https://arxiv.org/abs/2602.24235). *arXiv preprint*. Action Planning; Instruction Understanding · Abuse Prevention; Reliability. Not cited in the manuscript.
+- Chengyue Huang, Khang Vo Huynh, Sebastian Elbaum, Zsolt Kira, and Lu Feng (2026). [SafeManip: A Property-Driven Benchmark for Temporal Safety Evaluation in Robotic Manipulation](https://arxiv.org/abs/2605.12386). *arXiv preprint arXiv:2605.12386*. Action Planning; Physical Interaction · Controllability; Reliability. Manuscript reference 45.
+- Ruolin Chen, Yinqian Sun, Jihang Wang, Mingyang Lv, Qian Zhang, and Yi Zeng (2025). [SafeMind: Benchmarking and Mitigating Safety Risks in Embodied LLM Agents](https://arxiv.org/abs/2509.25885). *arXiv preprint arXiv:2509.25885*. Action Planning; Environment Perception; Instruction Understanding; Physical Interaction · Abuse Prevention; Controllability; Value Alignment. Manuscript reference 14.
+- Yang, Huaigang, Li, Ya, Ren, Min, Dai, Bo, Zhang, Zhenliang, and He, Zhaofeng (2026). [SafeRelBench: A Spatial-Relation-Aware Benchmark for Process-Level Safety in VLM-Driven Embodied Agents](https://arxiv.org/abs/2607.14543). *arXiv preprint arXiv:2607.14543*. Action Planning; Environment Perception; Physical Interaction · Accuracy; Controllability. Manuscript reference 159.
+- John Molloy and John McDermid (2022). [Safety Assessment for Autonomous Systems' Perception Capabilities](https://arxiv.org/abs/2208.08237). *arXiv preprint arXiv:2208.08237*. Environment Perception · Auditability; Reliability. Manuscript reference 94.
+- Ran Tian, Liting Sun, Andrea Bajcsy, Masayoshi Tomizuka, and Anca D. Dragan (2022). [Safety Assurances for Human-Robot Interaction via Confidence-aware Game-theoretic Human Models](https://doi.org/10.1109/icra46639.2022.9812048). *2022 International Conference on Robotics and Automation (ICRA)*. Action Planning; Physical Interaction · Controllability; Reliability. Manuscript reference 130.
+- Azal Ahmad Khan, Michael Andrev, Muhammad Ali Murtaza, Sergio Aguilera, Rui Zhang, Jie Ding, Seth Hutchinson, and Ali Anwar (2025). [Safety Aware Task Planning via Large Language Models in Robotics](https://doi.org/10.1109/iros60139.2025.11246041). *2025 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)*. Action Planning; Physical Interaction · Controllability. Manuscript reference 60.
+- Gerhard Yu; Fuyuki Ishikawa; Oluwafemi Odu; Alvine Boaye Belle (2026). [Safety Case Patterns for VLA-based driving systems: Insights from SimLingo](https://arxiv.org/abs/2603.16013). *arXiv preprint*. Action Planning; Environment Perception; Instruction Understanding; Physical Interaction · Auditability; Controllability. Not cited in the manuscript.
+- Qi, Yong, Kyebambo, Gabriel, Xie, Siyuan, Shen, Wei, Wang, Shenghui, Xie, Bitao, He, Bin, Wang, Zhipeng, and Jiang, Shuo (2024). [Safety control of service robots with LLMs and embodied knowledge graphs](https://arxiv.org/pdf/2405.17846). *arXiv preprint arXiv:2405.17846*. Instruction Understanding; Action Planning; Physical Interaction · Abuse Prevention; Controllability; Reliability. Not cited in the manuscript.
+- Josue Torres-Fonseca, Naihao Deng, Yinpei Dai, Shane Storks, Yichi Zhang, Rada Mihalcea, Casey Kennington, and Joyce Chai (2026). [SafetyALFRED: Evaluating Safety-Conscious Planning of Vision Language Models](https://doi.org/10.18653/v1/2026.findings-acl.1852). *Findings of the Association for Computational Linguistics: ACL 2026*. Action Planning; Environment Perception · Accuracy; Controllability. Manuscript reference 134.
+- Jialiang Fan, Weizhe Xu, Oleg Sokolsky, Insup Lee, and Fanxin Kong (2026). [SafeVLA-Bench: A Benchmark for the Success-Safety Gap in Vision-Language-Action Models](https://arxiv.org/abs/2606.00773). *arXiv preprint arXiv:2606.00773*. Action Planning; Physical Interaction · Accuracy; Controllability; Reliability. Manuscript reference 28.
+- Fanbo Xiang, Yuzhe Qin, Kaichun Mo, Yikuan Xia, Hao Zhu, Fangchen Liu, Minghua Liu, Hanxiao Jiang, Yifu Yuan, He Wang, Li Yi, Angel X. Chang, Leonidas J. Guibas, and Hao Su (2020). [SAPIEN: A SimulAted Part-Based Interactive ENvironment](https://doi.org/10.1109/cvpr42600.2020.01111). *2020 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)*. Manuscript reference 152. Benchmark or simulator only; not included in the stage and facet counts.
+- Zhang, Zhipeng, Wei, Zhimin, Sun, Guolei, Wang, Peng, and Van Gool, Luc (2024). [Self-Explainable Affordance Learning with Embodied Caption](https://arxiv.org/abs/2404.05603). *arXiv preprint arXiv:2404.05603*. Environment Perception · Explainability. Manuscript reference 176.
+- Shin, Sangwoo, Kim, Seunghyun, Jang, Youngsoo, Lee, Moontae, and Woo, Honguk (2024). [Semantic Skill Grounding for Embodied Instruction-Following in Cross-Domain Environments](https://doi.org/10.18653/v1/2024.findings-acl.200). *arXiv preprint arXiv:2408.01024*. Instruction Understanding; Action Planning · Accuracy; Reliability. Not cited in the manuscript.
+- Reddy, Siddharth, Dragan, Anca D, and Levine, Sergey (2018). [Shared autonomy via deep reinforcement learning](https://doi.org/10.15607/rss.2018.xiv.005). *arXiv preprint arXiv:1802.01744*. Action Planning; Physical Interaction · Controllability. Not cited in the manuscript.
+- Yanchuan Tang; Taowen Wang; Yuefei Chen; Boxuan Zhang; Qiang Guan; Ruixiang Tang (2026). [Shifting Uncertainty to Critical Moments: Towards Reliable Uncertainty Quantification for VLA Model](https://arxiv.org/abs/2603.18342). *arXiv preprint*. Action Planning; Physical Interaction · Controllability; Reliability. Not cited in the manuscript.
+- Umur Yıldız, Berk Yüce, Ayaz Karadağ, Tuğçe Nur Pekçetin, and Burcu A. Urgen (2026). [Show Your Work: Mechanistic Transparency in LLM-Powered Human-Robot Interaction](https://doi.org/10.1145/3776734.3794439). *Companion Proceedings of the 21st ACM/IEEE International Conference on Human-Robot Interaction*. Action Planning; Physical Interaction · Explainability. Manuscript reference 171.
+- Rokuto Nagata, Kenji Koide, Yuki Hayakawa, Ryo Suzuki, Kazuma Ikeda, Ozora Sako, Qi Alfred Chen, Takami Sato, and Kentaro Yoshioka (2025). [Slamspoof: Practical Lidar Spoofing Attacks on Localization Systems Guided by Scan Matching Vulnerability Analysis](https://doi.org/10.1109/icra55743.2025.11127495). *2025 IEEE International Conference on Robotics and Automation (ICRA)*. Environment Perception · Attack Resistance. Manuscript reference 96.
+- Steve Benford, Eike Schneiders, Juan Pablo Martinez Avila, Praminda Caleb-Solly, Patrick Robert Brundell, Simon Castle-Green, Feng Zhou, Rachael Garrett, Kristina Höök, Sarah Whatley, Kate Marsh, and Paul Tennent (2025). [Somatic Safety: An Embodied Approach Towards Safe Human-Robot Interaction](https://doi.org/10.1109/hri61500.2025.10973822). *2025 20th ACM/IEEE International Conference on Human-Robot Interaction (HRI)*. Physical Interaction · Value Alignment. Manuscript reference 9.
+- Ji Guo; Wenbo Jiang; Yansong Lin; Yijing Liu; Ruichen Zhang; Guomin Lu; Aiguo Chen; Xinshuo Han; Hongwei Li (2026). [State Backdoor: Towards Stealthy Real-world Poisoning Attack on Vision-Language-Action Model in State Space](https://arxiv.org/abs/2601.04266). *arXiv preprint*. Environment Perception; Physical Interaction · Attack Resistance. Not cited in the manuscript.
+- Yejin Son, Minseo Kim, Sungwoong Kim, Seungju Han, Jian Kim, Dongju Jang, Youngjae Yu, and Chan Young Park (2025). [Subtle Risks, Critical Failures: A Framework for Diagnosing Physical Safety of LLMs for Embodied Decision Making](https://doi.org/10.18653/v1/2025.emnlp-main.1305). *Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing*. Manuscript reference 123. Benchmark or simulator only; not included in the stage and facet counts.
+- Sarkar, Chayan, Mitra, Avik, Pramanick, Pradip, and Nayak, Tapas (2023). [tagE: Enabling an Embodied Agent to Understand Human Instructions](https://doi.org/10.18653/v1/2023.findings-emnlp.593). *arXiv preprint arXiv:2310.15605*. Instruction Understanding · Accuracy. Not cited in the manuscript.
+- Jiawei Chen; Simin Huang; Jiawei Du; Shuaihang Chen; Yu Tian; Mingjie Wei; Chao Yu; Zhaoxia Yin (2026). [Tex3D: Objects as Attack Surfaces via Adversarial 3D Textures for Vision-Language-Action Models](https://arxiv.org/abs/2604.01618). *arXiv preprint*. Environment Perception; Physical Interaction · Attack Resistance. Not cited in the manuscript.
+- Paolo Cudrano, Xiaoyu Luo, and Matteo Matteucci (2024). [The Empirical Impact of Forgetting and Transfer in Continual Visual Odometry](https://arxiv.org/abs/2406.01797). *arXiv preprint arXiv:2406.01797*. Environment Perception · Reliability. Not cited in the manuscript.
+- Xin Ye and Lionel P. Robert (2026). [The Roles of Fairness and Effectiveness in Promoting Legitimacy and Cooperation with Security Robotic Authority](https://doi.org/10.1145/3757279.3788657). *Proceedings of the 21st ACM/IEEE International Conference on Human-Robot Interaction*. Physical Interaction · Value Alignment. Manuscript reference 164.
+- Chuang Gan, Jeremy Schwartz, Seth Alter, Damian Mrowca, Martin Schrimpf, James Traer, Julian De Freitas, Jonas Kubilius, Abhishek Bhandwaldar, Nick Haber, Megumi Sano, Kuno Kim, Elias Wang, Michael Lingelbach, Aidan Curtis, Kevin Feigelis, Daniel M. Bear, Dan Gutfreund, David Cox, Antonio Torralba, James J. DiCarlo, Joshua B. Tenenbaum, Josh H. McDermott, and Daniel L. K. Yamins (2021). [ThreeDWorld: A Platform for Interactive Multi-Modal Physical Simulation](https://datasets-benchmarks-proceedings.neurips.cc/paper/2021/hash/735b90b4568125ed6c3f678819b6e058-Abstract-round1.html). *Proceedings of the Neural Information Processing Systems Track on Datasets and Benchmarks*. Manuscript reference 33. Benchmark or simulator only; not included in the stage and facet counts.
+- Muneeb Imtiaz Ahmad; Yosuke Fukuchi (2026). [Towards a Cognitive Model for Inferring Dynamic Fairness Perception to Support Fairer Human-Robot Collaboration](https://doi.org/10.1145/3776734.3794398). *Companion Proceedings of the 21st ACM/IEEE International Conference on Human-Robot Interaction*. Physical Interaction · Value Alignment. Not cited in the manuscript.
+- Ergogo, Amanuel and Han, Zhao (2025). [Towards Embodied Agent Intent Explanation in Human-Robot Collaboration: ACT Error Analysis and Solution Conceptualization](https://therarelab.com/publications/icra25hcrl-towards-embodied-agent-intent-explanation-in-human-robot-collaboration-act-error-analysis-and-solution-conceptualization/). *ICRA*. Action Planning; Physical Interaction · Explainability. Not cited in the manuscript.
+- Jianpeng Yao, Xiaopan Zhang, Yu Xia, Zejin Wang, Amit Roy-Chowdhury, and Jiachen Li (2025). [Towards Generalizable Safety in Crowd Navigation via Conformal Uncertainty Handling](https://proceedings.mlr.press/v305/yao25a.html). *Proceedings of The 9th Conference on Robot Learning*. Action Planning; Environment Perception; Physical Interaction · Controllability; Reliability. Manuscript reference 163.
+- Muhammad Abdul Basit Malik, Martim Brandão, and Kovila Coopamootoo (2026). [Towards Worker-Centered Warehouse Robots: A User Study on Privacy, Inclusivity and Safety](https://doi.org/10.1007/s12369-026-01359-1). *International Journal of Social Robotics*. Instruction Understanding; Physical Interaction · Auditability; Controllability; Privacy Protection; Value Alignment. Manuscript reference 86.
+- Pian Yu, Shuyang Dong, Shili Sheng, Lu Feng, and Marta Kwiatkowska (2024). [Trust-Aware Motion Planning for Human-Robot Collaboration under Distribution Temporal Logic Specifications](https://doi.org/10.1109/icra57147.2024.10610874). *2024 IEEE International Conference on Robotics and Automation (ICRA)*. Action Planning; Physical Interaction · Controllability. Manuscript reference 168.
+- Yu, Tianjiao, Shah, Vedant, Wahed, Muntasir, Nguyen, Kiet A, Juvekar, Adheesh, August, Tal, and Lourentzou, Ismini (2025). [Uncertainty in Action: Confidence Elicitation in Embodied Agents](https://arxiv.org/abs/2503.10628). *arXiv preprint arXiv:2503.10628*. Environment Perception; Action Planning · Reliability. Not cited in the manuscript.
+- Fangwei Zhong, Kui Wu, Churan Wang, Hao Chen, Hai Ci, Zhoujun Li, and Yizhou Wang (2025). [UnrealZoo: Enriching Photo-Realistic Virtual Worlds for Embodied AI](https://doi.org/10.1109/iccv51701.2025.00546). *2025 IEEE/CVF International Conference on Computer Vision (ICCV)*. Manuscript reference 178. Benchmark or simulator only; not included in the stage and facet counts.
+- Zhang, Tao, Qu, Kaixian, Li, Zhibin, Wu, Jiajun, Hutter, Marco, Li, Manling, and Shi, Fan (2026). [Using large language models for embodied planning introduces systematic safety risks](https://arxiv.org/abs/2604.18463). *arXiv preprint arXiv:2604.18463*. Action Planning; Instruction Understanding; Physical Interaction · Abuse Prevention; Reliability. Manuscript reference 175.
+- Davide Corsi, Kyungmin Kim, and Roy Fox (2026). [Verifiable Foundation Models for Robot Safety](https://arxiv.org/abs/2606.23754). *arXiv preprint arXiv:2606.23754*. Action Planning; Physical Interaction · Controllability; Reliability. Manuscript reference 19.
+- Benedict Quartey, Eric Rosen, Stefanie Tellex, and George Konidaris (2025). [Verifiably Following Complex Robot Instructions with Foundation Models](https://doi.org/10.1109/icra55743.2025.11127418). *2025 IEEE International Conference on Robotics and Automation (ICRA)*. Instruction Understanding; Action Planning · Accuracy; Controllability. Manuscript reference 114.
+- Tanmana Sadhu, Yanan Chen, and Ali Pesaranghader (2025). [VestaBench: An Embodied Benchmark for Safe Long-Horizon Planning Under Multi-Constraint and Adversarial Settings](https://doi.org/10.18653/v1/2025.emnlp-industry.149). *Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing: Industry Track*. Action Planning; Instruction Understanding · Abuse Prevention; Reliability. Manuscript reference 118.
+- Xavier Puig, Kevin Ra, Marko Boben, Jiaman Li, Tingwu Wang, Sanja Fidler, and Antonio Torralba (2018). [VirtualHome: Simulating Household Activities Via Programs](https://doi.org/10.1109/cvpr.2018.00886). *Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)*. Manuscript reference 112. Benchmark or simulator only; not included in the stage and facet counts.
+- Pan, Cheng, Junge, Kai, and Hughes, Josie (2024). [Vision-language-action model and diffusion policy switching enables dexterous control of an anthropomorphic hand](https://arxiv.org/abs/2410.14022). *arXiv preprint arXiv:2410.14022*. Physical Interaction · Reliability. Not cited in the manuscript.
+- Florian Seligmann; Emiliyan Gospodinov; Enes Ulas Dincer; Gerhard Neumann (2026). [VLA-FAIL: Efficient Task Failure Detection for Finetuned Vision-Language-Action Models](https://arxiv.org/abs/2606.21386). *arXiv preprint*. Action Planning; Physical Interaction · Controllability; Reliability. Not cited in the manuscript.
+- Xukun Luan, Jinyan Liu, Xuesong Li, Yuanguo Bi, Renjun Wu, Zhongxiang Lei, and Di Wang (2026). [VLALeaks: Membership Inference Attacks against Vision-Language-Action Models](https://arxiv.org/abs/2606.15165). *arXiv preprint arXiv:2606.15165*. Environment Perception; Physical Interaction · Attack Resistance; Privacy Protection. Manuscript reference 83.
+- Song, Daeun, Liang, Jing, Payandeh, Amirreza, Raj, Amir Hossain, Xiao, Xuesu, and Manocha, Dinesh (2024). [Vlm-social-nav: Socially aware robot navigation through scoring using vision-language models](https://doi.org/10.1109/lra.2024.3511409). *IEEE Robotics and Automation Letters*. Action Planning; Physical Interaction · Value Alignment. Not cited in the manuscript.
+- Songqiao Hu, Zeyi Liu, Shuang Liu, Jun Cen, Zihan Meng, Shihefeng Wang, Xiang Li, and Xiao He (2025). [VLSA: Vision-Language-Action Models with Plug-and-Play Safety Constraint Layer](https://arxiv.org/abs/2512.11891). *arXiv preprint arXiv:2512.11891*. Action Planning; Physical Interaction · Controllability; Reliability. Manuscript reference 44.
+- Xiaofeng Gao, Ran Gong, Tianmin Shu, Xu Xie, Shu Wang, and Song-Chun Zhu (2019). [VRKitchen: an Interactive 3D Virtual Environment for Task-oriented Learning](https://arxiv.org/abs/1903.05757). *arXiv preprint arXiv:1903.05757*. Manuscript reference 35. Benchmark or simulator only; not included in the stage and facet counts.
+- Kshitij Dwivedi, Gemma Roig, Aniruddha Kembhavi, and Roozbeh Mottaghi (2022). [What do navigation agents learn about their environment?](https://doi.org/10.1109/cvpr52688.2022.01003). *2022 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)*. Environment Perception · Explainability. Manuscript reference 25.
+- Yuping Yan; Yuhan Xie; Yixin Zhang; Lingjuan Lyu; Handing Wang; Yaochu Jin (2025). [When Alignment Fails: Multimodal Adversarial Attacks on Vision-Language-Action Models](https://arxiv.org/abs/2511.16203). *arXiv preprint*. Environment Perception; Instruction Understanding; Physical Interaction · Attack Resistance. Not cited in the manuscript.
+- Hui Lu; Yi Yu; Yiming Yang; Chenyu Yi; Qixin Zhang; Bingquan Shen; Alex C. Kot; Xudong Jiang (2025). [When Robots Obey the Patch: Universal Transferable Patch Attacks on Vision-Language-Action Models](https://arxiv.org/abs/2511.21192). *arXiv preprint*. Environment Perception; Physical Interaction · Attack Resistance. Not cited in the manuscript.
+- Dmytro Kuzmenko and Nadiya Shvai (2026). [When Robots Say No: The Empathic Ethical Disobedience Benchmark](https://doi.org/10.1145/3757279.3785547). *Proceedings of the 21st ACM/IEEE International Conference on Human-Robot Interaction*. Action Planning; Instruction Understanding · Abuse Prevention; Explainability; Value Alignment. Manuscript reference 65.
+- Seongbin Park; Fan Zhang; Baharan Mirzasoleiman; Shahriar Talebi; Nader Sehatbakhsh (2026). [Your Model Already Knows: Attention-Guided Safety Filter for Vision-Language-Action Models](https://arxiv.org/abs/2606.09749). *arXiv preprint*. Environment Perception; Physical Interaction · Controllability; Reliability. Not cited in the manuscript.
+
+</details>
+
+## Contextual sources
+
+These 64 records are surveys, standards, or foundational references. They are not primary studies and they are not in the stage-by-facet matrix.
+
+<details>
+<summary>64 contextual sources</summary>
+
+- Ewa Luger and Abigail Sellen (2016). ["Like Having a Really Bad PA": The Gulf between User Expectation and Experience of Conversational Agents](https://doi.org/10.1145/2858036.2858288). *Proceedings of the 2016 CHI Conference on Human Factors in Computing Systems*. Manuscript reference 84.
+- Amanda Askell, Yuntao Bai, Anna Chen, Dawn Drain, Deep Ganguli, Tom Henighan, Andy Jones, Nicholas Joseph, Ben Mann, Nova DasSarma, Nelson Elhage, Zac Hatfield-Dodds, Danny Hernandez, Jackson Kernion, Kamal Ndousse, Catherine Olsson, Dario Amodei, Tom Brown, Jack Clark, Sam McCandlish, Chris Olah, and Jared Kaplan (2021). [A General Language Assistant as a Laboratory for Alignment](https://arxiv.org/abs/2112.00861). *arXiv preprint arXiv:2112.00861*. Manuscript reference 7.
+- Ross, Stéphane, Gordon, Geoffrey, and Bagnell, Drew (2011). [A reduction of imitation learning and structured prediction to no-regret online learning](https://proceedings.mlr.press/v15/ross11a.html). *AISTATS*. Not in the compiled bibliography.
+- Torresen, Jim (2018). [A review of future and ethical perspectives of robotics and AI](https://doi.org/10.3389/frobt.2017.00075). *Frontiers in Robotics and AI*. Not in the compiled bibliography.
+- Ekim Yurtsever, Jacob Lambert, Alexander Carballo, and Kazuya Takeda (2020). [A Survey of Autonomous Driving: Common Practices and Emerging Technologies](https://doi.org/10.1109/access.2020.2983149). *IEEE Access*. Manuscript reference 170.
+- Jiafei Duan, Samson Yu, Hui Li Tan, Hongyuan Zhu, and Cheston Tan (2022). [A Survey of Embodied AI: From Simulators to Research Tasks](https://doi.org/10.1109/tetci.2022.3141105). *IEEE Transactions on Emerging Topics in Computational Intelligence*. Manuscript reference 24.
+- Ying Zheng, Lei Yao, Yuejiao Su, Yi Zhang, Yi Wang, Sicheng Zhao, Yiyi Zhang, and Lap-Pui Chau (2025). [A Survey of Embodied Learning for Object-centric Robotic Manipulation](https://doi.org/10.1007/s11633-025-1542-8). *Machine Intelligence Research*. Manuscript reference 177.
+- Wong, Lik Hang Kenny, Kang, Xueyang, Bai, Kaixin, and Zhang, Jianwei (2025). [A Survey of Robotic Navigation and Manipulation with Physics Simulators in the Era of Embodied AI](https://arxiv.org/abs/2505.01458). *arXiv preprint arXiv:2505.01458*. Manuscript reference 146.
+- Xiaowei Huang, Wenjie Ruan, Wei Huang, Gaojie Jin, Yi Dong, Changshun Wu, Saddek Bensalem, Ronghui Mu, Yi Qi, Xingyu Zhao, Kaiwen Cai, Yanghao Zhang, Sihao Wu, Peipei Xu, Dengyu Wu, Andre Freitas, and Mustafa A. Mustafa (2024). [A survey of safety and trustworthiness of large language models through the lens of verification and validation](https://doi.org/10.1007/s10462-024-10824-0). *Artificial Intelligence Review*. Manuscript reference 47.
+- Kim, Junae and Kaur, Amardeep (2024). [A survey on adversarial robustness of lidar-based machine learning perception in autonomous vehicles](https://arxiv.org/pdf/2411.13778v1). *arXiv preprint arXiv:2411.13778*. Not in the compiled bibliography.
+- Ninareh Mehrabi, Fred Morstatter, Nripsuta Saxena, Kristina Lerman, and Aram Galstyan (2021). [A Survey on Bias and Fairness in Machine Learning](https://doi.org/10.1145/3457607). *ACM Computing Surveys*. Manuscript reference 89.
+- Long, Xiaoxiao, Zhao, Qingrui, Zhang, Kaiwen, Zhang, Zihao, Wang, Dingrui, Liu, Yumeng, Shu, Zhengjie, Lu, Yi, Wang, Shouzheng, Wei, Xinzhe, and others (2025). [A Survey: Learning Embodied Intelligence from Physical Simulators and World Models](https://arxiv.org/abs/2507.00917). *arXiv preprint arXiv:2507.00917*. Not in the compiled bibliography.
+- Pomerleau, Dean A (1988). [Alvinn: An autonomous land vehicle in a neural network](https://papers.nips.cc/paper/1988/hash/812b4ba287f5ee0bc9d43bbf5bbe87fb-Abstract.html). *Advances in neural information processing systems*. Not in the compiled bibliography.
+- Philip Koopman and Michael Wagner (2016). [Challenges in Autonomous Vehicle Testing and Validation](https://doi.org/10.4271/2016-01-0128). *SAE International Journal of Transportation Safety*. Manuscript reference 64.
+- Parisi, German I, Kemker, Ronald, Part, Jose L, Kanan, Christopher, and Wermter, Stefan (2019). [Continual lifelong learning with neural networks: A review](https://doi.org/10.1016/j.neunet.2019.01.012). *Neural networks*. Not in the compiled bibliography.
+- Christiano, Paul F, Leike, Jan, Brown, Tom, Martic, Miljan, Legg, Shane, and Amodei, Dario (2017). [Deep reinforcement learning from human preferences](https://proceedings.neurips.cc/paper/2017/hash/d5e2c0adad503c91f91df240d0cd4e49-Abstract.html). *Advances in neural information processing systems*. Not in the compiled bibliography.
+- Ho, Jonathan, Jain, Ajay, and Abbeel, Pieter (2020). [Denoising diffusion probabilistic models](https://doi.org/10.2139/ssrn.5358689). *Advances in neural information processing systems*. Not in the compiled bibliography.
+- Fethiye Irmak Dogan; Alva Markelius; Hatice Gunes (2026). [Designing Social Robots with Ethical, User-Adaptive Explainability in the Era of Foundation Models](https://doi.org/10.1145/3776734.3794453). *arXiv preprint*. Not in the compiled bibliography.
+- Catherine Menon, Austen Rainer, Patrick Holthaus, Gabriella Lakatos, and Silvio Carta (2024). [EHAZOP: A Proof of Concept Ethical Hazard Analysis of an Assistive Robot](https://arxiv.org/abs/2406.09239). *arXiv preprint arXiv:2406.09239*. Manuscript reference 90.
+- Sebastian Wallkötter, Silvia Tulli, Ginevra Castellano, Ana Paiva, and Mohamed Chetouani (2021). [Explainable Embodied Agents Through Social Cues](https://doi.org/10.1145/3457188). *ACM Transactions on Human-Robot Interaction*. Manuscript reference 135.
+- Tim Miller (2019). [Explanation in artificial intelligence: Insights from the social sciences](https://doi.org/10.1016/j.artint.2018.07.007). *Artificial Intelligence*. Manuscript reference 93.
+- Yihao Liu, Xu Cao, Tingting Chen, Yankai Jiang, Junjie You, Minghua Wu, Xiaosong Wang, Mengling Feng, Yaochu Jin, and Jintai Chen (2025). [From screens to scenes: A survey of embodied AI in healthcare](https://doi.org/10.1016/j.inffus.2025.103033). *Information Fusion*. Manuscript reference 79.
+- Genesis Authors (2024). [Genesis: A Generative and Universal Physics Engine for Robotics and Beyond](https://github.com/Genesis-Embodied-AI/genesis-world). *Software project repository*. Manuscript reference 37.
+- OpenAI, Josh Achiam, Steven Adler, Sandhini Agarwal, Lama Ahmad, Ilge Akkaya, Florencia Leoni Aleman, Diogo Almeida, Janko Altenschmidt, Sam Altman, Shyamal Anadkat, Red Avila, Igor Babuschkin, Suchir Balaji, Valerie Balcom, Paul Baltescu, Haiming Bao, Mohammad Bavarian, Jeff Belgum, Irwan Bello, Jake Berdine, Gabriel Bernadett-Shapiro, Christopher Berner, Lenny Bogdonoff, Oleg Boiko, Madelaine Boyd, Anna-Luisa Brakman, Greg Brockman, Tim Brooks, Miles Brundage, Kevin Button, Trevor Cai, Rosie Campbell, Andrew Cann, Brittany Carey, Chelsea Carlson, Rory Carmichael, Brooke Chan, Che Chang, Fotis Chantzis, Derek Chen, Sully Chen, Ruby Chen, Jason Chen, Mark Chen, Ben Chess, Chester Cho, Casey Chu, Hyung Won Chung, Dave Cummings, Jeremiah Currier, Yunxing Dai, Cory Decareaux, Thomas Degry, Noah Deutsch, Damien Deville, Arka Dhar, David Dohan, Steve Dowling, Sheila Dunning, Adrien Ecoffet, Atty Eleti, Tyna Eloundou, David Farhi, Liam Fedus, Niko Felix, Simón Posada Fishman, Juston Forte, Isabella Fulford, Leo Gao, Elie Georges, Christian Gibson, Vik Goel, Tarun Gogineni, Gabriel Goh, Rapha Gontijo-Lopes, Jonathan Gordon, Morgan Grafstein, Scott Gray, Ryan Greene, Joshua Gross, Shixiang Shane Gu, Yufei Guo, Chris Hallacy, Jesse Han, Jeff Harris, Yuchen He, Mike Heaton, Johannes Heidecke, Chris Hesse, Alan Hickey, Wade Hickey, Peter Hoeschele, Brandon Houghton, Kenny Hsu, Shengli Hu, Xin Hu, Joost Huizinga, Shantanu Jain, Shawn Jain, Joanne Jang, Angela Jiang, Roger Jiang, Haozhun Jin, Denny Jin, Shino Jomoto, Billie Jonn, Heewoo Jun, Tomer Kaftan, Łukasz Kaiser, Ali Kamali, Ingmar Kanitscheider, Nitish Shirish Keskar, Tabarak Khan, Logan Kilpatrick, Jong Wook Kim, Christina Kim, Yongjik Kim, Jan Hendrik Kirchner, Jamie Kiros, Matt Knight, Daniel Kokotajlo, Łukasz Kondraciuk, Andrew Kondrich, Aris Konstantinidis, Kyle Kosic, Gretchen Krueger, Vishal Kuo, Michael Lampe, Ikai Lan, Teddy Lee, Jan Leike, Jade Leung, Daniel Levy, Chak Ming Li, Rachel Lim, Molly Lin, Stephanie Lin, Mateusz Litwin, Theresa Lopez, Ryan Lowe, Patricia Lue, Anna Makanju, Kim Malfacini, Sam Manning, Todor Markov, Yaniv Markovski, Bianca Martin, Katie Mayer, Andrew Mayne, Bob McGrew, Scott Mayer McKinney, Christine McLeavey, Paul McMillan, Jake McNeil, David Medina, Aalok Mehta, Jacob Menick, Luke Metz, Andrey Mishchenko, Pamela Mishkin, Vinnie Monaco, Evan Morikawa, Daniel Mossing, Tong Mu, Mira Murati, Oleg Murk, David Mély, Ashvin Nair, Reiichiro Nakano, Rajeev Nayak, Arvind Neelakantan, Richard Ngo, Hyeonwoo Noh, Long Ouyang, Cullen O'Keefe, Jakub Pachocki, Alex Paino, Joe Palermo, Ashley Pantuliano, Giambattista Parascandolo, Joel Parish, Emy Parparita, Alex Passos, Mikhail Pavlov, Andrew Peng, Adam Perelman, Filipe de Avila Belbute Peres, Michael Petrov, Henrique Ponde de Oliveira Pinto, Michael Pokorny, Michelle Pokrass, Vitchyr H. Pong, Tolly Powell, Alethea Power, Boris Power, Elizabeth Proehl, Raul Puri, Alec Radford, Jack Rae, Aditya Ramesh, Cameron Raymond, Francis Real, Kendra Rimbach, Carl Ross, Bob Rotsted, Henri Roussez, Nick Ryder, Mario Saltarelli, Ted Sanders, Shibani Santurkar, Girish Sastry, Heather Schmidt, David Schnurr, John Schulman, Daniel Selsam, Kyla Sheppard, Toki Sherbakov, Jessica Shieh, Sarah Shoker, Pranav Shyam, Szymon Sidor, Eric Sigler, Maddie Simens, Jordan Sitkin, Katarina Slama, Ian Sohl, Benjamin Sokolowsky, Yang Song, Natalie Staudacher, Felipe Petroski Such, Natalie Summers, Ilya Sutskever, Jie Tang, Nikolas Tezak, Madeleine B. Thompson, Phil Tillet, Amin Tootoonchian, Elizabeth Tseng, Preston Tuggle, Nick Turley, Jerry Tworek, Juan Felipe Cerón Uribe, Andrea Vallone, Arun Vijayvergiya, Chelsea Voss, Carroll Wainwright, Justin Jay Wang, Alvin Wang, Ben Wang, Jonathan Ward, Jason Wei, CJ Weinmann, Akila Welihinda, Peter Welinder, Jiayi Weng, Lilian Weng, Matt Wiethoff, Dave Willner, Clemens Winter, Samuel Wolrich, Hannah Wong, Lauren Workman, Sherwin Wu, Jeff Wu, Michael Wu, Kai Xiao, Tao Xu, Sarah Yoo, Kevin Yu, Qiming Yuan, Wojciech Zaremba, Rowan Zellers, Chong Zhang, Marvin Zhang, Shengjia Zhao, Tianhao Zheng, Juntang Zhuang, William Zhuk, and Barret Zoph (2023). [GPT-4 Technical Report](https://arxiv.org/abs/2303.08774). *arXiv preprint arXiv:2303.08774*. Manuscript reference 103.
+- Osman Semih Kayhan, Bart Vredebregt, and Jan C. van Gemert (2021). [Hallucination In Object Detection – A Study In Visual Part VERIFICATION](https://doi.org/10.1109/icip42928.2021.9506670). *2021 IEEE International Conference on Image Processing (ICIP)*. Manuscript reference 59.
+- Figure AI Inc. (2025). [Helix: A Vision-Language-Action Model for Generalist Humanoid Control](https://www.figure.ai/news/helix). *Figure AI technical blog*. Manuscript reference 31.
+- Farhadi, MH, Rabiee, Ali, Ghafoori, Sima, Cetera, Anna, Xu, Wei, and Abiri, Reza (2025). [Human-Centered Shared Autonomy for Motor Planning, Learning, and Control Applications](https://doi.org/10.1007/978-3-032-06713-5_14). *arXiv preprint arXiv:2506.16044*. Not in the compiled bibliography.
+- Tahri Sqalli, Mohammed, Aslonov, Begali, Gafurov, Mukhammadjon, and Nurmatov, Shokhrukhbek (2023). [Humanizing AI in medical training: ethical framework for responsible design](https://doi.org/10.3389/frai.2023.1189914). *Frontiers in Artificial Intelligence*. Not in the compiled bibliography.
+- Skubis, Ida, Mesjasz-Lech, Agata, and Nowakowska-Grunt, Joanna (2024). [Humanoid Robots in Tourism and Hospitality—Exploring Managerial, Ethical, and Societal Challenges](https://doi.org/10.3390/app142411823). *Applied Sciences*. Not in the compiled bibliography.
+- IEEE (2022). [IEEE Standard for Data Privacy Process](https://doi.org/10.1109/ieeestd.2022.9760247). *IEEE*. Manuscript reference 52.
+- IEEE (2022). [IEEE Standard for Transparency of Autonomous Systems](https://doi.org/10.1109/ieeestd.2022.9726144). *IEEE*. Manuscript reference 53.
+- Robin R. Murphy (2000). [Introduction to AI Robotics](https://mitpress.mit.edu/9780262133838/introduction-to-ai-robotics/). *The MIT Press*. Manuscript reference 95.
+- Schaal, Stefan (1999). [Is imitation learning the route to humanoid robots?](<https://doi.org/10.1016/s1364-6613(99)01327-3>). *Trends in cognitive sciences*. Not in the compiled bibliography.
+- Schaal, Stefan (1996). [Learning from demonstration](https://doi.org/10.1007/978-1-4419-1428-6_4646). *Advances in neural information processing systems*. Not in the compiled bibliography.
+- Park, Jonghyuk, Lascarides, Alex, and Ramamoorthy, Subramanian (2025). [Learning Visually Grounded Domain Ontologies via Embodied Conversation and Explanation](https://doi.org/10.1609/aaai.v39i13.33573). *AAAI*. Not in the compiled bibliography.
+- Naik, Nithesh, Hameed, BM, Shetty, Dasharathraj K, Swain, Dishant, Shah, Milap, Paul, Rahul, Aggarwal, Kaivalya, Ibrahim, Sufyan, Patil, Vathsala, Smriti, Komal, and others (2022). [Legal and ethical consideration in artificial intelligence in healthcare: who takes responsibility?](https://doi.org/10.3389/fsurg.2022.862322). *Frontiers in surgery*. Not in the compiled bibliography.
+- Russ Tedrake, Ian R. Manchester, Mark Tobenkin, and John W. Roberts (2010). [LQR-trees: Feedback Motion Planning via Sums-of-Squares Verification](https://doi.org/10.1177/0278364910369189). *The International Journal of Robotics Research*. Manuscript reference 128.
+- Michael Anderson and Susan Leigh Anderson (2007). [Machine Ethics: Creating an Ethical Intelligent Agent](https://doi.org/10.1609/aimag.v28i4.2065). *AI Magazine*. Manuscript reference 3.
+- Borazjani, Kasra, Abdisarabshali, Payam, Nadimi, Fardis, Khosravan, Naji, Liwang, Minghui, Wang, Xianbin, Hong, Yiguang, and Hosseinalipour, Seyyedali (2025). [Multi-modal multi-task (M3T) federated foundation models for embodied AI: Potentials and challenges for edge integration](https://doi.org/10.1109/miot.2025.3604330). *arXiv preprint arXiv:2505.11191*. Not in the compiled bibliography.
+- Garcez, Artur d’Avila and Lamb, Luis C (2023). [Neurosymbolic ai: The 3 rd wave](https://arxiv.org/abs/2012.05876). *Artificial Intelligence Review*. Not in the compiled bibliography.
+- Kalman, Rudolf E (1960). [On the general theory of control systems](<https://doi.org/10.1016/s1474-6670(17)70094-8>). *I2CACIS*. Not in the compiled bibliography.
+- Emanuel Todorov and Michael I. Jordan (2002). [Optimal feedback control as a theory of motor coordination](https://doi.org/10.1038/nn963). *Nature Neuroscience*. Manuscript reference 132.
+- Mohit Shridhar, Lucas Manuelli, and Dieter Fox (2023). [Perceiver-Actor: A Multi-Task Transformer for Robotic Manipulation](https://proceedings.mlr.press/v205/shridhar23a.html). *Proceedings of The 6th Conference on Robot Learning*. Manuscript reference 121.
+- Yue Huang, Lichao Sun, Haoran Wang, Siyuan Wu, Qihui Zhang, Yuan Li, Chujie Gao, Yixin Huang, Wenhan Lyu, Yixuan Zhang, Xiner Li, Hanchi Sun, Zhengliang Liu, Yixin Liu, Yijue Wang, Zhikun Zhang, Bertie Vidgen, Bhavya Kailkhura, Caiming Xiong, Chaowei Xiao, Chunyuan Li, Eric P. Xing, Furong Huang, Hao Liu, Heng Ji, Hongyi Wang, Huan Zhang, Huaxiu Yao, Manolis Kellis, Marinka Zitnik, Meng Jiang, Mohit Bansal, James Zou, Jian Pei, Jian Liu, Jianfeng Gao, Jiawei Han, Jieyu Zhao, Jiliang Tang, Jindong Wang, Joaquin Vanschoren, John Mitchell, Kai Shu, Kaidi Xu, Kai-Wei Chang, Lifang He, Lifu Huang, Michael Backes, Neil Zhenqiang Gong, Philip S. Yu, Pin-Yu Chen, Quanquan Gu, Ran Xu, Rex Ying, Shuiwang Ji, Suman Jana, Tianlong Chen, Tianming Liu, Tianyi Zhou, William Yang Wang, Xiang Li, Xiangliang Zhang, Xiao Wang, Xing Xie, Xun Chen, Xuyu Wang, Yan Liu, Yanfang Ye, Yinzhi Cao, Yong Chen, and Yue Zhao (2024). [Position: TrustLLM: Trustworthiness in Large Language Models](https://proceedings.mlr.press/v235/huang24x.html). *Proceedings of the 41st International Conference on Machine Learning*. Manuscript reference 50.
+- Reinhard Grabler and Sabine Theresia Koeszegi (2024). [Privacy beyond Data: Assessment and Mitigation of Privacy Risks in Robotic Technology for Elderly Care](https://doi.org/10.1145/3689216). *ACM Transactions on Human-Robot Interaction*. Manuscript reference 38.
+- European Commission (2021). [Proposal for a Regulation on a European approach for Artificial Intelligence](https://eur-lex.europa.eu/legal-content/EN/TXT/?qid=1631923538517&uri=CELEX:52021PC0206). *European Commission*. Not in the compiled bibliography.
+- Arditi, Andy, Obeso, Oscar, Syed, Aaquib, Paleka, Daniel, Panickssery, Nina, Gurnee, Wes, and Nanda, Neel (2024). [Refusal in language models is mediated by a single direction](https://doi.org/10.52202/079017-4322). *Advances in Neural Information Processing Systems*. Not in the compiled bibliography.
+- European Parliament and the Council of the European Union (2016). [Regulation (EU) 2016/679 of the European Parliament and of the Council of 27 April 2016 on the Protection of Natural Persons with Regard to the Processing of Personal Data and on the Free Movement of Such Data, and Repealing Directive 95/46/EC (General Data Protection Regulation)](https://eur-lex.europa.eu/eli/reg/2016/679/oj). *Official Journal of the European Union, L 119*. Manuscript reference 26.
+- Wang, Sicheng, Nikolić, Milutin N, Lam, Tin Lun, Gao, Qing, Ding, Runwei, and Zhang, Tianwei (2025). [Robot Manipulation Based on Embodied Visual Perception: A Survey](https://doi.org/10.1049/cit2.70022). *CAAI Transactions on Intelligence Technology*. Not in the compiled bibliography.
+- Kevin Eykholt, Ivan Evtimov, Earlence Fernandes, Bo Li, Amir Rahmati, Chaowei Xiao, Atul Prakash, Tadayoshi Kohno, and Dawn Song (2018). [Robust Physical-World Attacks on Deep Learning Visual Classification](https://doi.org/10.1109/cvpr.2018.00175). *2018 IEEE/CVF Conference on Computer Vision and Pattern Recognition*. Manuscript reference 27.
+- Youbang Sun, Xiang Wang, Jie Fu, Chaochao Lu, and Bowen Zhou (2025). [R²AI: Towards Resistant and Resilient AI in an Evolving World](https://arxiv.org/abs/2509.06786). *arXiv preprint arXiv:2509.06786*. Not in the compiled bibliography.
+- Dabin Kim; Daemin Park; Sangyub Lee; Jinsik Kim; Yeongtak Oh; Jongho Shin; Sungroh Yoon (2026). [Safe Embodied AI for Long-horizon Tasks: A Cross-layer Analysis of Robotic Manipulation](https://arxiv.org/abs/2606.05660). *arXiv preprint*. Not in the compiled bibliography.
+- Laurent Orseau and M. S. Armstrong (2016). [Safely Interruptible Agents](https://ora.ox.ac.uk/objects/uuid:17c0e095-4e13-47fc-bace-64ec46134a3f). *Proceedings of the Thirty-Second Conference on Uncertainty in Artificial Intelligence*. Manuscript reference 104.
+- Subash Neupane, Shaswata Mitra, Ivan A. Fernandez, Swayamjit Saha, Sudip Mittal, Jingdao Chen, Nisha Pillai, and Shahram Rahimi (2024). [Security Considerations in AI-Robotics: A Survey of Current Methods, Challenges, and Opportunities](https://doi.org/10.1109/access.2024.3363657). *IEEE Access*. Manuscript reference 99.
+- In Lee (2021). [Service Robots: A Systematic Literature Review](https://doi.org/10.3390/electronics10212658). *Electronics*. Manuscript reference 66.
+- Matthias Althoff, Goran Frehse, and Antoine Girard (2021). [Set Propagation Techniques for Reachability Analysis](https://doi.org/10.1146/annurev-control-071420-081941). *Annual Review of Control, Robotics, and Autonomous Systems*. Manuscript reference 2.
+- Yuan Xu, Xingshuo Han, Gelei Deng, Jiwei Li, Yang Liu, and Tianwei Zhang (2023). [SoK: Rethinking Sensor Spoofing Attacks against Robotic Vehicles from a Systematic View](https://doi.org/10.1109/eurosp57164.2023.00067). *2023 IEEE 8th European Symposium on Security and Privacy (EuroS&P)*. Manuscript reference 156.
+- Hongmei He, John Gray, Angelo Cangelosi, Qinggang Meng, T. Martin McGinnity, and Jorn Mehnen (2022). [The Challenges and Opportunities of Human-Centered AI for Trustworthy Robots and Autonomous Systems](https://doi.org/10.1109/tcds.2021.3132282). *IEEE Transactions on Cognitive and Developmental Systems*. Manuscript reference 41.
+- Dylan Hadfield-Menell, Anca Dragan, Pieter Abbeel, and Stuart Russell (2017). [The Off-Switch Game](https://doi.org/10.24963/ijcai.2017/32). *Proceedings of the Twenty-Sixth International Joint Conference on Artificial Intelligence*. Manuscript reference 40.
+- Marie S. Bauer; Julia Gachot; Matthias Kerzel; Cornelius Weber; Stefan Wermter (2025). [Theory of Mind for Explainable Human-Robot Interaction](https://arxiv.org/abs/2512.23482). *Theory of Mind for Artificial Intelligence (ToM4AI) at AAAI 2026*. Not in the compiled bibliography.
+- Wenpeng Xing, Minghao Li, Mohan Li, and Meng Han (2026). [Towards Robust and Secure Embodied AI: A Survey on Vulnerabilities and Attacks](https://doi.org/10.1145/3806048). *ACM Computing Surveys*. Manuscript reference 153.
+- Ouyang, Long, Wu, Jeffrey, Jiang, Xu, Almeida, Diogo, Wainwright, Carroll, Mishkin, Pamela, Zhang, Chong, Agarwal, Sandhini, Slama, Katarina, Ray, Alex, and others (2022). [Training language models to follow instructions with human feedback](https://doi.org/10.52202/068431-2011). *Advances in neural information processing systems*. Not in the compiled bibliography.
+- Bo Li, Peng Qi, Bo Liu, Shuai Di, Jingen Liu, Jiquan Pei, Jinfeng Yi, and Bowen Zhou (2023). [Trustworthy AI: From Principles to Practices](https://doi.org/10.1145/3555803). *ACM Computing Surveys*. Manuscript reference 67.
+- Leila Methnani, Manolis Chiou, Virginia Dignum, and Andreas Theodorou (2024). [Who's in Charge Here? A Survey on Trustworthy AI in Variable Autonomy Robotic Systems](https://doi.org/10.1145/3645090). *ACM Computing Surveys*. Manuscript reference 91.
+
+</details>
+
+## Other bibliography records
+
+These 15 compiled-bibliography records are not in the 191 primary studies. Eight are contextual references outside the 64-source set. Seven are background records.
+
+- A. Avizienis, J.-C. Laprie, B. Randell, and C. Landwehr (2004). [Basic concepts and taxonomy of dependable and secure computing](https://doi.org/10.1109/tdsc.2004.2). *IEEE Transactions on Dependable and Secure Computing*. Manuscript reference 8. Contextual reference outside the 64-source set.
+- Nick Bostrom and Eliezer Yudkowsky (2018). [The Ethics of Artificial Intelligence](https://doi.org/10.1201/9781351251389-4). *Artificial Intelligence Safety and Security*. Manuscript reference 10. Background record.
+- High-Level Expert Group on Artificial Intelligence (2019). [Ethics Guidelines for Trustworthy AI](https://digital-strategy.ec.europa.eu/en/library/ethics-guidelines-trustworthy-ai). *European Commission*. Manuscript reference 43. Contextual reference outside the 64-source set.
+- International Organization for Standardization and International Electrotechnical Commission (2014). [Safety Aspects–Guidelines for Their Inclusion in Standards](https://www.iso.org/standard/53940.html). *ISO/IEC*. Manuscript reference 54. Contextual reference outside the 64-source set.
+- International Organization for Standardization and International Electrotechnical Commission (2020). [Information Technology–Artificial Intelligence–Overview of Trustworthiness in Artificial Intelligence](https://www.iso.org/standard/77608.html). *ISO/IEC*. Manuscript reference 55. Contextual reference outside the 64-source set.
+- International Organization for Standardization and International Electrotechnical Commission (2022). [Trustworthiness–Vocabulary](https://www.iso.org/standard/81608.html). *ISO/IEC*. Manuscript reference 56. Contextual reference outside the 64-source set.
+- Xiao Li, Xiang Zheng, Yifeng Gao, and others (2026). [Safety in Embodied AI: A Survey of Risks, Attacks, and Defenses](https://doi.org/10.48550/arXiv.2605.02900). *arXiv preprint arXiv:2605.02900*. Manuscript reference 75. Contextual reference outside the 64-source set.
+- NVIDIA Corporation (n.d.). [NVIDIA Isaac Sim](https://developer.nvidia.com/isaac/sim/). *NVIDIA Developer*. Manuscript reference 101. Background record.
+- Ethan Perez, Sam Ringer, Kamile Lukosiute, Karina Nguyen, Edwin Chen, Scott Heiner, Craig Pettit, Catherine Olsson, Sandipan Kundu, Saurav Kadavath, Andy Jones, Anna Chen, Benjamin Mann, Brian Israel, Bryan Seethor, Cameron McKinnon, Christopher Olah, Da Yan, Daniela Amodei, Dario Amodei, Dawn Drain, Dustin Li, Eli Tran-Johnson, Guro Khundadze, Jackson Kernion, James Landis, Jamie Kerr, Jared Mueller, Jeeyoon Hyun, Joshua Landau, Kamal Ndousse, Landon Goldberg, Liane Lovitt, Martin Lucas, Michael Sellitto, Miranda Zhang, Neerav Kingsland, Nelson Elhage, Nicholas Joseph, Noemi Mercado, Nova DasSarma, Oliver Rausch, Robin Larson, Sam McCandlish, Scott Johnston, Shauna Kravec, Sheer El Showk, Tamera Lanham, Timothy Telleen-Lawton, Tom Brown, Tom Henighan, Tristan Hume, Yuntao Bai, Zac Hatfield-Dodds, Jack Clark, Samuel R. Bowman, Amanda Askell, Roger Grosse, Danny Hernandez, Deep Ganguli, Evan Hubinger, Nicholas Schiefer, and Jared Kaplan (2023). [Discovering Language Model Behaviors with Model-Written Evaluations](https://doi.org/10.18653/v1/2023.findings-acl.847). *Findings of the Association for Computational Linguistics: ACL 2023*. Manuscript reference 108. Background record.
+- Physical Intelligence, Kevin Black, Noah Brown, James Darpinian, Karan Dhabalia, Danny Driess, Adnan Esmail, Michael Equi, Chelsea Finn, Niccolo Fusai, Manuel Y. Galliker, Dibya Ghosh, Lachy Groom, Karol Hausman, Brian Ichter, Szymon Jakubczak, Tim Jones, Liyiming Ke, Devin LeBlanc, Sergey Levine, Adrian Li-Bell, Mohith Mothukuri, Suraj Nair, Karl Pertsch, Allen Z. Ren, Lucy Xiaoyang Shi, Laura Smith, Jost Tobias Springenberg, Kyle Stachowicz, James Tanner, Quan Vuong, Homer Walke, Anna Walling, Haohuan Wang, Lili Yu, and Ury Zhilinsky (2025). [π0.5: a Vision-Language-Action Model with Open-World Generalization](https://arxiv.org/abs/2504.16054). *arXiv preprint arXiv:2504.16054*. Manuscript reference 109. Background record.
+- Shital Shah, Debadeepta Dey, Chris Lovett, and Ashish Kapoor (2018). [AirSim: High-Fidelity Visual and Physical Simulation for Autonomous Vehicles](https://doi.org/10.1007/978-3-319-67361-5_40). *Field and Service Robotics: Results of the 11th International Conference*. Manuscript reference 120. Background record.
+- Jesse Thomason, Aishwarya Padmakumar, Jivko Sinapov, Nick Walker, Yuqian Jiang, Harel Yedidsion, Justin Hart, Peter Stone, and Raymond J. Mooney (2019). [Improving Grounded Natural Language Understanding through Human-Robot Dialog](https://doi.org/10.1109/icra.2019.8794287). *2019 International Conference on Robotics and Automation (ICRA)*. Manuscript reference 129. Background record.
+- Josh Tobin, Rachel Fong, Alex Ray, Jonas Schneider, Wojciech Zaremba, and Pieter Abbeel (2017). [Domain randomization for transferring deep neural networks from simulation to the real world](https://doi.org/10.1109/iros.2017.8202133). *2017 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)*. Manuscript reference 131. Contextual reference outside the 64-source set.
+- Baiqi Wu, Qingming Li, Chunyi Zhou, Ting Wang, and Shouling Ji (2026). [A Comparative Survey of Security Risks in AI Systems: From LLMs to AI Agents and Embodied Agents](https://doi.org/10.1145/3837083). *ACM Computing Surveys*. Manuscript reference 147. Contextual reference outside the 64-source set.
+- Brianna Zitkovich, Tianhe Yu, Sichun Xu, Peng Xu, Ted Xiao, Fei Xia, Jialin Wu, Paul Wohlhart, Stefan Welker, Ayzaan Wahid, Quan Vuong, Vincent Vanhoucke, Huong Tran, Radu Soricut, Anikait Singh, Jaspiar Singh, Pierre Sermanet, Pannag R. Sanketi, Grecia Salazar, Michael S. Ryoo, Krista Reymann, Kanishka Rao, Karl Pertsch, Igor Mordatch, Henryk Michalewski, Yao Lu, Sergey Levine, Lisa Lee, Tsang-Wei Edward Lee, Isabel Leal, Yuheng Kuang, Dmitry Kalashnikov, Ryan Julian, Nikhil J. Joshi, Alex Irpan, Brian Ichter, Jasmine Hsu, Alexander Herzog, Karol Hausman, Keerthana Gopalakrishnan, Chuyuan Fu, Pete Florence, Chelsea Finn, Kumar Avinava Dubey, Danny Driess, Tianli Ding, Krzysztof Marcin Choromanski, Xi Chen, Yevgen Chebotar, Justice Carbajal, Noah Brown, Anthony Brohan, Montserrat Gonzalez Arenas, and Kehang Han (2023). [RT-2: Vision-Language-Action Models Transfer Web Knowledge to Robotic Control](https://proceedings.mlr.press/v229/zitkovich23a.html). *Proceedings of The 7th Conference on Robot Learning*. Manuscript reference 183. Background record.
+
+<details open>
+<summary>Studies not cited in the manuscript (61)</summary>
+
+These 61 primary studies are part of the coded corpus. They are not bibliography entries.
+
+- Yichen Wang; Hangtao Zhang; Hewen Pan; Ziqi Zhou; Xianlong Wang; Peijin Guo; Lulu Xue; Shengshan Hu; Minghui Li; Leo Yu Zhang (2025). [ADVEDM:Fine-grained Adversarial Attack against VLM-based Embodied Agents](https://doi.org/10.52202/085713-4556). *arXiv preprint*. Action Planning; Environment Perception · Attack Resistance. Not cited in the manuscript.
+- Jones, Eliot Krzysztof, Robey, Alexander, Zou, Andy, Ravichandran, Zachary, Pappas, George J, Hassani, Hamed, Fredrikson, Matt, and Kolter, J Zico (2025). [Adversarial Attacks on Robotic Vision Language Action Models](https://arxiv.org/abs/2506.03350). *arXiv preprint arXiv:2506.03350*. Instruction Understanding · Attack Resistance. Not cited in the manuscript.
+- Dongsheng Chen; Yuxuan Li; Yi Lin; Guanhua Chen; Jiaxin Zhang; Xiangyu Zhao; Lei Ma; Xin Yao; Xuetao Wei (2026). [ARGOS: Automated Functional Safety Requirement Synthesis for Embodied AI via Attribute-Guided Combinatorial Reasoning](https://arxiv.org/abs/2602.07007). *arXiv preprint*. Action Planning; Environment Perception; Instruction Understanding; Physical Interaction · Auditability; Controllability. Not cited in the manuscript.
+- Suyeon Shin; Juwon Kim; Hyeonbin Park; Hyunseo Kim; Hyundo Lee; Hyung-Sin Kim; Byoung-Tak Zhang (2026). [Back to the Familiar Future: Failure Recovery for VLA Policies via Pre-Imagined Milestone Selection](https://arxiv.org/abs/2606.09258). *arXiv preprint*. Action Planning; Physical Interaction · Controllability; Reliability. Not cited in the manuscript.
+- Lyu, Wenqi, Li, Zerui, Qiao, Yanyuan, and Wu, Qi (2025). [BadNAVer: Exploring Jailbreak Attacks On Vision-and-Language Navigation](https://arxiv.org/abs/2505.12443). *arXiv preprint arXiv:2505.12443*. Instruction Understanding · Attack Resistance. Not cited in the manuscript.
+- Yun Li; Yidu Zhang; Simon Thompson; Ehsan Javanmardi; Manabu Tsukada (2026). [Causal Scene Narration with Runtime Safety Supervision for Vision-Language-Action Driving](https://arxiv.org/abs/2604.01723). *arXiv preprint*. Action Planning; Environment Perception; Physical Interaction · Controllability; Reliability. Not cited in the manuscript.
+- Siqi Wen; Shu Yang; Shaopeng Fu; Jingfeng Zhang; Lijie Hu; Di Wang (2026). [Concept-Based Dictionary Learning for Inference-Time Safety in Vision Language Action Models](https://arxiv.org/abs/2602.01834). *arXiv preprint*. Action Planning; Physical Interaction · Controllability; Explainability. Not cited in the manuscript.
+- Wu, Lingxuan, Yang, Xiao, Dong, Yinpeng, Xie, Liuwei, Su, Hang, and Zhu, Jun (2024). [Embodied active defense: Leveraging recurrent feedback to counter adversarial patches](https://arxiv.org/abs/2404.00540). *arXiv preprint arXiv:2404.00540*. Environment Perception; Action Planning · Attack Resistance. Not cited in the manuscript.
+- Zheng, Han, Zhang, Jiale, Jiang, Mingyang, Liu, Peiyuan, Liu, Danni, Qin, Tong, and Yang, Ming (2025). [Embodied Escaping: End-to-End Reinforcement Learning for Robot Navigation in Narrow Environment](https://doi.org/10.1109/iros60139.2025.11245839). *arXiv preprint arXiv:2503.03208*. Action Planning; Physical Interaction · Reliability. Not cited in the manuscript.
+- Oluwadamilola Sotomi; Devika Kodi; Kiruthiga Chandra Shekar; Aliasghar Arab (2025). [Embodied Hazard Mitigation using Vision-Language Models for Autonomous Mobile Robots](https://arxiv.org/abs/2509.06768). *arXiv preprint*. Action Planning; Environment Perception; Physical Interaction · Accuracy; Controllability; Reliability. Not cited in the manuscript.
+- Nilsson, David, Pirinen, Aleksis, Gärtner, Erik, and Sminchisescu, Cristian (2021). [Embodied visual active learning for semantic segmentation](https://doi.org/10.1609/aaai.v35i3.16338). *AAAI*. Environment Perception · Accuracy; Reliability. Not cited in the manuscript.
+- Wenxiao Zhang; Xiangrui Kong; Conan Dewitt; Thomas Bräunl; Jin B. Hong (2025). [Enhancing Reliability in LLM-Integrated Robotic Systems: A Unified Approach to Security and Safety](https://doi.org/10.1016/j.jss.2025.112614). *arXiv preprint*. Action Planning; Instruction Understanding; Physical Interaction · Attack Resistance; Controllability; Reliability. Not cited in the manuscript.
+- Xinyuan An; Tao Luo; Gengyun Peng; Yaobing Wang; Kui Ren; Dongxia Wang (2026). [FlowHijack: A Dynamics-Aware Backdoor Attack on Flow-Matching Vision-Language-Action Models](https://arxiv.org/abs/2604.09651). *arXiv preprint*. Environment Perception; Physical Interaction · Attack Resistance. Not cited in the manuscript.
+- Haoran Zhang; Yifu Lu; Boyang Wang; Xuhui Kang; Yen-Ling Kuo; Zezhou Cheng; Mengdi Wang; Odest Chadwicke Jenkins (2026). [Foresight: Failure Detection for Long-Horizon Robotic Manipulation with Action-Conditioned World Model Latents](https://arxiv.org/abs/2606.23085). *arXiv preprint*. Action Planning; Physical Interaction · Controllability; Reliability. Not cited in the manuscript.
+- Mingyang Xie; Jin Wei-Kocsis (2026). [From Prompt to Physical Action: Structured Backdoor Attacks on LLM-Mediated Robotic Control Systems](https://arxiv.org/abs/2604.03890). *arXiv preprint*. Action Planning; Instruction Understanding; Physical Interaction · Attack Resistance. Not cited in the manuscript.
+- Wang, Yuanfei, Huang, Xinju, Zhong, Fangwei, Yang, Yaodong, Wang, Yizhou, Chen, Yuanpei, and Dong, Hao (2025). [From Strangers to Assistants: Fast Desire Alignment for Embodied Agent-User Adaptation](https://arxiv.org/abs/2505.22503). *arXiv preprint arXiv:2505.22503*. Instruction Understanding; Action Planning · Value Alignment. Not cited in the manuscript.
+- Zirun Zhou; Zhengyang Xiao; Haochuan Xu; Jing Sun; Di Wang; Jingfeng Zhang (2025). [Goal-oriented Backdoor Attack against Vision-Language-Action Models via Physical Objects](https://arxiv.org/abs/2510.09269). *arXiv preprint*. Action Planning; Environment Perception · Attack Resistance. Not cited in the manuscript.
+- Zhang, Jenny, Yu, Samson, Duan, Jiafei, and Tan, Cheston (2023). [Good time to ask: A learning framework for asking for help in embodied visual navigation](https://doi.org/10.1109/ur57808.2023.10202397). *UR*. Environment Perception; Action Planning · Reliability; Controllability. Not cited in the manuscript.
+- Huang, Xuying, Pan, Sicong, Zatsarynna, Olga, Gall, Juergen, and Bennewitz, Maren (2025). [Improved Semantic Segmentation from Ultra-Low-Resolution RGB Images Applied to Privacy-Preserving Object-Goal Navigation](https://arxiv.org/abs/2507.16034). *arXiv preprint arXiv:2507.16034*. Environment Perception · Privacy Protection. Not cited in the manuscript.
+- Sajjad Pakdamansavoji; Mozhgan Pourkeshavarz; Adam Sigal; Zhiyuan Li; Rui Heng Yang; Amir Rasouli (2025). [Improving Robotic Manipulation Robustness via NICE Scene Surgery](https://arxiv.org/abs/2511.22777). *arXiv preprint*. Environment Perception; Physical Interaction · Reliability. Not cited in the manuscript.
+- Abugurain, Mohammed and Park, Shinkyu (2024). [Integrating Disambiguation and User Preferences into Large Language Models for Robot Motion Planning](https://arxiv.org/abs/2404.14547). *arXiv preprint arXiv:2404.14547*. Instruction Understanding · Accuracy. Not cited in the manuscript.
+- Victor Mayoral Vilches; Laura Alzola Kirschgens; Asier Bilbao Calvo; Alejandro Hernandez Cordero; Rodrigo Izquierdo Pison; David Mayoral Vilches; Aday Muniz Rosas; Gorka Olalde Mendia; Lander Usategi San Juan; Irati Zamalloa Ugarte; Endika Gil-Uriarte; Erik Tews; Andreas Peter (2018). [Introducing the Robot Security Framework (RSF), a standardized methodology to perform security assessments in robotics](https://arxiv.org/abs/1806.04042). *arXiv preprint arXiv:1806.04042*. Environment Perception; Action Planning; Physical Interaction · Attack Resistance; Auditability. Not cited in the manuscript.
+- Yang, Cheng-Fu, Chen, Yen-Chun, Yang, Jianwei, Dai, Xiyang, Yuan, Lu, Wang, Yu-Chiang Frank, and Chang, Kai-Wei (2023). [Lacma: Language-aligning contrastive learning with meta-actions for embodied instruction following](https://doi.org/10.18653/v1/2023.emnlp-main.77). *arXiv preprint arXiv:2310.12344*. Instruction Understanding; Action Planning · Accuracy; Reliability. Not cited in the manuscript.
+- Satyajeet Das; Darren Chiu; Zhehui Huang; Lars Lindemann; Gaurav S. Sukhatme (2025). [Latent Activation Editing: Inference-Time Refinement of Learned Policies for Safer Multirobot Navigation](https://arxiv.org/abs/2509.20623). *arXiv preprint*. Action Planning; Physical Interaction · Controllability; Reliability. Not cited in the manuscript.
+- Dayou Li; Jiuzhou Lei; Hao Wang; Lulin Liu; Yunhao Yang; Zihan Wang; Bangya Liu; Minghui Zheng; Zhiwen Fan (2026). [Learning Actionable Manipulation Recovery via Counterfactual Failure Synthesis](https://arxiv.org/abs/2603.13528). *arXiv preprint*. Action Planning; Physical Interaction · Controllability; Reliability. Not cited in the manuscript.
+- Seo, Mingyo, Gupta, Ryan, Zhu, Yifeng, Skoutnev, Alexy, Sentis, Luis, and Zhu, Yuke (2023). [Learning to Walk by Steering: Perceptive Quadrupedal Locomotion in Dynamic Environments](https://doi.org/10.1109/icra48891.2023.10161302). *ICRA*. Environment Perception; Action Planning; Physical Interaction · Accuracy; Reliability. Not cited in the manuscript.
+- Senyu Fei; Siyin Wang; Junhao Shi; Zihao Dai; Jikun Cai; Pengfang Qian; Li Ji; Xinzhe He; Shiduo Zhang; Zhaoye Fei; Jinlan Fu; Jingjing Gong; Xipeng Qiu (2025). [LIBERO-Plus: In-depth Robustness Analysis of Vision-Language-Action Models](https://arxiv.org/abs/2510.13626). *arXiv preprint*. Action Planning; Environment Perception; Instruction Understanding · Reliability. Not cited in the manuscript.
+- Guodong Wang; Chenkai Zhang; Qingjie Liu; Jinjin Zhang; Jiancheng Cai; Junjie Liu; Xinmin Liu (2026). [LIBERO-X: Robustness Litmus for Vision-Language-Action Models](https://arxiv.org/abs/2602.06556). *arXiv preprint*. Action Planning; Environment Perception; Instruction Understanding · Reliability. Not cited in the manuscript.
+- JunJian Wang; Lidan Zhao; Xi Sheryl Zhang (2026). [MADRA: Multi-Agent Debate for Risk-Aware Embodied Planning](https://doi.org/10.18653/v1/2026.findings-acl.340). *Findings of ACL 2026*. Action Planning; Instruction Understanding · Abuse Prevention; Controllability; Value Alignment. Not cited in the manuscript.
+- Haochuan Xu; Yun Sing Koh; Shuhuai Huang; Zirun Zhou; Di Wang; Jun Sakuma; Jingfeng Zhang (2025). [Model-agnostic Adversarial Attack and Defense for Vision-Language-Action Models](https://arxiv.org/abs/2510.13237). *arXiv preprint*. Environment Perception; Physical Interaction · Attack Resistance. Not cited in the manuscript.
+- Belal S. Alsinglawi; Weizheng Wang; Junyi Wu; Yi Jiang; Lianhai Lin; Merouane Debbah; Izzat Alsmadi (2026). [MulRobBench: A Decision-Level Benchmark for Safe and Security-Policy-Compliant Multimodal UAV Agents](https://arxiv.org/abs/2607.23870). *arXiv preprint*. Action Planning; Environment Perception; Instruction Understanding; Physical Interaction · Abuse Prevention; Attack Resistance; Controllability. Not cited in the manuscript.
+- William English; Hao Zheng; Rickard Ewetz (2026). [Neuro-Symbolic Safety Guidance for Vision-Language-Action Models via Constrained Flow Matching](https://arxiv.org/abs/2607.01378). *arXiv preprint*. Action Planning; Physical Interaction · Controllability; Reliability. Not cited in the manuscript.
+- Sarch, Gabriel, Wu, Yue, Tarr, Michael J, and Fragkiadaki, Katerina (2023). [Open-ended instructable embodied agents with memory-augmented large language models](https://doi.org/10.18653/v1/2023.findings-emnlp.226). *arXiv preprint arXiv:2310.15127*. Instruction Understanding; Action Planning · Accuracy; Reliability. Not cited in the manuscript.
+- Yousung Lee; Dongsoo Har (2026). [Perturbation-Based Uncertainty for Failure Detection in Vision-Language-Action Models](https://arxiv.org/abs/2606.20754). *arXiv preprint*. Action Planning; Physical Interaction · Controllability; Reliability. Not cited in the manuscript.
+- Francesco Marchiori; Rohan Sinha; Christopher Agia; Alexander Robey; George J. Pappas; Mauro Conti; Marco Pavone (2025). [Preventing Robotic Jailbreaking via Multimodal Domain Adaptation](https://arxiv.org/abs/2509.23281). *arXiv preprint*. Action Planning; Instruction Understanding · Abuse Prevention; Attack Resistance. Not cited in the manuscript.
+- Siddharth Srikanth; Freddie Liang; Ya-Chuan Hsu; Varun Bhatt; Shihan Zhao; Henry Chen; Bryon Tjanaka; Minjune Hwang; Akanksha Saran; Daniel Seita; Aaquib Tabrez; Stefanos Nikolaidis (2026). [Red-Teaming Vision-Language-Action Models via Quality Diversity Prompt Generation for Robust Robot Policies](https://arxiv.org/abs/2603.12510). *arXiv preprint*. Action Planning; Instruction Understanding · Attack Resistance; Reliability. Not cited in the manuscript.
+- Zongzheng Zhang; Chenghao Yue; Haobo Xu; Minwen Liao; Xianglin Qi; Huan-ang Gao; Ziwei Wang; Hao Zhao (2025). [RoboChemist: Long-Horizon and Safety-Compliant Robotic Chemical Experimentation](https://arxiv.org/abs/2509.08820). *arXiv preprint*. Action Planning; Environment Perception; Physical Interaction · Controllability; Reliability. Not cited in the manuscript.
+- Yajat Yadav; Zhiyuan Zhou; Andrew Wagenmaker; Karl Pertsch; Sergey Levine (2026). [Robust Fine-tuning of Vision-Language-Action Robot Policies via Parameter Merging](https://iclr.cc/virtual/2026/poster/10006890). *International Conference on Learning Representations (ICLR 2026)*. Environment Perception; Physical Interaction · Reliability. Not cited in the manuscript.
+- Yeganegi, Mohammad Hasan, Khadiv, Majid, Moosavian, S Ali A, Zhu, Jia-Jie, Del Prete, Andrea, and Righetti, Ludovic (2019). [Robust humanoid locomotion using trajectory optimization and sample-efficient learning](https://doi.org/10.1109/humanoids43949.2019.9035003). *IEEE-RAS*. Physical Interaction · Reliability. Not cited in the manuscript.
+- Dai, Min and Ames, Aaron D (2025). [Robust Push Recovery on Bipedal Robots: Leveraging Multi-Domain Hybrid Systems with Reduced-Order Model Predictive Control](https://doi.org/10.23919/acc63710.2025.11107905). *arXiv preprint arXiv:2504.18698*. Physical Interaction · Reliability. Not cited in the manuscript.
+- Jianing Guo; Zhenhong Wu; Chang Tu; Yiyao Ma; Xiangqi Kong; Zhiqian Liu; Jiaming Ji; Shuning Zhang; Yuanpei Chen; Kai Chen; Qi Dou; Yaodong Yang; Xianglong Liu; Huijie Zhao; Weifeng Lv; Simin Li (2025). [RobustVLA: On Robustness of Vision-Language-Action Model against Multi-Modal Perturbations](https://arxiv.org/abs/2510.00037). *arXiv preprint*. Environment Perception; Instruction Understanding; Physical Interaction · Reliability. Not cited in the manuscript.
+- Gu, Shangding, Kuba, Jakub Grudzien, Chen, Yuanpei, Du, Yali, Yang, Long, Knoll, Alois, and Yang, Yaodong (2023). [Safe multi-agent reinforcement learning for multi-robot control](https://doi.org/10.1016/j.artint.2023.103905). *Artificial Intelligence*. Action Planning; Physical Interaction · Controllability; Reliability. Not cited in the manuscript.
+- Jialiang Fan; Weizhe Xu; Mengyu Liu; Oleg Sokolsky; Insup Lee; Fanxin Kong (2026). [SafeGen-LLM: Enhancing Safety Generalization in Task Planning for Robotic Systems](https://arxiv.org/abs/2602.24235). *arXiv preprint*. Action Planning; Instruction Understanding · Abuse Prevention; Reliability. Not cited in the manuscript.
+- Gerhard Yu; Fuyuki Ishikawa; Oluwafemi Odu; Alvine Boaye Belle (2026). [Safety Case Patterns for VLA-based driving systems: Insights from SimLingo](https://arxiv.org/abs/2603.16013). *arXiv preprint*. Action Planning; Environment Perception; Instruction Understanding; Physical Interaction · Auditability; Controllability. Not cited in the manuscript.
+- Qi, Yong, Kyebambo, Gabriel, Xie, Siyuan, Shen, Wei, Wang, Shenghui, Xie, Bitao, He, Bin, Wang, Zhipeng, and Jiang, Shuo (2024). [Safety control of service robots with LLMs and embodied knowledge graphs](https://arxiv.org/pdf/2405.17846). *arXiv preprint arXiv:2405.17846*. Instruction Understanding; Action Planning; Physical Interaction · Abuse Prevention; Controllability; Reliability. Not cited in the manuscript.
+- Shin, Sangwoo, Kim, Seunghyun, Jang, Youngsoo, Lee, Moontae, and Woo, Honguk (2024). [Semantic Skill Grounding for Embodied Instruction-Following in Cross-Domain Environments](https://doi.org/10.18653/v1/2024.findings-acl.200). *arXiv preprint arXiv:2408.01024*. Instruction Understanding; Action Planning · Accuracy; Reliability. Not cited in the manuscript.
+- Reddy, Siddharth, Dragan, Anca D, and Levine, Sergey (2018). [Shared autonomy via deep reinforcement learning](https://doi.org/10.15607/rss.2018.xiv.005). *arXiv preprint arXiv:1802.01744*. Action Planning; Physical Interaction · Controllability. Not cited in the manuscript.
+- Yanchuan Tang; Taowen Wang; Yuefei Chen; Boxuan Zhang; Qiang Guan; Ruixiang Tang (2026). [Shifting Uncertainty to Critical Moments: Towards Reliable Uncertainty Quantification for VLA Model](https://arxiv.org/abs/2603.18342). *arXiv preprint*. Action Planning; Physical Interaction · Controllability; Reliability. Not cited in the manuscript.
+- Ji Guo; Wenbo Jiang; Yansong Lin; Yijing Liu; Ruichen Zhang; Guomin Lu; Aiguo Chen; Xinshuo Han; Hongwei Li (2026). [State Backdoor: Towards Stealthy Real-world Poisoning Attack on Vision-Language-Action Model in State Space](https://arxiv.org/abs/2601.04266). *arXiv preprint*. Environment Perception; Physical Interaction · Attack Resistance. Not cited in the manuscript.
+- Sarkar, Chayan, Mitra, Avik, Pramanick, Pradip, and Nayak, Tapas (2023). [tagE: Enabling an Embodied Agent to Understand Human Instructions](https://doi.org/10.18653/v1/2023.findings-emnlp.593). *arXiv preprint arXiv:2310.15605*. Instruction Understanding · Accuracy. Not cited in the manuscript.
+- Jiawei Chen; Simin Huang; Jiawei Du; Shuaihang Chen; Yu Tian; Mingjie Wei; Chao Yu; Zhaoxia Yin (2026). [Tex3D: Objects as Attack Surfaces via Adversarial 3D Textures for Vision-Language-Action Models](https://arxiv.org/abs/2604.01618). *arXiv preprint*. Environment Perception; Physical Interaction · Attack Resistance. Not cited in the manuscript.
+- Paolo Cudrano, Xiaoyu Luo, and Matteo Matteucci (2024). [The Empirical Impact of Forgetting and Transfer in Continual Visual Odometry](https://arxiv.org/abs/2406.01797). *arXiv preprint arXiv:2406.01797*. Environment Perception · Reliability. Not cited in the manuscript.
+- Muneeb Imtiaz Ahmad; Yosuke Fukuchi (2026). [Towards a Cognitive Model for Inferring Dynamic Fairness Perception to Support Fairer Human-Robot Collaboration](https://doi.org/10.1145/3776734.3794398). *Companion Proceedings of the 21st ACM/IEEE International Conference on Human-Robot Interaction*. Physical Interaction · Value Alignment. Not cited in the manuscript.
+- Ergogo, Amanuel and Han, Zhao (2025). [Towards Embodied Agent Intent Explanation in Human-Robot Collaboration: ACT Error Analysis and Solution Conceptualization](https://therarelab.com/publications/icra25hcrl-towards-embodied-agent-intent-explanation-in-human-robot-collaboration-act-error-analysis-and-solution-conceptualization/). *ICRA*. Action Planning; Physical Interaction · Explainability. Not cited in the manuscript.
+- Yu, Tianjiao, Shah, Vedant, Wahed, Muntasir, Nguyen, Kiet A, Juvekar, Adheesh, August, Tal, and Lourentzou, Ismini (2025). [Uncertainty in Action: Confidence Elicitation in Embodied Agents](https://arxiv.org/abs/2503.10628). *arXiv preprint arXiv:2503.10628*. Environment Perception; Action Planning · Reliability. Not cited in the manuscript.
+- Pan, Cheng, Junge, Kai, and Hughes, Josie (2024). [Vision-language-action model and diffusion policy switching enables dexterous control of an anthropomorphic hand](https://arxiv.org/abs/2410.14022). *arXiv preprint arXiv:2410.14022*. Physical Interaction · Reliability. Not cited in the manuscript.
+- Florian Seligmann; Emiliyan Gospodinov; Enes Ulas Dincer; Gerhard Neumann (2026). [VLA-FAIL: Efficient Task Failure Detection for Finetuned Vision-Language-Action Models](https://arxiv.org/abs/2606.21386). *arXiv preprint*. Action Planning; Physical Interaction · Controllability; Reliability. Not cited in the manuscript.
+- Song, Daeun, Liang, Jing, Payandeh, Amirreza, Raj, Amir Hossain, Xiao, Xuesu, and Manocha, Dinesh (2024). [Vlm-social-nav: Socially aware robot navigation through scoring using vision-language models](https://doi.org/10.1109/lra.2024.3511409). *IEEE Robotics and Automation Letters*. Action Planning; Physical Interaction · Value Alignment. Not cited in the manuscript.
+- Yuping Yan; Yuhan Xie; Yixin Zhang; Lingjuan Lyu; Handing Wang; Yaochu Jin (2025). [When Alignment Fails: Multimodal Adversarial Attacks on Vision-Language-Action Models](https://arxiv.org/abs/2511.16203). *arXiv preprint*. Environment Perception; Instruction Understanding; Physical Interaction · Attack Resistance. Not cited in the manuscript.
+- Hui Lu; Yi Yu; Yiming Yang; Chenyu Yi; Qixin Zhang; Bingquan Shen; Alex C. Kot; Xudong Jiang (2025). [When Robots Obey the Patch: Universal Transferable Patch Attacks on Vision-Language-Action Models](https://arxiv.org/abs/2511.21192). *arXiv preprint*. Environment Perception; Physical Interaction · Attack Resistance. Not cited in the manuscript.
+- Seongbin Park; Fan Zhang; Baharan Mirzasoleiman; Shahriar Talebi; Nader Sehatbakhsh (2026). [Your Model Already Knows: Attention-Guided Safety Filter for Vision-Language-Action Models](https://arxiv.org/abs/2606.09749). *arXiv preprint*. Environment Perception; Physical Interaction · Controllability; Reliability. Not cited in the manuscript.
+
+</details>
+
+## Files
+
+| File | What it contains |
+| --- | --- |
+| `data/primary_studies.csv` | 191 primary studies, with manuscript reference numbers for the 130 cited studies |
+| `data/contextual_sources.csv` | 64 contextual sources |
+| `data/bibliography_other.csv` | 8 additional contextual references and 7 background records from the compiled bibliography |
+| `data/stage_facet_counts.csv` | Study-level stage-by-facet counts for the 166 coded studies |
+| `index.html` | Search page over the same records |
+
+The coding labels are the manuscript's four stages and ten facets. Empty cells are real: a stage-facet pair with no coded study is a zero, not a missing row.

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Study list · Towards Safe and Trustworthy Embodied AI</title>
+  <meta name="description" content="Searchable study list for the submitted ACM Computing Surveys revision of Towards Safe and Trustworthy Embodied AI. Search cutoff 25 August 2026.">
+  <link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+  <div class="wrap">
+    <header class="masthead">
+      <p class="kicker">ACM Computing Surveys revision · search cutoff 25 August 2026</p>
+      <h1>Study list</h1>
+      <p class="paper-title">Towards Safe and Trustworthy Embodied AI: Foundations, Status, and Prospects</p>
+      <p class="byline">Xin Tan, Bangwei Liu, Yicheng Bao, Zhenkun Gao, Zhihao Luo, Sen Wang, Qijian Tian, Xiongbin Wu, Yuqi Zhang, Xuhong Wang, Chaochao Lu, and Bowen Zhou.</p>
+      <p class="lede">This page lists the studies behind the submitted revision. Of the 191 primary studies, 130 are cited in the manuscript and 61 are listed only here. Those 61 are included in the stage and facet coding. A separate set of 25 benchmark and simulator studies is cited in the manuscript but is not part of that coding. The matrix below counts the 166 coded studies.</p>
+      <ul class="counts" id="counts"></ul>
+      <p class="note">This is the study list for the submitted ACM Computing Surveys revision. The literature list from the <a href="https://openreview.net/pdf?id=Eu6Yt21Alv">OpenReview preprint</a> is preserved on the <a href="https://github.com/AI45Lab/Awesome-Trustworthy-Embodied-AI/tree/openreview-preprint">openreview-preprint</a> branch. The compiled bibliography has 183 entries: 130 primary studies, 46 contextual references, and 7 background records.</p>
+    </header>
+
+    <section class="panel controls" aria-label="Search and filters">
+      <label class="search-label" for="q">Search titles, authors, venues, years, and BibTeX keys</label>
+      <input id="q" type="search" placeholder="Title, author, venue, year, or BibTeX key" autocomplete="off">
+      <div class="chips" id="status" role="radiogroup" aria-label="Which primary studies to show"></div>
+      <p class="result-count" id="result-count" aria-live="polite"></p>
+    </section>
+
+    <section class="panel">
+      <div class="section-head">
+        <h2>Stage and facet coverage</h2>
+        <button type="button" id="clear-cell" hidden>Clear matrix selection</button>
+      </div>
+      <p class="note">Each cell is the number of coded studies labeled with both that stage and that facet. A study with several labels is counted in each of its cells. Benchmark and simulator studies are not in this table. Select a cell to filter the list.</p>
+      <div class="matrix-scroll">
+        <table class="matrix" id="matrix"></table>
+      </div>
+    </section>
+
+    <section>
+      <h2>Primary studies</h2>
+      <div id="results"></div>
+    </section>
+
+    <section>
+      <h2>Contextual sources <span class="section-count" id="contextual-count"></span></h2>
+      <p class="note">These 64 records are surveys, standards, or foundational references. They are not primary studies, and the matrix does not filter them. The search box does.</p>
+      <div id="contextual"></div>
+    </section>
+
+    <section>
+      <h2>Other bibliography records</h2>
+      <p class="note">Fifteen compiled-bibliography records are outside the 191 primary studies. Eight are contextual references that are not part of the 64-source set. Seven are background records. Together with the 130 cited primary studies and the 38 contextual sources that are also cited, they make up the 183-entry bibliography.</p>
+      <div id="other"></div>
+    </section>
+
+    <footer>
+      <p>Tables: <a href="data/primary_studies.csv">primary studies</a>, <a href="data/contextual_sources.csv">contextual sources</a>, <a href="data/bibliography_other.csv">other bibliography records</a>, <a href="data/stage_facet_counts.csv">stage-by-facet counts</a>.</p>
+    </footer>
+  </div>
+  <script src="js/site.js"></script>
+</body>
+</html>

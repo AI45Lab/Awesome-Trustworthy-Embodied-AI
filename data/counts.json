@@ -1,0 +1,17 @@
+{
+  "cutoff": "2026-08-25",
+  "primary": 191,
+  "cited_primary": 130,
+  "repository_only": 61,
+  "coded": 166,
+  "benchmark_only": 25,
+  "stage_assignments": 327,
+  "facet_assignments": 268,
+  "contextual_sources": 64,
+  "contextual_in_bibliography": 38,
+  "contextual_not_in_bibliography": 26,
+  "bibliography_contextual_outside_set": 8,
+  "bibliography_background": 7,
+  "bibliography_contextual": 46,
+  "bibliography_entries": 183
+}

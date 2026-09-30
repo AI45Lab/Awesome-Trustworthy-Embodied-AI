@@ -1,0 +1,4176 @@
+[
+  {
+    "study_id": "PS104",
+    "title": "A Framework for Benchmarking and Aligning Task-Planning Safety in LLM-Based Embodied Agents",
+    "authors": "Yuting Huang, Leilei Ding, Zhipeng Tang, Tianfu Wang, Xinrui Lin, Wuyang Zhang, Mingxiao Ma, and Yanyong Zhang",
+    "year": "2025",
+    "venue": "arXiv preprint arXiv:2504.14650",
+    "url": "https://arxiv.org/abs/2504.14650",
+    "doi": "",
+    "arxiv": "2504.14650",
+    "bibtex_key": "huang_framework_2025",
+    "manuscript_reference": 49,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Action Planning"
+    ],
+    "facets": [
+      "Controllability",
+      "Reliability"
+    ],
+    "supplement_label": "S084"
+  },
+  {
+    "study_id": "PS045",
+    "title": "A Model-Agnostic Approach for Semantically Driven Disambiguation in Human-Robot Interaction",
+    "authors": "Fethiye Irmak Dogan, Maithili Patel, Weiyu Liu, Iolanda Leite, and Sonia Chernova",
+    "year": "2025",
+    "venue": "2025 34th IEEE International Conference on Robot and Human Interactive Communication (RO-MAN)",
+    "url": "https://doi.org/10.1109/ro-man63969.2025.11217614",
+    "doi": "https://doi.org/10.1109/ro-man63969.2025.11217614",
+    "arxiv": "2409.17004",
+    "bibtex_key": "dogan2025modelagnosticapproachsemanticallydriven",
+    "manuscript_reference": 22,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Instruction Understanding"
+    ],
+    "facets": [
+      "Accuracy"
+    ],
+    "supplement_label": "S037"
+  },
+  {
+    "study_id": "PS258",
+    "title": "A New Perspective and Approach to Evaluating Human-Robot Interaction Safety Considering Human Pain Sensation and Skin Contact Conditions",
+    "authors": "Fengyu Li",
+    "year": "2025",
+    "venue": "2025 34th IEEE International Conference on Robot and Human Interactive Communication (RO-MAN)",
+    "url": "https://doi.org/10.1109/ro-man63969.2025.11217760",
+    "doi": "https://doi.org/10.1109/ro-man63969.2025.11217760",
+    "arxiv": "",
+    "bibtex_key": "li2025new",
+    "manuscript_reference": 69,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Physical Interaction"
+    ],
+    "facets": [
+      "Accuracy"
+    ],
+    "supplement_label": "S183"
+  },
+  {
+    "study_id": "PS223",
+    "title": "A Secure Robot Learning Framework for Cyber Attack Scheduling and Countermeasure",
+    "authors": "Chengwei Wu, Weiran Yao, Wensheng Luo, Wei Pan, Guanghui Sun, Hui Xie, and Ligang Wu",
+    "year": "2023",
+    "venue": "IEEE Transactions on Robotics",
+    "url": "https://doi.org/10.1109/tro.2023.3275875",
+    "doi": "https://doi.org/10.1109/tro.2023.3275875",
+    "arxiv": "",
+    "bibtex_key": "wu_secure_2023",
+    "manuscript_reference": 148,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Physical Interaction"
+    ],
+    "facets": [
+      "Attack Resistance"
+    ],
+    "supplement_label": "S159"
+  },
+  {
+    "study_id": "PS263",
+    "title": "Active SLAM With Dynamic Viewpoint Optimization for Robust Visual Navigation",
+    "authors": "Peng Li, Yupei Huang, Wenkai Chang, Chao Zhou, Shuo Wang, Junzhi Yu, and Zhengxing Wu",
+    "year": "2025",
+    "venue": "IEEE Transactions on Instrumentation and Measurement",
+    "url": "https://doi.org/10.1109/tim.2025.3579846",
+    "doi": "https://doi.org/10.1109/tim.2025.3579846",
+    "arxiv": "",
+    "bibtex_key": "li2025active",
+    "manuscript_reference": 73,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Environment Perception"
+    ],
+    "facets": [
+      "Accuracy",
+      "Reliability"
+    ],
+    "supplement_label": "S188"
+  },
+  {
+    "study_id": "PS215",
+    "title": "Advancing Embodied Agent Security: From Safety Benchmarks to Input Moderation",
+    "authors": "Ning Wang, Zihan Yan, Weiyang Li, Chuan Ma, He Chen, and Tao Xiang",
+    "year": "2025",
+    "venue": "Proceedings of the Thirty-Fourth International Joint Conference on Artificial Intelligence",
+    "url": "https://doi.org/10.24963/ijcai.2025/867",
+    "doi": "https://doi.org/10.24963/ijcai.2025/867",
+    "arxiv": "2504.15699",
+    "bibtex_key": "wang2025advancingembodiedagentsecurity",
+    "manuscript_reference": 141,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Instruction Understanding",
+      "Action Planning"
+    ],
+    "facets": [
+      "Abuse Prevention"
+    ],
+    "supplement_label": "S154"
+  },
+  {
+    "study_id": "PS015",
+    "title": "ADVEDM:Fine-grained Adversarial Attack against VLM-based Embodied Agents",
+    "authors": "Yichen Wang; Hangtao Zhang; Hewen Pan; Ziqi Zhou; Xianlong Wang; Peijin Guo; Lulu Xue; Shengshan Hu; Minghui Li; Leo Yu Zhang",
+    "year": "2025",
+    "venue": "arXiv preprint",
+    "url": "https://doi.org/10.52202/085713-4556",
+    "doi": "https://doi.org/10.52202/085713-4556",
+    "arxiv": "2509.16645",
+    "bibtex_key": "",
+    "manuscript_reference": null,
+    "cited_in_manuscript": false,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Action Planning",
+      "Environment Perception"
+    ],
+    "facets": [
+      "Attack Resistance"
+    ],
+    "supplement_label": "S013"
+  },
+  {
+    "study_id": "PS162",
+    "title": "Adversarial Attacks and Detection in Visual Place Recognition for Safer Robot Navigation",
+    "authors": "Connor Malone, Owen Claxton, Iman Shames, and Michael Milford",
+    "year": "2025",
+    "venue": "2025 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)",
+    "url": "https://doi.org/10.1109/iros60139.2025.11246866",
+    "doi": "https://doi.org/10.1109/iros60139.2025.11246866",
+    "arxiv": "2506.15988",
+    "bibtex_key": "malone_adversarial_2025",
+    "manuscript_reference": 87,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Environment Perception"
+    ],
+    "facets": [
+      "Attack Resistance"
+    ],
+    "supplement_label": "S121"
+  },
+  {
+    "study_id": "PS116",
+    "title": "Adversarial Attacks on Robotic Vision Language Action Models",
+    "authors": "Jones, Eliot Krzysztof, Robey, Alexander, Zou, Andy, Ravichandran, Zachary, Pappas, George J, Hassani, Hamed, Fredrikson, Matt, and Kolter, J Zico",
+    "year": "2025",
+    "venue": "arXiv preprint arXiv:2506.03350",
+    "url": "https://arxiv.org/abs/2506.03350",
+    "doi": "",
+    "arxiv": "2506.03350",
+    "bibtex_key": "",
+    "manuscript_reference": null,
+    "cited_in_manuscript": false,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Instruction Understanding"
+    ],
+    "facets": [
+      "Attack Resistance"
+    ],
+    "supplement_label": "S092"
+  },
+  {
+    "study_id": "PS218",
+    "title": "AdvGrasp: Adversarial Attacks on Robotic Grasping from a Physical Perspective",
+    "authors": "Xiaofei Wang, Mingliang Han, Tianyu Hao, Cegang Li, Yunbo Zhao, and Keke Tang",
+    "year": "2025",
+    "venue": "Proceedings of the Thirty-Fourth International Joint Conference on Artificial Intelligence",
+    "url": "https://doi.org/10.24963/ijcai.2025/62",
+    "doi": "https://doi.org/10.24963/ijcai.2025/62",
+    "arxiv": "2507.09857",
+    "bibtex_key": "wang_advgrasp_2025",
+    "manuscript_reference": 143,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Physical Interaction"
+    ],
+    "facets": [
+      "Attack Resistance"
+    ],
+    "supplement_label": "S156"
+  },
+  {
+    "study_id": "PS151",
+    "title": "AGENTSAFE: Benchmarking the Safety of Embodied Agents on Hazardous Instructions",
+    "authors": "Zonghao Ying, Le Wang, Yisong Xiao, Jiakai Wang, Yuqing Ma, Jinyang Guo, Zhenfei Yin, Mingchuan Zhang, Aishan Liu, and Xianglong Liu",
+    "year": "2025",
+    "venue": "arXiv preprint arXiv:2506.14697",
+    "url": "https://arxiv.org/abs/2506.14697",
+    "doi": "",
+    "arxiv": "2506.14697",
+    "bibtex_key": "liu2025agentsafebenchmarkingsafetyembodied",
+    "manuscript_reference": 167,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Action Planning",
+      "Environment Perception",
+      "Instruction Understanding",
+      "Physical Interaction"
+    ],
+    "facets": [
+      "Abuse Prevention"
+    ],
+    "supplement_label": "S116"
+  },
+  {
+    "study_id": "PS214",
+    "title": "AgentSpec: Customizable Runtime Enforcement for Safe and Reliable LLM Agents",
+    "authors": "Haoyu Wang, Christopher M. Poskitt, and Jun Sun",
+    "year": "2026",
+    "venue": "Proceedings of the IEEE/ACM 48th International Conference on Software Engineering",
+    "url": "https://doi.org/10.1145/3744916.3764546",
+    "doi": "https://doi.org/10.1145/3744916.3764546",
+    "arxiv": "2503.18666",
+    "bibtex_key": "wang2025agentspeccustomizableruntimeenforcement",
+    "manuscript_reference": 138,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Action Planning",
+      "Physical Interaction"
+    ],
+    "facets": [
+      "Abuse Prevention",
+      "Controllability"
+    ],
+    "supplement_label": "S153"
+  },
+  {
+    "study_id": "PS132",
+    "title": "AI2-THOR: An Interactive 3D Environment for Visual AI",
+    "authors": "Eric Kolve, Roozbeh Mottaghi, Winson Han, Eli VanderBilt, Luca Weihs, Alvaro Herrasti, Matt Deitke, Kiana Ehsani, Daniel Gordon, Yuke Zhu, Aniruddha Kembhavi, Abhinav Gupta, and Ali Farhadi",
+    "year": "2017",
+    "venue": "arXiv preprint arXiv:1712.05474",
+    "url": "https://arxiv.org/abs/1712.05474",
+    "doi": "",
+    "arxiv": "1712.05474",
+    "bibtex_key": "kolveAI2THORInteractive3D2022",
+    "manuscript_reference": 63,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": true,
+    "stages": [],
+    "facets": [],
+    "supplement_label": "S104"
+  },
+  {
+    "study_id": "PS066",
+    "title": "ARGOS: Automated Functional Safety Requirement Synthesis for Embodied AI via Attribute-Guided Combinatorial Reasoning",
+    "authors": "Dongsheng Chen; Yuxuan Li; Yi Lin; Guanhua Chen; Jiaxin Zhang; Xiangyu Zhao; Lei Ma; Xin Yao; Xuetao Wei",
+    "year": "2026",
+    "venue": "arXiv preprint",
+    "url": "https://arxiv.org/abs/2602.07007",
+    "doi": "",
+    "arxiv": "2602.07007",
+    "bibtex_key": "",
+    "manuscript_reference": null,
+    "cited_in_manuscript": false,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Action Planning",
+      "Environment Perception",
+      "Instruction Understanding",
+      "Physical Interaction"
+    ],
+    "facets": [
+      "Auditability",
+      "Controllability"
+    ],
+    "supplement_label": "S053"
+  },
+  {
+    "study_id": "PS198",
+    "title": "Ask4Help: Learning to Leverage an Expert for Embodied Tasks",
+    "authors": "Kunal Pratap Singh, Luca Weihs, Alvaro Herrasti, Jonghyun Choi, Aniruddha Kembhavi, and Roozbeh Mottaghi",
+    "year": "2022",
+    "venue": "Advances in Neural Information Processing Systems 35",
+    "url": "https://doi.org/10.52202/068431-1180",
+    "doi": "https://doi.org/10.52202/068431-1180",
+    "arxiv": "2211.09960",
+    "bibtex_key": "singh2022ask4help",
+    "manuscript_reference": 122,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Action Planning"
+    ],
+    "facets": [
+      "Reliability",
+      "Controllability"
+    ],
+    "supplement_label": "S143"
+  },
+  {
+    "study_id": "PS048",
+    "title": "AttackVLA: Benchmarking Adversarial and Backdoor Attacks on Vision-Language-Action Models",
+    "authors": "Jiayu Li, Yunhan Zhao, Xiang Zheng, Zonghuan Xu, Yige Li, Xingjun Ma, and Yu-Gang Jiang",
+    "year": "2025",
+    "venue": "arXiv preprint arXiv:2511.12149",
+    "url": "https://arxiv.org/abs/2511.12149",
+    "doi": "",
+    "arxiv": "2511.12149",
+    "bibtex_key": "li2025attackvla",
+    "manuscript_reference": 70,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Environment Perception",
+      "Physical Interaction"
+    ],
+    "facets": [
+      "Attack Resistance"
+    ],
+    "supplement_label": "S040"
+  },
+  {
+    "study_id": "PS096",
+    "title": "Auditing Demographic Bias in Facial Landmark Detection for Fair Human-Robot Interaction",
+    "authors": "Pablo Parte, Roberto Valle, José M. Buenaposada, and Luis Baumela",
+    "year": "2026",
+    "venue": "arXiv preprint arXiv:2604.06961",
+    "url": "https://arxiv.org/abs/2604.06961",
+    "doi": "",
+    "arxiv": "2604.06961",
+    "bibtex_key": "parte2026auditing",
+    "manuscript_reference": 107,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Environment Perception"
+    ],
+    "facets": [
+      "Value Alignment"
+    ],
+    "supplement_label": "S077"
+  },
+  {
+    "study_id": "PS113",
+    "title": "Back to the Familiar Future: Failure Recovery for VLA Policies via Pre-Imagined Milestone Selection",
+    "authors": "Suyeon Shin; Juwon Kim; Hyeonbin Park; Hyunseo Kim; Hyundo Lee; Hyung-Sin Kim; Byoung-Tak Zhang",
+    "year": "2026",
+    "venue": "arXiv preprint",
+    "url": "https://arxiv.org/abs/2606.09258",
+    "doi": "",
+    "arxiv": "2606.09258",
+    "bibtex_key": "",
+    "manuscript_reference": null,
+    "cited_in_manuscript": false,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Action Planning",
+      "Physical Interaction"
+    ],
+    "facets": [
+      "Controllability",
+      "Reliability"
+    ],
+    "supplement_label": "S090"
+  },
+  {
+    "study_id": "PS088",
+    "title": "BadDepth: Backdoor Attacks Against Monocular Depth Estimation in the Physical World",
+    "authors": "Ji Guo, Long Zhou, Zhijin Wang, Jiaming He, Qiyang Song, Aiguo Chen, and Wenbo Jiang",
+    "year": "2025",
+    "venue": "arXiv preprint arXiv:2505.16154",
+    "url": "https://arxiv.org/abs/2505.16154",
+    "doi": "",
+    "arxiv": "2505.16154",
+    "bibtex_key": "guo_baddepth_2025",
+    "manuscript_reference": 39,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Environment Perception"
+    ],
+    "facets": [
+      "Attack Resistance"
+    ],
+    "supplement_label": "S071"
+  },
+  {
+    "study_id": "PS160",
+    "title": "BadNAVer: Exploring Jailbreak Attacks On Vision-and-Language Navigation",
+    "authors": "Lyu, Wenqi, Li, Zerui, Qiao, Yanyuan, and Wu, Qi",
+    "year": "2025",
+    "venue": "arXiv preprint arXiv:2505.12443",
+    "url": "https://arxiv.org/abs/2505.12443",
+    "doi": "",
+    "arxiv": "2505.12443",
+    "bibtex_key": "",
+    "manuscript_reference": null,
+    "cited_in_manuscript": false,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Instruction Understanding"
+    ],
+    "facets": [
+      "Attack Resistance"
+    ],
+    "supplement_label": "S120"
+  },
+  {
+    "study_id": "PS249",
+    "title": "BadRobot: Jailbreaking Embodied LLM Agents in the Physical World",
+    "authors": "Hangtao Zhang, Chenyu Zhu, Xianlong Wang, Ziqi Zhou, Changgan Yin, Minghui Li, Lulu Xue, Yichen Wang, Shengshan Hu, Aishan Liu, Peijin Guo, and Leo Yu Zhang",
+    "year": "2025",
+    "venue": "International Conference on Learning Representations",
+    "url": "https://proceedings.iclr.cc/paper_files/paper/2025/hash/5b2fa23e4ef0f7ac6c4f01d7998e6237-Abstract-Conference.html",
+    "doi": "",
+    "arxiv": "2407.20242",
+    "bibtex_key": "zhang2025badrobotjailbreakingembodiedllms",
+    "manuscript_reference": 173,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Instruction Understanding",
+      "Action Planning",
+      "Physical Interaction"
+    ],
+    "facets": [
+      "Attack Resistance"
+    ],
+    "supplement_label": "S176"
+  },
+  {
+    "study_id": "PS255",
+    "title": "BadVLA: Towards Backdoor Attacks on Vision-Language-Action Models via Objective-Decoupled Optimization",
+    "authors": "Xueyang Zhou, Guiyao Tie, Guowen Zhang, Hecheng Wang, Pan Zhou, and Lichao Sun",
+    "year": "2025",
+    "venue": "Advances in Neural Information Processing Systems 38",
+    "url": "https://doi.org/10.52202/085713-4247",
+    "doi": "https://doi.org/10.52202/085713-4247",
+    "arxiv": "2505.16640",
+    "bibtex_key": "zhou2025badvla",
+    "manuscript_reference": 180,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Action Planning",
+      "Physical Interaction"
+    ],
+    "facets": [
+      "Attack Resistance"
+    ],
+    "supplement_label": "S181"
+  },
+  {
+    "study_id": "PS164",
+    "title": "CALVIN: A Benchmark for Language-Conditioned Policy Learning for Long-Horizon Robot Manipulation Tasks",
+    "authors": "Oier Mees, Lukas Hermann, Erick Rosete-Beas, and Wolfram Burgard Burgard",
+    "year": "2022",
+    "venue": "IEEE Robotics and Automation Letters",
+    "url": "https://doi.org/10.1109/lra.2022.3180108",
+    "doi": "https://doi.org/10.1109/lra.2022.3180108",
+    "arxiv": "",
+    "bibtex_key": "meesCALVINBenchmarkLanguageConditioned2022",
+    "manuscript_reference": 88,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": true,
+    "stages": [],
+    "facets": [],
+    "supplement_label": "S122"
+  },
+  {
+    "study_id": "PS023",
+    "title": "Can AI Perceive Physical Danger and Intervene?",
+    "authors": "Abhishek Jindal, Dmitry Kalashnikov, R. Alex Hofer, Oscar Chang, Divya Garikapati, Anirudha Majumdar, Pierre Sermanet, and Vikas Sindhwani",
+    "year": "2025",
+    "venue": "arXiv preprint arXiv:2509.21651",
+    "url": "https://arxiv.org/abs/2509.21651",
+    "doi": "",
+    "arxiv": "2509.21651",
+    "bibtex_key": "jindal2025can",
+    "manuscript_reference": 58,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Action Planning",
+      "Environment Perception",
+      "Physical Interaction"
+    ],
+    "facets": [
+      "Accuracy",
+      "Controllability"
+    ],
+    "supplement_label": "S019"
+  },
+  {
+    "study_id": "PS091",
+    "title": "Causal Scene Narration with Runtime Safety Supervision for Vision-Language-Action Driving",
+    "authors": "Yun Li; Yidu Zhang; Simon Thompson; Ehsan Javanmardi; Manabu Tsukada",
+    "year": "2026",
+    "venue": "arXiv preprint",
+    "url": "https://arxiv.org/abs/2604.01723",
+    "doi": "",
+    "arxiv": "2604.01723",
+    "bibtex_key": "",
+    "manuscript_reference": null,
+    "cited_in_manuscript": false,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Action Planning",
+      "Environment Perception",
+      "Physical Interaction"
+    ],
+    "facets": [
+      "Controllability",
+      "Reliability"
+    ],
+    "supplement_label": "S074"
+  },
+  {
+    "study_id": "PS236",
+    "title": "CEE: An Inference-Time Jailbreak Defense for Embodied Intelligence via Subspace Concept Rotation",
+    "authors": "Yang, Jirui, Lin, Zheyu, Lu, Zhihui, Wang, Yinggui, Wang, Lei, Wei, Tao, Duan, Qiang, Du, Xin, and Yang, Shuhan",
+    "year": "2025",
+    "venue": "arXiv preprint arXiv:2504.13201",
+    "url": "https://arxiv.org/abs/2504.13201",
+    "doi": "",
+    "arxiv": "2504.13201",
+    "bibtex_key": "yang2025conceptenhancementengineeringlightweight",
+    "manuscript_reference": 160,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Instruction Understanding",
+      "Action Planning"
+    ],
+    "facets": [
+      "Attack Resistance"
+    ],
+    "supplement_label": "S169"
+  },
+  {
+    "study_id": "PS234",
+    "title": "CHALET: Cornell House Agent Learning Environment",
+    "authors": "Yan, Claudia, Misra, Dipendra, Bennnett, Andrew, Walsman, Aaron, Bisk, Yonatan, and Artzi, Yoav",
+    "year": "2018",
+    "venue": "arXiv preprint arXiv:1801.07357",
+    "url": "https://arxiv.org/abs/1801.07357",
+    "doi": "",
+    "arxiv": "1801.07357",
+    "bibtex_key": "yanCHALETCornellHouse2019",
+    "manuscript_reference": 158,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": true,
+    "stages": [],
+    "facets": [],
+    "supplement_label": "S167"
+  },
+  {
+    "study_id": "PS227",
+    "title": "Characterizing Physical Adversarial Attacks on Robot Motion Planners",
+    "authors": "Wenxi Wu, Fabio Pierazzi, Yali Du, and Martim Brandão",
+    "year": "2024",
+    "venue": "2024 IEEE International Conference on Robotics and Automation (ICRA)",
+    "url": "https://doi.org/10.1109/icra57147.2024.10610344",
+    "doi": "https://doi.org/10.1109/icra57147.2024.10610344",
+    "arxiv": "",
+    "bibtex_key": "wu2024characterizing",
+    "manuscript_reference": 150,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Action Planning",
+      "Physical Interaction"
+    ],
+    "facets": [
+      "Attack Resistance"
+    ],
+    "supplement_label": "S162"
+  },
+  {
+    "study_id": "PS067",
+    "title": "Concept-Based Dictionary Learning for Inference-Time Safety in Vision Language Action Models",
+    "authors": "Siqi Wen; Shu Yang; Shaopeng Fu; Jingfeng Zhang; Lijie Hu; Di Wang",
+    "year": "2026",
+    "venue": "arXiv preprint",
+    "url": "https://arxiv.org/abs/2602.01834",
+    "doi": "",
+    "arxiv": "2602.01834",
+    "bibtex_key": "",
+    "manuscript_reference": null,
+    "cited_in_manuscript": false,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Action Planning",
+      "Physical Interaction"
+    ],
+    "facets": [
+      "Controllability",
+      "Explainability"
+    ],
+    "supplement_label": "S054"
+  },
+  {
+    "study_id": "PS206",
+    "title": "DeepMind Control Suite",
+    "authors": "Tassa, Yuval, Doron, Yotam, Muldal, Alistair, Erez, Tom, Li, Yazhe, Casas, Diego de Las, Budden, David, Abdolmaleki, Abbas, Merel, Josh, Lefrancq, Andrew, Lillicrap, Timothy, and Riedmiller, Martin",
+    "year": "2018",
+    "venue": "arXiv preprint arXiv:1801.00690",
+    "url": "https://arxiv.org/abs/1801.00690",
+    "doi": "",
+    "arxiv": "1801.00690",
+    "bibtex_key": "tassaDeepMindControlSuite2018",
+    "manuscript_reference": 127,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": true,
+    "stages": [],
+    "facets": [],
+    "supplement_label": "S147"
+  },
+  {
+    "study_id": "PS130",
+    "title": "Design and use paradigms for gazebo, an open-source multi-robot simulator",
+    "authors": "N. Koenig and A. Howard",
+    "year": "2004",
+    "venue": "2004 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS) (IEEE Cat. No.04CH37566)",
+    "url": "https://doi.org/10.1109/iros.2004.1389727",
+    "doi": "https://doi.org/10.1109/iros.2004.1389727",
+    "arxiv": "",
+    "bibtex_key": "koenigDesignUseParadigms2004",
+    "manuscript_reference": 62,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": true,
+    "stages": [],
+    "facets": [],
+    "supplement_label": "S103"
+  },
+  {
+    "study_id": "PS073",
+    "title": "DialFRED: Dialogue-Enabled Agents for Embodied Instruction Following",
+    "authors": "Xiaofeng Gao, Qiaozi Gao, Ran Gong, Kaixiang Lin, Govind Thattai, and Gaurav S. Sukhatme",
+    "year": "2022",
+    "venue": "IEEE Robotics and Automation Letters",
+    "url": "https://doi.org/10.1109/lra.2022.3193254",
+    "doi": "https://doi.org/10.1109/lra.2022.3193254",
+    "arxiv": "2202.13330",
+    "bibtex_key": "gao2022dialfred",
+    "manuscript_reference": 34,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Instruction Understanding"
+    ],
+    "facets": [
+      "Accuracy"
+    ],
+    "supplement_label": "S059"
+  },
+  {
+    "study_id": "PS264",
+    "title": "DoRO: Disambiguation of Referred Object for Embodied Agents",
+    "authors": "Pradip Pramanick, Chayan Sarkar, Sayan Paul, Ruddra dev Roychoudhury, and Brojeshwar Bhowmick",
+    "year": "2022",
+    "venue": "IEEE Robotics and Automation Letters",
+    "url": "https://doi.org/10.1109/lra.2022.3195198",
+    "doi": "https://doi.org/10.1109/lra.2022.3195198",
+    "arxiv": "2207.14205",
+    "bibtex_key": "pramanick2022doro",
+    "manuscript_reference": 110,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Instruction Understanding",
+      "Environment Perception"
+    ],
+    "facets": [
+      "Accuracy",
+      "Controllability"
+    ],
+    "supplement_label": "S189"
+  },
+  {
+    "study_id": "PS173",
+    "title": "DreamWaQ++: Obstacle-Aware Quadrupedal Locomotion With Resilient Multi-Modal Reinforcement Learning",
+    "authors": "I Made Aswin Nahrendra, Byeongho Yu, Minho Oh, Dongkyu Lee, Seunghyun Lee, Hyeonwoo Lee, Hyungtae Lim, and Hyun Myung",
+    "year": "2024",
+    "venue": "arXiv preprint arXiv:2409.19709",
+    "url": "https://arxiv.org/abs/2409.19709",
+    "doi": "",
+    "arxiv": "2409.19709",
+    "bibtex_key": "nahrendra2024obstacle",
+    "manuscript_reference": 98,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Environment Perception",
+      "Physical Interaction"
+    ],
+    "facets": [
+      "Reliability"
+    ],
+    "supplement_label": "S127"
+  },
+  {
+    "study_id": "PS038",
+    "title": "DropVLA: An Action-Level Backdoor Attack on Vision-Language-Action Models",
+    "authors": "Xu, Zonghuan, Li, Jiayu, Zhao, Yunhan, Zheng, Xiang, Ma, Xingjun, and Jiang, Yu-Gang",
+    "year": "2025",
+    "venue": "arXiv preprint arXiv:2510.10932",
+    "url": "https://arxiv.org/abs/2510.10932",
+    "doi": "",
+    "arxiv": "2510.10932",
+    "bibtex_key": "xu2025dropvla",
+    "manuscript_reference": 157,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Environment Perception",
+      "Physical Interaction"
+    ],
+    "facets": [
+      "Attack Resistance"
+    ],
+    "supplement_label": "S030"
+  },
+  {
+    "study_id": "PS213",
+    "title": "E2CL: Exploration-based Error Correction Learning for Embodied Agents",
+    "authors": "Hanlin Wang, Chak Tou Leong, Jian Wang, and Wenjie Li",
+    "year": "2024",
+    "venue": "Findings of the Association for Computational Linguistics: EMNLP 2024",
+    "url": "https://doi.org/10.18653/v1/2024.findings-emnlp.448",
+    "doi": "https://doi.org/10.18653/v1/2024.findings-emnlp.448",
+    "arxiv": "2409.03256",
+    "bibtex_key": "wang2024e2cl",
+    "manuscript_reference": 137,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Action Planning"
+    ],
+    "facets": [
+      "Reliability"
+    ],
+    "supplement_label": "S152"
+  },
+  {
+    "study_id": "PS257",
+    "title": "EARBench: Towards Evaluating Physical Risk Awareness for Task Planning of Foundation Model-based Embodied AI Agents",
+    "authors": "Zihao Zhu, Bingzhe Wu, Zhengyou Zhang, Lei Han, Qingshan Liu, and Baoyuan Wu",
+    "year": "2024",
+    "venue": "arXiv preprint arXiv:2408.04449",
+    "url": "https://arxiv.org/abs/2408.04449",
+    "doi": "",
+    "arxiv": "2408.04449",
+    "bibtex_key": "zhu_earbench_2024",
+    "manuscript_reference": 182,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": true,
+    "stages": [],
+    "facets": [],
+    "supplement_label": "S182"
+  },
+  {
+    "study_id": "PS129",
+    "title": "EgoSafetyBench: A Diagnostic Egocentric Video Benchmark for Evaluating Embodied VLMs as Runtime Safety Guards",
+    "authors": "Siddhant Panpatil, Arth Singh, Mijin Koo, Chaeyun Kim, Haon Park, and Dasol Choi",
+    "year": "2026",
+    "venue": "arXiv preprint arXiv:2607.00218",
+    "url": "https://arxiv.org/abs/2607.00218",
+    "doi": "",
+    "arxiv": "2607.00218",
+    "bibtex_key": "panpatil2026egosafetybench",
+    "manuscript_reference": 106,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Environment Perception",
+      "Physical Interaction"
+    ],
+    "facets": [
+      "Accuracy",
+      "Controllability"
+    ],
+    "supplement_label": "S102"
+  },
+  {
+    "study_id": "PS225",
+    "title": "Embodied active defense: Leveraging recurrent feedback to counter adversarial patches",
+    "authors": "Wu, Lingxuan, Yang, Xiao, Dong, Yinpeng, Xie, Liuwei, Su, Hang, and Zhu, Jun",
+    "year": "2024",
+    "venue": "arXiv preprint arXiv:2404.00540",
+    "url": "https://arxiv.org/abs/2404.00540",
+    "doi": "",
+    "arxiv": "2404.00540",
+    "bibtex_key": "",
+    "manuscript_reference": null,
+    "cited_in_manuscript": false,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Environment Perception",
+      "Action Planning"
+    ],
+    "facets": [
+      "Attack Resistance"
+    ],
+    "supplement_label": "S160"
+  },
+  {
+    "study_id": "PS144",
+    "title": "Embodied Agent Interface: Benchmarking LLMs for Embodied Decision Making",
+    "authors": "Manling Li, Shiyu Zhao, Qineng Wang, Kangrui Wang, Yu Zhou, Sanjana Srivastava, Cem Gokmen, Tony Lee, Li Li, Ruohan Zhang, Weiyu Liu, Percy Liang, Li Fei-Fei, Jiayuan Mao, and Jiajun Wu",
+    "year": "2024",
+    "venue": "Advances in Neural Information Processing Systems 37",
+    "url": "https://doi.org/10.52202/079017-3188",
+    "doi": "https://doi.org/10.52202/079017-3188",
+    "arxiv": "2410.07166",
+    "bibtex_key": "li2024embodied",
+    "manuscript_reference": 72,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": true,
+    "stages": [],
+    "facets": [],
+    "supplement_label": "S114"
+  },
+  {
+    "study_id": "PS252",
+    "title": "Embodied Escaping: End-to-End Reinforcement Learning for Robot Navigation in Narrow Environment",
+    "authors": "Zheng, Han, Zhang, Jiale, Jiang, Mingyang, Liu, Peiyuan, Liu, Danni, Qin, Tong, and Yang, Ming",
+    "year": "2025",
+    "venue": "arXiv preprint arXiv:2503.03208",
+    "url": "https://doi.org/10.1109/iros60139.2025.11245839",
+    "doi": "https://doi.org/10.1109/iros60139.2025.11245839",
+    "arxiv": "2503.03208",
+    "bibtex_key": "",
+    "manuscript_reference": null,
+    "cited_in_manuscript": false,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Action Planning",
+      "Physical Interaction"
+    ],
+    "facets": [
+      "Reliability"
+    ],
+    "supplement_label": "S179"
+  },
+  {
+    "study_id": "PS012",
+    "title": "Embodied Hazard Mitigation using Vision-Language Models for Autonomous Mobile Robots",
+    "authors": "Oluwadamilola Sotomi; Devika Kodi; Kiruthiga Chandra Shekar; Aliasghar Arab",
+    "year": "2025",
+    "venue": "arXiv preprint",
+    "url": "https://arxiv.org/abs/2509.06768",
+    "doi": "",
+    "arxiv": "2509.06768",
+    "bibtex_key": "",
+    "manuscript_reference": null,
+    "cited_in_manuscript": false,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Action Planning",
+      "Environment Perception",
+      "Physical Interaction"
+    ],
+    "facets": [
+      "Accuracy",
+      "Controllability",
+      "Reliability"
+    ],
+    "supplement_label": "S010"
+  },
+  {
+    "study_id": "PS202",
+    "title": "Embodied Laser Attack:Leveraging Scene Priors to Achieve Agent-based Robust Non-contact Attacks",
+    "authors": "Yitong Sun, Yao Huang, and Xingxing Wei",
+    "year": "2024",
+    "venue": "Proceedings of the 32nd ACM International Conference on Multimedia",
+    "url": "https://doi.org/10.1145/3664647.3680659",
+    "doi": "https://doi.org/10.1145/3664647.3680659",
+    "arxiv": "",
+    "bibtex_key": "sun2024embodied",
+    "manuscript_reference": 125,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Environment Perception",
+      "Action Planning"
+    ],
+    "facets": [
+      "Attack Resistance"
+    ],
+    "supplement_label": "S146"
+  },
+  {
+    "study_id": "PS062",
+    "title": "Embodied Uncertainty-Aware Object Segmentation",
+    "authors": "Xiaolin Fang, Leslie Pack Kaelbling, and Tomás Lozano-Pérez",
+    "year": "2024",
+    "venue": "2024 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)",
+    "url": "https://doi.org/10.1109/iros58592.2024.10801562",
+    "doi": "https://doi.org/10.1109/iros58592.2024.10801562",
+    "arxiv": "",
+    "bibtex_key": "fang2024embodied",
+    "manuscript_reference": 29,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Environment Perception"
+    ],
+    "facets": [
+      "Accuracy"
+    ],
+    "supplement_label": "S051"
+  },
+  {
+    "study_id": "PS175",
+    "title": "Embodied visual active learning for semantic segmentation",
+    "authors": "Nilsson, David, Pirinen, Aleksis, Gärtner, Erik, and Sminchisescu, Cristian",
+    "year": "2021",
+    "venue": "AAAI",
+    "url": "https://doi.org/10.1609/aaai.v35i3.16338",
+    "doi": "https://doi.org/10.1609/aaai.v35i3.16338",
+    "arxiv": "",
+    "bibtex_key": "",
+    "manuscript_reference": null,
+    "cited_in_manuscript": false,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Environment Perception"
+    ],
+    "facets": [
+      "Accuracy",
+      "Reliability"
+    ],
+    "supplement_label": "S129"
+  },
+  {
+    "study_id": "PS098",
+    "title": "EmbodiedGovBench: A Benchmark for Governance, Recovery, and Upgrade Safety in Embodied Agent Systems",
+    "authors": "Xue Qin, Simin Luan, John See, Cong Yang, and Zhijun Li",
+    "year": "2026",
+    "venue": "arXiv preprint arXiv:2604.11174",
+    "url": "https://arxiv.org/abs/2604.11174",
+    "doi": "",
+    "arxiv": "2604.11174",
+    "bibtex_key": "qin2026embodiedgovbench",
+    "manuscript_reference": 113,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Action Planning",
+      "Instruction Understanding",
+      "Physical Interaction"
+    ],
+    "facets": [
+      "Auditability",
+      "Controllability",
+      "Reliability"
+    ],
+    "supplement_label": "S078"
+  },
+  {
+    "study_id": "PS011",
+    "title": "Enhancing Reliability in LLM-Integrated Robotic Systems: A Unified Approach to Security and Safety",
+    "authors": "Wenxiao Zhang; Xiangrui Kong; Conan Dewitt; Thomas Bräunl; Jin B. Hong",
+    "year": "2025",
+    "venue": "arXiv preprint",
+    "url": "https://doi.org/10.1016/j.jss.2025.112614",
+    "doi": "https://doi.org/10.1016/j.jss.2025.112614",
+    "arxiv": "2509.02163",
+    "bibtex_key": "",
+    "manuscript_reference": null,
+    "cited_in_manuscript": false,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Action Planning",
+      "Instruction Understanding",
+      "Physical Interaction"
+    ],
+    "facets": [
+      "Attack Resistance",
+      "Controllability",
+      "Reliability"
+    ],
+    "supplement_label": "S009"
+  },
+  {
+    "study_id": "PS032",
+    "title": "Estimating Trust in Human-Robot Collaboration Through Behavioral Indicators and Explainability",
+    "authors": "Giulio Campagna, Marta Lagomarsino, Marta Lorenzini, Dimitrios Chrysostomou, Matthias Rehm, and Arash Ajoudani",
+    "year": "2025",
+    "venue": "IEEE Robotics and Automation Letters",
+    "url": "https://doi.org/10.1109/lra.2025.3600170",
+    "doi": "https://doi.org/10.1109/lra.2025.3600170",
+    "arxiv": "",
+    "bibtex_key": "campagna2025estimating",
+    "manuscript_reference": 11,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Physical Interaction"
+    ],
+    "facets": [
+      "Explainability"
+    ],
+    "supplement_label": "S025"
+  },
+  {
+    "study_id": "PS019",
+    "title": "Eva-VLA: Evaluating Vision-Language-Action Models' Robustness Under Real-World Physical Variations",
+    "authors": "Hanqing Liu, Shouwei Ruan, Jiahuan Long, Junqi Wu, Jiacheng Hou, Huili Tang, Tingsong Jiang, Weien Zhou, and Wen Yao",
+    "year": "2025",
+    "venue": "arXiv preprint arXiv:2509.18953",
+    "url": "https://arxiv.org/abs/2509.18953",
+    "doi": "",
+    "arxiv": "2509.18953",
+    "bibtex_key": "liu2025evavla",
+    "manuscript_reference": 77,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Environment Perception",
+      "Physical Interaction"
+    ],
+    "facets": [
+      "Reliability"
+    ],
+    "supplement_label": "S016"
+  },
+  {
+    "study_id": "PS153",
+    "title": "Exploring the Robustness of Decision-Level Through Adversarial Attacks on LLM-Based Embodied Models",
+    "authors": "Shuyuan Liu, Jiawei Chen, Shouwei Ruan, Hang Su, and Zhaoxia Yin",
+    "year": "2024",
+    "venue": "Proceedings of the 32nd ACM International Conference on Multimedia",
+    "url": "https://doi.org/10.1145/3664647.3680616",
+    "doi": "https://doi.org/10.1145/3664647.3680616",
+    "arxiv": "2405.19802",
+    "bibtex_key": "liu2024exploring",
+    "manuscript_reference": 78,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Action Planning"
+    ],
+    "facets": [
+      "Attack Resistance"
+    ],
+    "supplement_label": "S117"
+  },
+  {
+    "study_id": "PS133",
+    "title": "FAER: Benchmarking VLMs for Failure-Aware Embodied Reasoning",
+    "authors": "Hao Song, Kaifeng Liu, Yuanxing Liu, Xiang Tian, Xuesong Wang, Chen Yifan, Weinan Zhang, and Ting Liu",
+    "year": "2026",
+    "venue": "Findings of the Association for Computational Linguistics: ACL 2026",
+    "url": "https://doi.org/10.18653/v1/2026.findings-acl.948",
+    "doi": "https://doi.org/10.18653/v1/2026.findings-acl.948",
+    "arxiv": "",
+    "bibtex_key": "song2026faer",
+    "manuscript_reference": 124,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Action Planning",
+      "Environment Perception",
+      "Physical Interaction"
+    ],
+    "facets": [
+      "Accuracy",
+      "Controllability",
+      "Reliability"
+    ],
+    "supplement_label": "S105"
+  },
+  {
+    "study_id": "PS033",
+    "title": "FailSafe: Reasoning and Recovery from Failures in Vision-Language-Action Models",
+    "authors": "Zijun Lin, Jiafei Duan, Haoquan Fang, Dieter Fox, Ranjay Krishna, Cheston Tan, and Bihan Wen",
+    "year": "2025",
+    "venue": "arXiv preprint arXiv:2510.01642",
+    "url": "https://arxiv.org/abs/2510.01642",
+    "doi": "",
+    "arxiv": "2510.01642",
+    "bibtex_key": "lin2025failsafe",
+    "manuscript_reference": 76,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Action Planning",
+      "Physical Interaction"
+    ],
+    "facets": [
+      "Controllability",
+      "Reliability"
+    ],
+    "supplement_label": "S026"
+  },
+  {
+    "study_id": "PS017",
+    "title": "Fine-Tuning Robot Policies While Maintaining User Privacy",
+    "authors": "Benjamin A. Christie, Sagar Parekh, and Dylan P. Losey",
+    "year": "2025",
+    "venue": "arXiv preprint arXiv:2509.18311",
+    "url": "https://arxiv.org/abs/2509.18311",
+    "doi": "",
+    "arxiv": "2509.18311",
+    "bibtex_key": "christie2025finetuning",
+    "manuscript_reference": 17,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Physical Interaction"
+    ],
+    "facets": [
+      "Privacy Protection"
+    ],
+    "supplement_label": "S014"
+  },
+  {
+    "study_id": "PS090",
+    "title": "FlowHijack: A Dynamics-Aware Backdoor Attack on Flow-Matching Vision-Language-Action Models",
+    "authors": "Xinyuan An; Tao Luo; Gengyun Peng; Yaobing Wang; Kui Ren; Dongxia Wang",
+    "year": "2026",
+    "venue": "arXiv preprint",
+    "url": "https://arxiv.org/abs/2604.09651",
+    "doi": "",
+    "arxiv": "2604.09651",
+    "bibtex_key": "",
+    "manuscript_reference": null,
+    "cited_in_manuscript": false,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Environment Perception",
+      "Physical Interaction"
+    ],
+    "facets": [
+      "Attack Resistance"
+    ],
+    "supplement_label": "S073"
+  },
+  {
+    "study_id": "PS122",
+    "title": "Foresight: Failure Detection for Long-Horizon Robotic Manipulation with Action-Conditioned World Model Latents",
+    "authors": "Haoran Zhang; Yifu Lu; Boyang Wang; Xuhui Kang; Yen-Ling Kuo; Zezhou Cheng; Mengdi Wang; Odest Chadwicke Jenkins",
+    "year": "2026",
+    "venue": "arXiv preprint",
+    "url": "https://arxiv.org/abs/2606.23085",
+    "doi": "",
+    "arxiv": "2606.23085",
+    "bibtex_key": "",
+    "manuscript_reference": null,
+    "cited_in_manuscript": false,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Action Planning",
+      "Physical Interaction"
+    ],
+    "facets": [
+      "Controllability",
+      "Reliability"
+    ],
+    "supplement_label": "S096"
+  },
+  {
+    "study_id": "PS127",
+    "title": "ForesightSafety-VLA: A Unified Diagnostic Safety Benchmark for Vision-Language-Action Models",
+    "authors": "Mingyang Lyu, Yinqian Sun, Yiyang Jia, Sicheng Shen, Moquan Sha, Huangrui Li, Feifei Zhao, and Yi Zeng",
+    "year": "2026",
+    "venue": "arXiv preprint arXiv:2606.27079",
+    "url": "https://arxiv.org/abs/2606.27079",
+    "doi": "",
+    "arxiv": "2606.27079",
+    "bibtex_key": "lyu2026foresightsafetyvla",
+    "manuscript_reference": 85,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Action Planning",
+      "Environment Perception",
+      "Physical Interaction"
+    ],
+    "facets": [
+      "Accuracy",
+      "Controllability",
+      "Reliability"
+    ],
+    "supplement_label": "S100"
+  },
+  {
+    "study_id": "PS021",
+    "title": "FreezeVLA: Action-Freezing Attacks against Vision-Language-Action Models",
+    "authors": "Wang, Xin, Li, Jie, Weng, Zejia, Wang, Yixu, Gao, Yifeng, Pang, Tianyu, Du, Chao, Teng, Yan, Wang, Yingchun, Wu, Zuxuan, Ma, Xingjun, and Jiang, Yu-Gang",
+    "year": "2025",
+    "venue": "arXiv preprint arXiv:2509.19870",
+    "url": "https://arxiv.org/abs/2509.19870",
+    "doi": "",
+    "arxiv": "2509.19870",
+    "bibtex_key": "wang2025freezevla",
+    "manuscript_reference": 144,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Environment Perception",
+      "Physical Interaction"
+    ],
+    "facets": [
+      "Attack Resistance"
+    ],
+    "supplement_label": "S017"
+  },
+  {
+    "study_id": "PS094",
+    "title": "From Prompt to Physical Action: Structured Backdoor Attacks on LLM-Mediated Robotic Control Systems",
+    "authors": "Mingyang Xie; Jin Wei-Kocsis",
+    "year": "2026",
+    "venue": "arXiv preprint",
+    "url": "https://arxiv.org/abs/2604.03890",
+    "doi": "",
+    "arxiv": "2604.03890",
+    "bibtex_key": "",
+    "manuscript_reference": null,
+    "cited_in_manuscript": false,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Action Planning",
+      "Instruction Understanding",
+      "Physical Interaction"
+    ],
+    "facets": [
+      "Attack Resistance"
+    ],
+    "supplement_label": "S076"
+  },
+  {
+    "study_id": "PS220",
+    "title": "From Strangers to Assistants: Fast Desire Alignment for Embodied Agent-User Adaptation",
+    "authors": "Wang, Yuanfei, Huang, Xinju, Zhong, Fangwei, Yang, Yaodong, Wang, Yizhou, Chen, Yuanpei, and Dong, Hao",
+    "year": "2025",
+    "venue": "arXiv preprint arXiv:2505.22503",
+    "url": "https://arxiv.org/abs/2505.22503",
+    "doi": "",
+    "arxiv": "2505.22503",
+    "bibtex_key": "",
+    "manuscript_reference": null,
+    "cited_in_manuscript": false,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Instruction Understanding",
+      "Action Planning"
+    ],
+    "facets": [
+      "Value Alignment"
+    ],
+    "supplement_label": "S158"
+  },
+  {
+    "study_id": "PS219",
+    "title": "Generating Explanations for Embodied Action Decision from Visual Observation",
+    "authors": "Xiaohan Wang, Yuehu Liu, Xinhang Song, Beibei Wang, and Shuqiang Jiang",
+    "year": "2023",
+    "venue": "Proceedings of the 31st ACM International Conference on Multimedia",
+    "url": "https://doi.org/10.1145/3581783.3612351",
+    "doi": "https://doi.org/10.1145/3581783.3612351",
+    "arxiv": "",
+    "bibtex_key": "wang2023generating",
+    "manuscript_reference": 145,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Action Planning"
+    ],
+    "facets": [
+      "Explainability"
+    ],
+    "supplement_label": "S157"
+  },
+  {
+    "study_id": "PS229",
+    "title": "Gibson Env: Real-World Perception for Embodied Agents",
+    "authors": "Fei Xia, Amir R. Zamir, Zhiyang He, Alexander Sax, Jitendra Malik, and Silvio Savarese",
+    "year": "2018",
+    "venue": "2018 IEEE/CVF Conference on Computer Vision and Pattern Recognition",
+    "url": "https://doi.org/10.1109/cvpr.2018.00945",
+    "doi": "https://doi.org/10.1109/cvpr.2018.00945",
+    "arxiv": "",
+    "bibtex_key": "xiaGibsonEnvRealWorld2018",
+    "manuscript_reference": 151,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": true,
+    "stages": [],
+    "facets": [],
+    "supplement_label": "S163"
+  },
+  {
+    "study_id": "PS037",
+    "title": "Goal-oriented Backdoor Attack against Vision-Language-Action Models via Physical Objects",
+    "authors": "Zirun Zhou; Zhengyang Xiao; Haochuan Xu; Jing Sun; Di Wang; Jingfeng Zhang",
+    "year": "2025",
+    "venue": "arXiv preprint",
+    "url": "https://arxiv.org/abs/2510.09269",
+    "doi": "",
+    "arxiv": "2510.09269",
+    "bibtex_key": "",
+    "manuscript_reference": null,
+    "cited_in_manuscript": false,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Action Planning",
+      "Environment Perception"
+    ],
+    "facets": [
+      "Attack Resistance"
+    ],
+    "supplement_label": "S029"
+  },
+  {
+    "study_id": "PS250",
+    "title": "Good time to ask: A learning framework for asking for help in embodied visual navigation",
+    "authors": "Zhang, Jenny, Yu, Samson, Duan, Jiafei, and Tan, Cheston",
+    "year": "2023",
+    "venue": "UR",
+    "url": "https://doi.org/10.1109/ur57808.2023.10202397",
+    "doi": "https://doi.org/10.1109/ur57808.2023.10202397",
+    "arxiv": "",
+    "bibtex_key": "",
+    "manuscript_reference": null,
+    "cited_in_manuscript": false,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Environment Perception",
+      "Action Planning"
+    ],
+    "facets": [
+      "Reliability",
+      "Controllability"
+    ],
+    "supplement_label": "S177"
+  },
+  {
+    "study_id": "PS185",
+    "title": "Grounding Multimodal LLMs to Embodied Agents that Ask for Help with Reinforcement Learning",
+    "authors": "Ram Ramrakhya, Matthew Chang, Xavier Puig, Ruta Desai, Zsolt Kira, and Roozbeh Mottaghi",
+    "year": "2025",
+    "venue": "arXiv preprint arXiv:2504.00907",
+    "url": "https://arxiv.org/abs/2504.00907",
+    "doi": "",
+    "arxiv": "2504.00907",
+    "bibtex_key": "ramrakhya2025grounding",
+    "manuscript_reference": 116,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Instruction Understanding",
+      "Action Planning"
+    ],
+    "facets": [
+      "Accuracy",
+      "Reliability"
+    ],
+    "supplement_label": "S135"
+  },
+  {
+    "study_id": "PS212",
+    "title": "GRUtopia: Dream General Robots in a City at Scale",
+    "authors": "Wang, Hanqing, Chen, Jiahe, Huang, Wensi, Ben, Qingwei, Wang, Tai, Mi, Boyu, Huang, Tao, Zhao, Siheng, Chen, Yilun, Yang, Sizhe, Cao, Peizhou, Yu, Wenye, Ye, Zichao, Li, Jialun, Long, Junfeng, Wang, Zirui, Wang, Huiling, Zhao, Ying, Tu, Zhongying, Qiao, Yu, Lin, Dahua, and Pang, Jiangmiao",
+    "year": "2024",
+    "venue": "arXiv preprint arXiv:2407.10943",
+    "url": "https://arxiv.org/abs/2407.10943",
+    "doi": "",
+    "arxiv": "2407.10943",
+    "bibtex_key": "wangGRUtopiaDreamGeneral2024a",
+    "manuscript_reference": 136,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": true,
+    "stages": [],
+    "facets": [],
+    "supplement_label": "S151"
+  },
+  {
+    "study_id": "PS192",
+    "title": "Habitat: A Platform for Embodied AI Research",
+    "authors": "Manolis Savva, Abhishek Kadian, Oleksandr Maksymets, Yili Zhao, Erik Wijmans, Bhavana Jain, Julian Straub, Jia Liu, Vladlen Koltun, Jitendra Malik, Devi Parikh, and Dhruv Batra",
+    "year": "2019",
+    "venue": "Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)",
+    "url": "https://doi.org/10.1109/iccv.2019.00943",
+    "doi": "https://doi.org/10.1109/iccv.2019.00943",
+    "arxiv": "",
+    "bibtex_key": "savvaHabitatPlatformEmbodied2019",
+    "manuscript_reference": 119,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": true,
+    "stages": [],
+    "facets": [],
+    "supplement_label": "S140"
+  },
+  {
+    "study_id": "PS209",
+    "title": "HASARD: A Benchmark for Vision-Based Safe Reinforcement Learning in Embodied Agents",
+    "authors": "Tristan Tomilin, Meng Fang, and Mykola Pechenizkiy",
+    "year": "2025",
+    "venue": "International Conference on Learning Representations",
+    "url": "https://proceedings.iclr.cc/paper_files/paper/2025/hash/5ab848771ff8c9c47aac4128e2ef9f4e-Abstract-Conference.html",
+    "doi": "",
+    "arxiv": "2503.08241",
+    "bibtex_key": "tomilin_hasard_2025",
+    "manuscript_reference": 133,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": true,
+    "stages": [],
+    "facets": [],
+    "supplement_label": "S149"
+  },
+  {
+    "study_id": "PS100",
+    "title": "HazardArena: Evaluating Semantic Safety in Vision-Language-Action Models",
+    "authors": "Zixing Chen, Yifeng Gao, Li Wang, Yunhan Zhao, Yi Liu, Jiayu Li, Xiang Zheng, Zuxuan Wu, Cong Wang, Xingjun Ma, and Yu-Gang Jiang",
+    "year": "2026",
+    "venue": "arXiv preprint arXiv:2604.12447",
+    "url": "https://arxiv.org/abs/2604.12447",
+    "doi": "",
+    "arxiv": "2604.12447",
+    "bibtex_key": "chen2026hazardarena",
+    "manuscript_reference": 15,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Action Planning",
+      "Environment Perception",
+      "Physical Interaction"
+    ],
+    "facets": [
+      "Abuse Prevention",
+      "Accuracy",
+      "Controllability"
+    ],
+    "supplement_label": "S080"
+  },
+  {
+    "study_id": "PS043",
+    "title": "HEAL: An Empirical Study on Hallucinations in Embodied Agents Driven by Large Language Models",
+    "authors": "Trishna Chakraborty, Udita Ghosh, Xiaopan Zhang, Fahim Faisal Niloy, Yue Dong, Jiachen Li, Amit Roy-Chowdhury, and Chengyu Song",
+    "year": "2025",
+    "venue": "Findings of the Association for Computational Linguistics: EMNLP 2025",
+    "url": "https://doi.org/10.18653/v1/2025.findings-emnlp.1158",
+    "doi": "https://doi.org/10.18653/v1/2025.findings-emnlp.1158",
+    "arxiv": "",
+    "bibtex_key": "chakraborty2025heal",
+    "manuscript_reference": 12,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Action Planning",
+      "Environment Perception",
+      "Instruction Understanding"
+    ],
+    "facets": [
+      "Accuracy",
+      "Reliability"
+    ],
+    "supplement_label": "S035"
+  },
+  {
+    "study_id": "PS028",
+    "title": "HomeSafeBench: Benchmarking Embodied Vision-Language Models in Free-Exploration Home Safety Inspection",
+    "authors": "Yao, Jiashu, Wen, Haoyu, Gao, Siyuan, Guo, Yuhang, Liu, Zeming, and Huang, Heyan",
+    "year": "2025",
+    "venue": "arXiv preprint arXiv:2509.23690",
+    "url": "https://arxiv.org/abs/2509.23690",
+    "doi": "",
+    "arxiv": "2509.23690",
+    "bibtex_key": "yao2025homesafebench",
+    "manuscript_reference": 162,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Action Planning",
+      "Environment Perception"
+    ],
+    "facets": [
+      "Accuracy",
+      "Reliability"
+    ],
+    "supplement_label": "S022"
+  },
+  {
+    "study_id": "PS141",
+    "title": "iGibson 2.0: Object-Centric Simulation for Robot Learning of Everyday Household Tasks",
+    "authors": "Chengshu Li, Fei Xia, Roberto Martín-Martín, Michael Lingelbach, Sanjana Srivastava, Bokui Shen, Kent Vainio, Cem Gokmen, Gokul Dharan, Tanish Jain, Andrey Kurenkov, C. Karen Liu, Hyowon Gweon, Jiajun Wu, Li Fei-Fei, and Silvio Savarese",
+    "year": "2021",
+    "venue": "arXiv preprint arXiv:2108.03272",
+    "url": "https://arxiv.org/abs/2108.03272",
+    "doi": "",
+    "arxiv": "2108.03272",
+    "bibtex_key": "liIGibson20ObjectCentric2021",
+    "manuscript_reference": 68,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": true,
+    "stages": [],
+    "facets": [],
+    "supplement_label": "S111"
+  },
+  {
+    "study_id": "PS004",
+    "title": "Immersive Explainability: Visualizing Robot Navigation Decisions through XAI Semantic Scene Projections in Virtual Reality",
+    "authors": "Jorge de Heuvel, Sebastian Müller, Marlene Wessels, Aftab Akhtar, Christian Bauckhage, and Maren Bennewitz",
+    "year": "2025",
+    "venue": "2025 34th IEEE International Conference on Robot and Human Interactive Communication (RO-MAN)",
+    "url": "https://doi.org/10.1109/ro-man63969.2025.11217609",
+    "doi": "https://doi.org/10.1109/ro-man63969.2025.11217609",
+    "arxiv": "",
+    "bibtex_key": "deheuvel2025immersive",
+    "manuscript_reference": 21,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Action Planning",
+      "Environment Perception"
+    ],
+    "facets": [
+      "Explainability"
+    ],
+    "supplement_label": "S004"
+  },
+  {
+    "study_id": "PS101",
+    "title": "Improved Semantic Segmentation from Ultra-Low-Resolution RGB Images Applied to Privacy-Preserving Object-Goal Navigation",
+    "authors": "Huang, Xuying, Pan, Sicong, Zatsarynna, Olga, Gall, Juergen, and Bennewitz, Maren",
+    "year": "2025",
+    "venue": "arXiv preprint arXiv:2507.16034",
+    "url": "https://arxiv.org/abs/2507.16034",
+    "doi": "",
+    "arxiv": "2507.16034",
+    "bibtex_key": "",
+    "manuscript_reference": null,
+    "cited_in_manuscript": false,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Environment Perception"
+    ],
+    "facets": [
+      "Privacy Protection"
+    ],
+    "supplement_label": "S081"
+  },
+  {
+    "study_id": "PS056",
+    "title": "Improving accountability and explainability in robots through encryption, large language models, and visual language models",
+    "authors": "Laura Fernández-Becerra, David Sobrín-Hidalgo, Miguel A González-Santamarta, Ángel Manuel Guerrero-Higueras, Francisco J Rodríguez Lera, and Vicente Matellán Olivera",
+    "year": "2026",
+    "venue": "Logic Journal of the IGPL",
+    "url": "https://doi.org/10.1093/jigpal/jzaf016",
+    "doi": "https://doi.org/10.1093/jigpal/jzaf016",
+    "arxiv": "",
+    "bibtex_key": "fernandezbecerra2026improving",
+    "manuscript_reference": 30,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Action Planning",
+      "Physical Interaction"
+    ],
+    "facets": [
+      "Auditability",
+      "Explainability",
+      "Privacy Protection"
+    ],
+    "supplement_label": "S047"
+  },
+  {
+    "study_id": "PS053",
+    "title": "Improving Robotic Manipulation Robustness via NICE Scene Surgery",
+    "authors": "Sajjad Pakdamansavoji; Mozhgan Pourkeshavarz; Adam Sigal; Zhiyuan Li; Rui Heng Yang; Amir Rasouli",
+    "year": "2025",
+    "venue": "arXiv preprint",
+    "url": "https://arxiv.org/abs/2511.22777",
+    "doi": "",
+    "arxiv": "2511.22777",
+    "bibtex_key": "",
+    "manuscript_reference": null,
+    "cited_in_manuscript": false,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Environment Perception",
+      "Physical Interaction"
+    ],
+    "facets": [
+      "Reliability"
+    ],
+    "supplement_label": "S044"
+  },
+  {
+    "study_id": "PS261",
+    "title": "Inferring Human Fairness Judgments with Large Language Models in Human-Robot Interaction Scenarios",
+    "authors": "Houston Claure, Aly Moosa, and Marynel Vázquez",
+    "year": "2025",
+    "venue": "2025 34th IEEE International Conference on Robot and Human Interactive Communication (RO-MAN)",
+    "url": "https://doi.org/10.1109/ro-man63969.2025.11217730",
+    "doi": "https://doi.org/10.1109/ro-man63969.2025.11217730",
+    "arxiv": "",
+    "bibtex_key": "claure2025inferring",
+    "manuscript_reference": 18,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Action Planning",
+      "Physical Interaction"
+    ],
+    "facets": [
+      "Value Alignment"
+    ],
+    "supplement_label": "S186"
+  },
+  {
+    "study_id": "PS001",
+    "title": "Integrating Disambiguation and User Preferences into Large Language Models for Robot Motion Planning",
+    "authors": "Abugurain, Mohammed and Park, Shinkyu",
+    "year": "2024",
+    "venue": "arXiv preprint arXiv:2404.14547",
+    "url": "https://arxiv.org/abs/2404.14547",
+    "doi": "",
+    "arxiv": "2404.14547",
+    "bibtex_key": "",
+    "manuscript_reference": null,
+    "cited_in_manuscript": false,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Instruction Understanding"
+    ],
+    "facets": [
+      "Accuracy"
+    ],
+    "supplement_label": "S001"
+  },
+  {
+    "study_id": "PS006",
+    "title": "Integrating Perceptions: A Human-Centered Physical Safety Model for Human-Robot Interaction",
+    "authors": "Pranav Pandey, Ramviyas Parasuraman, and Prashant Doshi",
+    "year": "2025",
+    "venue": "2025 34th IEEE International Conference on Robot and Human Interactive Communication (RO-MAN)",
+    "url": "https://doi.org/10.1109/ro-man63969.2025.11217747",
+    "doi": "https://doi.org/10.1109/ro-man63969.2025.11217747",
+    "arxiv": "",
+    "bibtex_key": "pandey2025integrating",
+    "manuscript_reference": 105,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Physical Interaction"
+    ],
+    "facets": [
+      "Reliability",
+      "Value Alignment"
+    ],
+    "supplement_label": "S006"
+  },
+  {
+    "study_id": "PS262",
+    "title": "Interactive task learning via embodied corrective feedback",
+    "authors": "Mattias Appelgren and Alex Lascarides",
+    "year": "2020",
+    "venue": "Autonomous Agents and Multi-Agent Systems",
+    "url": "https://doi.org/10.1007/s10458-020-09481-8",
+    "doi": "https://doi.org/10.1007/s10458-020-09481-8",
+    "arxiv": "",
+    "bibtex_key": "appelgren2020interactive",
+    "manuscript_reference": 6,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Instruction Understanding",
+      "Action Planning"
+    ],
+    "facets": [
+      "Controllability"
+    ],
+    "supplement_label": "S187"
+  },
+  {
+    "study_id": "PS211",
+    "title": "Introducing the Robot Security Framework (RSF), a standardized methodology to perform security assessments in robotics",
+    "authors": "Victor Mayoral Vilches; Laura Alzola Kirschgens; Asier Bilbao Calvo; Alejandro Hernandez Cordero; Rodrigo Izquierdo Pison; David Mayoral Vilches; Aday Muniz Rosas; Gorka Olalde Mendia; Lander Usategi San Juan; Irati Zamalloa Ugarte; Endika Gil-Uriarte; Erik Tews; Andreas Peter",
+    "year": "2018",
+    "venue": "arXiv preprint arXiv:1806.04042",
+    "url": "https://arxiv.org/abs/1806.04042",
+    "doi": "",
+    "arxiv": "1806.04042",
+    "bibtex_key": "",
+    "manuscript_reference": null,
+    "cited_in_manuscript": false,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Environment Perception",
+      "Action Planning",
+      "Physical Interaction"
+    ],
+    "facets": [
+      "Attack Resistance",
+      "Auditability"
+    ],
+    "supplement_label": "S150"
+  },
+  {
+    "study_id": "PS174",
+    "title": "Is the Robot Spying on me? A Study on Perceived Privacy in Telepresence Scenarios in a Care Setting with Mobile and Humanoid Robots",
+    "authors": "Celia Nieto Agraz, Pascal Hinrichs, Marco Eichelberg, and Andreas Hein",
+    "year": "2025",
+    "venue": "International Journal of Social Robotics",
+    "url": "https://doi.org/10.1007/s12369-024-01153-x",
+    "doi": "https://doi.org/10.1007/s12369-024-01153-x",
+    "arxiv": "",
+    "bibtex_key": "nieto2024robot",
+    "manuscript_reference": 1,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Environment Perception",
+      "Physical Interaction"
+    ],
+    "facets": [
+      "Privacy Protection"
+    ],
+    "supplement_label": "S128"
+  },
+  {
+    "study_id": "PS158",
+    "title": "IS-Bench: Evaluating Interactive Safety of VLM-Driven Embodied Agents in Daily Household Tasks",
+    "authors": "Xiaoya Lu, Zeren Chen, Xuhao Hu, Yijin Zhou, Weichen Zhang, Dongrui Liu, Lu Sheng, and Jing Shao",
+    "year": "2026",
+    "venue": "Proceedings of the AAAI Conference on Artificial Intelligence",
+    "url": "https://doi.org/10.1609/aaai.v40i42.40880",
+    "doi": "https://doi.org/10.1609/aaai.v40i42.40880",
+    "arxiv": "2506.16402",
+    "bibtex_key": "lu2025bench",
+    "manuscript_reference": 81,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": true,
+    "stages": [],
+    "facets": [],
+    "supplement_label": "S118"
+  },
+  {
+    "study_id": "PS076",
+    "title": "Jailbreaking Embodied LLMs via Action-Level Manipulation",
+    "authors": "Xinyu Huang, Qiang Yang, Leming Shen, Zijing Ma, and Yuanqing Zheng",
+    "year": "2026",
+    "venue": "Proceedings of the 2026 ACM/IEEE International Conference on Embedded Artificial Intelligence and Sensing Systems",
+    "url": "https://doi.org/10.1145/3774906.3802758",
+    "doi": "https://doi.org/10.1145/3774906.3802758",
+    "arxiv": "2603.01414",
+    "bibtex_key": "huang2026jailbreaking",
+    "manuscript_reference": 48,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Instruction Understanding",
+      "Physical Interaction"
+    ],
+    "facets": [
+      "Abuse Prevention",
+      "Attack Resistance"
+    ],
+    "supplement_label": "S062"
+  },
+  {
+    "study_id": "PS188",
+    "title": "Jailbreaking LLM-Controlled Robots",
+    "authors": "Alexander Robey, Zachary Ravichandran, Vijay Kumar, Hamed Hassani, and George J. Pappas",
+    "year": "2025",
+    "venue": "2025 IEEE International Conference on Robotics and Automation (ICRA)",
+    "url": "https://doi.org/10.1109/icra55743.2025.11128119",
+    "doi": "https://doi.org/10.1109/icra55743.2025.11128119",
+    "arxiv": "2410.13691",
+    "bibtex_key": "robey2024jailbreakingllmcontrolledrobots",
+    "manuscript_reference": 117,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Instruction Understanding",
+      "Action Planning",
+      "Physical Interaction"
+    ],
+    "facets": [
+      "Attack Resistance"
+    ],
+    "supplement_label": "S137"
+  },
+  {
+    "study_id": "PS140",
+    "title": "LabRobFail: A Benchmark for Robotic Failure Analysis in Chemical Self-driving Laboratory",
+    "authors": "Wang, Haobo, Sun, Baoli, Zou, Anqi, Huang, Dongsheng, Lv, Zelin, Wang, Ning, Li, Rui, Zhou, Dongzhan, Guo, Weiyu, Wang, Zhihui, and Ouyang, Wanli",
+    "year": "2026",
+    "venue": "arXiv preprint arXiv:2607.23704",
+    "url": "https://arxiv.org/abs/2607.23704",
+    "doi": "",
+    "arxiv": "2607.23704",
+    "bibtex_key": "wang2026labrobfail",
+    "manuscript_reference": 139,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Action Planning",
+      "Environment Perception",
+      "Physical Interaction"
+    ],
+    "facets": [
+      "Controllability",
+      "Reliability"
+    ],
+    "supplement_label": "S110"
+  },
+  {
+    "study_id": "PS145",
+    "title": "LabUtopia: High-Fidelity Simulation and Hierarchical Benchmark for Scientific Embodied Agents",
+    "authors": "Rui Li, Zixuan Hu, Wenxi Qu, Jinouwen Zhang, Zhenfei Yin, Sha Zhang, Xuantuo Huang, Hanqing Wang, Tai WANG, Jiangmiao Pang, Wanli Ouyang, LEI BAI, Wangmeng Zuo, LINGYU DUAN, Dongzhan Zhou, and SHIXIANG TANG",
+    "year": "2025",
+    "venue": "Advances in Neural Information Processing Systems 38",
+    "url": "https://doi.org/10.52202/085713-1158",
+    "doi": "https://doi.org/10.52202/085713-1158",
+    "arxiv": "2505.22634",
+    "bibtex_key": "liLabUtopiaHighFidelitySimulation2025",
+    "manuscript_reference": 74,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": true,
+    "stages": [],
+    "facets": [],
+    "supplement_label": "S115"
+  },
+  {
+    "study_id": "PS235",
+    "title": "Lacma: Language-aligning contrastive learning with meta-actions for embodied instruction following",
+    "authors": "Yang, Cheng-Fu, Chen, Yen-Chun, Yang, Jianwei, Dai, Xiyang, Yuan, Lu, Wang, Yu-Chiang Frank, and Chang, Kai-Wei",
+    "year": "2023",
+    "venue": "arXiv preprint arXiv:2310.12344",
+    "url": "https://doi.org/10.18653/v1/2023.emnlp-main.77",
+    "doi": "https://doi.org/10.18653/v1/2023.emnlp-main.77",
+    "arxiv": "2310.12344",
+    "bibtex_key": "",
+    "manuscript_reference": null,
+    "cited_in_manuscript": false,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Instruction Understanding",
+      "Action Planning"
+    ],
+    "facets": [
+      "Accuracy",
+      "Reliability"
+    ],
+    "supplement_label": "S168"
+  },
+  {
+    "study_id": "PS002",
+    "title": "Language as Cost: Proactive Hazard Mapping using VLM for Robot Navigation",
+    "authors": "Mintaek Oh, Chan Kim, Seung-Woo Seo, and Seong-Woo Kim",
+    "year": "2025",
+    "venue": "2025 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)",
+    "url": "https://doi.org/10.1109/iros60139.2025.11246665",
+    "doi": "https://doi.org/10.1109/iros60139.2025.11246665",
+    "arxiv": "2508.03138",
+    "bibtex_key": "oh2025language",
+    "manuscript_reference": 102,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Action Planning",
+      "Environment Perception"
+    ],
+    "facets": [
+      "Accuracy",
+      "Controllability",
+      "Reliability"
+    ],
+    "supplement_label": "S002"
+  },
+  {
+    "study_id": "PS022",
+    "title": "Latent Activation Editing: Inference-Time Refinement of Learned Policies for Safer Multirobot Navigation",
+    "authors": "Satyajeet Das; Darren Chiu; Zhehui Huang; Lars Lindemann; Gaurav S. Sukhatme",
+    "year": "2025",
+    "venue": "arXiv preprint",
+    "url": "https://arxiv.org/abs/2509.20623",
+    "doi": "",
+    "arxiv": "2509.20623",
+    "bibtex_key": "",
+    "manuscript_reference": null,
+    "cited_in_manuscript": false,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Action Planning",
+      "Physical Interaction"
+    ],
+    "facets": [
+      "Controllability",
+      "Reliability"
+    ],
+    "supplement_label": "S018"
+  },
+  {
+    "study_id": "PS079",
+    "title": "Learning Actionable Manipulation Recovery via Counterfactual Failure Synthesis",
+    "authors": "Dayou Li; Jiuzhou Lei; Hao Wang; Lulin Liu; Yunhao Yang; Zihan Wang; Bangya Liu; Minghui Zheng; Zhiwen Fan",
+    "year": "2026",
+    "venue": "arXiv preprint",
+    "url": "https://arxiv.org/abs/2603.13528",
+    "doi": "",
+    "arxiv": "2603.13528",
+    "bibtex_key": "",
+    "manuscript_reference": null,
+    "cited_in_manuscript": false,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Action Planning",
+      "Physical Interaction"
+    ],
+    "facets": [
+      "Controllability",
+      "Reliability"
+    ],
+    "supplement_label": "S065"
+  },
+  {
+    "study_id": "PS166",
+    "title": "Learning robust perceptive locomotion for quadrupedal robots in the wild",
+    "authors": "Takahiro Miki, Joonho Lee, Jemin Hwangbo, Lorenz Wellhausen, Vladlen Koltun, and Marco Hutter",
+    "year": "2022",
+    "venue": "Science Robotics",
+    "url": "https://doi.org/10.1126/scirobotics.abk2822",
+    "doi": "https://doi.org/10.1126/scirobotics.abk2822",
+    "arxiv": "2201.08117",
+    "bibtex_key": "miki2022learning",
+    "manuscript_reference": 92,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Environment Perception"
+    ],
+    "facets": [
+      "Accuracy",
+      "Reliability"
+    ],
+    "supplement_label": "S123"
+  },
+  {
+    "study_id": "PS193",
+    "title": "Learning to Walk by Steering: Perceptive Quadrupedal Locomotion in Dynamic Environments",
+    "authors": "Seo, Mingyo, Gupta, Ryan, Zhu, Yifeng, Skoutnev, Alexy, Sentis, Luis, and Zhu, Yuke",
+    "year": "2023",
+    "venue": "ICRA",
+    "url": "https://doi.org/10.1109/icra48891.2023.10161302",
+    "doi": "https://doi.org/10.1109/icra48891.2023.10161302",
+    "arxiv": "2209.09233",
+    "bibtex_key": "",
+    "manuscript_reference": null,
+    "cited_in_manuscript": false,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Environment Perception",
+      "Action Planning",
+      "Physical Interaction"
+    ],
+    "facets": [
+      "Accuracy",
+      "Reliability"
+    ],
+    "supplement_label": "S141"
+  },
+  {
+    "study_id": "PS047",
+    "title": "Legibility and predictability of robot motion",
+    "authors": "Anca D. Dragan, Kenton C.T. Lee, and Siddhartha S. Srinivasa",
+    "year": "2013",
+    "venue": "2013 8th ACM/IEEE International Conference on Human-Robot Interaction (HRI)",
+    "url": "https://doi.org/10.1109/hri.2013.6483603",
+    "doi": "https://doi.org/10.1109/hri.2013.6483603",
+    "arxiv": "",
+    "bibtex_key": "dragan2013legibility",
+    "manuscript_reference": 23,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Action Planning",
+      "Physical Interaction"
+    ],
+    "facets": [
+      "Explainability"
+    ],
+    "supplement_label": "S039"
+  },
+  {
+    "study_id": "PS040",
+    "title": "LIBERO-Plus: In-depth Robustness Analysis of Vision-Language-Action Models",
+    "authors": "Senyu Fei; Siyin Wang; Junhao Shi; Zihao Dai; Jikun Cai; Pengfang Qian; Li Ji; Xinzhe He; Shiduo Zhang; Zhaoye Fei; Jinlan Fu; Jingjing Gong; Xipeng Qiu",
+    "year": "2025",
+    "venue": "arXiv preprint",
+    "url": "https://arxiv.org/abs/2510.13626",
+    "doi": "",
+    "arxiv": "2510.13626",
+    "bibtex_key": "",
+    "manuscript_reference": null,
+    "cited_in_manuscript": false,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Action Planning",
+      "Environment Perception",
+      "Instruction Understanding"
+    ],
+    "facets": [
+      "Reliability"
+    ],
+    "supplement_label": "S032"
+  },
+  {
+    "study_id": "PS035",
+    "title": "LIBERO-PRO: Towards Robust and Fair Evaluation of Vision-Language-Action Models Beyond Memorization",
+    "authors": "Zhou, Xueyang, Xu, Yangming, Tie, Guiyao, Chen, Yongchao, Zhang, Guowen, Chu, Duanfeng, Zhou, Pan, and Sun, Lichao",
+    "year": "2025",
+    "venue": "arXiv preprint arXiv:2510.03827",
+    "url": "https://arxiv.org/abs/2510.03827",
+    "doi": "",
+    "arxiv": "2510.03827",
+    "bibtex_key": "zhou2025liberopro",
+    "manuscript_reference": 181,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Action Planning",
+      "Environment Perception",
+      "Instruction Understanding"
+    ],
+    "facets": [
+      "Reliability"
+    ],
+    "supplement_label": "S027"
+  },
+  {
+    "study_id": "PS124",
+    "title": "LIBERO-Safety: A Comprehensive Benchmark for Physical and Semantic Safety in Vision-Language-Action Models",
+    "authors": "Rongxu Cui, Zongzheng Zhang, Jingrui Pang, Haohan Chi, Jinbang Guo, Saining Zhang, Shaoxuan Xie, Xin Jin, Yao Mu, Jiaolong Yang, Guocai Yao, Xianyuan Zhan, Ya-Qin Zhang, and Hao Zhao",
+    "year": "2026",
+    "venue": "arXiv preprint arXiv:2606.23686",
+    "url": "https://arxiv.org/abs/2606.23686",
+    "doi": "",
+    "arxiv": "2606.23686",
+    "bibtex_key": "cui2026liberosafety",
+    "manuscript_reference": 20,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Action Planning",
+      "Environment Perception",
+      "Instruction Understanding",
+      "Physical Interaction"
+    ],
+    "facets": [
+      "Accuracy",
+      "Controllability",
+      "Reliability"
+    ],
+    "supplement_label": "S098"
+  },
+  {
+    "study_id": "PS069",
+    "title": "LIBERO-X: Robustness Litmus for Vision-Language-Action Models",
+    "authors": "Guodong Wang; Chenkai Zhang; Qingjie Liu; Jinjin Zhang; Jiancheng Cai; Junjie Liu; Xinmin Liu",
+    "year": "2026",
+    "venue": "arXiv preprint",
+    "url": "https://arxiv.org/abs/2602.06556",
+    "doi": "",
+    "arxiv": "2602.06556",
+    "bibtex_key": "",
+    "manuscript_reference": null,
+    "cited_in_manuscript": false,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Action Planning",
+      "Environment Perception",
+      "Instruction Understanding"
+    ],
+    "facets": [
+      "Reliability"
+    ],
+    "supplement_label": "S056"
+  },
+  {
+    "study_id": "PS013",
+    "title": "LLM-Driven Robots Risk Enacting Discrimination, Violence, and Unlawful Actions",
+    "authors": "Andrew Hundt, Rumaisa Azeem, Masoumeh Mansouri, and Martim Brandão",
+    "year": "2025",
+    "venue": "International Journal of Social Robotics",
+    "url": "https://doi.org/10.1007/s12369-025-01301-x",
+    "doi": "https://doi.org/10.1007/s12369-025-01301-x",
+    "arxiv": "2406.08824",
+    "bibtex_key": "azeem_llm-driven_2024",
+    "manuscript_reference": 51,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Action Planning",
+      "Instruction Understanding"
+    ],
+    "facets": [
+      "Abuse Prevention",
+      "Value Alignment"
+    ],
+    "supplement_label": "S011"
+  },
+  {
+    "study_id": "PS008",
+    "title": "Lost in Transparency? Exploring Uni- and Multimodal Transparency Declarations in Human-Robot Interaction*",
+    "authors": "André Helgert, Lukas Erle, Andre Dittmann, Sabrina C. Eimler, and Carolin Straßmann",
+    "year": "2025",
+    "venue": "2025 34th IEEE International Conference on Robot and Human Interactive Communication (RO-MAN)",
+    "url": "https://doi.org/10.1109/ro-man63969.2025.11217627",
+    "doi": "https://doi.org/10.1109/ro-man63969.2025.11217627",
+    "arxiv": "",
+    "bibtex_key": "helgert2025lost",
+    "manuscript_reference": 42,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Instruction Understanding",
+      "Physical Interaction"
+    ],
+    "facets": [
+      "Explainability",
+      "Identifiability"
+    ],
+    "supplement_label": "S007"
+  },
+  {
+    "study_id": "PS134",
+    "title": "MADRA: Multi-Agent Debate for Risk-Aware Embodied Planning",
+    "authors": "JunJian Wang; Lidan Zhao; Xi Sheryl Zhang",
+    "year": "2026",
+    "venue": "Findings of ACL 2026",
+    "url": "https://doi.org/10.18653/v1/2026.findings-acl.340",
+    "doi": "https://doi.org/10.18653/v1/2026.findings-acl.340",
+    "arxiv": "2511.21460",
+    "bibtex_key": "",
+    "manuscript_reference": null,
+    "cited_in_manuscript": false,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Action Planning",
+      "Instruction Understanding"
+    ],
+    "facets": [
+      "Abuse Prevention",
+      "Controllability",
+      "Value Alignment"
+    ],
+    "supplement_label": "S106"
+  },
+  {
+    "study_id": "PS232",
+    "title": "Manipulating Neural Path Planners via Slight Perturbations",
+    "authors": "Zikang Xiong and Suresh Jagannathan",
+    "year": "2024",
+    "venue": "IEEE Robotics and Automation Letters",
+    "url": "https://doi.org/10.1109/lra.2024.3387131",
+    "doi": "https://doi.org/10.1109/lra.2024.3387131",
+    "arxiv": "2403.18256",
+    "bibtex_key": "xiong2024manipulating",
+    "manuscript_reference": 154,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Action Planning"
+    ],
+    "facets": [
+      "Attack Resistance"
+    ],
+    "supplement_label": "S165"
+  },
+  {
+    "study_id": "PS059",
+    "title": "Measuring transparency in intelligent robots",
+    "authors": "Georgios Angelopoulos, Dimitri Lacroix, Ricarda Wullenkord, Alessandra Rossi, Silvia Rossi, and Friederike Eyssel",
+    "year": "2025",
+    "venue": "Scientific Reports",
+    "url": "https://doi.org/10.1038/s41598-025-29685-w",
+    "doi": "https://doi.org/10.1038/s41598-025-29685-w",
+    "arxiv": "",
+    "bibtex_key": "angelopoulos2025measuring",
+    "manuscript_reference": 4,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Instruction Understanding",
+      "Physical Interaction"
+    ],
+    "facets": [
+      "Explainability"
+    ],
+    "supplement_label": "S049"
+  },
+  {
+    "study_id": "PS245",
+    "title": "Meta-World: A Benchmark and Evaluation for Multi-Task and Meta Reinforcement Learning",
+    "authors": "Tianhe Yu, Deirdre Quillen, Zhanpeng He, Ryan Julian, Karol Hausman, Chelsea Finn, and Sergey Levine",
+    "year": "2020",
+    "venue": "Proceedings of the Conference on Robot Learning",
+    "url": "https://proceedings.mlr.press/v100/yu20a.html",
+    "doi": "",
+    "arxiv": "1910.10897",
+    "bibtex_key": "yuMetaWorldBenchmarkEvaluation2021",
+    "manuscript_reference": 169,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": true,
+    "stages": [],
+    "facets": [],
+    "supplement_label": "S174"
+  },
+  {
+    "study_id": "PS042",
+    "title": "Model-agnostic Adversarial Attack and Defense for Vision-Language-Action Models",
+    "authors": "Haochuan Xu; Yun Sing Koh; Shuhuai Huang; Zirun Zhou; Di Wang; Jun Sakuma; Jingfeng Zhang",
+    "year": "2025",
+    "venue": "arXiv preprint",
+    "url": "https://arxiv.org/abs/2510.13237",
+    "doi": "",
+    "arxiv": "2510.13237",
+    "bibtex_key": "",
+    "manuscript_reference": null,
+    "cited_in_manuscript": false,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Environment Perception",
+      "Physical Interaction"
+    ],
+    "facets": [
+      "Attack Resistance"
+    ],
+    "supplement_label": "S034"
+  },
+  {
+    "study_id": "PS005",
+    "title": "Monitoring and Diagnosability of Perception Systems",
+    "authors": "Pasquale Antonante, David I. Spivak, and Luca Carlone",
+    "year": "2021",
+    "venue": "2021 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)",
+    "url": "https://doi.org/10.1109/iros51168.2021.9636497",
+    "doi": "https://doi.org/10.1109/iros51168.2021.9636497",
+    "arxiv": "",
+    "bibtex_key": "antonante2021monitoring",
+    "manuscript_reference": 5,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Environment Perception"
+    ],
+    "facets": [
+      "Auditability",
+      "Reliability"
+    ],
+    "supplement_label": "S005"
+  },
+  {
+    "study_id": "PS142",
+    "title": "MulRobBench: A Decision-Level Benchmark for Safe and Security-Policy-Compliant Multimodal UAV Agents",
+    "authors": "Belal S. Alsinglawi; Weizheng Wang; Junyi Wu; Yi Jiang; Lianhai Lin; Merouane Debbah; Izzat Alsmadi",
+    "year": "2026",
+    "venue": "arXiv preprint",
+    "url": "https://arxiv.org/abs/2607.23870",
+    "doi": "",
+    "arxiv": "2607.23870",
+    "bibtex_key": "",
+    "manuscript_reference": null,
+    "cited_in_manuscript": false,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Action Planning",
+      "Environment Perception",
+      "Instruction Understanding",
+      "Physical Interaction"
+    ],
+    "facets": [
+      "Abuse Prevention",
+      "Attack Resistance",
+      "Controllability"
+    ],
+    "supplement_label": "S112"
+  },
+  {
+    "study_id": "PS172",
+    "title": "MuTRAP: Multi-trigger Trojans Attacking Robot Task Planning Systems",
+    "authors": "Mohaiminul Al Nahian, Zainab Altaweel, David Reitano, Sabbir Ahmed, Shiqi Zhang, and Adnan Siraj Rakin",
+    "year": "2025",
+    "venue": "arXiv preprint arXiv:2504.17070",
+    "url": "https://arxiv.org/abs/2504.17070",
+    "doi": "",
+    "arxiv": "2504.17070",
+    "bibtex_key": "nahian2025robo",
+    "manuscript_reference": 97,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Action Planning"
+    ],
+    "facets": [
+      "Attack Resistance"
+    ],
+    "supplement_label": "S126"
+  },
+  {
+    "study_id": "PS138",
+    "title": "Neuro-Symbolic Safety Guidance for Vision-Language-Action Models via Constrained Flow Matching",
+    "authors": "William English; Hao Zheng; Rickard Ewetz",
+    "year": "2026",
+    "venue": "arXiv preprint",
+    "url": "https://arxiv.org/abs/2607.01378",
+    "doi": "",
+    "arxiv": "2607.01378",
+    "bibtex_key": "",
+    "manuscript_reference": null,
+    "cited_in_manuscript": false,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Action Planning",
+      "Physical Interaction"
+    ],
+    "facets": [
+      "Controllability",
+      "Reliability"
+    ],
+    "supplement_label": "S108"
+  },
+  {
+    "study_id": "PS226",
+    "title": "NoisyEQA: Benchmarking Embodied Question Answering Against Noisy Queries",
+    "authors": "Wu, Tao, Zhou, Chuhao, Wong, Yen Heng, Gu, Lin, and Yang, Jianfei",
+    "year": "2024",
+    "venue": "arXiv preprint arXiv:2412.10726",
+    "url": "https://arxiv.org/abs/2412.10726",
+    "doi": "",
+    "arxiv": "2412.10726",
+    "bibtex_key": "wu2024noisyeqa",
+    "manuscript_reference": 149,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": true,
+    "stages": [],
+    "facets": [],
+    "supplement_label": "S161"
+  },
+  {
+    "study_id": "PS189",
+    "title": "Open-ended instructable embodied agents with memory-augmented large language models",
+    "authors": "Sarch, Gabriel, Wu, Yue, Tarr, Michael J, and Fragkiadaki, Katerina",
+    "year": "2023",
+    "venue": "arXiv preprint arXiv:2310.15127",
+    "url": "https://doi.org/10.18653/v1/2023.findings-emnlp.226",
+    "doi": "https://doi.org/10.18653/v1/2023.findings-emnlp.226",
+    "arxiv": "2310.15127",
+    "bibtex_key": "",
+    "manuscript_reference": null,
+    "cited_in_manuscript": false,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Instruction Understanding",
+      "Action Planning"
+    ],
+    "facets": [
+      "Accuracy",
+      "Reliability"
+    ],
+    "supplement_label": "S138"
+  },
+  {
+    "study_id": "PS216",
+    "title": "Optimal Actuator Attacks on Autonomous Vehicles Using Reinforcement Learning",
+    "authors": "Wang, Pengyu, Li, Jialu, and Shi, Ling",
+    "year": "2025",
+    "venue": "arXiv preprint arXiv:2502.07839",
+    "url": "https://arxiv.org/abs/2502.07839",
+    "doi": "",
+    "arxiv": "2502.07839",
+    "bibtex_key": "wang2025optimalactuatorattacksautonomous",
+    "manuscript_reference": 142,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Physical Interaction"
+    ],
+    "facets": [
+      "Attack Resistance"
+    ],
+    "supplement_label": "S155"
+  },
+  {
+    "study_id": "PS181",
+    "title": "Perception Matters: Enhancing Embodied AI with Uncertainty-Aware Semantic Segmentation",
+    "authors": "Sai Prasanna, Daniel Honerkamp, Kshitij Sirohi, Tim Welschehold, Wolfram Burgard, and Abhinav Valada",
+    "year": "2024",
+    "venue": "arXiv preprint arXiv:2408.02297",
+    "url": "https://arxiv.org/abs/2408.02297",
+    "doi": "",
+    "arxiv": "2408.02297",
+    "bibtex_key": "prasanna2024perception",
+    "manuscript_reference": 111,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Environment Perception",
+      "Action Planning"
+    ],
+    "facets": [
+      "Accuracy",
+      "Reliability"
+    ],
+    "supplement_label": "S131"
+  },
+  {
+    "study_id": "PS118",
+    "title": "Perturbation-Based Uncertainty for Failure Detection in Vision-Language-Action Models",
+    "authors": "Yousung Lee; Dongsoo Har",
+    "year": "2026",
+    "venue": "arXiv preprint",
+    "url": "https://arxiv.org/abs/2606.20754",
+    "doi": "",
+    "arxiv": "2606.20754",
+    "bibtex_key": "",
+    "manuscript_reference": null,
+    "cited_in_manuscript": false,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Action Planning",
+      "Physical Interaction"
+    ],
+    "facets": [
+      "Controllability",
+      "Reliability"
+    ],
+    "supplement_label": "S094"
+  },
+  {
+    "study_id": "PS046",
+    "title": "Phantom Menace: Exploring and Enhancing the Robustness of VLA Models Against Physical Sensor Attacks",
+    "authors": "Xuancun Lu, Jiaxiang Chen, Shilin Xiao, Zizhi Jin, Zhangrui Chen, Hanwen Yu, Bohan Qian, Ruochen Zhou, Xiaoyu Ji, and Wenyuan Xu",
+    "year": "2026",
+    "venue": "Proceedings of the AAAI Conference on Artificial Intelligence",
+    "url": "https://doi.org/10.1609/aaai.v40i42.40881",
+    "doi": "https://doi.org/10.1609/aaai.v40i42.40881",
+    "arxiv": "2511.10008",
+    "bibtex_key": "lu2026phantom",
+    "manuscript_reference": 80,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Environment Perception",
+      "Physical Interaction"
+    ],
+    "facets": [
+      "Attack Resistance",
+      "Reliability"
+    ],
+    "supplement_label": "S038"
+  },
+  {
+    "study_id": "PS239",
+    "title": "Plug in the Safety Chip: Enforcing Constraints for LLM-driven Robot Agents",
+    "authors": "Ziyi Yang, Shreyas S. Raman, Ankit Shah, and Stefanie Tellex",
+    "year": "2024",
+    "venue": "2024 IEEE International Conference on Robotics and Automation (ICRA)",
+    "url": "https://doi.org/10.1109/icra57147.2024.10611447",
+    "doi": "https://doi.org/10.1109/icra57147.2024.10611447",
+    "arxiv": "",
+    "bibtex_key": "yang2023plugsafetychipenforcing",
+    "manuscript_reference": 161,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Instruction Understanding",
+      "Action Planning"
+    ],
+    "facets": [
+      "Abuse Prevention",
+      "Controllability"
+    ],
+    "supplement_label": "S170"
+  },
+  {
+    "study_id": "PS159",
+    "title": "POEX: Towards Policy Executable Jailbreak Attacks Against the LLM-based Robots",
+    "authors": "Xuancun Lu, Zhengxian Huang, Xinfeng Li, Chi Zhang, Xiaoyu ji, and Wenyuan Xu",
+    "year": "2024",
+    "venue": "arXiv preprint arXiv:2412.16633",
+    "url": "https://arxiv.org/abs/2412.16633",
+    "doi": "",
+    "arxiv": "2412.16633",
+    "bibtex_key": "lu2025poexunderstandingmitigatingpolicy",
+    "manuscript_reference": 82,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Instruction Understanding"
+    ],
+    "facets": [
+      "Attack Resistance"
+    ],
+    "supplement_label": "S119"
+  },
+  {
+    "study_id": "PS108",
+    "title": "Pre-VLA: Preemptive Runtime Verification for Reliable Vision-Language-Action and World-Model Rollouts",
+    "authors": "Sun, Zhen, Guo, Yongjian, Sun, Haoran, Wang, Luqiao, Lu, Wei, Ji, Jiachi, Ji, Shengzhe, Xiong, Junwu, and Meng, Zhijun",
+    "year": "2026",
+    "venue": "arXiv preprint arXiv:2605.22446",
+    "url": "https://arxiv.org/abs/2605.22446",
+    "doi": "",
+    "arxiv": "2605.22446",
+    "bibtex_key": "sun2026prevla",
+    "manuscript_reference": 126,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Action Planning",
+      "Physical Interaction"
+    ],
+    "facets": [
+      "Controllability",
+      "Reliability"
+    ],
+    "supplement_label": "S087"
+  },
+  {
+    "study_id": "PS026",
+    "title": "Preventing Robotic Jailbreaking via Multimodal Domain Adaptation",
+    "authors": "Francesco Marchiori; Rohan Sinha; Christopher Agia; Alexander Robey; George J. Pappas; Mauro Conti; Marco Pavone",
+    "year": "2025",
+    "venue": "arXiv preprint",
+    "url": "https://arxiv.org/abs/2509.23281",
+    "doi": "",
+    "arxiv": "2509.23281",
+    "bibtex_key": "",
+    "manuscript_reference": null,
+    "cited_in_manuscript": false,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Action Planning",
+      "Instruction Understanding"
+    ],
+    "facets": [
+      "Abuse Prevention",
+      "Attack Resistance"
+    ],
+    "supplement_label": "S021"
+  },
+  {
+    "study_id": "PS259",
+    "title": "Privacy and Transparency in Human-Robot Conversations: Effects on Self-Disclosure",
+    "authors": "Xiyu Zhong, Romain Maure, and Barbara Bruno",
+    "year": "2025",
+    "venue": "2025 34th IEEE International Conference on Robot and Human Interactive Communication (RO-MAN)",
+    "url": "https://doi.org/10.1109/ro-man63969.2025.11217835",
+    "doi": "https://doi.org/10.1109/ro-man63969.2025.11217835",
+    "arxiv": "",
+    "bibtex_key": "zhong2025privacy",
+    "manuscript_reference": 179,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Environment Perception",
+      "Physical Interaction"
+    ],
+    "facets": [
+      "Explainability",
+      "Privacy Protection"
+    ],
+    "supplement_label": "S184"
+  },
+  {
+    "study_id": "PS009",
+    "title": "Privacy Perceptions in Robot-Assisted Well-Being Coaching: Examining the Roles of Information Transparency, User Control, and Proactivity",
+    "authors": "Atikkhan Faridkhan Nilgar, Manuel Dietrich, and Kristof Van Laerhoven",
+    "year": "2025",
+    "venue": "2025 34th IEEE International Conference on Robot and Human Interactive Communication (RO-MAN)",
+    "url": "https://doi.org/10.1109/ro-man63969.2025.11217725",
+    "doi": "https://doi.org/10.1109/ro-man63969.2025.11217725",
+    "arxiv": "",
+    "bibtex_key": "nilgar2025privacy",
+    "manuscript_reference": 100,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Instruction Understanding",
+      "Physical Interaction"
+    ],
+    "facets": [
+      "Controllability",
+      "Explainability",
+      "Privacy Protection"
+    ],
+    "supplement_label": "S008"
+  },
+  {
+    "study_id": "PS143",
+    "title": "Privacy Risks in Reinforcement Learning for Household Robots",
+    "authors": "Miao Li, Wenhao Ding, and Ding Zhao",
+    "year": "2024",
+    "venue": "2024 IEEE International Conference on Robotics and Automation (ICRA)",
+    "url": "https://doi.org/10.1109/icra57147.2024.10610832",
+    "doi": "https://doi.org/10.1109/icra57147.2024.10610832",
+    "arxiv": "",
+    "bibtex_key": "li2024privacy",
+    "manuscript_reference": 71,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Action Planning",
+      "Environment Perception"
+    ],
+    "facets": [
+      "Attack Resistance",
+      "Privacy Protection"
+    ],
+    "supplement_label": "S113"
+  },
+  {
+    "study_id": "PS099",
+    "title": "Privacy Risks of Robot Vision: A User Study on Image Modalities and Resolution",
+    "authors": "Xuying Huang, Sicong Pan, and Maren Bennewitz",
+    "year": "2025",
+    "venue": "arXiv preprint arXiv:2505.07766",
+    "url": "https://arxiv.org/abs/2505.07766",
+    "doi": "",
+    "arxiv": "2505.07766",
+    "bibtex_key": "huang2025privacy",
+    "manuscript_reference": 46,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Environment Perception"
+    ],
+    "facets": [
+      "Privacy Protection"
+    ],
+    "supplement_label": "S079"
+  },
+  {
+    "study_id": "PS128",
+    "title": "Privacy-Preserving Robot Vision with Anonymized Faces by Extreme Low Resolution",
+    "authors": "Myeung Un Kim, Harim Lee, Hyun Jong Yang, and Michael S. Ryoo",
+    "year": "2019",
+    "venue": "2019 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)",
+    "url": "https://doi.org/10.1109/iros40897.2019.8967681",
+    "doi": "https://doi.org/10.1109/iros40897.2019.8967681",
+    "arxiv": "",
+    "bibtex_key": "kim2019privacy",
+    "manuscript_reference": 61,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Environment Perception"
+    ],
+    "facets": [
+      "Privacy Protection"
+    ],
+    "supplement_label": "S101"
+  },
+  {
+    "study_id": "PS068",
+    "title": "Random Spoofing Attack against LiDAR-Based Scan Matching SLAM",
+    "authors": "Masashi Fukunaga and Takeshi Sugawara",
+    "year": "2024",
+    "venue": "Proceedings of the Symposium on Vehicle Security and Privacy (VehicleSec 2024)",
+    "url": "https://doi.org/10.14722/vehiclesec.2024.23014",
+    "doi": "https://doi.org/10.14722/vehiclesec.2024.23014",
+    "arxiv": "",
+    "bibtex_key": "fukunaga2024random",
+    "manuscript_reference": 32,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Environment Perception"
+    ],
+    "facets": [
+      "Attack Resistance"
+    ],
+    "supplement_label": "S055"
+  },
+  {
+    "study_id": "PS036",
+    "title": "Real-Time Privacy Preservation for Robot Visual Perception",
+    "authors": "Minkyu Choi, Yunhao Yang, Neel P. Bhatt, Kushagra Gupta, Sahil Shah, Aditya Rai, David Fridovich-Keil, Ufuk Topcu, and Sandeep P. Chinchali",
+    "year": "2025",
+    "venue": "Transactions on Machine Learning Research",
+    "url": "https://openreview.net/forum?id=uMf2vn8396",
+    "doi": "",
+    "arxiv": "2505.05519",
+    "bibtex_key": "choi2025real",
+    "manuscript_reference": 16,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Environment Perception"
+    ],
+    "facets": [
+      "Privacy Protection"
+    ],
+    "supplement_label": "S028"
+  },
+  {
+    "study_id": "PS077",
+    "title": "Red-Teaming Vision-Language-Action Models via Quality Diversity Prompt Generation for Robust Robot Policies",
+    "authors": "Siddharth Srikanth; Freddie Liang; Ya-Chuan Hsu; Varun Bhatt; Shihan Zhao; Henry Chen; Bryon Tjanaka; Minjune Hwang; Akanksha Saran; Daniel Seita; Aaquib Tabrez; Stefanos Nikolaidis",
+    "year": "2026",
+    "venue": "arXiv preprint",
+    "url": "https://arxiv.org/abs/2603.12510",
+    "doi": "",
+    "arxiv": "2603.12510",
+    "bibtex_key": "",
+    "manuscript_reference": null,
+    "cited_in_manuscript": false,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Action Planning",
+      "Instruction Understanding"
+    ],
+    "facets": [
+      "Attack Resistance",
+      "Reliability"
+    ],
+    "supplement_label": "S063"
+  },
+  {
+    "study_id": "PS266",
+    "title": "Resilient Legged Local Navigation: Learning to Traverse with Compromised Perception End-to-End",
+    "authors": "Chong Zhang, Jin Jin, Jonas Frey, Nikita Rudin, Matías Mattamala, Cesar Cadena, and Marco Hutter",
+    "year": "2024",
+    "venue": "2024 IEEE International Conference on Robotics and Automation (ICRA)",
+    "url": "https://doi.org/10.1109/icra57147.2024.10611254",
+    "doi": "https://doi.org/10.1109/icra57147.2024.10611254",
+    "arxiv": "2310.03581",
+    "bibtex_key": "zhang2024resilient",
+    "manuscript_reference": 172,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Environment Perception",
+      "Action Planning",
+      "Physical Interaction"
+    ],
+    "facets": [
+      "Reliability"
+    ],
+    "supplement_label": "S191"
+  },
+  {
+    "study_id": "PS055",
+    "title": "ResponsibleRobotBench: Benchmarking Responsible Robot Manipulation using Multi-modal Large Language Models",
+    "authors": "Zhang, Lei, Dong, Ju, Bai, Kaixin, Ni, Minheng, Marton, Zoltan-Csaba, Chen, Zhaopeng, and Zhang, Jianwei",
+    "year": "2025",
+    "venue": "arXiv preprint arXiv:2512.04308",
+    "url": "https://arxiv.org/abs/2512.04308",
+    "doi": "",
+    "arxiv": "2512.04308",
+    "bibtex_key": "zhang2025responsiblerobotbench",
+    "manuscript_reference": 174,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Action Planning",
+      "Environment Perception",
+      "Physical Interaction"
+    ],
+    "facets": [
+      "Accuracy",
+      "Controllability",
+      "Reliability",
+      "Value Alignment"
+    ],
+    "supplement_label": "S046"
+  },
+  {
+    "study_id": "PS111",
+    "title": "RLBench: The Robot Learning Benchmark & Learning Environment",
+    "authors": "Stephen James, Zicong Ma, David Rovick Arrojo, and Andrew J. Davison",
+    "year": "2020",
+    "venue": "IEEE Robotics and Automation Letters",
+    "url": "https://doi.org/10.1109/lra.2020.2974707",
+    "doi": "https://doi.org/10.1109/lra.2020.2974707",
+    "arxiv": "",
+    "bibtex_key": "jamesRLBenchRobotLearning2019",
+    "manuscript_reference": 57,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": true,
+    "stages": [],
+    "facets": [],
+    "supplement_label": "S089"
+  },
+  {
+    "study_id": "PS014",
+    "title": "RoboChemist: Long-Horizon and Safety-Compliant Robotic Chemical Experimentation",
+    "authors": "Zongzheng Zhang; Chenghao Yue; Haobo Xu; Minwen Liao; Xianglin Qi; Huan-ang Gao; Ziwei Wang; Hao Zhao",
+    "year": "2025",
+    "venue": "arXiv preprint",
+    "url": "https://arxiv.org/abs/2509.08820",
+    "doi": "",
+    "arxiv": "2509.08820",
+    "bibtex_key": "",
+    "manuscript_reference": null,
+    "cited_in_manuscript": false,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Action Planning",
+      "Environment Perception",
+      "Physical Interaction"
+    ],
+    "facets": [
+      "Controllability",
+      "Reliability"
+    ],
+    "supplement_label": "S012"
+  },
+  {
+    "study_id": "PS106",
+    "title": "RoboJailBench: Benchmarking Adversarial Attacks and Defenses in Embodied Robotic Agents",
+    "authors": "Yeke, Doguhuan, Zhou, Yanming, Lin, Leo Y., Cai, Hongyu, Bianchi, Antonio, and Celik, Z. Berkay",
+    "year": "2026",
+    "venue": "arXiv preprint arXiv:2605.19328",
+    "url": "https://arxiv.org/abs/2605.19328",
+    "doi": "",
+    "arxiv": "2605.19328",
+    "bibtex_key": "yeke2026robojailbench",
+    "manuscript_reference": 165,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Action Planning",
+      "Instruction Understanding",
+      "Physical Interaction"
+    ],
+    "facets": [
+      "Attack Resistance"
+    ],
+    "supplement_label": "S086"
+  },
+  {
+    "study_id": "PS061",
+    "title": "RoboSafe: Safeguarding Embodied Agents via Executable Safety Logic",
+    "authors": "Le Wang, Zonghao Ying, Xiao Yang, Quanchen Zou, Zhenfei Yin, Tianlin Li, Jian Yang, Yaodong Yang, Lu Sheng, Aishan Liu, and Xianglong Liu",
+    "year": "2026",
+    "venue": "The First Workshop on Efficient Spatial Reasoning at ICLR 2026",
+    "url": "https://openreview.net/forum?id=wyKCkQ2GyO",
+    "doi": "",
+    "arxiv": "2512.21220",
+    "bibtex_key": "wang2026robosafe",
+    "manuscript_reference": 140,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Action Planning",
+      "Instruction Understanding",
+      "Physical Interaction"
+    ],
+    "facets": [
+      "Auditability",
+      "Controllability"
+    ],
+    "supplement_label": "S050"
+  },
+  {
+    "study_id": "PS103",
+    "title": "Robust Fine-tuning of Vision-Language-Action Robot Policies via Parameter Merging",
+    "authors": "Yajat Yadav; Zhiyuan Zhou; Andrew Wagenmaker; Karl Pertsch; Sergey Levine",
+    "year": "2026",
+    "venue": "International Conference on Learning Representations (ICLR 2026)",
+    "url": "https://iclr.cc/virtual/2026/poster/10006890",
+    "doi": "",
+    "arxiv": "2512.08333",
+    "bibtex_key": "",
+    "manuscript_reference": null,
+    "cited_in_manuscript": false,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Environment Perception",
+      "Physical Interaction"
+    ],
+    "facets": [
+      "Reliability"
+    ],
+    "supplement_label": "S083"
+  },
+  {
+    "study_id": "PS240",
+    "title": "Robust humanoid locomotion using trajectory optimization and sample-efficient learning",
+    "authors": "Yeganegi, Mohammad Hasan, Khadiv, Majid, Moosavian, S Ali A, Zhu, Jia-Jie, Del Prete, Andrea, and Righetti, Ludovic",
+    "year": "2019",
+    "venue": "IEEE-RAS",
+    "url": "https://doi.org/10.1109/humanoids43949.2019.9035003",
+    "doi": "https://doi.org/10.1109/humanoids43949.2019.9035003",
+    "arxiv": "",
+    "bibtex_key": "",
+    "manuscript_reference": null,
+    "cited_in_manuscript": false,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Physical Interaction"
+    ],
+    "facets": [
+      "Reliability"
+    ],
+    "supplement_label": "S171"
+  },
+  {
+    "study_id": "PS041",
+    "title": "Robust Push Recovery on Bipedal Robots: Leveraging Multi-Domain Hybrid Systems with Reduced-Order Model Predictive Control",
+    "authors": "Dai, Min and Ames, Aaron D",
+    "year": "2025",
+    "venue": "arXiv preprint arXiv:2504.18698",
+    "url": "https://doi.org/10.23919/acc63710.2025.11107905",
+    "doi": "https://doi.org/10.23919/acc63710.2025.11107905",
+    "arxiv": "2504.18698",
+    "bibtex_key": "",
+    "manuscript_reference": null,
+    "cited_in_manuscript": false,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Physical Interaction"
+    ],
+    "facets": [
+      "Reliability"
+    ],
+    "supplement_label": "S033"
+  },
+  {
+    "study_id": "PS031",
+    "title": "RobustNav: Towards Benchmarking Robustness in Embodied Navigation",
+    "authors": "Prithvijit Chattopadhyay, Judy Hoffman, Roozbeh Mottaghi, and Aniruddha Kembhavi",
+    "year": "2021",
+    "venue": "2021 IEEE/CVF International Conference on Computer Vision (ICCV)",
+    "url": "https://doi.org/10.1109/iccv48922.2021.01540",
+    "doi": "https://doi.org/10.1109/iccv48922.2021.01540",
+    "arxiv": "",
+    "bibtex_key": "chattopadhyay2021robustnav",
+    "manuscript_reference": 13,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Environment Perception"
+    ],
+    "facets": [
+      "Accuracy",
+      "Reliability"
+    ],
+    "supplement_label": "S024"
+  },
+  {
+    "study_id": "PS265",
+    "title": "Robustness of Embodied Point Navigation Agents",
+    "authors": "Frano Rajič",
+    "year": "2023",
+    "venue": "Computer Vision – ECCV 2022 Workshops, Part VI",
+    "url": "https://doi.org/10.1007/978-3-031-25075-0_15",
+    "doi": "https://doi.org/10.1007/978-3-031-25075-0_15",
+    "arxiv": "",
+    "bibtex_key": "rajivc2022robustness",
+    "manuscript_reference": 115,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Environment Perception",
+      "Physical Interaction"
+    ],
+    "facets": [
+      "Reliability"
+    ],
+    "supplement_label": "S190"
+  },
+  {
+    "study_id": "PS024",
+    "title": "RobustVLA: On Robustness of Vision-Language-Action Model against Multi-Modal Perturbations",
+    "authors": "Jianing Guo; Zhenhong Wu; Chang Tu; Yiyao Ma; Xiangqi Kong; Zhiqian Liu; Jiaming Ji; Shuning Zhang; Yuanpei Chen; Kai Chen; Qi Dou; Yaodong Yang; Xianglong Liu; Huijie Zhao; Weifeng Lv; Simin Li",
+    "year": "2025",
+    "venue": "arXiv preprint",
+    "url": "https://arxiv.org/abs/2510.00037",
+    "doi": "",
+    "arxiv": "2510.00037",
+    "bibtex_key": "",
+    "manuscript_reference": null,
+    "cited_in_manuscript": false,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Environment Perception",
+      "Instruction Understanding",
+      "Physical Interaction"
+    ],
+    "facets": [
+      "Reliability"
+    ],
+    "supplement_label": "S020"
+  },
+  {
+    "study_id": "PS078",
+    "title": "Safe Exploration of State and Action Spaces in Reinforcement Learning",
+    "authors": "J. Garcia and F. Fernandez",
+    "year": "2012",
+    "venue": "Journal of Artificial Intelligence Research",
+    "url": "https://doi.org/10.1613/jair.3761",
+    "doi": "https://doi.org/10.1613/jair.3761",
+    "arxiv": "",
+    "bibtex_key": "garciaSafeExplorationState2012",
+    "manuscript_reference": 36,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Action Planning",
+      "Physical Interaction"
+    ],
+    "facets": [
+      "Controllability",
+      "Reliability"
+    ],
+    "supplement_label": "S064"
+  },
+  {
+    "study_id": "PS086",
+    "title": "Safe multi-agent reinforcement learning for multi-robot control",
+    "authors": "Gu, Shangding, Kuba, Jakub Grudzien, Chen, Yuanpei, Du, Yali, Yang, Long, Knoll, Alois, and Yang, Yaodong",
+    "year": "2023",
+    "venue": "Artificial Intelligence",
+    "url": "https://doi.org/10.1016/j.artint.2023.103905",
+    "doi": "https://doi.org/10.1016/j.artint.2023.103905",
+    "arxiv": "",
+    "bibtex_key": "",
+    "manuscript_reference": null,
+    "cited_in_manuscript": false,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Action Planning",
+      "Physical Interaction"
+    ],
+    "facets": [
+      "Controllability",
+      "Reliability"
+    ],
+    "supplement_label": "S069"
+  },
+  {
+    "study_id": "PS242",
+    "title": "SafeAgentBench: A Benchmark for Safe Task Planning of Embodied LLM Agents",
+    "authors": "Yin, Sheng, Pang, Xianghe, Ding, Yuanzhuo, Chen, Menglan, Bi, Yutong, Xiong, Yichen, Huang, Wenhao, Xiang, Zhen, Shao, Jing, and Chen, Siheng",
+    "year": "2024",
+    "venue": "arXiv preprint arXiv:2412.13178",
+    "url": "https://arxiv.org/abs/2412.13178",
+    "doi": "",
+    "arxiv": "2412.13178",
+    "bibtex_key": "yin2024safeagentbench",
+    "manuscript_reference": 166,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": true,
+    "stages": [],
+    "facets": [],
+    "supplement_label": "S172"
+  },
+  {
+    "study_id": "PS233",
+    "title": "SafeBench: A Benchmarking Platform for Safety Evaluation of Autonomous Vehicles",
+    "authors": "Chejian Xu, Wenhao Ding, Weijie Lyu, Zuxin Liu, Shuai Wang, Yihan He, Hanjiang Hu, Ding Zhao, and Bo Li",
+    "year": "2022",
+    "venue": "Advances in Neural Information Processing Systems 35",
+    "url": "https://doi.org/10.52202/068431-1861",
+    "doi": "https://doi.org/10.52202/068431-1861",
+    "arxiv": "2206.09682",
+    "bibtex_key": "xu_safebench_2022",
+    "manuscript_reference": 155,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": true,
+    "stages": [],
+    "facets": [],
+    "supplement_label": "S166"
+  },
+  {
+    "study_id": "PS074",
+    "title": "SafeGen-LLM: Enhancing Safety Generalization in Task Planning for Robotic Systems",
+    "authors": "Jialiang Fan; Weizhe Xu; Mengyu Liu; Oleg Sokolsky; Insup Lee; Fanxin Kong",
+    "year": "2026",
+    "venue": "arXiv preprint",
+    "url": "https://arxiv.org/abs/2602.24235",
+    "doi": "",
+    "arxiv": "2602.24235",
+    "bibtex_key": "",
+    "manuscript_reference": null,
+    "cited_in_manuscript": false,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Action Planning",
+      "Instruction Understanding"
+    ],
+    "facets": [
+      "Abuse Prevention",
+      "Reliability"
+    ],
+    "supplement_label": "S060"
+  },
+  {
+    "study_id": "PS105",
+    "title": "SafeManip: A Property-Driven Benchmark for Temporal Safety Evaluation in Robotic Manipulation",
+    "authors": "Chengyue Huang, Khang Vo Huynh, Sebastian Elbaum, Zsolt Kira, and Lu Feng",
+    "year": "2026",
+    "venue": "arXiv preprint arXiv:2605.12386",
+    "url": "https://arxiv.org/abs/2605.12386",
+    "doi": "",
+    "arxiv": "2605.12386",
+    "bibtex_key": "huang2026safemanip",
+    "manuscript_reference": 45,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Action Planning",
+      "Physical Interaction"
+    ],
+    "facets": [
+      "Controllability",
+      "Reliability"
+    ],
+    "supplement_label": "S085"
+  },
+  {
+    "study_id": "PS030",
+    "title": "SafeMind: Benchmarking and Mitigating Safety Risks in Embodied LLM Agents",
+    "authors": "Ruolin Chen, Yinqian Sun, Jihang Wang, Mingyang Lv, Qian Zhang, and Yi Zeng",
+    "year": "2025",
+    "venue": "arXiv preprint arXiv:2509.25885",
+    "url": "https://arxiv.org/abs/2509.25885",
+    "doi": "",
+    "arxiv": "2509.25885",
+    "bibtex_key": "chen2025safemind",
+    "manuscript_reference": 14,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Action Planning",
+      "Environment Perception",
+      "Instruction Understanding",
+      "Physical Interaction"
+    ],
+    "facets": [
+      "Abuse Prevention",
+      "Controllability",
+      "Value Alignment"
+    ],
+    "supplement_label": "S023"
+  },
+  {
+    "study_id": "PS139",
+    "title": "SafeRelBench: A Spatial-Relation-Aware Benchmark for Process-Level Safety in VLM-Driven Embodied Agents",
+    "authors": "Yang, Huaigang, Li, Ya, Ren, Min, Dai, Bo, Zhang, Zhenliang, and He, Zhaofeng",
+    "year": "2026",
+    "venue": "arXiv preprint arXiv:2607.14543",
+    "url": "https://arxiv.org/abs/2607.14543",
+    "doi": "",
+    "arxiv": "2607.14543",
+    "bibtex_key": "yang2026saferelbench",
+    "manuscript_reference": 159,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Action Planning",
+      "Environment Perception",
+      "Physical Interaction"
+    ],
+    "facets": [
+      "Accuracy",
+      "Controllability"
+    ],
+    "supplement_label": "S109"
+  },
+  {
+    "study_id": "PS168",
+    "title": "Safety Assessment for Autonomous Systems' Perception Capabilities",
+    "authors": "John Molloy and John McDermid",
+    "year": "2022",
+    "venue": "arXiv preprint arXiv:2208.08237",
+    "url": "https://arxiv.org/abs/2208.08237",
+    "doi": "",
+    "arxiv": "2208.08237",
+    "bibtex_key": "molloy2022safety",
+    "manuscript_reference": 94,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Environment Perception"
+    ],
+    "facets": [
+      "Auditability",
+      "Reliability"
+    ],
+    "supplement_label": "S124"
+  },
+  {
+    "study_id": "PS208",
+    "title": "Safety Assurances for Human-Robot Interaction via Confidence-aware Game-theoretic Human Models",
+    "authors": "Ran Tian, Liting Sun, Andrea Bajcsy, Masayoshi Tomizuka, and Anca D. Dragan",
+    "year": "2022",
+    "venue": "2022 International Conference on Robotics and Automation (ICRA)",
+    "url": "https://doi.org/10.1109/icra46639.2022.9812048",
+    "doi": "https://doi.org/10.1109/icra46639.2022.9812048",
+    "arxiv": "",
+    "bibtex_key": "tian2022safety",
+    "manuscript_reference": 130,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Action Planning",
+      "Physical Interaction"
+    ],
+    "facets": [
+      "Controllability",
+      "Reliability"
+    ],
+    "supplement_label": "S148"
+  },
+  {
+    "study_id": "PS123",
+    "title": "Safety Aware Task Planning via Large Language Models in Robotics",
+    "authors": "Azal Ahmad Khan, Michael Andrev, Muhammad Ali Murtaza, Sergio Aguilera, Rui Zhang, Jie Ding, Seth Hutchinson, and Ali Anwar",
+    "year": "2025",
+    "venue": "2025 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)",
+    "url": "https://doi.org/10.1109/iros60139.2025.11246041",
+    "doi": "https://doi.org/10.1109/iros60139.2025.11246041",
+    "arxiv": "2503.15707",
+    "bibtex_key": "khan2025safety",
+    "manuscript_reference": 60,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Action Planning",
+      "Physical Interaction"
+    ],
+    "facets": [
+      "Controllability"
+    ],
+    "supplement_label": "S097"
+  },
+  {
+    "study_id": "PS081",
+    "title": "Safety Case Patterns for VLA-based driving systems: Insights from SimLingo",
+    "authors": "Gerhard Yu; Fuyuki Ishikawa; Oluwafemi Odu; Alvine Boaye Belle",
+    "year": "2026",
+    "venue": "arXiv preprint",
+    "url": "https://arxiv.org/abs/2603.16013",
+    "doi": "",
+    "arxiv": "2603.16013",
+    "bibtex_key": "",
+    "manuscript_reference": null,
+    "cited_in_manuscript": false,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Action Planning",
+      "Environment Perception",
+      "Instruction Understanding",
+      "Physical Interaction"
+    ],
+    "facets": [
+      "Auditability",
+      "Controllability"
+    ],
+    "supplement_label": "S066"
+  },
+  {
+    "study_id": "PS183",
+    "title": "Safety control of service robots with LLMs and embodied knowledge graphs",
+    "authors": "Qi, Yong, Kyebambo, Gabriel, Xie, Siyuan, Shen, Wei, Wang, Shenghui, Xie, Bitao, He, Bin, Wang, Zhipeng, and Jiang, Shuo",
+    "year": "2024",
+    "venue": "arXiv preprint arXiv:2405.17846",
+    "url": "https://arxiv.org/pdf/2405.17846",
+    "doi": "",
+    "arxiv": "2405.17846",
+    "bibtex_key": "",
+    "manuscript_reference": null,
+    "cited_in_manuscript": false,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Instruction Understanding",
+      "Action Planning",
+      "Physical Interaction"
+    ],
+    "facets": [
+      "Abuse Prevention",
+      "Controllability",
+      "Reliability"
+    ],
+    "supplement_label": "S133"
+  },
+  {
+    "study_id": "PS136",
+    "title": "SafetyALFRED: Evaluating Safety-Conscious Planning of Vision Language Models",
+    "authors": "Josue Torres-Fonseca, Naihao Deng, Yinpei Dai, Shane Storks, Yichi Zhang, Rada Mihalcea, Casey Kennington, and Joyce Chai",
+    "year": "2026",
+    "venue": "Findings of the Association for Computational Linguistics: ACL 2026",
+    "url": "https://doi.org/10.18653/v1/2026.findings-acl.1852",
+    "doi": "https://doi.org/10.18653/v1/2026.findings-acl.1852",
+    "arxiv": "2604.19638",
+    "bibtex_key": "torresfonseca2026safetyalfred",
+    "manuscript_reference": 134,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Action Planning",
+      "Environment Perception"
+    ],
+    "facets": [
+      "Accuracy",
+      "Controllability"
+    ],
+    "supplement_label": "S107"
+  },
+  {
+    "study_id": "PS110",
+    "title": "SafeVLA-Bench: A Benchmark for the Success-Safety Gap in Vision-Language-Action Models",
+    "authors": "Jialiang Fan, Weizhe Xu, Oleg Sokolsky, Insup Lee, and Fanxin Kong",
+    "year": "2026",
+    "venue": "arXiv preprint arXiv:2606.00773",
+    "url": "https://arxiv.org/abs/2606.00773",
+    "doi": "",
+    "arxiv": "2606.00773",
+    "bibtex_key": "fan2026safevlabench",
+    "manuscript_reference": 28,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Action Planning",
+      "Physical Interaction"
+    ],
+    "facets": [
+      "Accuracy",
+      "Controllability",
+      "Reliability"
+    ],
+    "supplement_label": "S088"
+  },
+  {
+    "study_id": "PS230",
+    "title": "SAPIEN: A SimulAted Part-Based Interactive ENvironment",
+    "authors": "Fanbo Xiang, Yuzhe Qin, Kaichun Mo, Yikuan Xia, Hao Zhu, Fangchen Liu, Minghua Liu, Hanxiao Jiang, Yifu Yuan, He Wang, Li Yi, Angel X. Chang, Leonidas J. Guibas, and Hao Su",
+    "year": "2020",
+    "venue": "2020 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)",
+    "url": "https://doi.org/10.1109/cvpr42600.2020.01111",
+    "doi": "https://doi.org/10.1109/cvpr42600.2020.01111",
+    "arxiv": "",
+    "bibtex_key": "xiangSAPIENSimulAtedPartbased2020",
+    "manuscript_reference": 152,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": true,
+    "stages": [],
+    "facets": [],
+    "supplement_label": "S164"
+  },
+  {
+    "study_id": "PS251",
+    "title": "Self-Explainable Affordance Learning with Embodied Caption",
+    "authors": "Zhang, Zhipeng, Wei, Zhimin, Sun, Guolei, Wang, Peng, and Van Gool, Luc",
+    "year": "2024",
+    "venue": "arXiv preprint arXiv:2404.05603",
+    "url": "https://arxiv.org/abs/2404.05603",
+    "doi": "",
+    "arxiv": "2404.05603",
+    "bibtex_key": "zhang2024self",
+    "manuscript_reference": 176,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Environment Perception"
+    ],
+    "facets": [
+      "Explainability"
+    ],
+    "supplement_label": "S178"
+  },
+  {
+    "study_id": "PS196",
+    "title": "Semantic Skill Grounding for Embodied Instruction-Following in Cross-Domain Environments",
+    "authors": "Shin, Sangwoo, Kim, Seunghyun, Jang, Youngsoo, Lee, Moontae, and Woo, Honguk",
+    "year": "2024",
+    "venue": "arXiv preprint arXiv:2408.01024",
+    "url": "https://doi.org/10.18653/v1/2024.findings-acl.200",
+    "doi": "https://doi.org/10.18653/v1/2024.findings-acl.200",
+    "arxiv": "2408.01024",
+    "bibtex_key": "",
+    "manuscript_reference": null,
+    "cited_in_manuscript": false,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Instruction Understanding",
+      "Action Planning"
+    ],
+    "facets": [
+      "Accuracy",
+      "Reliability"
+    ],
+    "supplement_label": "S142"
+  },
+  {
+    "study_id": "PS187",
+    "title": "Shared autonomy via deep reinforcement learning",
+    "authors": "Reddy, Siddharth, Dragan, Anca D, and Levine, Sergey",
+    "year": "2018",
+    "venue": "arXiv preprint arXiv:1802.01744",
+    "url": "https://doi.org/10.15607/rss.2018.xiv.005",
+    "doi": "https://doi.org/10.15607/rss.2018.xiv.005",
+    "arxiv": "1802.01744",
+    "bibtex_key": "",
+    "manuscript_reference": null,
+    "cited_in_manuscript": false,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Action Planning",
+      "Physical Interaction"
+    ],
+    "facets": [
+      "Controllability"
+    ],
+    "supplement_label": "S136"
+  },
+  {
+    "study_id": "PS089",
+    "title": "Shifting Uncertainty to Critical Moments: Towards Reliable Uncertainty Quantification for VLA Model",
+    "authors": "Yanchuan Tang; Taowen Wang; Yuefei Chen; Boxuan Zhang; Qiang Guan; Ruixiang Tang",
+    "year": "2026",
+    "venue": "arXiv preprint",
+    "url": "https://arxiv.org/abs/2603.18342",
+    "doi": "",
+    "arxiv": "2603.18342",
+    "bibtex_key": "",
+    "manuscript_reference": null,
+    "cited_in_manuscript": false,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Action Planning",
+      "Physical Interaction"
+    ],
+    "facets": [
+      "Controllability",
+      "Reliability"
+    ],
+    "supplement_label": "S072"
+  },
+  {
+    "study_id": "PS260",
+    "title": "Show Your Work: Mechanistic Transparency in LLM-Powered Human-Robot Interaction",
+    "authors": "Umur Yıldız, Berk Yüce, Ayaz Karadağ, Tuğçe Nur Pekçetin, and Burcu A. Urgen",
+    "year": "2026",
+    "venue": "Companion Proceedings of the 21st ACM/IEEE International Conference on Human-Robot Interaction",
+    "url": "https://doi.org/10.1145/3776734.3794439",
+    "doi": "https://doi.org/10.1145/3776734.3794439",
+    "arxiv": "",
+    "bibtex_key": "yildiz2026show",
+    "manuscript_reference": 171,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Action Planning",
+      "Physical Interaction"
+    ],
+    "facets": [
+      "Explainability"
+    ],
+    "supplement_label": "S185"
+  },
+  {
+    "study_id": "PS171",
+    "title": "Slamspoof: Practical Lidar Spoofing Attacks on Localization Systems Guided by Scan Matching Vulnerability Analysis",
+    "authors": "Rokuto Nagata, Kenji Koide, Yuki Hayakawa, Ryo Suzuki, Kazuma Ikeda, Ozora Sako, Qi Alfred Chen, Takami Sato, and Kentaro Yoshioka",
+    "year": "2025",
+    "venue": "2025 IEEE International Conference on Robotics and Automation (ICRA)",
+    "url": "https://doi.org/10.1109/icra55743.2025.11127495",
+    "doi": "https://doi.org/10.1109/icra55743.2025.11127495",
+    "arxiv": "2502.13641",
+    "bibtex_key": "nagata2025slamspoof",
+    "manuscript_reference": 96,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Environment Perception"
+    ],
+    "facets": [
+      "Attack Resistance"
+    ],
+    "supplement_label": "S125"
+  },
+  {
+    "study_id": "PS018",
+    "title": "Somatic Safety: An Embodied Approach Towards Safe Human-Robot Interaction",
+    "authors": "Steve Benford, Eike Schneiders, Juan Pablo Martinez Avila, Praminda Caleb-Solly, Patrick Robert Brundell, Simon Castle-Green, Feng Zhou, Rachael Garrett, Kristina Höök, Sarah Whatley, Kate Marsh, and Paul Tennent",
+    "year": "2025",
+    "venue": "2025 20th ACM/IEEE International Conference on Human-Robot Interaction (HRI)",
+    "url": "https://doi.org/10.1109/hri61500.2025.10973822",
+    "doi": "https://doi.org/10.1109/hri61500.2025.10973822",
+    "arxiv": "",
+    "bibtex_key": "benford2025somatic",
+    "manuscript_reference": 9,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Physical Interaction"
+    ],
+    "facets": [
+      "Value Alignment"
+    ],
+    "supplement_label": "S015"
+  },
+  {
+    "study_id": "PS064",
+    "title": "State Backdoor: Towards Stealthy Real-world Poisoning Attack on Vision-Language-Action Model in State Space",
+    "authors": "Ji Guo; Wenbo Jiang; Yansong Lin; Yijing Liu; Ruichen Zhang; Guomin Lu; Aiguo Chen; Xinshuo Han; Hongwei Li",
+    "year": "2026",
+    "venue": "arXiv preprint",
+    "url": "https://arxiv.org/abs/2601.04266",
+    "doi": "",
+    "arxiv": "2601.04266",
+    "bibtex_key": "",
+    "manuscript_reference": null,
+    "cited_in_manuscript": false,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Environment Perception",
+      "Physical Interaction"
+    ],
+    "facets": [
+      "Attack Resistance"
+    ],
+    "supplement_label": "S052"
+  },
+  {
+    "study_id": "PS199",
+    "title": "Subtle Risks, Critical Failures: A Framework for Diagnosing Physical Safety of LLMs for Embodied Decision Making",
+    "authors": "Yejin Son, Minseo Kim, Sungwoong Kim, Seungju Han, Jian Kim, Dongju Jang, Youngjae Yu, and Chan Young Park",
+    "year": "2025",
+    "venue": "Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing",
+    "url": "https://doi.org/10.18653/v1/2025.emnlp-main.1305",
+    "doi": "https://doi.org/10.18653/v1/2025.emnlp-main.1305",
+    "arxiv": "2505.19933",
+    "bibtex_key": "son_subtle_2025",
+    "manuscript_reference": 123,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": true,
+    "stages": [],
+    "facets": [],
+    "supplement_label": "S144"
+  },
+  {
+    "study_id": "PS190",
+    "title": "tagE: Enabling an Embodied Agent to Understand Human Instructions",
+    "authors": "Sarkar, Chayan, Mitra, Avik, Pramanick, Pradip, and Nayak, Tapas",
+    "year": "2023",
+    "venue": "arXiv preprint arXiv:2310.15605",
+    "url": "https://doi.org/10.18653/v1/2023.findings-emnlp.593",
+    "doi": "https://doi.org/10.18653/v1/2023.findings-emnlp.593",
+    "arxiv": "2310.15605",
+    "bibtex_key": "",
+    "manuscript_reference": null,
+    "cited_in_manuscript": false,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Instruction Understanding"
+    ],
+    "facets": [
+      "Accuracy"
+    ],
+    "supplement_label": "S139"
+  },
+  {
+    "study_id": "PS092",
+    "title": "Tex3D: Objects as Attack Surfaces via Adversarial 3D Textures for Vision-Language-Action Models",
+    "authors": "Jiawei Chen; Simin Huang; Jiawei Du; Shuaihang Chen; Yu Tian; Mingjie Wei; Chao Yu; Zhaoxia Yin",
+    "year": "2026",
+    "venue": "arXiv preprint",
+    "url": "https://arxiv.org/abs/2604.01618",
+    "doi": "",
+    "arxiv": "2604.01618",
+    "bibtex_key": "",
+    "manuscript_reference": null,
+    "cited_in_manuscript": false,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Environment Perception",
+      "Physical Interaction"
+    ],
+    "facets": [
+      "Attack Resistance"
+    ],
+    "supplement_label": "S075"
+  },
+  {
+    "study_id": "PS039",
+    "title": "The Empirical Impact of Forgetting and Transfer in Continual Visual Odometry",
+    "authors": "Paolo Cudrano, Xiaoyu Luo, and Matteo Matteucci",
+    "year": "2024",
+    "venue": "arXiv preprint arXiv:2406.01797",
+    "url": "https://arxiv.org/abs/2406.01797",
+    "doi": "",
+    "arxiv": "2406.01797",
+    "bibtex_key": "",
+    "manuscript_reference": null,
+    "cited_in_manuscript": false,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Environment Perception"
+    ],
+    "facets": [
+      "Reliability"
+    ],
+    "supplement_label": "S031"
+  },
+  {
+    "study_id": "PS083",
+    "title": "The Roles of Fairness and Effectiveness in Promoting Legitimacy and Cooperation with Security Robotic Authority",
+    "authors": "Xin Ye and Lionel P. Robert",
+    "year": "2026",
+    "venue": "Proceedings of the 21st ACM/IEEE International Conference on Human-Robot Interaction",
+    "url": "https://doi.org/10.1145/3757279.3788657",
+    "doi": "https://doi.org/10.1145/3757279.3788657",
+    "arxiv": "",
+    "bibtex_key": "ye2026roles",
+    "manuscript_reference": 164,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Physical Interaction"
+    ],
+    "facets": [
+      "Value Alignment"
+    ],
+    "supplement_label": "S067"
+  },
+  {
+    "study_id": "PS070",
+    "title": "ThreeDWorld: A Platform for Interactive Multi-Modal Physical Simulation",
+    "authors": "Chuang Gan, Jeremy Schwartz, Seth Alter, Damian Mrowca, Martin Schrimpf, James Traer, Julian De Freitas, Jonas Kubilius, Abhishek Bhandwaldar, Nick Haber, Megumi Sano, Kuno Kim, Elias Wang, Michael Lingelbach, Aidan Curtis, Kevin Feigelis, Daniel M. Bear, Dan Gutfreund, David Cox, Antonio Torralba, James J. DiCarlo, Joshua B. Tenenbaum, Josh H. McDermott, and Daniel L. K. Yamins",
+    "year": "2021",
+    "venue": "Proceedings of the Neural Information Processing Systems Track on Datasets and Benchmarks",
+    "url": "https://datasets-benchmarks-proceedings.neurips.cc/paper/2021/hash/735b90b4568125ed6c3f678819b6e058-Abstract-round1.html",
+    "doi": "",
+    "arxiv": "2007.04954",
+    "bibtex_key": "ganThreeDWorldPlatformInteractive2021",
+    "manuscript_reference": 33,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": true,
+    "stages": [],
+    "facets": [],
+    "supplement_label": "S057"
+  },
+  {
+    "study_id": "PS085",
+    "title": "Towards a Cognitive Model for Inferring Dynamic Fairness Perception to Support Fairer Human-Robot Collaboration",
+    "authors": "Muneeb Imtiaz Ahmad; Yosuke Fukuchi",
+    "year": "2026",
+    "venue": "Companion Proceedings of the 21st ACM/IEEE International Conference on Human-Robot Interaction",
+    "url": "https://doi.org/10.1145/3776734.3794398",
+    "doi": "https://doi.org/10.1145/3776734.3794398",
+    "arxiv": "",
+    "bibtex_key": "",
+    "manuscript_reference": null,
+    "cited_in_manuscript": false,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Physical Interaction"
+    ],
+    "facets": [
+      "Value Alignment"
+    ],
+    "supplement_label": "S068"
+  },
+  {
+    "study_id": "PS054",
+    "title": "Towards Embodied Agent Intent Explanation in Human-Robot Collaboration: ACT Error Analysis and Solution Conceptualization",
+    "authors": "Ergogo, Amanuel and Han, Zhao",
+    "year": "2025",
+    "venue": "ICRA",
+    "url": "https://therarelab.com/publications/icra25hcrl-towards-embodied-agent-intent-explanation-in-human-robot-collaboration-act-error-analysis-and-solution-conceptualization/",
+    "doi": "",
+    "arxiv": "",
+    "bibtex_key": "",
+    "manuscript_reference": null,
+    "cited_in_manuscript": false,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Action Planning",
+      "Physical Interaction"
+    ],
+    "facets": [
+      "Explainability"
+    ],
+    "supplement_label": "S045"
+  },
+  {
+    "study_id": "PS003",
+    "title": "Towards Generalizable Safety in Crowd Navigation via Conformal Uncertainty Handling",
+    "authors": "Jianpeng Yao, Xiaopan Zhang, Yu Xia, Zejin Wang, Amit Roy-Chowdhury, and Jiachen Li",
+    "year": "2025",
+    "venue": "Proceedings of The 9th Conference on Robot Learning",
+    "url": "https://proceedings.mlr.press/v305/yao25a.html",
+    "doi": "",
+    "arxiv": "2508.05634",
+    "bibtex_key": "yao2025towards",
+    "manuscript_reference": 163,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Action Planning",
+      "Environment Perception",
+      "Physical Interaction"
+    ],
+    "facets": [
+      "Controllability",
+      "Reliability"
+    ],
+    "supplement_label": "S003"
+  },
+  {
+    "study_id": "PS071",
+    "title": "Towards Worker-Centered Warehouse Robots: A User Study on Privacy, Inclusivity and Safety",
+    "authors": "Muhammad Abdul Basit Malik, Martim Brandão, and Kovila Coopamootoo",
+    "year": "2026",
+    "venue": "International Journal of Social Robotics",
+    "url": "https://doi.org/10.1007/s12369-026-01359-1",
+    "doi": "https://doi.org/10.1007/s12369-026-01359-1",
+    "arxiv": "",
+    "bibtex_key": "malik2026towards",
+    "manuscript_reference": 86,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Instruction Understanding",
+      "Physical Interaction"
+    ],
+    "facets": [
+      "Auditability",
+      "Controllability",
+      "Privacy Protection",
+      "Value Alignment"
+    ],
+    "supplement_label": "S058"
+  },
+  {
+    "study_id": "PS244",
+    "title": "Trust-Aware Motion Planning for Human-Robot Collaboration under Distribution Temporal Logic Specifications",
+    "authors": "Pian Yu, Shuyang Dong, Shili Sheng, Lu Feng, and Marta Kwiatkowska",
+    "year": "2024",
+    "venue": "2024 IEEE International Conference on Robotics and Automation (ICRA)",
+    "url": "https://doi.org/10.1109/icra57147.2024.10610874",
+    "doi": "https://doi.org/10.1109/icra57147.2024.10610874",
+    "arxiv": "",
+    "bibtex_key": "yu2024trust",
+    "manuscript_reference": 168,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Action Planning",
+      "Physical Interaction"
+    ],
+    "facets": [
+      "Controllability"
+    ],
+    "supplement_label": "S173"
+  },
+  {
+    "study_id": "PS246",
+    "title": "Uncertainty in Action: Confidence Elicitation in Embodied Agents",
+    "authors": "Yu, Tianjiao, Shah, Vedant, Wahed, Muntasir, Nguyen, Kiet A, Juvekar, Adheesh, August, Tal, and Lourentzou, Ismini",
+    "year": "2025",
+    "venue": "arXiv preprint arXiv:2503.10628",
+    "url": "https://arxiv.org/abs/2503.10628",
+    "doi": "",
+    "arxiv": "2503.10628",
+    "bibtex_key": "",
+    "manuscript_reference": null,
+    "cited_in_manuscript": false,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Environment Perception",
+      "Action Planning"
+    ],
+    "facets": [
+      "Reliability"
+    ],
+    "supplement_label": "S175"
+  },
+  {
+    "study_id": "PS253",
+    "title": "UnrealZoo: Enriching Photo-Realistic Virtual Worlds for Embodied AI",
+    "authors": "Fangwei Zhong, Kui Wu, Churan Wang, Hao Chen, Hai Ci, Zhoujun Li, and Yizhou Wang",
+    "year": "2025",
+    "venue": "2025 IEEE/CVF International Conference on Computer Vision (ICCV)",
+    "url": "https://doi.org/10.1109/iccv51701.2025.00546",
+    "doi": "https://doi.org/10.1109/iccv51701.2025.00546",
+    "arxiv": "2412.20977",
+    "bibtex_key": "zhongUnrealZooEnrichingPhotorealistic2024",
+    "manuscript_reference": 178,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": true,
+    "stages": [],
+    "facets": [],
+    "supplement_label": "S180"
+  },
+  {
+    "study_id": "PS102",
+    "title": "Using large language models for embodied planning introduces systematic safety risks",
+    "authors": "Zhang, Tao, Qu, Kaixian, Li, Zhibin, Wu, Jiajun, Hutter, Marco, Li, Manling, and Shi, Fan",
+    "year": "2026",
+    "venue": "arXiv preprint arXiv:2604.18463",
+    "url": "https://arxiv.org/abs/2604.18463",
+    "doi": "",
+    "arxiv": "2604.18463",
+    "bibtex_key": "zhang2026using",
+    "manuscript_reference": 175,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Action Planning",
+      "Instruction Understanding",
+      "Physical Interaction"
+    ],
+    "facets": [
+      "Abuse Prevention",
+      "Reliability"
+    ],
+    "supplement_label": "S082"
+  },
+  {
+    "study_id": "PS125",
+    "title": "Verifiable Foundation Models for Robot Safety",
+    "authors": "Davide Corsi, Kyungmin Kim, and Roy Fox",
+    "year": "2026",
+    "venue": "arXiv preprint arXiv:2606.23754",
+    "url": "https://arxiv.org/abs/2606.23754",
+    "doi": "",
+    "arxiv": "2606.23754",
+    "bibtex_key": "corsi2026verifiable",
+    "manuscript_reference": 19,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Action Planning",
+      "Physical Interaction"
+    ],
+    "facets": [
+      "Controllability",
+      "Reliability"
+    ],
+    "supplement_label": "S099"
+  },
+  {
+    "study_id": "PS184",
+    "title": "Verifiably Following Complex Robot Instructions with Foundation Models",
+    "authors": "Benedict Quartey, Eric Rosen, Stefanie Tellex, and George Konidaris",
+    "year": "2025",
+    "venue": "2025 IEEE International Conference on Robotics and Automation (ICRA)",
+    "url": "https://doi.org/10.1109/icra55743.2025.11127418",
+    "doi": "https://doi.org/10.1109/icra55743.2025.11127418",
+    "arxiv": "2402.11498",
+    "bibtex_key": "quartey2025verifiablyfollowingcomplexrobot",
+    "manuscript_reference": 114,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Instruction Understanding",
+      "Action Planning"
+    ],
+    "facets": [
+      "Accuracy",
+      "Controllability"
+    ],
+    "supplement_label": "S134"
+  },
+  {
+    "study_id": "PS044",
+    "title": "VestaBench: An Embodied Benchmark for Safe Long-Horizon Planning Under Multi-Constraint and Adversarial Settings",
+    "authors": "Tanmana Sadhu, Yanan Chen, and Ali Pesaranghader",
+    "year": "2025",
+    "venue": "Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing: Industry Track",
+    "url": "https://doi.org/10.18653/v1/2025.emnlp-industry.149",
+    "doi": "https://doi.org/10.18653/v1/2025.emnlp-industry.149",
+    "arxiv": "",
+    "bibtex_key": "sadhu2025vestabench",
+    "manuscript_reference": 118,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Action Planning",
+      "Instruction Understanding"
+    ],
+    "facets": [
+      "Abuse Prevention",
+      "Reliability"
+    ],
+    "supplement_label": "S036"
+  },
+  {
+    "study_id": "PS182",
+    "title": "VirtualHome: Simulating Household Activities Via Programs",
+    "authors": "Xavier Puig, Kevin Ra, Marko Boben, Jiaman Li, Tingwu Wang, Sanja Fidler, and Antonio Torralba",
+    "year": "2018",
+    "venue": "Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)",
+    "url": "https://doi.org/10.1109/cvpr.2018.00886",
+    "doi": "https://doi.org/10.1109/cvpr.2018.00886",
+    "arxiv": "",
+    "bibtex_key": "puigVirtualHomeSimulatingHousehold2018",
+    "manuscript_reference": 112,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": true,
+    "stages": [],
+    "facets": [],
+    "supplement_label": "S132"
+  },
+  {
+    "study_id": "PS176",
+    "title": "Vision-language-action model and diffusion policy switching enables dexterous control of an anthropomorphic hand",
+    "authors": "Pan, Cheng, Junge, Kai, and Hughes, Josie",
+    "year": "2024",
+    "venue": "arXiv preprint arXiv:2410.14022",
+    "url": "https://arxiv.org/abs/2410.14022",
+    "doi": "",
+    "arxiv": "2410.14022",
+    "bibtex_key": "",
+    "manuscript_reference": null,
+    "cited_in_manuscript": false,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Physical Interaction"
+    ],
+    "facets": [
+      "Reliability"
+    ],
+    "supplement_label": "S130"
+  },
+  {
+    "study_id": "PS120",
+    "title": "VLA-FAIL: Efficient Task Failure Detection for Finetuned Vision-Language-Action Models",
+    "authors": "Florian Seligmann; Emiliyan Gospodinov; Enes Ulas Dincer; Gerhard Neumann",
+    "year": "2026",
+    "venue": "arXiv preprint",
+    "url": "https://arxiv.org/abs/2606.21386",
+    "doi": "",
+    "arxiv": "2606.21386",
+    "bibtex_key": "",
+    "manuscript_reference": null,
+    "cited_in_manuscript": false,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Action Planning",
+      "Physical Interaction"
+    ],
+    "facets": [
+      "Controllability",
+      "Reliability"
+    ],
+    "supplement_label": "S095"
+  },
+  {
+    "study_id": "PS117",
+    "title": "VLALeaks: Membership Inference Attacks against Vision-Language-Action Models",
+    "authors": "Xukun Luan, Jinyan Liu, Xuesong Li, Yuanguo Bi, Renjun Wu, Zhongxiang Lei, and Di Wang",
+    "year": "2026",
+    "venue": "arXiv preprint arXiv:2606.15165",
+    "url": "https://arxiv.org/abs/2606.15165",
+    "doi": "",
+    "arxiv": "2606.15165",
+    "bibtex_key": "luan2026vlaleaks",
+    "manuscript_reference": 83,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Environment Perception",
+      "Physical Interaction"
+    ],
+    "facets": [
+      "Attack Resistance",
+      "Privacy Protection"
+    ],
+    "supplement_label": "S093"
+  },
+  {
+    "study_id": "PS200",
+    "title": "Vlm-social-nav: Socially aware robot navigation through scoring using vision-language models",
+    "authors": "Song, Daeun, Liang, Jing, Payandeh, Amirreza, Raj, Amir Hossain, Xiao, Xuesu, and Manocha, Dinesh",
+    "year": "2024",
+    "venue": "IEEE Robotics and Automation Letters",
+    "url": "https://doi.org/10.1109/lra.2024.3511409",
+    "doi": "https://doi.org/10.1109/lra.2024.3511409",
+    "arxiv": "",
+    "bibtex_key": "",
+    "manuscript_reference": null,
+    "cited_in_manuscript": false,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Action Planning",
+      "Physical Interaction"
+    ],
+    "facets": [
+      "Value Alignment"
+    ],
+    "supplement_label": "S145"
+  },
+  {
+    "study_id": "PS057",
+    "title": "VLSA: Vision-Language-Action Models with Plug-and-Play Safety Constraint Layer",
+    "authors": "Songqiao Hu, Zeyi Liu, Shuang Liu, Jun Cen, Zihan Meng, Shihefeng Wang, Xiang Li, and Xiao He",
+    "year": "2025",
+    "venue": "arXiv preprint arXiv:2512.11891",
+    "url": "https://arxiv.org/abs/2512.11891",
+    "doi": "",
+    "arxiv": "2512.11891",
+    "bibtex_key": "hu2025vlsa",
+    "manuscript_reference": 44,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Action Planning",
+      "Physical Interaction"
+    ],
+    "facets": [
+      "Controllability",
+      "Reliability"
+    ],
+    "supplement_label": "S048"
+  },
+  {
+    "study_id": "PS075",
+    "title": "VRKitchen: an Interactive 3D Virtual Environment for Task-oriented Learning",
+    "authors": "Xiaofeng Gao, Ran Gong, Tianmin Shu, Xu Xie, Shu Wang, and Song-Chun Zhu",
+    "year": "2019",
+    "venue": "arXiv preprint arXiv:1903.05757",
+    "url": "https://arxiv.org/abs/1903.05757",
+    "doi": "",
+    "arxiv": "1903.05757",
+    "bibtex_key": "gaoVRKitchenInteractive3D2019",
+    "manuscript_reference": 35,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": true,
+    "stages": [],
+    "facets": [],
+    "supplement_label": "S061"
+  },
+  {
+    "study_id": "PS052",
+    "title": "What do navigation agents learn about their environment?",
+    "authors": "Kshitij Dwivedi, Gemma Roig, Aniruddha Kembhavi, and Roozbeh Mottaghi",
+    "year": "2022",
+    "venue": "2022 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)",
+    "url": "https://doi.org/10.1109/cvpr52688.2022.01003",
+    "doi": "https://doi.org/10.1109/cvpr52688.2022.01003",
+    "arxiv": "",
+    "bibtex_key": "dwivedi2022navigation",
+    "manuscript_reference": 25,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Environment Perception"
+    ],
+    "facets": [
+      "Explainability"
+    ],
+    "supplement_label": "S043"
+  },
+  {
+    "study_id": "PS050",
+    "title": "When Alignment Fails: Multimodal Adversarial Attacks on Vision-Language-Action Models",
+    "authors": "Yuping Yan; Yuhan Xie; Yixin Zhang; Lingjuan Lyu; Handing Wang; Yaochu Jin",
+    "year": "2025",
+    "venue": "arXiv preprint",
+    "url": "https://arxiv.org/abs/2511.16203",
+    "doi": "",
+    "arxiv": "2511.16203",
+    "bibtex_key": "",
+    "manuscript_reference": null,
+    "cited_in_manuscript": false,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Environment Perception",
+      "Instruction Understanding",
+      "Physical Interaction"
+    ],
+    "facets": [
+      "Attack Resistance"
+    ],
+    "supplement_label": "S041"
+  },
+  {
+    "study_id": "PS051",
+    "title": "When Robots Obey the Patch: Universal Transferable Patch Attacks on Vision-Language-Action Models",
+    "authors": "Hui Lu; Yi Yu; Yiming Yang; Chenyu Yi; Qixin Zhang; Bingquan Shen; Alex C. Kot; Xudong Jiang",
+    "year": "2025",
+    "venue": "arXiv preprint",
+    "url": "https://arxiv.org/abs/2511.21192",
+    "doi": "",
+    "arxiv": "2511.21192",
+    "bibtex_key": "",
+    "manuscript_reference": null,
+    "cited_in_manuscript": false,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Environment Perception",
+      "Physical Interaction"
+    ],
+    "facets": [
+      "Attack Resistance"
+    ],
+    "supplement_label": "S042"
+  },
+  {
+    "study_id": "PS087",
+    "title": "When Robots Say No: The Empathic Ethical Disobedience Benchmark",
+    "authors": "Dmytro Kuzmenko and Nadiya Shvai",
+    "year": "2026",
+    "venue": "Proceedings of the 21st ACM/IEEE International Conference on Human-Robot Interaction",
+    "url": "https://doi.org/10.1145/3757279.3785547",
+    "doi": "https://doi.org/10.1145/3757279.3785547",
+    "arxiv": "2512.18474",
+    "bibtex_key": "kuzmenko2026when",
+    "manuscript_reference": 65,
+    "cited_in_manuscript": true,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Action Planning",
+      "Instruction Understanding"
+    ],
+    "facets": [
+      "Abuse Prevention",
+      "Explainability",
+      "Value Alignment"
+    ],
+    "supplement_label": "S070"
+  },
+  {
+    "study_id": "PS115",
+    "title": "Your Model Already Knows: Attention-Guided Safety Filter for Vision-Language-Action Models",
+    "authors": "Seongbin Park; Fan Zhang; Baharan Mirzasoleiman; Shahriar Talebi; Nader Sehatbakhsh",
+    "year": "2026",
+    "venue": "arXiv preprint",
+    "url": "https://arxiv.org/abs/2606.09749",
+    "doi": "",
+    "arxiv": "2606.09749",
+    "bibtex_key": "",
+    "manuscript_reference": null,
+    "cited_in_manuscript": false,
+    "benchmark_or_simulator_only": false,
+    "stages": [
+      "Environment Perception",
+      "Physical Interaction"
+    ],
+    "facets": [
+      "Controllability",
+      "Reliability"
+    ],
+    "supplement_label": "S091"
+  }
+]
